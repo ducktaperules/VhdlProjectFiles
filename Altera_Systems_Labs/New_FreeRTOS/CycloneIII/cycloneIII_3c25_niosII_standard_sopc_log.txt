@@ -1,0 +1,132 @@
+Altera SOPC Builder Version 8.00 Build 231
+Copyright (c) 1999-2007 Altera Corporation.  All rights reserved.
+
+
+# 2009.12.10 13:09:43 (*) mk_custom_sdk starting
+# 2009.12.10 13:09:43 (*) Reading project /home/netlab/ngunton/Av_Sys_rtos/standard/cycloneIII_3c25_niosII_standard_sopc.ptf.
+
+# 2009.12.10 13:09:44 (*) Finding all CPUs
+# 2009.12.10 13:09:44 (*) Finding all available components
+# 2009.12.10 13:09:44 (*) Reading /home/netlab/ngunton/Av_Sys_rtos/standard/.sopc_builder/install.ptf
+
+# 2009.12.10 13:09:44 (*) Found 74 components
+
+# 2009.12.10 13:09:45 (*) Finding all peripherals
+
+# 2009.12.10 13:09:46 (*) Finding software components
+
+# 2009.12.10 13:09:46 (*) (Legacy SDK Generation Skipped)
+# 2009.12.10 13:09:46 (*) (All TCL Script Generation Skipped)
+# 2009.12.10 13:09:46 (*) (No Libraries Built)
+# 2009.12.10 13:09:46 (*) (Contents Generation Skipped)
+# 2009.12.10 13:09:46 (*) mk_custom_sdk finishing
+
+# 2009.12.10 13:09:46 (*) Starting generation for system: cycloneIII_3c25_niosII_standard_sopc.
+
+.
+.
+..
+.
+.
+.
+..
+..
+.
+.
+..
+.
+.
+
+# 2009.12.10 13:09:49 (*) Running Generator Program for pll
+
+# 2009.12.10 13:09:54 (*) Running Generator Program for cpu
+
+# 2009.12.10 13:09:56 (*)   Checking for plaintext license.
+# 2009.12.10 13:09:57 (*)   Plaintext license not found.
+# 2009.12.10 13:09:57 (*)   Checking for encrypted license (non-evaluation).
+# 2009.12.10 13:09:57 (*)   Encrypted license found.  SOF will not be time-limited.
+# 2009.12.10 13:10:12 (*)   Creating encrypted HDL
+
+# 2009.12.10 13:10:16 (*) Running Generator Program for ssram
+
+# 2009.12.10 13:10:18 (*) Running Generator Program for ext_flash
+
+# 2009.12.10 13:10:19 (*) Running Generator Program for ddr_sdram
+
+# 2009.12.10 13:10:20 (*) Running Generator Program for sys_clk_timer
+
+# 2009.12.10 13:10:22 (*) Running Generator Program for high_res_timer
+
+# 2009.12.10 13:10:24 (*) Running Generator Program for sysid
+
+# 2009.12.10 13:10:26 (*) Running Generator Program for jtag_uart
+
+# 2009.12.10 13:10:29 (*) Running Generator Program for button_pio
+
+# 2009.12.10 13:10:31 (*) Running Generator Program for led_pio
+
+# 2009.12.10 13:10:33 (*) Running Generator Program for cycloneIII_3c25_niosII_standard_sopc_clock_0
+
+# 2009.12.10 13:10:35 (*) Running Generator Program for cycloneIII_3c25_niosII_standard_sopc_clock_1
+
+# 2009.12.10 13:10:38 (*) Running Generator Program for flash_ssram_pipeline_bridge
+
+# 2009.12.10 13:10:41 (*) Running Generator Program for pipeline_bridge_before_tristate_bridge
+
+# 2009.12.10 13:10:44 (*) Running Generator Program for cpu_ddr_clock_bridge
+
+# 2009.12.10 13:10:47 (*) Running Generator Program for slow_peripheral_bridge
+
+.
+
+
+# 2009.12.10 13:10:49 (*) Running Test Generator Program for ddr_sdram
+
+# 2009.12.10 13:10:50 (*) Making arbitration and system (top) modules.
+
+# 2009.12.10 13:11:18 (*) Generating Quartus symbol for top level: cycloneIII_3c25_niosII_standard_sopc
+
+# 2009.12.10 13:11:18 (*) Symbol /home/netlab/ngunton/Av_Sys_rtos/standard/cycloneIII_3c25_niosII_standard_sopc.bsf already exists, no need to regenerate
+# 2009.12.10 13:11:18 (*) Creating command-line system-generation script: /home/netlab/ngunton/Av_Sys_rtos/standard/cycloneIII_3c25_niosII_standard_sopc_generation_script
+
+# 2009.12.10 13:11:18 (*) Running setup for HDL simulator: modelsim
+
+
+# 2009.12.10 13:11:18 (*) Setting up Quartus with cycloneIII_3c25_niosII_standard_sopc_setup_quartus.tcl
+/usr/local/stow/altera8.0/altera8.0/quartus/bin/quartus_sh -t cycloneIII_3c25_niosII_standard_sopc_setup_quartus.tcl
+
+
+Info: *******************************************************************
+Info: Running Quartus II Shell
+    Info: Version 8.0 Build 231 07/10/2008 Service Pack 1 SJ Full Version
+    Info: Copyright (C) 1991-2008 Altera Corporation. All rights reserved.
+    Info: Your use of Altera Corporation's design tools, logic functions 
+    Info: and other software and tools, and its AMPP partner logic 
+    Info: functions, and any output files from any of the foregoing 
+    Info: (including device programming or simulation files), and any 
+    Info: associated documentation or information are expressly subject 
+    Info: to the terms and conditions of the Altera Program License 
+    Info: Subscription Agreement, Altera MegaCore Function License 
+    Info: Agreement, or other applicable license agreement, including, 
+    Info: without limitation, that your use is for the sole purpose of 
+    Info: programming logic devices manufactured by Altera and sold by 
+    Info: Altera or its authorized distributors.  Please refer to the 
+    Info: applicable agreement for further details.
+    Info: Processing started: Thu Dec 10 13:11:19 2009
+Info: Command: quartus_sh -t cycloneIII_3c25_niosII_standard_sopc_setup_quartus.tcl
+Info: Evaluation of Tcl script cycloneIII_3c25_niosII_standard_sopc_setup_quartus.tcl was successful
+Info: Quartus II Shell was successful. 0 errors, 0 warnings
+    Info: Processing ended: Thu Dec 10 13:11:19 2009
+    Info: Elapsed time: 00:00:00
+    Info: Total CPU time (on all processors): 00:00:00
+
+# 2009.12.10 13:11:20 (*) Completed generation for system: cycloneIII_3c25_niosII_standard_sopc.
+# 2009.12.10 13:11:20 (*) THE FOLLOWING SYSTEM ITEMS HAVE BEEN GENERATED:
+  SOPC Builder database : /home/netlab/ngunton/Av_Sys_rtos/standard/cycloneIII_3c25_niosII_standard_sopc.ptf 
+  System HDL Model : /home/netlab/ngunton/Av_Sys_rtos/standard/cycloneIII_3c25_niosII_standard_sopc.v 
+  System Generation Script : /home/netlab/ngunton/Av_Sys_rtos/standard/cycloneIII_3c25_niosII_standard_sopc_generation_script 
+
+# 2009.12.10 13:11:20 (*) SUCCESS: SYSTEM GENERATION COMPLETED.
+
+
+Press 'Exit' to exit.

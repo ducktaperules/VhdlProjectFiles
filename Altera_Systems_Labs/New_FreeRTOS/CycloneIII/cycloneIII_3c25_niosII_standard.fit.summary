@@ -1,0 +1,16 @@
+Fitter Status : Successful - Mon Jun 23 00:37:03 2008
+Quartus II Version : 8.0 Build 215 05/29/2008 SJ Full Version
+Revision Name : cycloneIII_3c25_niosII_standard
+Top-level Entity Name : cycloneIII_3c25_niosII_standard
+Family : Cyclone III
+Device : EP3C25F324C8
+Timing Models : Final
+Total logic elements : 9,416 / 24,624 ( 38 % )
+    Total combinational functions : 7,831 / 24,624 ( 32 % )
+    Dedicated logic registers : 5,363 / 24,624 ( 22 % )
+Total registers : 5597
+Total pins : 122 / 216 ( 56 % )
+Total virtual pins : 1
+Total memory bits : 72,456 / 608,256 ( 12 % )
+Embedded Multiplier 9-bit elements : 4 / 132 ( 3 % )
+Total PLLs : 2 / 4 ( 50 % )

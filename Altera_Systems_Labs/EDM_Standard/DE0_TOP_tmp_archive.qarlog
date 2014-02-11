@@ -1,0 +1,87 @@
+Quartus II Archive log --	/home/netlab/s2hughes/Altera_Systems_Labs/EDM_Standard/DE0_TOP_tmp_archive.qarlog
+
+Archive:	/home/netlab/s2hughes/Altera_Systems_Labs/EDM_Standard/DE0_TOP_tmp_archive.qar
+Date:		Tue Jan 21 15:23:25 2014
+Quartus II		11.0 Build 208 07/03/2011 SP 1 SJ Full Version
+
+	=========== Files Selected: ===========
+/altera/11.0/ip/altera/sopc_builder_ip/altera_avalon_clock_adapter/altera_avalon_clock_adapter.sdc
+/home/netlab/s2hughes/Altera_Systems_Labs/EDM_Standard/DE0_SOPC.ptf
+/home/netlab/s2hughes/Altera_Systems_Labs/EDM_Standard/DE0_SOPC.qip
+/home/netlab/s2hughes/Altera_Systems_Labs/EDM_Standard/DE0_SOPC.sopc
+/home/netlab/s2hughes/Altera_Systems_Labs/EDM_Standard/DE0_SOPC.sopcinfo
+/home/netlab/s2hughes/Altera_Systems_Labs/EDM_Standard/DE0_SOPC.v
+/home/netlab/s2hughes/Altera_Systems_Labs/EDM_Standard/DE0_SOPC_clock_0.v
+/home/netlab/s2hughes/Altera_Systems_Labs/EDM_Standard/DE0_SOPC_clock_1.v
+/home/netlab/s2hughes/Altera_Systems_Labs/EDM_Standard/DE0_SOPC_clock_2.v
+/home/netlab/s2hughes/Altera_Systems_Labs/EDM_Standard/DE0_SOPC_clock_3.v
+/home/netlab/s2hughes/Altera_Systems_Labs/EDM_Standard/DE0_SOPC_clock_4.v
+/home/netlab/s2hughes/Altera_Systems_Labs/EDM_Standard/DE0_SOPC_setup_quartus.tcl
+/home/netlab/s2hughes/Altera_Systems_Labs/EDM_Standard/DE0_TOP.qpf
+/home/netlab/s2hughes/Altera_Systems_Labs/EDM_Standard/DE0_TOP.qsf
+/home/netlab/s2hughes/Altera_Systems_Labs/EDM_Standard/DE0_TOP.sdc
+/home/netlab/s2hughes/Altera_Systems_Labs/EDM_Standard/DE0_TOP.tcl
+/home/netlab/s2hughes/Altera_Systems_Labs/EDM_Standard/DE0_TOP.v
+/home/netlab/s2hughes/Altera_Systems_Labs/EDM_Standard/DE0_TOP_assignment_defaults.qdf
+/home/netlab/s2hughes/Altera_Systems_Labs/EDM_Standard/EDM_Enhanced/pwm_simple/nios/my_pwm_1/my_pwm_hw.tcl
+/home/netlab/s2hughes/Altera_Systems_Labs/EDM_Standard/PAT_640x480_GEN.v
+/home/netlab/s2hughes/Altera_Systems_Labs/EDM_Standard/VGA_Gen.v
+/home/netlab/s2hughes/Altera_Systems_Labs/EDM_Standard/altera_avalon_altpll_hw.tcl
+/home/netlab/s2hughes/Altera_Systems_Labs/EDM_Standard/altera_avalon_clock_adapter.sdc
+/home/netlab/s2hughes/Altera_Systems_Labs/EDM_Standard/altpll_0.v
+/home/netlab/s2hughes/Altera_Systems_Labs/EDM_Standard/altpllpll_bb.v
+/home/netlab/s2hughes/Altera_Systems_Labs/EDM_Standard/buttons.v
+/home/netlab/s2hughes/Altera_Systems_Labs/EDM_Standard/clock_crossing_bridge.v
+/home/netlab/s2hughes/Altera_Systems_Labs/EDM_Standard/cpu.ocp
+/home/netlab/s2hughes/Altera_Systems_Labs/EDM_Standard/cpu.sdc
+/home/netlab/s2hughes/Altera_Systems_Labs/EDM_Standard/cpu.v
+/home/netlab/s2hughes/Altera_Systems_Labs/EDM_Standard/cpu_jtag_debug_module_sysclk.v
+/home/netlab/s2hughes/Altera_Systems_Labs/EDM_Standard/cpu_jtag_debug_module_tck.v
+/home/netlab/s2hughes/Altera_Systems_Labs/EDM_Standard/cpu_jtag_debug_module_wrapper.v
+/home/netlab/s2hughes/Altera_Systems_Labs/EDM_Standard/cpu_oci_test_bench.v
+/home/netlab/s2hughes/Altera_Systems_Labs/EDM_Standard/cpu_ociram_default_contents.mif
+/home/netlab/s2hughes/Altera_Systems_Labs/EDM_Standard/cpu_rf_ram_a.mif
+/home/netlab/s2hughes/Altera_Systems_Labs/EDM_Standard/cpu_rf_ram_b.mif
+/home/netlab/s2hughes/Altera_Systems_Labs/EDM_Standard/cpu_test_bench.v
+/home/netlab/s2hughes/Altera_Systems_Labs/EDM_Standard/edm1.cdf
+/home/netlab/s2hughes/Altera_Systems_Labs/EDM_Standard/edm_enhanced.cdf
+/home/netlab/s2hughes/Altera_Systems_Labs/EDM_Standard/edm_logic.cdf
+/home/netlab/s2hughes/Altera_Systems_Labs/EDM_Standard/i2c_master_top_0.vhd
+/home/netlab/s2hughes/Altera_Systems_Labs/EDM_Standard/incremental_db/compiled_partitions/DE0_TOP.db_info
+/home/netlab/s2hughes/Altera_Systems_Labs/EDM_Standard/jtag_uart.v
+/home/netlab/s2hughes/Altera_Systems_Labs/EDM_Standard/key_out.v
+/home/netlab/s2hughes/Altera_Systems_Labs/EDM_Standard/lcd.v
+/home/netlab/s2hughes/Altera_Systems_Labs/EDM_Standard/lcd_light.v
+/home/netlab/s2hughes/Altera_Systems_Labs/EDM_Standard/leds.v
+/home/netlab/s2hughes/Altera_Systems_Labs/EDM_Standard/onchip_mem.hex
+/home/netlab/s2hughes/Altera_Systems_Labs/EDM_Standard/onchip_mem.v
+/home/netlab/s2hughes/Altera_Systems_Labs/EDM_Standard/pll.sdc
+/home/netlab/s2hughes/Altera_Systems_Labs/EDM_Standard/port_a.v
+/home/netlab/s2hughes/Altera_Systems_Labs/EDM_Standard/profile_timer.v
+/home/netlab/s2hughes/Altera_Systems_Labs/EDM_Standard/pwm_1.vhd
+/home/netlab/s2hughes/Altera_Systems_Labs/EDM_Standard/pwm_2.vhd
+/home/netlab/s2hughes/Altera_Systems_Labs/EDM_Standard/pwm_simple/nios/my_pwm_1/my_pwm.vhd
+/home/netlab/s2hughes/Altera_Systems_Labs/EDM_Standard/pwm_simple/nios/my_pwm_1/my_pwm_hw.tcl
+/home/netlab/s2hughes/Altera_Systems_Labs/EDM_Standard/sd_clk.v
+/home/netlab/s2hughes/Altera_Systems_Labs/EDM_Standard/sd_cmd.v
+/home/netlab/s2hughes/Altera_Systems_Labs/EDM_Standard/sd_dat.v
+/home/netlab/s2hughes/Altera_Systems_Labs/EDM_Standard/sd_wp_n.v
+/home/netlab/s2hughes/Altera_Systems_Labs/EDM_Standard/sdram.v
+/home/netlab/s2hughes/Altera_Systems_Labs/EDM_Standard/sdram_test_component.v
+/home/netlab/s2hughes/Altera_Systems_Labs/EDM_Standard/seg7.v
+/home/netlab/s2hughes/Altera_Systems_Labs/EDM_Standard/sopc_add_qip_file.tcl
+/home/netlab/s2hughes/Altera_Systems_Labs/EDM_Standard/switches.v
+/home/netlab/s2hughes/Altera_Systems_Labs/EDM_Standard/sysid.v
+/home/netlab/s2hughes/Altera_Systems_Labs/EDM_Standard/timer.v
+/home/netlab/s2hughes/Altera_Systems_Labs/EDM_Standard/uart.v
+/home/netlab/s2hughes/Altera_Systems_Labs/EDM_Standard/user_timer.v
+	======= Total: 70 files to archive =======
+
+	================ Status: ===============
+All files archived successfully.
+
+
+******* Archived project restoration attempt on Tue Jan 21 15:23:27 2014
+Source archive file:	/home/netlab/s2hughes/Altera_Systems_Labs/EDM_Standard/DE0_TOP_tmp_archive.qar
+Archive was extracted into	/home/netlab/s2hughes/VHDL_C/alteraBackup/Altera_Systems_Labs/Nios + PWM/
+		 - successfully.

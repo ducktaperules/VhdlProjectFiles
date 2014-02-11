@@ -1,0 +1,44 @@
+11-Feb-2014 20:26:39 com.altera.utilities.Launcher launch
+INFO: Launching:c:/altera/11.1sp2/quartus//bin/quartus_map.exe not_a_project --generate_hdl_interface=C:/Users/Queron/Altera_Systems_Labs/EDM_Standard/my_pwm.vhd --source=C:/Users/Queron/Altera_Systems_Labs/EDM_Standard/my_pwm.vhd --set=HDL_INTERFACE_OUTPUT_PATH=C:/Users/Queron/AppData/Local/Temp/alt6112_2375066999093938279.dir/0001_sopcqmap/
+11-Feb-2014 20:30:49 com.altera.utilities.Launcher launch
+INFO: Launching:c:/altera/11.1sp2/quartus//bin/quartus_map.exe not_a_project --generate_hdl_interface=C:/Users/Queron/Altera_Systems_Labs/EDM_Standard/altpll_0.v --source=C:/Users/Queron/Altera_Systems_Labs/EDM_Standard/altpll_0.v --set=HDL_INTERFACE_OUTPUT_PATH=C:/Users/Queron/AppData/Local/Temp/alt6112_2375066999093938279.dir/0002_sopcqmap/
+11-Feb-2014 20:30:50 com.altera.utilities.Launcher launch
+INFO: Launching:c:/altera/11.1sp2/quartus//bin/quartus_map.exe C:\Users\Queron\AppData\Local\Temp\alt6112_2375066999093938279.dir\0003_sopcqmap\altpll_0.v --source=C:/Users/Queron/AppData/Local/Temp/alt6112_2375066999093938279.dir/0003_sopcqmap/altpll_0.v --simgen --simgen_parameter=CBX_HDL_LANGUAGE=VERILOG,SIMGEN_RAND_POWERUP_FFS=OFF,SIMGEN_OBFUSCATE=OFF,SIMGEN_MAX_TULIP_COUNT=0 --family=Cyclone III
+11-Feb-2014 20:30:54 com.altera.utilities.Launcher launch
+INFO: Launching:c:/altera/11.1sp2/quartus//bin/quartus_map.exe not_a_project --generate_hdl_interface=C:/altera/11.1sp2/ip/altera/nios2_ip/altera_nios_custom_instr_floating_point_qsys/fpoint_wrapper.v --source=C:/altera/11.1sp2/ip/altera/nios2_ip/altera_nios_custom_instr_floating_point_qsys/fpoint_qsys.v --source=C:/altera/11.1sp2/ip/altera/nios2_ip/altera_nios_custom_instr_floating_point_qsys/fpoint_hw_qsys.v --source=C:/altera/11.1sp2/ip/altera/nios2_ip/altera_nios_custom_instr_floating_point_qsys/fpoint_wrapper.v --set=HDL_INTERFACE_OUTPUT_PATH=C:/Users/Queron/AppData/Local/Temp/alt6112_2375066999093938279.dir/0005_sopcqmap/
+11-Feb-2014 20:30:55 com.altera.utilities.Launcher launch
+INFO: Launching:c:\altera\11.1sp2\quartus//bin/quartus_sh.exe -t sopc_add_qip_file.tcl
+11-Feb-2014 20:30:56 com.altera.utilities.Launcher launch
+INFO: Launching:C:/altera/11.1sp2/quartus/bin/cygwin/bin/sh.exe -c . C:/altera/11.1sp2/quartus/sopc_builder/bin/nios_sh ; C:/altera/11.1sp2/quartus/sopc_builder/bin/sopc_builder --classic --no_splash --refresh C:/Users/Queron/Altera_Systems_Labs/EDM_Standard/DE0_SOPC.ptf
+11-Feb-2014 20:31:17 com.altera.utilities.Launcher launch
+INFO: Launching:C:/altera/11.1sp2/quartus/bin/cygwin/bin/sh.exe -c . C:/altera/11.1sp2/quartus/sopc_builder/bin/nios_sh ; C:/altera/11.1sp2/quartus/sopc_builder/bin/sopc_builder --classic --generate C:/Users/Queron/Altera_Systems_Labs/EDM_Standard/DE0_SOPC.ptf
+11-Feb-2014 20:35:49 com.altera.utilities.Launcher launch
+INFO: Launching:c:/altera/11.1sp2/quartus//bin/quartus_map.exe C:\Users\Queron\AppData\Local\Temp\alt6112_2375066999093938279.dir\0006_sopcqmap\altpll_0.v --source=C:/Users/Queron/AppData/Local/Temp/alt6112_2375066999093938279.dir/0006_sopcqmap/altpll_0.v --simgen --simgen_parameter=CBX_HDL_LANGUAGE=VERILOG,SIMGEN_RAND_POWERUP_FFS=OFF,SIMGEN_OBFUSCATE=OFF,SIMGEN_MAX_TULIP_COUNT=0 --family=Cyclone III
+11-Feb-2014 20:35:50 com.altera.utilities.Launcher launch
+INFO: Launching:c:/altera/11.1sp2/quartus//bin/quartus_map.exe not_a_project --generate_hdl_interface=C:/Users/Queron/Altera_Systems_Labs/EDM_Standard/my_pwm.vhd --source=C:/Users/Queron/Altera_Systems_Labs/EDM_Standard/my_pwm_0.vhd --source=C:/Users/Queron/Altera_Systems_Labs/EDM_Standard/my_pwm.vhd --set=HDL_INTERFACE_OUTPUT_PATH=C:/Users/Queron/AppData/Local/Temp/alt6112_2375066999093938279.dir/0008_sopcqmap/
+11-Feb-2014 20:35:52 com.altera.utilities.Launcher launch
+INFO: Launching:c:/altera/11.1sp2/quartus//bin/quartus_map.exe not_a_project --generate_hdl_interface=C:/Users/Queron/Altera_Systems_Labs/EDM_Standard/my_pwm.vhd --source=C:/Users/Queron/Altera_Systems_Labs/EDM_Standard/my_pwm.vhd --set=HDL_INTERFACE_OUTPUT_PATH=C:/Users/Queron/AppData/Local/Temp/alt6112_2375066999093938279.dir/0009_sopcqmap/
+11-Feb-2014 20:35:54 com.altera.utilities.Launcher launch
+INFO: Launching:c:/altera/11.1sp2/quartus//bin/quartus_map.exe not_a_project --generate_hdl_interface=C:/Users/Queron/Altera_Systems_Labs/EDM_Standard/my_pwm.vhd --source=C:/Users/Queron/Altera_Systems_Labs/EDM_Standard/my_pwm_1.vhd --source=C:/Users/Queron/Altera_Systems_Labs/EDM_Standard/my_pwm.vhd --set=HDL_INTERFACE_OUTPUT_PATH=C:/Users/Queron/AppData/Local/Temp/alt6112_2375066999093938279.dir/0010_sopcqmap/
+11-Feb-2014 20:35:56 com.altera.utilities.Launcher launch
+INFO: Launching:c:/altera/11.1sp2/quartus//bin/quartus_map.exe not_a_project --generate_hdl_interface=C:/Users/Queron/Altera_Systems_Labs/EDM_Standard/my_pwm.vhd --source=C:/Users/Queron/Altera_Systems_Labs/EDM_Standard/my_pwm.vhd --set=HDL_INTERFACE_OUTPUT_PATH=C:/Users/Queron/AppData/Local/Temp/alt6112_2375066999093938279.dir/0011_sopcqmap/
+11-Feb-2014 20:35:58 com.altera.utilities.Launcher launch
+INFO: Launching:c:/altera/11.1sp2/quartus//bin/quartus_map.exe not_a_project --generate_hdl_interface=C:/Users/Queron/Altera_Systems_Labs/EDM_Standard/my_pwm.vhd --source=C:/Users/Queron/Altera_Systems_Labs/EDM_Standard/my_pwm_2.vhd --source=C:/Users/Queron/Altera_Systems_Labs/EDM_Standard/my_pwm.vhd --set=HDL_INTERFACE_OUTPUT_PATH=C:/Users/Queron/AppData/Local/Temp/alt6112_2375066999093938279.dir/0012_sopcqmap/
+11-Feb-2014 20:36:00 com.altera.utilities.Launcher launch
+INFO: Launching:c:/altera/11.1sp2/quartus//bin/quartus_map.exe not_a_project --generate_hdl_interface=C:/Users/Queron/Altera_Systems_Labs/EDM_Standard/my_pwm.vhd --source=C:/Users/Queron/Altera_Systems_Labs/EDM_Standard/my_pwm.vhd --set=HDL_INTERFACE_OUTPUT_PATH=C:/Users/Queron/AppData/Local/Temp/alt6112_2375066999093938279.dir/0013_sopcqmap/
+11-Feb-2014 20:36:02 com.altera.utilities.Launcher launch
+INFO: Launching:c:/altera/11.1sp2/quartus//bin/quartus_map.exe not_a_project --generate_hdl_interface=C:/Users/Queron/Altera_Systems_Labs/EDM_Standard/my_pwm.vhd --source=C:/Users/Queron/Altera_Systems_Labs/EDM_Standard/my_pwm_3.vhd --source=C:/Users/Queron/Altera_Systems_Labs/EDM_Standard/my_pwm.vhd --set=HDL_INTERFACE_OUTPUT_PATH=C:/Users/Queron/AppData/Local/Temp/alt6112_2375066999093938279.dir/0014_sopcqmap/
+11-Feb-2014 20:36:03 com.altera.utilities.Launcher launch
+INFO: Launching:c:/altera/11.1sp2/quartus//bin/quartus_map.exe not_a_project --generate_hdl_interface=C:/Users/Queron/Altera_Systems_Labs/EDM_Standard/my_pwm.vhd --source=C:/Users/Queron/Altera_Systems_Labs/EDM_Standard/my_pwm.vhd --set=HDL_INTERFACE_OUTPUT_PATH=C:/Users/Queron/AppData/Local/Temp/alt6112_2375066999093938279.dir/0015_sopcqmap/
+11-Feb-2014 20:36:05 com.altera.utilities.Launcher launch
+INFO: Launching:c:/altera/11.1sp2/quartus//bin/quartus_map.exe not_a_project --generate_hdl_interface=C:/Users/Queron/Altera_Systems_Labs/EDM_Standard/my_pwm.vhd --source=C:/Users/Queron/Altera_Systems_Labs/EDM_Standard/my_pwm_4.vhd --source=C:/Users/Queron/Altera_Systems_Labs/EDM_Standard/my_pwm.vhd --set=HDL_INTERFACE_OUTPUT_PATH=C:/Users/Queron/AppData/Local/Temp/alt6112_2375066999093938279.dir/0016_sopcqmap/
+11-Feb-2014 20:36:07 com.altera.utilities.Launcher launch
+INFO: Launching:c:/altera/11.1sp2/quartus//bin/quartus_map.exe not_a_project --generate_hdl_interface=C:/Users/Queron/Altera_Systems_Labs/EDM_Standard/my_pwm.vhd --source=C:/Users/Queron/Altera_Systems_Labs/EDM_Standard/my_pwm.vhd --set=HDL_INTERFACE_OUTPUT_PATH=C:/Users/Queron/AppData/Local/Temp/alt6112_2375066999093938279.dir/0017_sopcqmap/
+11-Feb-2014 20:36:09 com.altera.utilities.Launcher launch
+INFO: Launching:c:/altera/11.1sp2/quartus//bin/quartus_map.exe not_a_project --generate_hdl_interface=C:/Users/Queron/Altera_Systems_Labs/EDM_Standard/my_pwm.vhd --source=C:/Users/Queron/Altera_Systems_Labs/EDM_Standard/my_pwm_5.vhd --source=C:/Users/Queron/Altera_Systems_Labs/EDM_Standard/my_pwm.vhd --set=HDL_INTERFACE_OUTPUT_PATH=C:/Users/Queron/AppData/Local/Temp/alt6112_2375066999093938279.dir/0018_sopcqmap/
+11-Feb-2014 20:36:12 com.altera.utilities.Launcher launch
+INFO: Launching:c:\altera\11.1sp2\quartus//bin/quartus_sh.exe -t sopc_add_qip_file.tcl
+11-Feb-2014 20:36:13 com.altera.utilities.Launcher launch
+INFO: Launching:C:/altera/11.1sp2/quartus/bin/cygwin/bin/sh.exe -c . C:/altera/11.1sp2/quartus/sopc_builder/bin/nios_sh ; C:/altera/11.1sp2/quartus/sopc_builder/bin/sopc_builder --classic --no_splash --refresh C:/Users/Queron/Altera_Systems_Labs/EDM_Standard/DE0_SOPC.ptf
+11-Feb-2014 20:36:34 com.altera.utilities.Launcher launch
+INFO: Launching:C:/altera/11.1sp2/quartus/bin/cygwin/bin/sh.exe -c . C:/altera/11.1sp2/quartus/sopc_builder/bin/nios_sh ; C:/altera/11.1sp2/quartus/sopc_builder/bin/sopc_builder --classic --generate C:/Users/Queron/Altera_Systems_Labs/EDM_Standard/DE0_SOPC.ptf

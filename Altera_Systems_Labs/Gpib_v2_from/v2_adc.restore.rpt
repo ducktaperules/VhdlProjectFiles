@@ -1,0 +1,171 @@
+Restore Archived Project report for v2_adc
+Tue Sep 24 11:27:40 2013
+Quartus II Version 11.0 Build 208 07/03/2011 Service Pack 1 SJ Full Version
+
+
+---------------------
+; Table of Contents ;
+---------------------
+  1. Legal Notice
+  2. Restore Archived Project Summary
+  3. Restore Archived Project Messages
+  4. Files Restored
+  5. Files Not Restored
+
+
+
+----------------
+; Legal Notice ;
+----------------
+Copyright (C) 1991-2011 Altera Corporation
+Your use of Altera Corporation's design tools, logic functions 
+and other software and tools, and its AMPP partner logic 
+functions, and any output files from any of the foregoing 
+(including device programming or simulation files), and any 
+associated documentation or information are expressly subject 
+to the terms and conditions of the Altera Program License 
+Subscription Agreement, Altera MegaCore Function License 
+Agreement, or other applicable license agreement, including, 
+without limitation, that your use is for the sole purpose of 
+programming logic devices manufactured by Altera and sold by 
+Altera or its authorized distributors.  Please refer to the 
+applicable agreement for further details.
+
+
+
++-------------------------------------------------------------------------+
+; Restore Archived Project Summary                                        ;
++---------------------------------+---------------------------------------+
+; Restore Archived Project Status ; Successful - Tue Sep 24 11:27:40 2013 ;
+; Revision Name                   ; v2_adc                                ;
+; Top-level Entity Name           ; interface1                            ;
+; Family                          ; Cyclone III                           ;
++---------------------------------+---------------------------------------+
+
+
++-----------------------------------+
+; Restore Archived Project Messages ;
++-----------------------------------+
+Info: Successfully restored '/home/netlab/s2hughes/Altera_Systems_Labs/Gpib_v2_from/interface1_with_dac.qar'
+Info: Generated report 'v2_adc.restore.rpt'
+Info: Evaluation of Tcl script /altera/11.0/quartus/common/tcl/apps/qpm/qar.tcl was successful
+Info: Quartus II Shell was successful. 0 errors, 0 warnings
+    Info: Peak virtual memory: 175 megabytes
+    Info: Processing ended: Tue Sep 24 11:27:40 2013
+    Info: Elapsed time: 00:00:01
+    Info: Total CPU time (on all processors): 00:00:01
+
+
++---------------------------------------------------+
+; Files Restored                                    ;
++---------------------------------------------------+
+; File Name                                         ;
++---------------------------------------------------+
+; ad7928.vhd                                        ;
+; alt_ddrx_addr_cmd.v                               ;
+; alt_ddrx_afi_block.v                              ;
+; alt_ddrx_avalon_if.v                              ;
+; alt_ddrx_bank_timer.v                             ;
+; alt_ddrx_bank_timer_info.v                        ;
+; alt_ddrx_bank_timer_wrapper.v                     ;
+; alt_ddrx_bypass.v                                 ;
+; alt_ddrx_cache.v                                  ;
+; alt_ddrx_clock_and_reset.v                        ;
+; alt_ddrx_cmd_gen.v                                ;
+; alt_ddrx_cmd_queue.v                              ;
+; alt_ddrx_controller.v                             ;
+; alt_ddrx_csr.v                                    ;
+; alt_ddrx_ecc.v                                    ;
+; alt_ddrx_input_if.v                               ;
+; alt_ddrx_odt_gen.v                                ;
+; alt_ddrx_rank_monitor.v                           ;
+; alt_ddrx_state_machine.v                          ;
+; alt_ddrx_timing_param.v                           ;
+; alt_ddrx_wdata_fifo.v                             ;
+; alt_mem_phy_defines.v                             ;
+; altera_avalon_clock_adapter.sdc                   ;
+; altera_avalon_half_rate_bridge_constraints.sdc    ;
+; altera_avalon_remote_update_cycloneiii.v          ;
+; altera_avalon_remote_update_cycloneiii_hw.tcl     ;
+; altpllpll.vhd                                     ;
+; assignment_defaults.qdf                           ;
+; auk_ddr_hp_controller.vhd                         ;
+; clock_crossing_0.vhd                              ;
+; cpu_0.sdc                                         ;
+; cpu_0.vhd                                         ;
+; cpu_0_jtag_debug_module_sysclk.vhd                ;
+; cpu_0_jtag_debug_module_tck.vhd                   ;
+; cpu_0_jtag_debug_module_wrapper.vhd               ;
+; cpu_0_oci_test_bench.vhd                          ;
+; cpu_0_ociram_default_contents.mif                 ;
+; cpu_0_rf_ram.mif                                  ;
+; cpu_0_rf_ram_a.mif                                ;
+; cpu_0_rf_ram_b.mif                                ;
+; cpu_0_test_bench.vhd                              ;
+; cpu_ddr_clock_bridge.vhd                          ;
+; dac_ad5308.vhd                                    ;
+; ddr_sdram.vhd                                     ;
+; ddr_sdram_alt_ddrx_controller_wrapper.v           ;
+; ddr_sdram_auk_ddr_hp_controller_wrapper.v         ;
+; ddr_sdram_controller_phy.vhd                      ;
+; ddr_sdram_example_top.sdc                         ;
+; ddr_sdram_phy.vhd                                 ;
+; ddr_sdram_phy_alt_mem_phy.v                       ;
+; ddr_sdram_phy_alt_mem_phy_pll.vhd                 ;
+; ddr_sdram_phy_alt_mem_phy_seq.vhd                 ;
+; ddr_sdram_phy_alt_mem_phy_seq_wrapper.v           ;
+; ddr_sdram_phy_autodetectedpins.tcl                ;
+; ddr_sdram_phy_ddr_pins.tcl                        ;
+; ddr_sdram_phy_ddr_timing.sdc                      ;
+; ddr_sdram_phy_report_timing.tcl                   ;
+; ddr_sdram_pin_assignments.tcl                     ;
+; flash_ssram_pipeline_bridge.vhd                   ;
+; gpib2_v1_pins.tcl                                 ;
+; gpib_edm1.cdf                                     ;
+; gpib_edm1.qip                                     ;
+; gpib_edm1.sopc                                    ;
+; gpib_edm1.vhd                                     ;
+; gpib_edm1_clock_0.vhd                             ;
+; gpib_edm1_clock_1.vhd                             ;
+; gpib_edm1_clock_2.vhd                             ;
+; gpib_edm1_clock_3.vhd                             ;
+; gpib_leds.vhd                                     ;
+; gpio1.vhd                                         ;
+; gpio2.vhd                                         ;
+; high_res_timer.vhd                                ;
+; incremental_db/compiled_partitions/v2_adc.db_info ;
+; interface1.bdf                                    ;
+; interface1.cdf                                    ;
+; interface1.dpf                                    ;
+; interface1.qpf                                    ;
+; interface1.qsf                                    ;
+; interface1_assignment_defaults.qdf                ;
+; jtag_uart.vhd                                     ;
+; led_pio.vhd                                       ;
+; onchip_memory.hex                                 ;
+; onchip_memory.vhd                                 ;
+; pipeline_bridge_before_tristate.vhd               ;
+; pll.sdc                                           ;
+; pll.vhd                                           ;
+; remote_update_cycloneiii_1.v                      ;
+; sopc_add_qip_file.tcl                             ;
+; sys_clk.vhd                                       ;
+; v1.dpf                                            ;
+; v1.qsf                                            ;
+; v2_adc.dpf                                        ;
+; v2_adc.jdi                                        ;
+; v2_adc.qsf                                        ;
+; v2_adc.sof                                        ;
+; altera_avalon_clock_adapter.sdc                   ;
+; altera_avalon_remote_update_cycloneiii.v          ;
+; altera_avalon_remote_update_cycloneiii_hw.tcl     ;
++---------------------------------------------------+
+
+
++--------------------+
+; Files Not Restored ;
++--------------------+
+; File Name          ;
++--------------------+
+
+

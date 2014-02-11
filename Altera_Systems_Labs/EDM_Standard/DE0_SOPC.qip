@@ -1,0 +1,56 @@
+# clk
+# cpu
+set_global_assignment -name SDC_FILE [file join $::quartus(qip_path) cpu.sdc]
+set_global_assignment -name SOURCE_FILE [file join $::quartus(qip_path) cpu.ocp]
+# jtag_uart
+# uart
+# onchip_mem
+# sysid
+# timer
+# lcd
+# sd_clk
+# sd_dat
+# sd_cmd
+# sd_wp_n
+# buttons
+# switches
+# leds
+# cfi_flash
+# tristate_bridge
+# sdram
+# lcd_light
+# clock_crossing_bridge
+# seg7
+# profile_timer
+# user_timer
+# port_a
+# key_out
+# altpll_0
+set_global_assignment -name TCL_FILE [file join $::quartus(qip_path) altera_avalon_altpll_hw.tcl]
+set_global_assignment -name VERILOG_FILE [file join $::quartus(qip_path) altpll_0.v]
+# my_pwm_0
+set_global_assignment -name TCL_FILE [file join $::quartus(qip_path) my_pwm_hw.tcl]
+set_global_assignment -name VHDL_FILE [file join $::quartus(qip_path) my_pwm.vhd]
+set_global_assignment -name VHDL_FILE [file join $::quartus(qip_path) my_pwm_0.vhd]
+# my_pwm_1
+set_global_assignment -name VHDL_FILE [file join $::quartus(qip_path) my_pwm_1.vhd]
+# my_pwm_2
+set_global_assignment -name VHDL_FILE [file join $::quartus(qip_path) my_pwm_2.vhd]
+# my_pwm_3
+set_global_assignment -name VHDL_FILE [file join $::quartus(qip_path) my_pwm_3.vhd]
+# my_pwm_4
+set_global_assignment -name VHDL_FILE [file join $::quartus(qip_path) my_pwm_4.vhd]
+# my_pwm_5
+set_global_assignment -name VHDL_FILE [file join $::quartus(qip_path) my_pwm_5.vhd]
+# null
+set_global_assignment -name SDC_FILE [file join $::quartus(ip_rootpath) altera/sopc_builder_ip/altera_avalon_clock_adapter/altera_avalon_clock_adapter.sdc]
+# cpu_altera_nios_custom_instr_floating_point_inst
+set_global_assignment -name TCL_FILE [file join $::quartus(ip_rootpath) altera/nios2_ip/altera_nios_custom_instr_floating_point_qsys/fpoint_qsys_hw.tcl]
+set_global_assignment -name VERILOG_FILE [file join $::quartus(ip_rootpath) altera/nios2_ip/altera_nios_custom_instr_floating_point_qsys/fpoint_wrapper.v]
+set_global_assignment -name VERILOG_FILE [file join $::quartus(ip_rootpath) altera/nios2_ip/altera_nios_custom_instr_floating_point_qsys/fpoint_qsys.v]
+set_global_assignment -name VERILOG_FILE [file join $::quartus(ip_rootpath) altera/nios2_ip/altera_nios_custom_instr_floating_point_qsys/fpoint_hw_qsys.v]
+set_global_assignment -name VERILOG_FILE [file join $::quartus(qip_path) cpu_altera_nios_custom_instr_floating_point_inst.v]
+set_global_assignment -name SOPC_BUILDER_SIGNATURE_ID "A0481C233F820000014422A9ABA5"
+set_global_assignment -entity "DE0_SOPC" -name IP_TOOL_NAME "sopc"
+set_global_assignment -entity "DE0_SOPC" -name IP_TOOL_VERSION "11.1sp2"
+set_global_assignment -entity "DE0_SOPC" -name IP_TOOL_ENV "sopc"
