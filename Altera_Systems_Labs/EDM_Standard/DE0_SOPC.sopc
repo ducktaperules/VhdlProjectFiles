@@ -21,19 +21,11 @@
          type = "long";
       }
    }
-   element my_pwm_2.avalon_slave_0
+   element my_pwm_0.avalon_slave_0
    {
       datum baseAddress
       {
-         value = "400";
-         type = "long";
-      }
-   }
-   element my_pwm_4.avalon_slave_0
-   {
-      datum baseAddress
-      {
-         value = "432";
+         value = "368";
          type = "long";
       }
    }
@@ -53,11 +45,19 @@
          type = "long";
       }
    }
-   element my_pwm_0.avalon_slave_0
+   element my_pwm_4.avalon_slave_0
    {
       datum baseAddress
       {
-         value = "368";
+         value = "432";
+         type = "long";
+      }
+   }
+   element my_pwm_2.avalon_slave_0
+   {
+      datum baseAddress
+      {
+         value = "400";
          type = "long";
       }
    }
@@ -338,75 +338,11 @@
          type = "int";
       }
    }
-   element buttons.s1
-   {
-      datum baseAddress
-      {
-         value = "224";
-         type = "long";
-      }
-   }
-   element key_out.s1
-   {
-      datum baseAddress
-      {
-         value = "352";
-         type = "long";
-      }
-   }
-   element switches.s1
-   {
-      datum baseAddress
-      {
-         value = "208";
-         type = "long";
-      }
-   }
    element seg7.s1
    {
       datum baseAddress
       {
          value = "336";
-         type = "long";
-      }
-   }
-   element lcd_light.s1
-   {
-      datum baseAddress
-      {
-         value = "320";
-         type = "long";
-      }
-   }
-   element cfi_flash.s1
-   {
-      datum baseAddress
-      {
-         value = "41943040";
-         type = "long";
-      }
-   }
-   element onchip_mem.s1
-   {
-      datum baseAddress
-      {
-         value = "65536";
-         type = "long";
-      }
-   }
-   element sd_dat.s1
-   {
-      datum baseAddress
-      {
-         value = "304";
-         type = "long";
-      }
-   }
-   element timer.s1
-   {
-      datum baseAddress
-      {
-         value = "64";
          type = "long";
       }
    }
@@ -418,43 +354,11 @@
          type = "long";
       }
    }
-   element sdram.s1
-   {
-      datum baseAddress
-      {
-         value = "33554432";
-         type = "long";
-      }
-   }
-   element sd_wp_n.s1
-   {
-      datum baseAddress
-      {
-         value = "240";
-         type = "long";
-      }
-   }
-   element sd_cmd.s1
-   {
-      datum baseAddress
-      {
-         value = "256";
-         type = "long";
-      }
-   }
    element clock_crossing_bridge.s1
    {
       datum baseAddress
       {
          value = "16777216";
-         type = "long";
-      }
-   }
-   element leds.s1
-   {
-      datum baseAddress
-      {
-         value = "192";
          type = "long";
       }
    }
@@ -466,11 +370,99 @@
          type = "long";
       }
    }
-   element port_a.s1
+   element switches.s1
    {
       datum baseAddress
       {
-         value = "160";
+         value = "208";
+         type = "long";
+      }
+   }
+   element leds.s1
+   {
+      datum baseAddress
+      {
+         value = "192";
+         type = "long";
+      }
+   }
+   element sd_wp_n.s1
+   {
+      datum baseAddress
+      {
+         value = "240";
+         type = "long";
+      }
+   }
+   element timer.s1
+   {
+      datum baseAddress
+      {
+         value = "64";
+         type = "long";
+      }
+   }
+   element sd_dat.s1
+   {
+      datum baseAddress
+      {
+         value = "304";
+         type = "long";
+      }
+   }
+   element buttons.s1
+   {
+      datum baseAddress
+      {
+         value = "224";
+         type = "long";
+      }
+   }
+   element cfi_flash.s1
+   {
+      datum baseAddress
+      {
+         value = "41943040";
+         type = "long";
+      }
+   }
+   element key_out.s1
+   {
+      datum baseAddress
+      {
+         value = "352";
+         type = "long";
+      }
+   }
+   element user_timer.s1
+   {
+      datum baseAddress
+      {
+         value = "128";
+         type = "long";
+      }
+   }
+   element onchip_mem.s1
+   {
+      datum baseAddress
+      {
+         value = "65536";
+         type = "long";
+      }
+   }
+   element sdram.s1
+   {
+      datum baseAddress
+      {
+         value = "33554432";
+         type = "long";
+      }
+   }
+   element lcd_light.s1
+   {
+      datum baseAddress
+      {
+         value = "320";
          type = "long";
       }
    }
@@ -482,11 +474,19 @@
          type = "long";
       }
    }
-   element user_timer.s1
+   element sd_cmd.s1
    {
       datum baseAddress
       {
-         value = "128";
+         value = "256";
+         type = "long";
+      }
+   }
+   element port_a.s1
+   {
+      datum baseAddress
+      {
+         value = "160";
          type = "long";
       }
    }
@@ -656,7 +656,7 @@
  <parameter name="projectName" value="DE0_TOP.qpf" />
  <parameter name="sopcBorderPoints" value="true" />
  <parameter name="systemHash" value="103783224714" />
- <parameter name="timeStamp" value="1392150939589" />
+ <parameter name="timeStamp" value="1392159198696" />
  <parameter name="useTestBenchNamingPattern" value="false" />
  <module kind="clock_source" version="11.1" enabled="1" name="clk">
   <parameter name="clockFrequency" value="50000000" />

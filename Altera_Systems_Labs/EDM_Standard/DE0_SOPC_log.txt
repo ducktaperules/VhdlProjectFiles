@@ -3,143 +3,142 @@ Copyright (c) 1999-2009 Altera Corporation.  All rights reserved.
 
 
 No .sopc_builder configuration file(!)
-# 2014.02.11 20:36:41 (*) mk_custom_sdk starting
-# 2014.02.11 20:36:41 (*) Reading project C:/Users/Queron/Altera_Systems_Labs/EDM_Standard/DE0_SOPC.ptf.
+# 2014.02.11 22:54:04 (*) mk_custom_sdk starting
+# 2014.02.11 22:54:04 (*) Reading project C:/Users/Queron/Documents/GitHub/VhdlProjectFiles/Altera_Systems_Labs/EDM_Standard/DE0_SOPC.ptf.
 
-# 2014.02.11 20:36:42 (*) Finding all CPUs
-# 2014.02.11 20:36:42 (*) Finding all available components
-# 2014.02.11 20:36:42 (*) Reading C:/Users/Queron/Altera_Systems_Labs/EDM_Standard/.sopc_builder/install.ptf
+# 2014.02.11 22:54:04 (*) Finding all CPUs
+# 2014.02.11 22:54:04 (*) Finding all available components
+# 2014.02.11 22:54:04 (*) Reading C:/Users/Queron/Documents/GitHub/VhdlProjectFiles/Altera_Systems_Labs/EDM_Standard/.sopc_builder/install.ptf
 
-# 2014.02.11 20:36:42 (*) Found 63 components
+# 2014.02.11 22:54:04 (*) Found 63 components
 
-# 2014.02.11 20:36:42 (*) Finding all peripherals
+# 2014.02.11 22:54:05 (*) Finding all peripherals
 
-# 2014.02.11 20:36:42 (*) Finding software components
+# 2014.02.11 22:54:05 (*) Finding software components
 
-# 2014.02.11 20:36:43 (*) (Legacy SDK Generation Skipped)
-# 2014.02.11 20:36:43 (*) (All TCL Script Generation Skipped)
-# 2014.02.11 20:36:43 (*) (No Libraries Built)
-# 2014.02.11 20:36:43 (*) (Contents Generation Skipped)
-# 2014.02.11 20:36:43 (*) mk_custom_sdk finishing
+# 2014.02.11 22:54:05 (*) (Legacy SDK Generation Skipped)
+# 2014.02.11 22:54:05 (*) (All TCL Script Generation Skipped)
+# 2014.02.11 22:54:05 (*) (No Libraries Built)
+# 2014.02.11 22:54:05 (*) (Contents Generation Skipped)
+# 2014.02.11 22:54:05 (*) mk_custom_sdk finishing
 
-# 2014.02.11 20:36:43 (*) Starting generation for system: DE0_SOPC.
+# 2014.02.11 22:54:05 (*) Starting generation for system: DE0_SOPC.
 
 .
 .
 .
 .
 .
+..
+.......
 .
-.
-....
 ...
-.
-....
 .....
+.
 ........
 
-# 2014.02.11 20:36:44 (*) Running Generator Program for cpu
+# 2014.02.11 22:54:07 (*) Running Generator Program for cpu
 
-# 2014.02.11 20:36:45 (*) Starting Nios II generation
-# 2014.02.11 20:36:45 (*)   Checking for plaintext license.
-# 2014.02.11 20:36:45 (*)   Couldn't query license setup in Quartus directory c:/altera/11.1sp2/quartus
-# 2014.02.11 20:36:45 (*)   Defaulting to contents of LM_LICENSE_FILE environment variable
-# 2014.02.11 20:36:45 (*)   LM_LICENSE_FILE environment variable is empty
-# 2014.02.11 20:36:45 (*)   Plaintext license not found.
-# 2014.02.11 20:36:45 (*)   No license required to generate encrypted Nios II/e.
+# 2014.02.11 22:54:07 (*) Starting Nios II generation
+# 2014.02.11 22:54:07 (*)   Checking for plaintext license.
+# 2014.02.11 22:54:08 (*)   Couldn't query license setup in Quartus directory c:/altera/11.1sp2/quartus
+# 2014.02.11 22:54:08 (*)   Defaulting to contents of LM_LICENSE_FILE environment variable
+# 2014.02.11 22:54:08 (*)   LM_LICENSE_FILE environment variable is empty
+# 2014.02.11 22:54:08 (*)   Plaintext license not found.
+# 2014.02.11 22:54:08 (*)   No license required to generate encrypted Nios II/e.
 
-# 2014.02.11 20:36:45 (*)   Getting CPU configuration settings
-# 2014.02.11 20:36:45 (*)   Elaborating CPU configuration settings
-# 2014.02.11 20:36:45 (*)   Creating all objects for CPU
-# 2014.02.11 20:36:46 (*)   Generating HDL from CPU objects
-# 2014.02.11 20:36:46 (*)   Creating plain-text HDL
-# 2014.02.11 20:36:48 (*) Done Nios II generation
+# 2014.02.11 22:54:08 (*)   Getting CPU configuration settings
+# 2014.02.11 22:54:08 (*)   Elaborating CPU configuration settings
+# 2014.02.11 22:54:08 (*)   Creating all objects for CPU
+# 2014.02.11 22:54:09 (*)   Generating HDL from CPU objects
+# 2014.02.11 22:54:09 (*)   Creating plain-text HDL
+# 2014.02.11 22:54:10 (*) Done Nios II generation
 
-# 2014.02.11 20:36:48 (*) Running Generator Program for jtag_uart
+# 2014.02.11 22:54:11 (*) Running Generator Program for jtag_uart
 
-# 2014.02.11 20:36:49 (*) Running Generator Program for uart
+# 2014.02.11 22:54:12 (*) Running Generator Program for uart
 
-# 2014.02.11 20:36:51 (*) Running Generator Program for onchip_mem
+# 2014.02.11 22:54:13 (*) Running Generator Program for onchip_mem
 
-# 2014.02.11 20:36:52 (*) Running Generator Program for sysid
+# 2014.02.11 22:54:14 (*) Running Generator Program for sysid
 
-# 2014.02.11 20:36:53 (*) Running Generator Program for timer
+# 2014.02.11 22:54:15 (*) Running Generator Program for timer
 
-# 2014.02.11 20:36:54 (*) Running Generator Program for lcd
+# 2014.02.11 22:54:16 (*) Running Generator Program for lcd
 
-# 2014.02.11 20:36:55 (*) Running Generator Program for sd_clk
+# 2014.02.11 22:54:17 (*) Running Generator Program for sd_clk
 
-# 2014.02.11 20:36:56 (*) Running Generator Program for sd_dat
+# 2014.02.11 22:54:18 (*) Running Generator Program for sd_dat
 
-# 2014.02.11 20:36:56 (*) Running Generator Program for sd_cmd
+# 2014.02.11 22:54:19 (*) Running Generator Program for sd_cmd
 
-# 2014.02.11 20:36:57 (*) Running Generator Program for sd_wp_n
+# 2014.02.11 22:54:20 (*) Running Generator Program for sd_wp_n
 
-# 2014.02.11 20:36:58 (*) Running Generator Program for buttons
+# 2014.02.11 22:54:21 (*) Running Generator Program for buttons
 
-# 2014.02.11 20:36:59 (*) Running Generator Program for switches
+# 2014.02.11 22:54:22 (*) Running Generator Program for switches
 
-# 2014.02.11 20:37:00 (*) Running Generator Program for leds
+# 2014.02.11 22:54:23 (*) Running Generator Program for leds
 
-# 2014.02.11 20:37:01 (*) Running Generator Program for cfi_flash
+# 2014.02.11 22:54:24 (*) Running Generator Program for cfi_flash
 
-# 2014.02.11 20:37:02 (*) Running Generator Program for sdram
+# 2014.02.11 22:54:25 (*) Running Generator Program for sdram
 
-# 2014.02.11 20:37:03 (*) Running Generator Program for lcd_light
+# 2014.02.11 22:54:26 (*) Running Generator Program for lcd_light
 
-# 2014.02.11 20:37:04 (*) Running Generator Program for seg7
+# 2014.02.11 22:54:27 (*) Running Generator Program for seg7
 
-# 2014.02.11 20:37:05 (*) Running Generator Program for profile_timer
+# 2014.02.11 22:54:28 (*) Running Generator Program for profile_timer
 
-# 2014.02.11 20:37:06 (*) Running Generator Program for user_timer
+# 2014.02.11 22:54:29 (*) Running Generator Program for user_timer
 
-# 2014.02.11 20:37:07 (*) Running Generator Program for port_a
+# 2014.02.11 22:54:30 (*) Running Generator Program for port_a
 
-# 2014.02.11 20:37:08 (*) Running Generator Program for key_out
+# 2014.02.11 22:54:31 (*) Running Generator Program for key_out
 
-# 2014.02.11 20:37:09 (*) Running Generator Program for DE0_SOPC_clock_0
+# 2014.02.11 22:54:32 (*) Running Generator Program for DE0_SOPC_clock_0
 
-# 2014.02.11 20:37:11 (*) Running Generator Program for DE0_SOPC_clock_1
+# 2014.02.11 22:54:33 (*) Running Generator Program for DE0_SOPC_clock_1
 
-# 2014.02.11 20:37:12 (*) Running Generator Program for DE0_SOPC_clock_2
+# 2014.02.11 22:54:34 (*) Running Generator Program for DE0_SOPC_clock_2
 
-# 2014.02.11 20:37:13 (*) Running Generator Program for DE0_SOPC_clock_3
+# 2014.02.11 22:54:35 (*) Running Generator Program for DE0_SOPC_clock_3
 
-# 2014.02.11 20:37:14 (*) Running Generator Program for DE0_SOPC_clock_4
+# 2014.02.11 22:54:37 (*) Running Generator Program for DE0_SOPC_clock_4
 
-# 2014.02.11 20:37:15 (*) Running Generator Program for DE0_SOPC_clock_5
+# 2014.02.11 22:54:38 (*) Running Generator Program for DE0_SOPC_clock_5
 
-# 2014.02.11 20:37:17 (*) Running Generator Program for DE0_SOPC_clock_6
+# 2014.02.11 22:54:39 (*) Running Generator Program for DE0_SOPC_clock_6
 
-# 2014.02.11 20:37:18 (*) Running Generator Program for DE0_SOPC_clock_7
+# 2014.02.11 22:54:40 (*) Running Generator Program for DE0_SOPC_clock_7
 
-# 2014.02.11 20:37:19 (*) Running Generator Program for DE0_SOPC_clock_8
+# 2014.02.11 22:54:42 (*) Running Generator Program for DE0_SOPC_clock_8
 
-# 2014.02.11 20:37:21 (*) Running Generator Program for clock_crossing_bridge
+# 2014.02.11 22:54:43 (*) Running Generator Program for clock_crossing_bridge
 
 .
 
 
-# 2014.02.11 20:37:22 (*) Running Test Generator Program for sdram
+# 2014.02.11 22:54:44 (*) Running Test Generator Program for sdram
 
-# 2014.02.11 20:37:23 (*) Making arbitration and system (top) modules.
+# 2014.02.11 22:54:45 (*) Making arbitration and system (top) modules.
 
-# 2014.02.11 20:37:36 (*) Generating Quartus symbol for top level: DE0_SOPC
+# 2014.02.11 22:54:58 (*) Generating Quartus symbol for top level: DE0_SOPC
 
-# 2014.02.11 20:37:36 (*) Generating Symbol C:/Users/Queron/Altera_Systems_Labs/EDM_Standard/DE0_SOPC.bsf
+# 2014.02.11 22:54:58 (*) Symbol C:/Users/Queron/Documents/GitHub/VhdlProjectFiles/Altera_Systems_Labs/EDM_Standard/DE0_SOPC.bsf already exists, no need to regenerate
+# 2014.02.11 22:54:58 (*) Creating command-line system-generation script: C:/Users/Queron/Documents/GitHub/VhdlProjectFiles/Altera_Systems_Labs/EDM_Standard/DE0_SOPC_generation_script
 
-# 2014.02.11 20:37:36 (*) Creating command-line system-generation script: C:/Users/Queron/Altera_Systems_Labs/EDM_Standard/DE0_SOPC_generation_script
-
-# 2014.02.11 20:37:36 (*) Running setup for HDL simulator: modelsim
+# 2014.02.11 22:54:58 (*) Running setup for HDL simulator: modelsim
 
 
-# 2014.02.11 20:37:37 (*) Completed generation for system: DE0_SOPC.
-# 2014.02.11 20:37:37 (*) THE FOLLOWING SYSTEM ITEMS HAVE BEEN GENERATED:
-  SOPC Builder database : C:/Users/Queron/Altera_Systems_Labs/EDM_Standard/DE0_SOPC.ptf 
-  System HDL Model : C:/Users/Queron/Altera_Systems_Labs/EDM_Standard/DE0_SOPC.v 
-  System Generation Script : C:/Users/Queron/Altera_Systems_Labs/EDM_Standard/DE0_SOPC_generation_script 
+# 2014.02.11 22:54:59 (*) Completed generation for system: DE0_SOPC.
+# 2014.02.11 22:54:59 (*) THE FOLLOWING SYSTEM ITEMS HAVE BEEN GENERATED:
+  SOPC Builder database : C:/Users/Queron/Documents/GitHub/VhdlProjectFiles/Altera_Systems_Labs/EDM_Standard/DE0_SOPC.ptf 
+  System HDL Model : C:/Users/Queron/Documents/GitHub/VhdlProjectFiles/Altera_Systems_Labs/EDM_Standard/DE0_SOPC.v 
+  System Generation Script : C:/Users/Queron/Documents/GitHub/VhdlProjectFiles/Altera_Systems_Labs/EDM_Standard/DE0_SOPC_generation_script 
 
-# 2014.02.11 20:37:37 (*) SUCCESS: SYSTEM GENERATION COMPLETED.
+
+# 2014.02.11 22:54:59 (*) SUCCESS: SYSTEM GENERATION COMPLETED.
 
 
 Press 'Exit' to exit.

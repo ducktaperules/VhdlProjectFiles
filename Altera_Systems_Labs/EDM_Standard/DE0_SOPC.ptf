@@ -2689,7 +2689,7 @@ SYSTEM DE0_SOPC
          Has_Clock = "1";
          View 
          {
-            Settings_Summary = "System ID (at last Generate):<br> <b>00000000</b>    (unique ID tag) <br> <b>52FA899C</b> (timestamp: Tue Feb 11, 2014 @8:35 PM)";
+            Settings_Summary = "System ID (at last Generate):<br> <b>00000000</b>    (unique ID tag) <br> <b>52FAA9DF</b> (timestamp: Tue Feb 11, 2014 @10:53 PM)";
             MESSAGES 
             {
             }
@@ -2698,7 +2698,7 @@ SYSTEM DE0_SOPC
       WIZARD_SCRIPT_ARGUMENTS 
       {
          id = "0u";
-         timestamp = "1392150940u";
+         timestamp = "1392159199u";
          regenerate_values = "0";
          MAKE 
          {
@@ -2707,7 +2707,7 @@ SYSTEM DE0_SOPC
                verifysysid 
                {
                   All_Depends_On = "0";
-                  Command = "nios2-download $(JTAG_CABLE)                                --sidp=0x010001d0 --id=0 --timestamp=1392150940";
+                  Command = "nios2-download $(JTAG_CABLE)                                --sidp=0x010001d0 --id=0 --timestamp=1392159199";
                   Is_Phony = "1";
                   Target_File = "dummy_verifysysid_file";
                }

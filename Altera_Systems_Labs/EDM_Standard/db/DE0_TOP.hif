@@ -27710,42 +27710,6 @@ DE0_SOPC:DE0_SOPC_inst|sysid_control_slave_arbitrator:the_sysid_control_slave
 
 # end
 # entity
-sysid
-# storage
-db|DE0_TOP.(302).cnf
-db|DE0_TOP.(302).cnf
-# logic_option {
-AUTO_RAM_RECOGNITION
-ON
-}
-# case_sensitive
-# source_file
-sysid.v
-d12ecb324dda5999dbbb5d5afbbf924
-8
-# internal_option {
-HDL_INITIAL_FANOUT_LIMIT
-OFF
-AUTO_RESOURCE_SHARING
-OFF
-AUTO_RAM_RECOGNITION
-ON
-AUTO_ROM_RECOGNITION
-ON
-IGNORE_VERILOG_INITIAL_CONSTRUCTS
-OFF
-VERILOG_CONSTANT_LOOP_LIMIT
-5000
-VERILOG_NON_CONSTANT_LOOP_LIMIT
-250
-}
-# hierarchies {
-DE0_SOPC:DE0_SOPC_inst|sysid:the_sysid
-}
-# macro_sequence
-
-# end
-# entity
 timer_s1_arbitrator
 # storage
 db|DE0_TOP.(303).cnf
@@ -28029,6 +27993,42 @@ VERILOG_NON_CONSTANT_LOOP_LIMIT
 }
 # hierarchies {
 DE0_SOPC:DE0_SOPC_inst|DE0_SOPC_reset_pll_sdram_domain_synch_module:DE0_SOPC_reset_pll_sdram_domain_synch
+}
+# macro_sequence
+
+# end
+# entity
+sysid
+# storage
+db|DE0_TOP.(302).cnf
+db|DE0_TOP.(302).cnf
+# logic_option {
+AUTO_RAM_RECOGNITION
+ON
+}
+# case_sensitive
+# source_file
+sysid.v
+fbfa4c5b854e4996f85a7e615a6835
+8
+# internal_option {
+HDL_INITIAL_FANOUT_LIMIT
+OFF
+AUTO_RESOURCE_SHARING
+OFF
+AUTO_RAM_RECOGNITION
+ON
+AUTO_ROM_RECOGNITION
+ON
+IGNORE_VERILOG_INITIAL_CONSTRUCTS
+OFF
+VERILOG_CONSTANT_LOOP_LIMIT
+5000
+VERILOG_NON_CONSTANT_LOOP_LIMIT
+250
+}
+# hierarchies {
+DE0_SOPC:DE0_SOPC_inst|sysid:the_sysid
 }
 # macro_sequence
 
