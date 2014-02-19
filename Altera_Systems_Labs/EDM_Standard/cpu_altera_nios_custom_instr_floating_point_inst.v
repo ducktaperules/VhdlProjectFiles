@@ -1,6 +1,6 @@
 // cpu_altera_nios_custom_instr_floating_point_inst.v
 
-// This file was auto-generated as part of a generation operation.
+// This file was auto-generated as part of a SOPC Builder generate operation.
 // If you edit it your changes will probably be lost.
 // 
 // The HDL file this wrapper is instantiating was not analysed successfully.

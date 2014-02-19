@@ -1,7 +1,7 @@
 SYSTEM DE0_SOPC
 {
-   System_Wizard_Version = "11.12";
-   System_Wizard_Build = "259";
+   System_Wizard_Version = "11.01";
+   System_Wizard_Build = "208";
    Builder_Application = "sopc_builder_ca";
    WIZARD_SCRIPT_ARGUMENTS 
    {
@@ -154,7 +154,7 @@ SYSTEM DE0_SOPC
                type = "readdatavalid";
                width = "1";
                direction = "input";
-               Is_Enabled = "0";
+               Is_Enabled = "1";
             }
             PORT i_waitrequest
             {
@@ -203,25 +203,25 @@ SYSTEM DE0_SOPC
          {
             Entry cpu/jtag_debug_module
             {
-               address = "0x00001000";
+               address = "0x02810800";
                span = "0x00000800";
                is_bridge = "0";
             }
             Entry onchip_mem/s1
             {
-               address = "0x00010000";
+               address = "0x02808000";
                span = "0x00007800";
                is_bridge = "0";
             }
             Entry sdram/s1
             {
-               address = "0x02000000";
+               address = "0x01800000";
                span = "0x00800000";
                is_bridge = "0";
             }
             Entry cfi_flash/s1
             {
-               address = "0x02800000";
+               address = "0x02400000";
                span = "0x00400000";
                is_bridge = "0";
             }
@@ -340,130 +340,130 @@ SYSTEM DE0_SOPC
                direction = "output";
                Is_Enabled = "0";
             }
-            PORT D_ci_a
+            PORT A_ci_multi_a
             {
                Is_Enabled = "1";
                direction = "output";
-               type = "a";
+               type = "multi_a";
                width = "5";
             }
-            PORT D_ci_b
+            PORT A_ci_multi_b
             {
                Is_Enabled = "1";
                direction = "output";
-               type = "b";
+               type = "multi_b";
                width = "5";
             }
-            PORT D_ci_c
+            PORT A_ci_multi_c
             {
                Is_Enabled = "1";
                direction = "output";
-               type = "c";
+               type = "multi_c";
                width = "5";
             }
-            PORT D_ci_n
+            PORT A_ci_multi_clk_en
             {
                Is_Enabled = "1";
                direction = "output";
-               type = "n";
-               width = "8";
-            }
-            PORT D_ci_readra
-            {
-               Is_Enabled = "1";
-               direction = "output";
-               type = "readra";
+               type = "multi_clk_en";
                width = "1";
             }
-            PORT D_ci_readrb
-            {
-               Is_Enabled = "1";
-               direction = "output";
-               type = "readrb";
-               width = "1";
-            }
-            PORT D_ci_writerc
-            {
-               Is_Enabled = "1";
-               direction = "output";
-               type = "writerc";
-               width = "1";
-            }
-            PORT E_ci_dataa
-            {
-               Is_Enabled = "1";
-               direction = "output";
-               type = "dataa";
-               width = "32";
-            }
-            PORT E_ci_datab
-            {
-               Is_Enabled = "1";
-               direction = "output";
-               type = "datab";
-               width = "32";
-            }
-            PORT E_ci_multi_clk_en
-            {
-               Is_Enabled = "1";
-               direction = "output";
-               type = "clk_en";
-               width = "1";
-            }
-            PORT E_ci_multi_clock
+            PORT A_ci_multi_clock
             {
                Is_Enabled = "1";
                direction = "output";
                type = "multi_clk";
                width = "1";
             }
-            PORT E_ci_multi_done
+            PORT A_ci_multi_dataa
+            {
+               Is_Enabled = "1";
+               direction = "output";
+               type = "multi_dataa";
+               width = "32";
+            }
+            PORT A_ci_multi_datab
+            {
+               Is_Enabled = "1";
+               direction = "output";
+               type = "multi_datab";
+               width = "32";
+            }
+            PORT A_ci_multi_done
             {
                Is_Enabled = "1";
                direction = "input";
-               type = "done";
+               type = "multi_done";
                width = "1";
             }
-            PORT E_ci_multi_reset
+            PORT A_ci_multi_estatus
+            {
+               Is_Enabled = "1";
+               direction = "output";
+               type = "multi_estatus";
+               width = "1";
+            }
+            PORT A_ci_multi_ipending
+            {
+               Is_Enabled = "1";
+               direction = "output";
+               type = "multi_ipending";
+               width = "32";
+            }
+            PORT A_ci_multi_n
+            {
+               Is_Enabled = "1";
+               direction = "output";
+               type = "multi_n";
+               width = "8";
+            }
+            PORT A_ci_multi_readra
+            {
+               Is_Enabled = "1";
+               direction = "output";
+               type = "multi_readra";
+               width = "1";
+            }
+            PORT A_ci_multi_readrb
+            {
+               Is_Enabled = "1";
+               direction = "output";
+               type = "multi_readrb";
+               width = "1";
+            }
+            PORT A_ci_multi_reset
             {
                Is_Enabled = "1";
                direction = "output";
                type = "multi_reset";
                width = "1";
             }
-            PORT E_ci_multi_start
-            {
-               Is_Enabled = "1";
-               direction = "output";
-               type = "start";
-               width = "1";
-            }
-            PORT E_ci_result
+            PORT A_ci_multi_result
             {
                Is_Enabled = "1";
                direction = "input";
-               type = "result";
+               type = "multi_result";
                width = "32";
             }
-            PORT W_ci_estatus
+            PORT A_ci_multi_start
             {
                Is_Enabled = "1";
                direction = "output";
-               type = "estatus";
+               type = "multi_start";
                width = "1";
             }
-            PORT W_ci_ipending
+            PORT A_ci_multi_status
             {
                Is_Enabled = "1";
                direction = "output";
-               type = "ipending";
-               width = "32";
+               type = "multi_status";
+               width = "1";
             }
-            PORT W_ci_status
+            PORT A_ci_multi_writerc
             {
                Is_Enabled = "1";
                direction = "output";
-               type = "status";
+               type = "multi_writerc";
                width = "1";
             }
             PORT clk
@@ -519,14 +519,14 @@ SYSTEM DE0_SOPC
             MASTERED_BY cpu/instruction_master
             {
                priority = "1";
-               Offset_Address = "0x00001000";
+               Offset_Address = "0x02810800";
             }
             MASTERED_BY cpu/data_master
             {
                priority = "1";
-               Offset_Address = "0x00001000";
+               Offset_Address = "0x02810800";
             }
-            Base_Address = "0x00001000";
+            Base_Address = "0x02810800";
             Is_Readable = "1";
             Is_Writeable = "1";
             Uses_Tri_State_Data_Bus = "0";
@@ -622,7 +622,7 @@ SYSTEM DE0_SOPC
             Data_Width = "32";
             Address_Width = "26";
             Maximum_Burst_Size = "1";
-            Register_Incoming_Signals = "1";
+            Register_Incoming_Signals = "0";
             Register_Outgoing_Signals = "0";
             Interleave_Bursts = "0";
             Linewrap_Bursts = "0";
@@ -678,7 +678,7 @@ SYSTEM DE0_SOPC
                type = "readdatavalid";
                width = "1";
                direction = "input";
-               Is_Enabled = "0";
+               Is_Enabled = "1";
             }
             PORT d_waitrequest
             {
@@ -713,181 +713,181 @@ SYSTEM DE0_SOPC
          {
             Entry cpu/jtag_debug_module
             {
-               address = "0x00001000";
+               address = "0x02810800";
                span = "0x00000800";
                is_bridge = "0";
             }
             Entry onchip_mem/s1
             {
-               address = "0x00010000";
+               address = "0x02808000";
                span = "0x00007800";
                is_bridge = "0";
             }
             Entry cfi_flash/s1
             {
-               address = "0x02800000";
+               address = "0x02400000";
                span = "0x00400000";
                is_bridge = "0";
             }
             Entry sdram/s1
             {
-               address = "0x02000000";
+               address = "0x01800000";
                span = "0x00800000";
                is_bridge = "0";
             }
             Entry jtag_uart/avalon_jtag_slave
             {
-               address = "0x00000010";
+               address = "0x02811010";
                span = "0x00000008";
                is_bridge = "0";
             }
             Entry clock_crossing_bridge/s1
             {
-               address = "0x01000000";
+               address = "0x00000000";
                span = "0x00000200";
                is_bridge = "1";
             }
             Entry leds/s1
             {
-               address = "0x010000c0";
+               address = "0x000000c0";
                span = "0x00000010";
                is_bridge = "0";
             }
             Entry switches/s1
             {
-               address = "0x010000d0";
+               address = "0x000000d0";
                span = "0x00000010";
                is_bridge = "0";
             }
             Entry buttons/s1
             {
-               address = "0x010000e0";
+               address = "0x000000e0";
                span = "0x00000010";
                is_bridge = "0";
             }
             Entry sd_wp_n/s1
             {
-               address = "0x010000f0";
+               address = "0x000000f0";
                span = "0x00000010";
                is_bridge = "0";
             }
             Entry sd_cmd/s1
             {
-               address = "0x01000100";
+               address = "0x00000100";
                span = "0x00000010";
                is_bridge = "0";
             }
             Entry sysid/control_slave
             {
-               address = "0x010001d0";
+               address = "0x000001d0";
                span = "0x00000008";
                is_bridge = "0";
             }
             Entry timer/s1
             {
-               address = "0x01000040";
+               address = "0x00000040";
                span = "0x00000020";
                is_bridge = "0";
             }
             Entry lcd/control_slave
             {
-               address = "0x01000110";
+               address = "0x00000110";
                span = "0x00000010";
                is_bridge = "0";
             }
             Entry sd_clk/s1
             {
-               address = "0x01000120";
+               address = "0x00000120";
                span = "0x00000010";
                is_bridge = "0";
             }
             Entry sd_dat/s1
             {
-               address = "0x01000130";
+               address = "0x00000130";
                span = "0x00000010";
                is_bridge = "0";
             }
             Entry lcd_light/s1
             {
-               address = "0x01000140";
+               address = "0x00000140";
                span = "0x00000010";
                is_bridge = "0";
             }
             Entry uart/s1
             {
-               address = "0x01000060";
+               address = "0x00000060";
                span = "0x00000020";
                is_bridge = "0";
             }
             Entry seg7/s1
             {
-               address = "0x01000150";
+               address = "0x00000150";
                span = "0x00000010";
                is_bridge = "0";
             }
             Entry profile_timer/s1
             {
-               address = "0x01000000";
+               address = "0x00000000";
                span = "0x00000040";
                is_bridge = "0";
             }
             Entry user_timer/s1
             {
-               address = "0x01000080";
+               address = "0x00000080";
                span = "0x00000020";
                is_bridge = "0";
             }
             Entry port_a/s1
             {
-               address = "0x010000a0";
+               address = "0x000000a0";
                span = "0x00000020";
                is_bridge = "0";
             }
             Entry key_out/s1
             {
-               address = "0x01000160";
+               address = "0x00000160";
                span = "0x00000010";
                is_bridge = "0";
             }
             Entry my_pwm_0/avalon_slave_0
             {
-               address = "0x01000170";
+               address = "0x00000170";
                span = "0x00000010";
                is_bridge = "0";
             }
             Entry my_pwm_1/avalon_slave_0
             {
-               address = "0x01000180";
+               address = "0x00000180";
                span = "0x00000010";
                is_bridge = "0";
             }
             Entry my_pwm_2/avalon_slave_0
             {
-               address = "0x01000190";
+               address = "0x00000190";
                span = "0x00000010";
                is_bridge = "0";
             }
             Entry my_pwm_3/avalon_slave_0
             {
-               address = "0x010001a0";
+               address = "0x000001a0";
                span = "0x00000010";
                is_bridge = "0";
             }
             Entry my_pwm_4/avalon_slave_0
             {
-               address = "0x010001b0";
+               address = "0x000001b0";
                span = "0x00000010";
                is_bridge = "0";
             }
             Entry my_pwm_5/avalon_slave_0
             {
-               address = "0x010001c0";
+               address = "0x000001c0";
                span = "0x00000010";
                is_bridge = "0";
             }
             Entry altpll_0/pll_slave
             {
-               address = "0x00000000";
+               address = "0x02811000";
                span = "0x00000010";
                is_bridge = "0";
             }
@@ -895,32 +895,32 @@ SYSTEM DE0_SOPC
       }
       WIZARD_SCRIPT_ARGUMENTS 
       {
-         cache_has_dcache = "0";
-         cache_dcache_size = "0";
-         cache_dcache_line_size = "0";
+         cache_has_dcache = "1";
+         cache_dcache_size = "4096";
+         cache_dcache_line_size = "32";
          cache_dcache_bursts = "0";
          cache_dcache_ram_block_type = "AUTO";
          num_tightly_coupled_data_masters = "0";
          gui_num_tightly_coupled_data_masters = "0";
          gui_include_tightly_coupled_data_masters = "0";
          gui_omit_avalon_data_master = "0";
-         cache_has_icache = "0";
-         cache_icache_size = "0";
-         cache_icache_line_size = "0";
+         cache_has_icache = "1";
+         cache_icache_size = "4096";
+         cache_icache_line_size = "32";
          cache_icache_ram_block_type = "AUTO";
          cache_icache_bursts = "0";
          num_tightly_coupled_instruction_masters = "0";
          gui_num_tightly_coupled_instruction_masters = "0";
          gui_include_tightly_coupled_instruction_masters = "0";
-         debug_level = "2";
+         debug_level = "5";
          include_oci = "1";
-         oci_num_xbrk = "0";
-         oci_num_dbrk = "0";
-         oci_dbrk_trace = "0";
-         oci_dbrk_pairs = "0";
-         oci_onchip_trace = "0";
-         oci_offchip_trace = "0";
-         oci_data_trace = "0";
+         oci_num_xbrk = "4";
+         oci_num_dbrk = "4";
+         oci_dbrk_trace = "1";
+         oci_dbrk_pairs = "1";
+         oci_onchip_trace = "1";
+         oci_offchip_trace = "1";
+         oci_data_trace = "1";
          include_third_party_debug_port = "0";
          oci_trace_addr_width = "7";
          oci_debugreq_signals = "0";
@@ -952,11 +952,11 @@ SYSTEM DE0_SOPC
          export_pcb = "0";
          big_endian = "0";
          avalon_debug_port_present = "0";
-         illegal_instructions_trap = "0";
+         illegal_instructions_trap = "1";
          illegal_memory_access_detection = "0";
          illegal_mem_exc = "0";
          slave_access_error_exc = "0";
-         division_error_exc = "0";
+         division_error_exc = "1";
          eic_present = "0";
          num_shadow_reg_sets = "0";
          gui_mmu_present = "0";
@@ -974,12 +974,12 @@ SYSTEM DE0_SOPC
          mpu_min_data_region_size_log2 = "12";
          mpu_min_inst_region_size_log2 = "12";
          mpu_use_limit = "0";
-         hardware_divide_present = "0";
-         gui_hardware_divide_setting = "0";
-         hardware_multiply_present = "0";
-         hardware_multiply_impl = "no_mul";
-         shift_rot_impl = "small_le_shift";
-         gui_hardware_multiply_setting = "no_mul_small_le_shift";
+         hardware_divide_present = "1";
+         gui_hardware_divide_setting = "1";
+         hardware_multiply_present = "1";
+         hardware_multiply_impl = "embedded_mul";
+         shift_rot_impl = "fast_le_shift";
+         gui_hardware_multiply_setting = "embedded_mul_fast_le_shift";
          reset_slave = "cfi_flash/s1";
          break_slave = "cpu/jtag_debug_module";
          exc_slave = "onchip_mem/s1";
@@ -987,8 +987,8 @@ SYSTEM DE0_SOPC
          break_offset = "0x00000020";
          exc_offset = "0x00000020";
          cpu_reset = "0";
-         CPU_Implementation = "tiny";
-         cpu_selection = "e";
+         CPU_Implementation = "fast";
+         cpu_selection = "f";
          device_family_id = "CYCLONEIII";
          address_stall_present = "1";
          dsp_block_supports_shift = "0";
@@ -1058,53 +1058,53 @@ SYSTEM DE0_SOPC
             }
             CONSTANT nasys_has_icache
             {
-               value = "0";
+               value = "1";
                comment = "True if instruction cache present";
             }
             CONSTANT nasys_icache_size
             {
-               value = "0";
+               value = "4096";
                comment = "Size in bytes of instruction cache";
             }
             CONSTANT nasys_icache_line_size
             {
-               value = "0";
+               value = "32";
                comment = "Size in bytes of each icache line";
             }
             CONSTANT nasys_icache_line_size_log2
             {
-               value = "-Infinity";
+               value = "5";
                comment = "Log2 size in bytes of each icache line";
             }
             CONSTANT nasys_has_dcache
             {
-               value = "0";
+               value = "1";
                comment = "True if instruction cache present";
             }
             CONSTANT nasys_dcache_size
             {
-               value = "0";
+               value = "4096";
                comment = "Size in bytes of data cache";
             }
             CONSTANT nasys_dcache_line_size
             {
-               value = "0";
+               value = "32";
                comment = "Size in bytes of each dcache line";
             }
             CONSTANT nasys_dcache_line_size_log2
             {
-               value = "-Infinity";
+               value = "5";
                comment = "Log2 size in bytes of each dcache line";
             }
          }
-         license_status = "none_required";
+         license_status = "encrypted";
          mainmem_slave = "sdram/s1";
          datamem_slave = "sdram/s1";
          maincomm_slave = "";
          germs_monitor_id = "";
       }
       class = "altera_nios2";
-      class_version = "7.08111";
+      class_version = "7.08110";
       SYSTEM_BUILDER_INFO 
       {
          Is_Enabled = "1";
@@ -1113,14 +1113,14 @@ SYSTEM DE0_SOPC
          Parameters_Signature = "";
          Is_CPU = "1";
          Instantiate_In_System_Module = "1";
-         Required_Device_Family = "STRATIX,STRATIXGX,STRATIXII,STRATIXIIGX,STRATIXIIGXLITE,STRATIXIII,STRATIXIV,STRATIXV,CYCLONE,CYCLONEII,CYCLONEIII,CYCLONEIVE,CYCLONEV,HARDCOPYIII,ARRIAII,ARRIAIIGZ,ARRIAV,TARPON,HARDCOPYIV,STINGRAY";
+         Required_Device_Family = "STRATIX,STRATIXGX,STRATIXII,STRATIXIIGX,STRATIXIIGXLITE,STRATIXIII,STRATIXIV,STRATIXV,CYCLONE,CYCLONEII,CYCLONEIII,CYCLONEIVE,HARDCOPYIII,ARRIAII,ARRIAIIGZ,TARPON,HARDCOPYIV,STINGRAY";
          Default_Module_Name = "cpu";
          Top_Level_Ports_Are_Enumerated = "1";
          View 
          {
-            Settings_Summary = "Nios II/e
-            
-            
+            Settings_Summary = "Nios II/f
+            <br>&nbsp;&nbsp;4-Kbyte Instruction Cache
+            <br>&nbsp;&nbsp;4-Kbyte Data Cache
             <br>&nbsp;&nbsp;JTAG Debug Module
             ";
             MESSAGES 
@@ -1134,7 +1134,7 @@ SYSTEM DE0_SOPC
          PLI_Files = "";
          Precompiled_Simulation_Library_Files = "";
          Simulation_HDL_Files = "";
-         Synthesis_HDL_Files = "__PROJECT_DIRECTORY__/cpu_test_bench.v, __PROJECT_DIRECTORY__/cpu_oci_test_bench.v, __PROJECT_DIRECTORY__/cpu_jtag_debug_module_tck.v, __PROJECT_DIRECTORY__/cpu_jtag_debug_module_sysclk.v, __PROJECT_DIRECTORY__/cpu_jtag_debug_module_wrapper.v, __PROJECT_DIRECTORY__/cpu.v";
+         Synthesis_HDL_Files = "__PROJECT_DIRECTORY__/cpu_test_bench.v, __PROJECT_DIRECTORY__/cpu_mult_cell.v, __PROJECT_DIRECTORY__/cpu_oci_test_bench.v, __PROJECT_DIRECTORY__/cpu_jtag_debug_module_tck.v, __PROJECT_DIRECTORY__/cpu_jtag_debug_module_sysclk.v, __PROJECT_DIRECTORY__/cpu_jtag_debug_module_wrapper.v, __PROJECT_DIRECTORY__/cpu.v";
          Synthesis_Only_Files = "";
       }
       MASTER tightly_coupled_instruction_master_0
@@ -1345,25 +1345,25 @@ SYSTEM DE0_SOPC
          {
             width = "1";
             direction = "output";
-            Is_Enabled = "0";
+            Is_Enabled = "1";
          }
          PORT jtag_debug_offchip_trace_clk
          {
             width = "1";
             direction = "output";
-            Is_Enabled = "0";
+            Is_Enabled = "1";
          }
          PORT jtag_debug_offchip_trace_data
          {
             width = "18";
             direction = "output";
-            Is_Enabled = "0";
+            Is_Enabled = "1";
          }
          PORT clkx2
          {
             width = "1";
             direction = "input";
-            Is_Enabled = "0";
+            Is_Enabled = "1";
             visible = "0";
          }
       }
@@ -1374,433 +1374,895 @@ SYSTEM DE0_SOPC
             SIGNAL aaa
             {
                format = "Logic";
-               name = "d_irq";
+               name = "i_readdata";
                radix = "hexadecimal";
             }
             SIGNAL aab
             {
                format = "Logic";
-               name = "d_waitrequest";
+               name = "i_readdatavalid";
                radix = "hexadecimal";
             }
             SIGNAL aac
             {
                format = "Logic";
-               name = "d_address";
+               name = "i_waitrequest";
                radix = "hexadecimal";
             }
             SIGNAL aad
             {
                format = "Logic";
-               name = "d_byteenable";
+               name = "i_address";
                radix = "hexadecimal";
             }
             SIGNAL aae
             {
                format = "Logic";
-               name = "d_read";
+               name = "i_read";
                radix = "hexadecimal";
             }
             SIGNAL aaf
             {
                format = "Logic";
-               name = "d_readdata";
+               name = "clk";
                radix = "hexadecimal";
             }
             SIGNAL aag
             {
                format = "Logic";
-               name = "d_write";
+               name = "reset_n";
                radix = "hexadecimal";
             }
             SIGNAL aah
             {
                format = "Logic";
-               name = "d_writedata";
+               name = "d_readdata";
                radix = "hexadecimal";
             }
             SIGNAL aai
             {
                format = "Logic";
-               name = "i_waitrequest";
+               name = "d_waitrequest";
                radix = "hexadecimal";
             }
             SIGNAL aaj
             {
                format = "Logic";
-               name = "i_address";
+               name = "d_address";
                radix = "hexadecimal";
             }
             SIGNAL aak
             {
                format = "Logic";
-               name = "i_read";
+               name = "d_byteenable";
                radix = "hexadecimal";
             }
             SIGNAL aal
             {
                format = "Logic";
-               name = "i_readdata";
+               name = "d_read";
                radix = "hexadecimal";
             }
             SIGNAL aam
             {
                format = "Logic";
-               name = "E_ci_dataa";
+               name = "d_write";
                radix = "hexadecimal";
             }
             SIGNAL aan
             {
                format = "Logic";
-               name = "E_ci_datab";
+               name = "d_writedata";
                radix = "hexadecimal";
             }
             SIGNAL aao
             {
                format = "Logic";
-               name = "W_ci_ipending";
+               name = "d_irq";
                radix = "hexadecimal";
             }
             SIGNAL aap
             {
                format = "Logic";
-               name = "W_ci_status";
+               name = "d_readdatavalid";
                radix = "hexadecimal";
             }
             SIGNAL aaq
             {
                format = "Logic";
-               name = "W_ci_estatus";
+               name = "A_ci_multi_dataa";
                radix = "hexadecimal";
             }
             SIGNAL aar
             {
                format = "Logic";
-               name = "D_ci_n";
+               name = "A_ci_multi_datab";
                radix = "hexadecimal";
             }
             SIGNAL aas
             {
                format = "Logic";
-               name = "D_ci_a";
+               name = "A_ci_multi_ipending";
                radix = "hexadecimal";
             }
             SIGNAL aat
             {
                format = "Logic";
-               name = "D_ci_b";
+               name = "A_ci_multi_status";
                radix = "hexadecimal";
             }
             SIGNAL aau
             {
                format = "Logic";
-               name = "D_ci_c";
+               name = "A_ci_multi_estatus";
                radix = "hexadecimal";
             }
             SIGNAL aav
             {
                format = "Logic";
-               name = "D_ci_readra";
+               name = "A_ci_multi_n";
                radix = "hexadecimal";
             }
             SIGNAL aaw
             {
                format = "Logic";
-               name = "D_ci_readrb";
+               name = "A_ci_multi_a";
                radix = "hexadecimal";
             }
             SIGNAL aax
             {
                format = "Logic";
-               name = "D_ci_writerc";
+               name = "A_ci_multi_b";
                radix = "hexadecimal";
             }
             SIGNAL aay
             {
                format = "Logic";
-               name = "E_ci_result";
+               name = "A_ci_multi_c";
                radix = "hexadecimal";
             }
             SIGNAL aaz
             {
                format = "Logic";
-               name = "E_ci_multi_clk_en";
+               name = "A_ci_multi_readra";
                radix = "hexadecimal";
             }
             SIGNAL aba
             {
                format = "Logic";
-               name = "E_ci_multi_clock";
+               name = "A_ci_multi_readrb";
                radix = "hexadecimal";
             }
             SIGNAL abb
             {
                format = "Logic";
-               name = "E_ci_multi_reset";
+               name = "A_ci_multi_writerc";
                radix = "hexadecimal";
             }
             SIGNAL abc
             {
                format = "Logic";
-               name = "E_ci_multi_start";
+               name = "A_ci_multi_result";
                radix = "hexadecimal";
             }
             SIGNAL abd
             {
                format = "Logic";
-               name = "E_ci_multi_done";
+               name = "A_ci_multi_clk_en";
                radix = "hexadecimal";
             }
             SIGNAL abe
             {
-               format = "Divider";
-               name = "common";
-               radix = "";
+               format = "Logic";
+               name = "A_ci_multi_start";
+               radix = "hexadecimal";
             }
             SIGNAL abf
+            {
+               format = "Logic";
+               name = "A_ci_multi_done";
+               radix = "hexadecimal";
+            }
+            SIGNAL abg
+            {
+               format = "Divider";
+               name = "base pipeline";
+               radix = "";
+            }
+            SIGNAL abh
             {
                format = "Logic";
                name = "clk";
                radix = "hexadecimal";
             }
-            SIGNAL abg
+            SIGNAL abi
             {
                format = "Logic";
                name = "reset_n";
                radix = "hexadecimal";
             }
-            SIGNAL abh
+            SIGNAL abj
+            {
+               format = "Logic";
+               name = "D_stall";
+               radix = "hexadecimal";
+            }
+            SIGNAL abk
+            {
+               format = "Logic";
+               name = "A_stall";
+               radix = "hexadecimal";
+            }
+            SIGNAL abl
             {
                format = "Logic";
                name = "F_pcb_nxt";
                radix = "hexadecimal";
             }
-            SIGNAL abi
+            SIGNAL abm
             {
                format = "Logic";
                name = "F_pcb";
                radix = "hexadecimal";
             }
-            SIGNAL abj
-            {
-               format = "Logic";
-               name = "F_vinst";
-               radix = "ascii";
-            }
-            SIGNAL abk
-            {
-               format = "Logic";
-               name = "D_vinst";
-               radix = "ascii";
-            }
-            SIGNAL abl
-            {
-               format = "Logic";
-               name = "R_vinst";
-               radix = "ascii";
-            }
-            SIGNAL abm
-            {
-               format = "Logic";
-               name = "E_vinst";
-               radix = "ascii";
-            }
             SIGNAL abn
             {
                format = "Logic";
-               name = "W_vinst";
-               radix = "ascii";
+               name = "D_pcb";
+               radix = "hexadecimal";
             }
             SIGNAL abo
             {
                format = "Logic";
-               name = "F_valid";
+               name = "E_pcb";
                radix = "hexadecimal";
             }
             SIGNAL abp
             {
                format = "Logic";
-               name = "D_valid";
+               name = "M_pcb";
                radix = "hexadecimal";
             }
             SIGNAL abq
             {
                format = "Logic";
-               name = "R_valid";
+               name = "A_pcb";
                radix = "hexadecimal";
             }
             SIGNAL abr
             {
                format = "Logic";
-               name = "E_valid";
+               name = "W_pcb";
                radix = "hexadecimal";
             }
             SIGNAL abs
             {
                format = "Logic";
-               name = "W_valid";
-               radix = "hexadecimal";
+               name = "F_vinst";
+               radix = "ascii";
             }
             SIGNAL abt
             {
                format = "Logic";
-               name = "D_wr_dst_reg";
-               radix = "hexadecimal";
+               name = "D_vinst";
+               radix = "ascii";
             }
             SIGNAL abu
             {
                format = "Logic";
-               name = "D_dst_regnum";
-               radix = "hexadecimal";
+               name = "E_vinst";
+               radix = "ascii";
             }
             SIGNAL abv
             {
                format = "Logic";
-               name = "W_wr_data";
-               radix = "hexadecimal";
+               name = "M_vinst";
+               radix = "ascii";
             }
             SIGNAL abw
             {
                format = "Logic";
-               name = "F_iw";
-               radix = "hexadecimal";
+               name = "A_vinst";
+               radix = "ascii";
             }
             SIGNAL abx
             {
                format = "Logic";
-               name = "D_iw";
-               radix = "hexadecimal";
+               name = "W_vinst";
+               radix = "ascii";
             }
             SIGNAL aby
             {
-               format = "Divider";
-               name = "breaks";
-               radix = "";
+               format = "Logic";
+               name = "F_inst_ram_hit";
+               radix = "hexadecimal";
             }
             SIGNAL abz
             {
                format = "Logic";
-               name = "hbreak_req";
+               name = "F_iw_valid";
                radix = "hexadecimal";
             }
             SIGNAL aca
             {
                format = "Logic";
-               name = "oci_hbreak_req";
+               name = "F_issue";
                radix = "hexadecimal";
             }
             SIGNAL acb
             {
                format = "Logic";
-               name = "hbreak_enabled";
+               name = "F_kill";
                radix = "hexadecimal";
             }
             SIGNAL acc
             {
                format = "Logic";
-               name = "wait_for_one_post_bret_inst";
+               name = "D_kill";
                radix = "hexadecimal";
             }
             SIGNAL acd
             {
-               format = "Divider";
-               name = "custom_instruction";
-               radix = "";
+               format = "Logic";
+               name = "D_refetch";
+               radix = "hexadecimal";
             }
             SIGNAL ace
             {
                format = "Logic";
-               name = "R_ctrl_custom";
+               name = "D_issue";
                radix = "hexadecimal";
             }
             SIGNAL acf
             {
                format = "Logic";
-               name = "R_ctrl_custom_multi";
+               name = "D_valid";
                radix = "hexadecimal";
             }
             SIGNAL acg
             {
                format = "Logic";
-               name = "E_ci_dataa";
+               name = "D_rdprs_stall";
                radix = "hexadecimal";
             }
             SIGNAL ach
             {
                format = "Logic";
-               name = "E_ci_datab";
+               name = "D_rdprs_stall_done";
                radix = "hexadecimal";
             }
             SIGNAL aci
             {
                format = "Logic";
-               name = "W_ipending_reg";
+               name = "E_valid";
                radix = "hexadecimal";
             }
             SIGNAL acj
             {
                format = "Logic";
-               name = "W_status_reg";
+               name = "M_valid";
                radix = "hexadecimal";
             }
             SIGNAL ack
             {
                format = "Logic";
-               name = "W_estatus_reg";
+               name = "A_valid";
                radix = "hexadecimal";
             }
             SIGNAL acl
             {
                format = "Logic";
-               name = "D_ci_n";
+               name = "W_valid";
                radix = "hexadecimal";
             }
             SIGNAL acm
             {
                format = "Logic";
-               name = "D_ci_readra";
+               name = "W_wr_dst_reg";
                radix = "hexadecimal";
             }
             SIGNAL acn
             {
                format = "Logic";
-               name = "D_ci_readrb";
+               name = "W_dst_regnum";
                radix = "hexadecimal";
             }
             SIGNAL aco
             {
                format = "Logic";
-               name = "D_ci_writerc";
+               name = "W_wr_data";
                radix = "hexadecimal";
             }
             SIGNAL acp
             {
                format = "Logic";
-               name = "E_ci_result";
+               name = "D_en";
                radix = "hexadecimal";
             }
             SIGNAL acq
             {
                format = "Logic";
-               name = "E_ci_multi_clk_en";
+               name = "E_en";
                radix = "hexadecimal";
             }
             SIGNAL acr
             {
                format = "Logic";
-               name = "E_ci_multi_start";
+               name = "M_en";
                radix = "hexadecimal";
             }
             SIGNAL acs
             {
                format = "Logic";
-               name = "E_ci_multi_done";
+               name = "A_en";
                radix = "hexadecimal";
             }
             SIGNAL act
             {
                format = "Logic";
-               name = "E_ci_multi_stall";
+               name = "F_iw";
+               radix = "hexadecimal";
+            }
+            SIGNAL acu
+            {
+               format = "Logic";
+               name = "D_iw";
+               radix = "hexadecimal";
+            }
+            SIGNAL acv
+            {
+               format = "Logic";
+               name = "E_iw";
+               radix = "hexadecimal";
+            }
+            SIGNAL acw
+            {
+               format = "Logic";
+               name = "M_pipe_flush";
+               radix = "hexadecimal";
+            }
+            SIGNAL acx
+            {
+               format = "Logic";
+               name = "M_pipe_flush_baddr";
+               radix = "hexadecimal";
+            }
+            SIGNAL acy
+            {
+               format = "Logic";
+               name = "norm_intr_req";
+               radix = "hexadecimal";
+            }
+            SIGNAL acz
+            {
+               format = "Logic";
+               name = "W_status_reg";
+               radix = "hexadecimal";
+            }
+            SIGNAL ada
+            {
+               format = "Logic";
+               name = "W_status_reg_pie";
+               radix = "hexadecimal";
+            }
+            SIGNAL adb
+            {
+               format = "Logic";
+               name = "W_estatus_reg";
+               radix = "hexadecimal";
+            }
+            SIGNAL adc
+            {
+               format = "Logic";
+               name = "W_estatus_reg_pie";
+               radix = "hexadecimal";
+            }
+            SIGNAL add
+            {
+               format = "Logic";
+               name = "W_bstatus_reg";
+               radix = "hexadecimal";
+            }
+            SIGNAL ade
+            {
+               format = "Logic";
+               name = "W_bstatus_reg_pie";
+               radix = "hexadecimal";
+            }
+            SIGNAL adf
+            {
+               format = "Logic";
+               name = "W_ienable_reg";
+               radix = "hexadecimal";
+            }
+            SIGNAL adg
+            {
+               format = "Logic";
+               name = "W_ienable_reg_irq0";
+               radix = "hexadecimal";
+            }
+            SIGNAL adh
+            {
+               format = "Logic";
+               name = "W_ienable_reg_irq1";
+               radix = "hexadecimal";
+            }
+            SIGNAL adi
+            {
+               format = "Logic";
+               name = "W_ienable_reg_irq2";
+               radix = "hexadecimal";
+            }
+            SIGNAL adj
+            {
+               format = "Logic";
+               name = "W_ienable_reg_irq3";
+               radix = "hexadecimal";
+            }
+            SIGNAL adk
+            {
+               format = "Logic";
+               name = "W_ienable_reg_irq4";
+               radix = "hexadecimal";
+            }
+            SIGNAL adl
+            {
+               format = "Logic";
+               name = "W_ienable_reg_irq5";
+               radix = "hexadecimal";
+            }
+            SIGNAL adm
+            {
+               format = "Logic";
+               name = "W_ienable_reg_irq6";
+               radix = "hexadecimal";
+            }
+            SIGNAL adn
+            {
+               format = "Logic";
+               name = "W_ienable_reg_irq7";
+               radix = "hexadecimal";
+            }
+            SIGNAL ado
+            {
+               format = "Logic";
+               name = "W_ipending_reg";
+               radix = "hexadecimal";
+            }
+            SIGNAL adp
+            {
+               format = "Logic";
+               name = "W_ipending_reg_irq0";
+               radix = "hexadecimal";
+            }
+            SIGNAL adq
+            {
+               format = "Logic";
+               name = "W_ipending_reg_irq1";
+               radix = "hexadecimal";
+            }
+            SIGNAL adr
+            {
+               format = "Logic";
+               name = "W_ipending_reg_irq2";
+               radix = "hexadecimal";
+            }
+            SIGNAL ads
+            {
+               format = "Logic";
+               name = "W_ipending_reg_irq3";
+               radix = "hexadecimal";
+            }
+            SIGNAL adt
+            {
+               format = "Logic";
+               name = "W_ipending_reg_irq4";
+               radix = "hexadecimal";
+            }
+            SIGNAL adu
+            {
+               format = "Logic";
+               name = "W_ipending_reg_irq5";
+               radix = "hexadecimal";
+            }
+            SIGNAL adv
+            {
+               format = "Logic";
+               name = "W_ipending_reg_irq6";
+               radix = "hexadecimal";
+            }
+            SIGNAL adw
+            {
+               format = "Logic";
+               name = "W_ipending_reg_irq7";
+               radix = "hexadecimal";
+            }
+            SIGNAL adx
+            {
+               format = "Logic";
+               name = "W_cpuid_reg";
+               radix = "hexadecimal";
+            }
+            SIGNAL ady
+            {
+               format = "Logic";
+               name = "A_pipe_flush";
+               radix = "hexadecimal";
+            }
+            SIGNAL adz
+            {
+               format = "Logic";
+               name = "A_pipe_flush_baddr";
+               radix = "hexadecimal";
+            }
+            SIGNAL aea
+            {
+               format = "Divider";
+               name = "exceptions";
+               radix = "";
+            }
+            SIGNAL aeb
+            {
+               format = "Logic";
+               name = "E_exc_trap_inst_pri10";
+               radix = "hexadecimal";
+            }
+            SIGNAL aec
+            {
+               format = "Logic";
+               name = "E_exc_unimp_inst_pri10";
+               radix = "hexadecimal";
+            }
+            SIGNAL aed
+            {
+               format = "Logic";
+               name = "E_exc_break_inst_pri10";
+               radix = "hexadecimal";
+            }
+            SIGNAL aee
+            {
+               format = "Logic";
+               name = "E_exc_illegal_inst_pri10";
+               radix = "hexadecimal";
+            }
+            SIGNAL aef
+            {
+               format = "Logic";
+               name = "E_exc_div_error_pri10";
+               radix = "hexadecimal";
+            }
+            SIGNAL aeg
+            {
+               format = "Logic";
+               name = "M_exc_hbreak_pri1";
+               radix = "hexadecimal";
+            }
+            SIGNAL aeh
+            {
+               format = "Logic";
+               name = "M_exc_norm_intr_pri3";
+               radix = "hexadecimal";
+            }
+            SIGNAL aei
+            {
+               format = "Logic";
+               name = "M_exc_break_inst_pri10";
+               radix = "hexadecimal";
+            }
+            SIGNAL aej
+            {
+               format = "Logic";
+               name = "M_exc_norm_intr_pri3";
+               radix = "hexadecimal";
+            }
+            SIGNAL aek
+            {
+               format = "Logic";
+               name = "M_exc_break";
+               radix = "hexadecimal";
+            }
+            SIGNAL ael
+            {
+               format = "Logic";
+               name = "M_refetch";
+               radix = "hexadecimal";
+            }
+            SIGNAL aem
+            {
+               format = "Logic";
+               name = "M_cancel";
+               radix = "hexadecimal";
+            }
+            SIGNAL aen
+            {
+               format = "Logic";
+               name = "M_ignore_exc";
+               radix = "hexadecimal";
+            }
+            SIGNAL aeo
+            {
+               format = "Logic";
+               name = "M_exc_any";
+               radix = "hexadecimal";
+            }
+            SIGNAL aep
+            {
+               format = "Logic";
+               name = "M_exc_allowed";
+               radix = "hexadecimal";
+            }
+            SIGNAL aeq
+            {
+               format = "Logic";
+               name = "A_exc_allowed";
+               radix = "hexadecimal";
+            }
+            SIGNAL aer
+            {
+               format = "Logic";
+               name = "A_exc_any ";
+               radix = "hexadecimal";
+            }
+            SIGNAL aes
+            {
+               format = "Logic";
+               name = "A_exc_break";
+               radix = "hexadecimal";
+            }
+            SIGNAL aet
+            {
+               format = "Logic";
+               name = "A_exc_crst";
+               radix = "hexadecimal";
+            }
+            SIGNAL aeu
+            {
+               format = "Logic";
+               name = "A_exc_ext_intr";
+               radix = "hexadecimal";
+            }
+            SIGNAL aev
+            {
+               format = "Logic";
+               name = "A_exc_any_active";
+               radix = "hexadecimal";
+            }
+            SIGNAL aew
+            {
+               format = "Logic";
+               name = "A_exc_break_active";
+               radix = "hexadecimal";
+            }
+            SIGNAL aex
+            {
+               format = "Logic";
+               name = "A_exc_active_no_break_no_crst";
+               radix = "hexadecimal";
+            }
+            SIGNAL aey
+            {
+               format = "Logic";
+               name = "A_exc_active_no_break";
+               radix = "hexadecimal";
+            }
+            SIGNAL aez
+            {
+               format = "Logic";
+               name = "A_exc_shadow_active";
+               radix = "hexadecimal";
+            }
+            SIGNAL afa
+            {
+               format = "Logic";
+               name = "A_exc_wr_ea_ba";
+               radix = "hexadecimal";
+            }
+            SIGNAL afb
+            {
+               format = "Logic";
+               name = "A_wr_dst_reg";
+               radix = "hexadecimal";
+            }
+            SIGNAL afc
+            {
+               format = "Logic";
+               name = "W_debug_mode_nxt";
+               radix = "hexadecimal";
+            }
+            SIGNAL afd
+            {
+               format = "Divider";
+               name = "multicycle_custom_instruction";
+               radix = "";
+            }
+            SIGNAL afe
+            {
+               format = "Logic";
+               name = "A_ctrl_custom_multi";
+               radix = "hexadecimal";
+            }
+            SIGNAL aff
+            {
+               format = "Logic";
+               name = "A_ci_multi_dataa";
+               radix = "hexadecimal";
+            }
+            SIGNAL afg
+            {
+               format = "Logic";
+               name = "A_ci_multi_datab";
+               radix = "hexadecimal";
+            }
+            SIGNAL afh
+            {
+               format = "Logic";
+               name = "A_ci_multi_ipending";
+               radix = "hexadecimal";
+            }
+            SIGNAL afi
+            {
+               format = "Logic";
+               name = "A_ci_multi_status";
+               radix = "hexadecimal";
+            }
+            SIGNAL afj
+            {
+               format = "Logic";
+               name = "A_ci_multi_estatus";
+               radix = "hexadecimal";
+            }
+            SIGNAL afk
+            {
+               format = "Logic";
+               name = "A_ci_multi_n";
+               radix = "hexadecimal";
+            }
+            SIGNAL afl
+            {
+               format = "Logic";
+               name = "A_ci_multi_readra";
+               radix = "hexadecimal";
+            }
+            SIGNAL afm
+            {
+               format = "Logic";
+               name = "A_ci_multi_readrb";
+               radix = "hexadecimal";
+            }
+            SIGNAL afn
+            {
+               format = "Logic";
+               name = "A_ci_multi_writerc";
+               radix = "hexadecimal";
+            }
+            SIGNAL afo
+            {
+               format = "Logic";
+               name = "A_ci_multi_result";
+               radix = "hexadecimal";
+            }
+            SIGNAL afp
+            {
+               format = "Logic";
+               name = "A_ci_multi_clk_en";
+               radix = "hexadecimal";
+            }
+            SIGNAL afq
+            {
+               format = "Logic";
+               name = "A_ci_multi_start";
+               radix = "hexadecimal";
+            }
+            SIGNAL afr
+            {
+               format = "Logic";
+               name = "A_ci_multi_done";
+               radix = "hexadecimal";
+            }
+            SIGNAL afs
+            {
+               format = "Logic";
+               name = "A_ci_multi_stall";
                radix = "hexadecimal";
             }
          }
@@ -1937,14 +2399,14 @@ SYSTEM DE0_SOPC
             MASTERED_BY cpu/data_master
             {
                priority = "1";
-               Offset_Address = "0x00000010";
+               Offset_Address = "0x02811010";
             }
-            Base_Address = "0x00000010";
+            Base_Address = "0x02811010";
             Address_Group = "0";
          }
       }
       class = "altera_avalon_jtag_uart";
-      class_version = "7.08111";
+      class_version = "7.08110";
       iss_model_name = "altera_avalon_jtag_uart";
       WIZARD_SCRIPT_ARGUMENTS 
       {
@@ -2185,7 +2647,7 @@ SYSTEM DE0_SOPC
                priority = "1";
                Offset_Address = "0x00000060";
             }
-            Base_Address = "0x01000060";
+            Base_Address = "0x00000060";
             Address_Group = "0";
          }
       }
@@ -2221,7 +2683,7 @@ SYSTEM DE0_SOPC
          }
       }
       class = "altera_avalon_uart";
-      class_version = "7.08111";
+      class_version = "7.08110";
       iss_model_name = "altera_avalon_uart";
       SYSTEM_BUILDER_INFO 
       {
@@ -2438,14 +2900,14 @@ SYSTEM DE0_SOPC
             MASTERED_BY cpu/instruction_master
             {
                priority = "1";
-               Offset_Address = "0x00010000";
+               Offset_Address = "0x02808000";
             }
             MASTERED_BY cpu/data_master
             {
                priority = "1";
-               Offset_Address = "0x00010000";
+               Offset_Address = "0x02808000";
             }
-            Base_Address = "0x00010000";
+            Base_Address = "0x02808000";
             Address_Group = "0";
             Has_IRQ = "0";
             Is_Channel = "1";
@@ -2493,7 +2955,7 @@ SYSTEM DE0_SOPC
                onchip_mem 
                {
                   Command1 = "@echo Post-processing to create $(notdir $@)";
-                  Command2 = "elf2hex $(ELF) 0x00010000 0x177FF --width=32 $(QUARTUS_PROJECT_DIR)/onchip_mem.hex --create-lanes=0 ";
+                  Command2 = "elf2hex $(ELF) 0x02808000 0x280F7FF --width=32 $(QUARTUS_PROJECT_DIR)/onchip_mem.hex --create-lanes=0 ";
                   Dependency = "$(ELF)";
                   Target_File = "$(QUARTUS_PROJECT_DIR)/onchip_mem.hex";
                }
@@ -2567,7 +3029,7 @@ SYSTEM DE0_SOPC
          }
       }
       class = "altera_avalon_onchip_memory2";
-      class_version = "7.08111";
+      class_version = "7.08110";
       HDL_INFO 
       {
          Precompiled_Simulation_Library_Files = "";
@@ -2671,13 +3133,13 @@ SYSTEM DE0_SOPC
                priority = "1";
                Offset_Address = "0x000001d0";
             }
-            Base_Address = "0x010001d0";
+            Base_Address = "0x000001d0";
             Has_IRQ = "0";
             Address_Group = "0";
          }
       }
       class = "altera_avalon_sysid";
-      class_version = "7.08111";
+      class_version = "7.08110";
       SYSTEM_BUILDER_INFO 
       {
          Date_Modified = "";
@@ -2689,7 +3151,7 @@ SYSTEM DE0_SOPC
          Has_Clock = "1";
          View 
          {
-            Settings_Summary = "System ID (at last Generate):<br> <b>00000000</b>    (unique ID tag) <br> <b>52FAA9DF</b> (timestamp: Tue Feb 11, 2014 @10:53 PM)";
+            Settings_Summary = "System ID (at last Generate):<br> <b>00000000</b>    (unique ID tag) <br> <b>52FD07B6</b> (timestamp: Thu Feb 13, 2014 @5:58 PM)";
             MESSAGES 
             {
             }
@@ -2698,7 +3160,7 @@ SYSTEM DE0_SOPC
       WIZARD_SCRIPT_ARGUMENTS 
       {
          id = "0u";
-         timestamp = "1392159199u";
+         timestamp = "1392314294u";
          regenerate_values = "0";
          MAKE 
          {
@@ -2707,7 +3169,7 @@ SYSTEM DE0_SOPC
                verifysysid 
                {
                   All_Depends_On = "0";
-                  Command = "nios2-download $(JTAG_CABLE)                                --sidp=0x010001d0 --id=0 --timestamp=1392159199";
+                  Command = "nios2-download $(JTAG_CABLE)                                --sidp=0x000001d0 --id=0 --timestamp=1392314294";
                   Is_Phony = "1";
                   Target_File = "dummy_verifysysid_file";
                }
@@ -2827,12 +3289,12 @@ SYSTEM DE0_SOPC
                priority = "1";
                Offset_Address = "0x00000040";
             }
-            Base_Address = "0x01000040";
+            Base_Address = "0x00000040";
             Address_Group = "0";
          }
       }
       class = "altera_avalon_timer";
-      class_version = "7.08111";
+      class_version = "7.08110";
       iss_model_name = "altera_avalon_timer";
       SYSTEM_BUILDER_INFO 
       {
@@ -2972,7 +3434,7 @@ SYSTEM DE0_SOPC
                priority = "1";
                Offset_Address = "0x00000110";
             }
-            Base_Address = "0x01000110";
+            Base_Address = "0x00000110";
             Has_IRQ = "0";
             Address_Group = "0";
          }
@@ -3012,7 +3474,7 @@ SYSTEM DE0_SOPC
       {
       }
       class = "altera_avalon_lcd_16207";
-      class_version = "7.08111";
+      class_version = "7.08110";
       SYSTEM_BUILDER_INFO 
       {
          Is_Enabled = "1";
@@ -3126,7 +3588,7 @@ SYSTEM DE0_SOPC
                priority = "1";
                Offset_Address = "0x00000120";
             }
-            Base_Address = "0x01000120";
+            Base_Address = "0x00000120";
             Has_IRQ = "0";
             Address_Group = "0";
             Is_Readable = "0";
@@ -3156,7 +3618,7 @@ SYSTEM DE0_SOPC
          }
       }
       class = "altera_avalon_pio";
-      class_version = "7.08111";
+      class_version = "7.08110";
       SYSTEM_BUILDER_INFO 
       {
          Is_Enabled = "1";
@@ -3290,7 +3752,7 @@ SYSTEM DE0_SOPC
                priority = "1";
                Offset_Address = "0x00000130";
             }
-            Base_Address = "0x01000130";
+            Base_Address = "0x00000130";
             Has_IRQ = "0";
             Address_Group = "0";
             Is_Readable = "1";
@@ -3320,7 +3782,7 @@ SYSTEM DE0_SOPC
          }
       }
       class = "altera_avalon_pio";
-      class_version = "7.08111";
+      class_version = "7.08110";
       SYSTEM_BUILDER_INFO 
       {
          Is_Enabled = "1";
@@ -3454,7 +3916,7 @@ SYSTEM DE0_SOPC
                priority = "1";
                Offset_Address = "0x00000100";
             }
-            Base_Address = "0x01000100";
+            Base_Address = "0x00000100";
             Has_IRQ = "0";
             Address_Group = "0";
             Is_Readable = "1";
@@ -3484,7 +3946,7 @@ SYSTEM DE0_SOPC
          }
       }
       class = "altera_avalon_pio";
-      class_version = "7.08111";
+      class_version = "7.08110";
       SYSTEM_BUILDER_INFO 
       {
          Is_Enabled = "1";
@@ -3597,7 +4059,7 @@ SYSTEM DE0_SOPC
                priority = "1";
                Offset_Address = "0x000000f0";
             }
-            Base_Address = "0x010000f0";
+            Base_Address = "0x000000f0";
             Has_IRQ = "0";
             Address_Group = "0";
             Is_Readable = "1";
@@ -3627,7 +4089,7 @@ SYSTEM DE0_SOPC
          }
       }
       class = "altera_avalon_pio";
-      class_version = "7.08111";
+      class_version = "7.08110";
       SYSTEM_BUILDER_INFO 
       {
          Is_Enabled = "1";
@@ -3773,7 +4235,7 @@ SYSTEM DE0_SOPC
                priority = "1";
                Offset_Address = "0x000000e0";
             }
-            Base_Address = "0x010000e0";
+            Base_Address = "0x000000e0";
             Address_Group = "0";
             Is_Readable = "1";
             Is_Writable = "1";
@@ -3802,7 +4264,7 @@ SYSTEM DE0_SOPC
          }
       }
       class = "altera_avalon_pio";
-      class_version = "7.08111";
+      class_version = "7.08110";
       SYSTEM_BUILDER_INFO 
       {
          Is_Enabled = "1";
@@ -3948,7 +4410,7 @@ SYSTEM DE0_SOPC
                priority = "1";
                Offset_Address = "0x000000d0";
             }
-            Base_Address = "0x010000d0";
+            Base_Address = "0x000000d0";
             Address_Group = "0";
             Is_Readable = "1";
             Is_Writable = "1";
@@ -3977,7 +4439,7 @@ SYSTEM DE0_SOPC
          }
       }
       class = "altera_avalon_pio";
-      class_version = "7.08111";
+      class_version = "7.08110";
       SYSTEM_BUILDER_INFO 
       {
          Is_Enabled = "1";
@@ -4111,7 +4573,7 @@ SYSTEM DE0_SOPC
                priority = "1";
                Offset_Address = "0x000000c0";
             }
-            Base_Address = "0x010000c0";
+            Base_Address = "0x000000c0";
             Has_IRQ = "0";
             Address_Group = "0";
             Is_Readable = "0";
@@ -4141,7 +4603,7 @@ SYSTEM DE0_SOPC
          }
       }
       class = "altera_avalon_pio";
-      class_version = "7.08111";
+      class_version = "7.08110";
       SYSTEM_BUILDER_INFO 
       {
          Is_Enabled = "1";
@@ -4266,9 +4728,9 @@ SYSTEM DE0_SOPC
             MASTERED_BY tristate_bridge/tristate_master
             {
                priority = "1";
-               Offset_Address = "0x02800000";
+               Offset_Address = "0x02400000";
             }
-            Base_Address = "0x02800000";
+            Base_Address = "0x02400000";
             Has_IRQ = "0";
             Simulation_Num_Lanes = "1";
             Convert_Xs_To_0 = "1";
@@ -4306,7 +4768,7 @@ SYSTEM DE0_SOPC
                {
                   BOOT_COPIER = "boot_loader_cfi.srec";
                   CPU_CLASS = "altera_nios2";
-                  CPU_RESET_ADDRESS = "0x2800000";
+                  CPU_RESET_ADDRESS = "0x2400000";
                }
             }
             TARGET delete_placeholder_warning
@@ -4323,7 +4785,7 @@ SYSTEM DE0_SOPC
                cfi_flash 
                {
                   Command1 = "@echo Post-processing to create $(notdir $@)";
-                  Command2 = "elf2flash --input=$(ELF) --flash= --boot=$(DBL_QUOTE)$(shell $(DBL_QUOTE)$(QUARTUS_ROOTDIR)/sopc_builder/bin/find_sopc_component_dir$(DBL_QUOTE) $(CPU_CLASS) $(QUARTUS_PROJECT_DIR))/$(BOOT_COPIER)$(DBL_QUOTE) --outfile=$(CFI_FLASH_FLASHTARGET_ALT_SIM_PREFIX)cfi_flash.flash --sim_optimize=$(ALT_SIM_OPTIMIZE) --base=0x2800000 --end=0x2BFFFFF --reset=$(CPU_RESET_ADDRESS) ";
+                  Command2 = "elf2flash --input=$(ELF) --flash= --boot=$(DBL_QUOTE)$(shell $(DBL_QUOTE)$(QUARTUS_ROOTDIR)/sopc_builder/bin/find_sopc_component_dir$(DBL_QUOTE) $(CPU_CLASS) $(QUARTUS_PROJECT_DIR))/$(BOOT_COPIER)$(DBL_QUOTE) --outfile=$(CFI_FLASH_FLASHTARGET_ALT_SIM_PREFIX)cfi_flash.flash --sim_optimize=$(ALT_SIM_OPTIMIZE) --base=0x2400000 --end=0x27FFFFF --reset=$(CPU_RESET_ADDRESS) ";
                   Dependency = "$(ELF)";
                   Target_File = "$(CFI_FLASH_FLASHTARGET_ALT_SIM_PREFIX)cfi_flash.flash";
                }
@@ -4358,7 +4820,7 @@ SYSTEM DE0_SOPC
          }
       }
       class = "altera_avalon_cfi_flash";
-      class_version = "7.08111";
+      class_version = "7.08110";
       iss_model_name = "altera_avalon_flash";
       HDL_INFO 
       {
@@ -4448,7 +4910,7 @@ SYSTEM DE0_SOPC
          {
             Entry cfi_flash/s1
             {
-               address = "0x02800000";
+               address = "0x02400000";
                span = "0x00400000";
                is_bridge = "0";
             }
@@ -4458,7 +4920,7 @@ SYSTEM DE0_SOPC
       {
       }
       class = "altera_avalon_tri_state_bridge";
-      class_version = "7.08111";
+      class_version = "7.08110";
       SYSTEM_BUILDER_INFO 
       {
          Is_Enabled = "1";
@@ -4646,14 +5108,14 @@ SYSTEM DE0_SOPC
             MASTERED_BY cpu/data_master
             {
                priority = "1";
-               Offset_Address = "0x02000000";
+               Offset_Address = "0x01800000";
             }
             MASTERED_BY cpu/instruction_master
             {
                priority = "1";
-               Offset_Address = "0x02000000";
+               Offset_Address = "0x01800000";
             }
-            Base_Address = "0x02000000";
+            Base_Address = "0x01800000";
             Has_IRQ = "0";
             Simulation_Num_Lanes = "1";
             Address_Group = "0";
@@ -5046,7 +5508,7 @@ SYSTEM DE0_SOPC
          }
       }
       class = "altera_avalon_new_sdram_controller";
-      class_version = "7.08111";
+      class_version = "7.08110";
       HDL_INFO 
       {
          Precompiled_Simulation_Library_Files = "";
@@ -5145,7 +5607,7 @@ SYSTEM DE0_SOPC
                priority = "1";
                Offset_Address = "0x00000140";
             }
-            Base_Address = "0x01000140";
+            Base_Address = "0x00000140";
             Has_IRQ = "0";
             Address_Group = "0";
             Is_Readable = "0";
@@ -5175,7 +5637,7 @@ SYSTEM DE0_SOPC
          }
       }
       class = "altera_avalon_pio";
-      class_version = "7.08111";
+      class_version = "7.08110";
       SYSTEM_BUILDER_INFO 
       {
          Is_Enabled = "1";
@@ -5274,13 +5736,6 @@ SYSTEM DE0_SOPC
                direction = "input";
                Is_Enabled = "1";
             }
-            PORT slave_byteenable
-            {
-               type = "byteenable";
-               width = "4";
-               direction = "input";
-               Is_Enabled = "1";
-            }
             PORT slave_readdata
             {
                type = "readdata";
@@ -5300,6 +5755,13 @@ SYSTEM DE0_SOPC
                type = "waitrequest";
                width = "1";
                direction = "output";
+               Is_Enabled = "1";
+            }
+            PORT slave_byteenable
+            {
+               type = "byteenable";
+               width = "4";
+               direction = "input";
                Is_Enabled = "1";
             }
             PORT slave_endofpacket
@@ -5344,11 +5806,11 @@ SYSTEM DE0_SOPC
             MASTERED_BY cpu/data_master
             {
                priority = "1";
-               Offset_Address = "0x01000000";
+               Offset_Address = "0x00000000";
             }
             Clock_Source = "pll_cpu";
             Has_Clock = "1";
-            Base_Address = "0x01000000";
+            Base_Address = "0x00000000";
             Address_Group = "0";
             IRQ_MASTER cpu/data_master
             {
@@ -5409,13 +5871,6 @@ SYSTEM DE0_SOPC
                direction = "output";
                Is_Enabled = "1";
             }
-            PORT master_byteenable
-            {
-               type = "byteenable";
-               width = "4";
-               direction = "output";
-               Is_Enabled = "1";
-            }
             PORT master_readdata
             {
                type = "readdata";
@@ -5435,6 +5890,13 @@ SYSTEM DE0_SOPC
                type = "waitrequest";
                width = "1";
                direction = "input";
+               Is_Enabled = "1";
+            }
+            PORT master_byteenable
+            {
+               type = "byteenable";
+               width = "4";
+               direction = "output";
                Is_Enabled = "1";
             }
             PORT master_endofpacket
@@ -5612,7 +6074,7 @@ SYSTEM DE0_SOPC
          }
       }
       class = "altera_avalon_clock_crossing";
-      class_version = "7.08111";
+      class_version = "7.08110";
       iss_model_name = "altera_avalon_clock_crossing";
       WIZARD_SCRIPT_ARGUMENTS 
       {
@@ -5744,7 +6206,7 @@ SYSTEM DE0_SOPC
                priority = "1";
                Offset_Address = "0x00000150";
             }
-            Base_Address = "0x01000150";
+            Base_Address = "0x00000150";
             Has_IRQ = "0";
             Address_Group = "0";
             Is_Readable = "0";
@@ -5774,7 +6236,7 @@ SYSTEM DE0_SOPC
          }
       }
       class = "altera_avalon_pio";
-      class_version = "7.08111";
+      class_version = "7.08110";
       SYSTEM_BUILDER_INFO 
       {
          Is_Enabled = "1";
@@ -5920,12 +6382,12 @@ SYSTEM DE0_SOPC
                priority = "1";
                Offset_Address = "0x00000000";
             }
-            Base_Address = "0x01000000";
+            Base_Address = "0x00000000";
             Address_Group = "0";
          }
       }
       class = "altera_avalon_timer";
-      class_version = "7.08111";
+      class_version = "7.08110";
       iss_model_name = "altera_avalon_timer";
       SYSTEM_BUILDER_INFO 
       {
@@ -6070,12 +6532,12 @@ SYSTEM DE0_SOPC
                priority = "1";
                Offset_Address = "0x00000080";
             }
-            Base_Address = "0x01000080";
+            Base_Address = "0x00000080";
             Address_Group = "0";
          }
       }
       class = "altera_avalon_timer";
-      class_version = "7.08111";
+      class_version = "7.08110";
       iss_model_name = "altera_avalon_timer";
       SYSTEM_BUILDER_INFO 
       {
@@ -6220,7 +6682,7 @@ SYSTEM DE0_SOPC
                priority = "1";
                Offset_Address = "0x000000a0";
             }
-            Base_Address = "0x010000a0";
+            Base_Address = "0x000000a0";
             Address_Group = "0";
             Is_Readable = "1";
             Is_Writable = "1";
@@ -6249,7 +6711,7 @@ SYSTEM DE0_SOPC
          }
       }
       class = "altera_avalon_pio";
-      class_version = "7.08111";
+      class_version = "7.08110";
       SYSTEM_BUILDER_INFO 
       {
          Is_Enabled = "1";
@@ -6383,7 +6845,7 @@ SYSTEM DE0_SOPC
                priority = "1";
                Offset_Address = "0x00000160";
             }
-            Base_Address = "0x01000160";
+            Base_Address = "0x00000160";
             Has_IRQ = "0";
             Address_Group = "0";
             Is_Readable = "0";
@@ -6413,7 +6875,7 @@ SYSTEM DE0_SOPC
          }
       }
       class = "altera_avalon_pio";
-      class_version = "7.08111";
+      class_version = "7.08110";
       SYSTEM_BUILDER_INFO 
       {
          Is_Enabled = "1";
@@ -6548,9 +7010,9 @@ SYSTEM DE0_SOPC
             MASTERED_BY cpu/data_master
             {
                priority = "1";
-               Offset_Address = "0x00000000";
+               Offset_Address = "0x02811000";
             }
-            Base_Address = "0x00000000";
+            Base_Address = "0x02811000";
             Address_Group = "0";
             IRQ_MASTER cpu/data_master
             {
@@ -6611,7 +7073,7 @@ SYSTEM DE0_SOPC
          }
       }
       class = "no_legacy_module";
-      class_version = "7.08111";
+      class_version = "7.08110";
       gtf_class_name = "altpll";
       gtf_class_version = "11.0";
       SYSTEM_BUILDER_INFO 
@@ -6727,7 +7189,7 @@ SYSTEM DE0_SOPC
                priority = "1";
                Offset_Address = "0x00000170";
             }
-            Base_Address = "0x01000170";
+            Base_Address = "0x00000170";
             Address_Group = "0";
          }
       }
@@ -6742,7 +7204,7 @@ SYSTEM DE0_SOPC
          }
       }
       class = "no_legacy_module";
-      class_version = "7.08111";
+      class_version = "7.08110";
       gtf_class_name = "my_pwm";
       gtf_class_version = "1.0";
       SYSTEM_BUILDER_INFO 
@@ -6751,7 +7213,7 @@ SYSTEM DE0_SOPC
          Instantiate_In_System_Module = "1";
          Is_Bridge = "0";
          Is_Enabled = "1";
-         Clock_Source = "clk";
+         Clock_Source = "pll_io";
          Has_Clock = "1";
          View 
          {
@@ -6859,7 +7321,7 @@ SYSTEM DE0_SOPC
                priority = "1";
                Offset_Address = "0x00000180";
             }
-            Base_Address = "0x01000180";
+            Base_Address = "0x00000180";
             Address_Group = "0";
          }
       }
@@ -6874,7 +7336,7 @@ SYSTEM DE0_SOPC
          }
       }
       class = "no_legacy_module";
-      class_version = "7.08111";
+      class_version = "7.08110";
       gtf_class_name = "my_pwm";
       gtf_class_version = "1.0";
       SYSTEM_BUILDER_INFO 
@@ -6883,7 +7345,7 @@ SYSTEM DE0_SOPC
          Instantiate_In_System_Module = "1";
          Is_Bridge = "0";
          Is_Enabled = "1";
-         Clock_Source = "clk";
+         Clock_Source = "pll_io";
          Has_Clock = "1";
          View 
          {
@@ -6991,7 +7453,7 @@ SYSTEM DE0_SOPC
                priority = "1";
                Offset_Address = "0x00000190";
             }
-            Base_Address = "0x01000190";
+            Base_Address = "0x00000190";
             Address_Group = "0";
          }
       }
@@ -7006,7 +7468,7 @@ SYSTEM DE0_SOPC
          }
       }
       class = "no_legacy_module";
-      class_version = "7.08111";
+      class_version = "7.08110";
       gtf_class_name = "my_pwm";
       gtf_class_version = "1.0";
       SYSTEM_BUILDER_INFO 
@@ -7015,7 +7477,7 @@ SYSTEM DE0_SOPC
          Instantiate_In_System_Module = "1";
          Is_Bridge = "0";
          Is_Enabled = "1";
-         Clock_Source = "clk";
+         Clock_Source = "pll_io";
          Has_Clock = "1";
          View 
          {
@@ -7123,7 +7585,7 @@ SYSTEM DE0_SOPC
                priority = "1";
                Offset_Address = "0x000001a0";
             }
-            Base_Address = "0x010001a0";
+            Base_Address = "0x000001a0";
             Address_Group = "0";
          }
       }
@@ -7138,7 +7600,7 @@ SYSTEM DE0_SOPC
          }
       }
       class = "no_legacy_module";
-      class_version = "7.08111";
+      class_version = "7.08110";
       gtf_class_name = "my_pwm";
       gtf_class_version = "1.0";
       SYSTEM_BUILDER_INFO 
@@ -7147,7 +7609,7 @@ SYSTEM DE0_SOPC
          Instantiate_In_System_Module = "1";
          Is_Bridge = "0";
          Is_Enabled = "1";
-         Clock_Source = "clk";
+         Clock_Source = "pll_io";
          Has_Clock = "1";
          View 
          {
@@ -7255,7 +7717,7 @@ SYSTEM DE0_SOPC
                priority = "1";
                Offset_Address = "0x000001b0";
             }
-            Base_Address = "0x010001b0";
+            Base_Address = "0x000001b0";
             Address_Group = "0";
          }
       }
@@ -7270,7 +7732,7 @@ SYSTEM DE0_SOPC
          }
       }
       class = "no_legacy_module";
-      class_version = "7.08111";
+      class_version = "7.08110";
       gtf_class_name = "my_pwm";
       gtf_class_version = "1.0";
       SYSTEM_BUILDER_INFO 
@@ -7279,7 +7741,7 @@ SYSTEM DE0_SOPC
          Instantiate_In_System_Module = "1";
          Is_Bridge = "0";
          Is_Enabled = "1";
-         Clock_Source = "clk";
+         Clock_Source = "pll_io";
          Has_Clock = "1";
          View 
          {
@@ -7387,7 +7849,7 @@ SYSTEM DE0_SOPC
                priority = "1";
                Offset_Address = "0x000001c0";
             }
-            Base_Address = "0x010001c0";
+            Base_Address = "0x000001c0";
             Address_Group = "0";
          }
       }
@@ -7402,7 +7864,7 @@ SYSTEM DE0_SOPC
          }
       }
       class = "no_legacy_module";
-      class_version = "7.08111";
+      class_version = "7.08110";
       gtf_class_name = "my_pwm";
       gtf_class_version = "1.0";
       SYSTEM_BUILDER_INFO 
@@ -7411,7 +7873,7 @@ SYSTEM DE0_SOPC
          Instantiate_In_System_Module = "1";
          Is_Bridge = "0";
          Is_Enabled = "1";
-         Clock_Source = "clk";
+         Clock_Source = "pll_io";
          Has_Clock = "1";
          View 
          {
@@ -7514,9 +7976,9 @@ SYSTEM DE0_SOPC
          }
       }
       class = "no_legacy_module";
-      class_version = "7.08111";
+      class_version = "7.08110";
       gtf_class_name = "altera_nios_custom_instr_floating_point";
-      gtf_class_version = "11.1";
+      gtf_class_version = "11.0";
       SYSTEM_BUILDER_INFO 
       {
          Do_Not_Generate = "1";
@@ -7533,7 +7995,7 @@ SYSTEM DE0_SOPC
       }
       HDL_INFO 
       {
-         Simulation_HDL_Files = "C:/altera/11.1sp2/ip/altera/nios2_ip/altera_nios_custom_instr_floating_point_qsys/fpoint_wrapper.v,C:/altera/11.1sp2/ip/altera/nios2_ip/altera_nios_custom_instr_floating_point_qsys/fpoint_qsys.v,C:/altera/11.1sp2/ip/altera/nios2_ip/altera_nios_custom_instr_floating_point_qsys/fpoint_hw_qsys.v,__PROJECT_DIRECTORY__/cpu_altera_nios_custom_instr_floating_point_inst.v";
+         Simulation_HDL_Files = "/altera/11.0/ip/altera/nios2_ip/altera_nios_custom_instr_floating_point_qsys/fpoint_wrapper.v,/altera/11.0/ip/altera/nios2_ip/altera_nios_custom_instr_floating_point_qsys/fpoint_qsys.v,/altera/11.0/ip/altera/nios2_ip/altera_nios_custom_instr_floating_point_qsys/fpoint_hw_qsys.v,__PROJECT_DIRECTORY__/cpu_altera_nios_custom_instr_floating_point_inst.v";
       }
       WIZARD_SCRIPT_ARGUMENTS 
       {

@@ -54,8 +54,7 @@ set WIZARD_NAME "ALTPLL"
 # |       to run it at all.
 # |
 
-source "C:/altera/11.1sp2/ip/altera/sopc_builder_ip/altera_avalon_mega_common/sopc_mwizc.tcl"
-#source "/usr/altera/11.0sp1/ip/altera/sopc_builder_ip/altera_avalon_mega_common/sopc_mwizc.tcl"
+source "/usr/altera/11.0sp1/ip/altera/sopc_builder_ip/altera_avalon_mega_common/sopc_mwizc.tcl"
 
 # |
 # +---------------------------------------------------------

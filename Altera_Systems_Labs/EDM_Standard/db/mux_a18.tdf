@@ -1,5 +1,5 @@
 --lpm_mux DEVICE_FAMILY="Cyclone III" LPM_SIZE=2 LPM_WIDTH=1 LPM_WIDTHS=1 data result sel
---VERSION_BEGIN 11.1SP2 cbx_lpm_mux 2012:01:25:21:13:53:SJ cbx_mgl 2012:01:25:21:15:41:SJ  VERSION_END
+--VERSION_BEGIN 11.0SP1 cbx_lpm_mux 2011:07:03:21:10:33:SJ cbx_mgl 2011:07:03:21:11:41:SJ  VERSION_END
 
 
 -- Copyright (C) 1991-2011 Altera Corporation

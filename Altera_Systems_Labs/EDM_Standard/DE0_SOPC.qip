@@ -26,7 +26,7 @@ set_global_assignment -name SOURCE_FILE [file join $::quartus(qip_path) cpu.ocp]
 # port_a
 # key_out
 # altpll_0
-set_global_assignment -name TCL_FILE [file join $::quartus(qip_path) altera_avalon_altpll_hw.tcl]
+set_global_assignment -name TCL_FILE [file join $::quartus(ip_rootpath) altera/sopc_builder_ip/altera_avalon_altpll/altera_avalon_altpll_hw.tcl]
 set_global_assignment -name VERILOG_FILE [file join $::quartus(qip_path) altpll_0.v]
 # my_pwm_0
 set_global_assignment -name TCL_FILE [file join $::quartus(qip_path) my_pwm_hw.tcl]
@@ -50,7 +50,5 @@ set_global_assignment -name VERILOG_FILE [file join $::quartus(ip_rootpath) alte
 set_global_assignment -name VERILOG_FILE [file join $::quartus(qip_path) cpu_altera_nios_custom_instr_floating_point_inst.v]
 # null
 set_global_assignment -name SDC_FILE [file join $::quartus(ip_rootpath) altera/sopc_builder_ip/altera_avalon_clock_adapter/altera_avalon_clock_adapter.sdc]
-set_global_assignment -name SOPC_BUILDER_SIGNATURE_ID "A0481C233F82000001442327B8D0"
-set_global_assignment -entity "DE0_SOPC" -name IP_TOOL_NAME "sopc"
-set_global_assignment -entity "DE0_SOPC" -name IP_TOOL_VERSION "11.1sp2"
-set_global_assignment -entity "DE0_SOPC" -name IP_TOOL_ENV "sopc"
+set_global_assignment -name SOPC_BUILDER_SIGNATURE_ID 2C27D725AFB9000001442C6A06F9 
+ 

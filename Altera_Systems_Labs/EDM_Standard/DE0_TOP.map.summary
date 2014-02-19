@@ -1,14 +1,14 @@
-Analysis & Synthesis Status : Successful - Tue Feb 11 22:56:11 2014
-Quartus II 32-bit Version : 11.1 Build 259 01/25/2012 SP 2.11 SJ Web Edition
+Analysis & Synthesis Status : Successful - Thu Feb 13 18:06:24 2014
+Quartus II Version : 11.0 Build 208 07/03/2011 SP 1 SJ Full Version
 Revision Name : DE0_TOP
 Top-level Entity Name : DE0_TOP
 Family : Cyclone III
-Total logic elements : 8,032
-    Total combinational functions : 5,730
-    Dedicated logic registers : 5,075
-Total registers : 5075
+Total logic elements : 12,088
+    Total combinational functions : 9,525
+    Dedicated logic registers : 6,828
+Total registers : 6828
 Total pins : 183
 Total virtual pins : 0
-Total memory bits : 259,955
-Embedded Multiplier 9-bit elements : 7
+Total memory bits : 335,731
+Embedded Multiplier 9-bit elements : 11
 Total PLLs : 1

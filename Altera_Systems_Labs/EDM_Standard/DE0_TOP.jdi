@@ -1,8 +1,4 @@
 <sld_project_info>
-  <file_info>
-    <file checksum="0x00577D2D" device="EP3C16F484C6" path="DE0_TOP.sof" usercode="0xFFFFFFFF"/>
-    <file checksum="0x055440BB" device="EPCS4" path="DE0_TOP.pof" usercode="0x00000000"/>
-  </file_info>
   <hub_info ir_width="2" node_count="2"/>
   <node_info>
     <node hpath="DE0_SOPC:DE0_SOPC_inst|cpu:the_cpu|cpu_nios2_oci:the_cpu_nios2_oci|cpu_jtag_debug_module_wrapper:the_cpu_jtag_debug_module_wrapper|sld_virtual_jtag_basic:cpu_jtag_debug_module_phy|sld_virtual_jtag_impl:sld_virtual_jtag_impl_inst" instance_id="0" mfg_id="70" node_id="34" sld_node_info="0x19104600" version="3">

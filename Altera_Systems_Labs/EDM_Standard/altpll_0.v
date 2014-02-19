@@ -1,5 +1,5 @@
 //altpll_avalon avalon_use_separate_sysclk="NO" CBX_SINGLE_OUTPUT_FILE="ON" CBX_SUBMODULE_USED_PORTS="altpll:areset,clk,locked,inclk" address areset c0 c1 c2 c3 clk locked phasedone read readdata reset write writedata bandwidth_type="AUTO" clk0_divide_by=1 clk0_duty_cycle=50 clk0_multiply_by=1 clk0_phase_shift="0" clk1_divide_by=1 clk1_duty_cycle=50 clk1_multiply_by=1 clk1_phase_shift="-3333" clk2_divide_by=5 clk2_duty_cycle=50 clk2_multiply_by=1 clk2_phase_shift="0" clk3_divide_by=2 clk3_duty_cycle=50 clk3_multiply_by=1 clk3_phase_shift="0" compensate_clock="CLK0" device_family="CYCLONEIII" inclk0_input_frequency=20000 intended_device_family="Cyclone III" operation_mode="normal" pll_type="AUTO" port_clk0="PORT_USED" port_clk1="PORT_USED" port_clk2="PORT_USED" port_clk3="PORT_USED" port_clk4="PORT_UNUSED" port_clk5="PORT_UNUSED" port_extclk0="PORT_UNUSED" port_extclk1="PORT_UNUSED" port_extclk2="PORT_UNUSED" port_extclk3="PORT_UNUSED" port_inclk1="PORT_UNUSED" port_phasecounterselect="PORT_UNUSED" port_phasedone="PORT_UNUSED" port_scandata="PORT_UNUSED" port_scandataout="PORT_UNUSED" width_clock=5
-//VERSION_BEGIN 11.1SP2 cbx_altclkbuf 2012:01:25:21:13:53:SJ cbx_altiobuf_bidir 2012:01:25:21:13:53:SJ cbx_altiobuf_in 2012:01:25:21:13:53:SJ cbx_altiobuf_out 2012:01:25:21:13:53:SJ cbx_altpll 2012:01:25:21:13:53:SJ cbx_altpll_avalon 2012:01:25:21:13:53:SJ cbx_cycloneii 2012:01:25:21:13:53:SJ cbx_lpm_add_sub 2012:01:25:21:13:53:SJ cbx_lpm_compare 2012:01:25:21:13:53:SJ cbx_lpm_decode 2012:01:25:21:13:53:SJ cbx_lpm_mux 2012:01:25:21:13:53:SJ cbx_lpm_shiftreg 2012:01:25:21:13:53:SJ cbx_mgl 2012:01:25:21:15:41:SJ cbx_stratix 2012:01:25:21:13:53:SJ cbx_stratixii 2012:01:25:21:13:53:SJ cbx_stratixiii 2012:01:25:21:13:53:SJ cbx_stratixv 2012:01:25:21:13:53:SJ cbx_util_mgl 2012:01:25:21:13:53:SJ  VERSION_END
+//VERSION_BEGIN 11.0SP1 cbx_altclkbuf 2011:07:03:21:10:32:SJ cbx_altiobuf_bidir 2011:07:03:21:10:33:SJ cbx_altiobuf_in 2011:07:03:21:10:33:SJ cbx_altiobuf_out 2011:07:03:21:10:33:SJ cbx_altpll 2011:07:03:21:10:33:SJ cbx_altpll_avalon 2011:07:03:21:10:33:SJ cbx_cycloneii 2011:07:03:21:10:33:SJ cbx_lpm_add_sub 2011:07:03:21:10:33:SJ cbx_lpm_compare 2011:07:03:21:10:33:SJ cbx_lpm_decode 2011:07:03:21:10:33:SJ cbx_lpm_mux 2011:07:03:21:10:33:SJ cbx_lpm_shiftreg 2011:07:03:21:10:33:SJ cbx_mgl 2011:07:03:21:11:41:SJ cbx_stratix 2011:07:03:21:10:33:SJ cbx_stratixii 2011:07:03:21:10:33:SJ cbx_stratixiii 2011:07:03:21:10:33:SJ cbx_stratixv 2011:07:03:21:10:33:SJ cbx_util_mgl 2011:07:03:21:10:33:SJ  VERSION_END
 // synthesis VERILOG_INPUT_VERSION VERILOG_2001
 // altera message_off 10463
 
@@ -23,11 +23,11 @@
 
 
 //altera_std_synchronizer CBX_SINGLE_OUTPUT_FILE="ON" clk din dout reset_n
-//VERSION_BEGIN 11.1SP2 cbx_mgl 2012:01:25:21:15:41:SJ cbx_stratixii 2012:01:25:21:13:53:SJ cbx_util_mgl 2012:01:25:21:13:53:SJ  VERSION_END
+//VERSION_BEGIN 11.0SP1 cbx_mgl 2011:07:03:21:11:41:SJ cbx_stratixii 2011:07:03:21:10:33:SJ cbx_util_mgl 2011:07:03:21:10:33:SJ  VERSION_END
 
 
 //dffpipe CBX_SINGLE_OUTPUT_FILE="ON" DELAY=3 WIDTH=1 clock clrn d q ALTERA_INTERNAL_OPTIONS=AUTO_SHIFT_REGISTER_RECOGNITION=OFF
-//VERSION_BEGIN 11.1SP2 cbx_mgl 2012:01:25:21:15:41:SJ cbx_stratixii 2012:01:25:21:13:53:SJ cbx_util_mgl 2012:01:25:21:13:53:SJ  VERSION_END
+//VERSION_BEGIN 11.0SP1 cbx_mgl 2011:07:03:21:11:41:SJ cbx_stratixii 2011:07:03:21:10:33:SJ cbx_util_mgl 2011:07:03:21:10:33:SJ  VERSION_END
 
 //synthesis_resources = reg 3 
 //synopsys translate_off
@@ -120,7 +120,7 @@ endmodule //altpll_0_stdsync_sv6
 
 
 //altpll bandwidth_type="AUTO" CBX_SINGLE_OUTPUT_FILE="ON" clk0_divide_by=1 clk0_duty_cycle=50 clk0_multiply_by=1 clk0_phase_shift="0" clk1_divide_by=1 clk1_duty_cycle=50 clk1_multiply_by=1 clk1_phase_shift="-3333" clk2_divide_by=5 clk2_duty_cycle=50 clk2_multiply_by=1 clk2_phase_shift="0" clk3_divide_by=2 clk3_duty_cycle=50 clk3_multiply_by=1 clk3_phase_shift="0" compensate_clock="CLK0" device_family="CYCLONEIII" inclk0_input_frequency=20000 intended_device_family="Cyclone III" operation_mode="normal" pll_type="AUTO" port_clk0="PORT_USED" port_clk1="PORT_USED" port_clk2="PORT_USED" port_clk3="PORT_USED" port_clk4="PORT_UNUSED" port_clk5="PORT_UNUSED" port_extclk0="PORT_UNUSED" port_extclk1="PORT_UNUSED" port_extclk2="PORT_UNUSED" port_extclk3="PORT_UNUSED" port_inclk1="PORT_UNUSED" port_phasecounterselect="PORT_UNUSED" port_phasedone="PORT_UNUSED" port_scandata="PORT_UNUSED" port_scandataout="PORT_UNUSED" width_clock=5 areset clk inclk locked
-//VERSION_BEGIN 11.1SP2 cbx_altclkbuf 2012:01:25:21:13:53:SJ cbx_altiobuf_bidir 2012:01:25:21:13:53:SJ cbx_altiobuf_in 2012:01:25:21:13:53:SJ cbx_altiobuf_out 2012:01:25:21:13:53:SJ cbx_altpll 2012:01:25:21:13:53:SJ cbx_cycloneii 2012:01:25:21:13:53:SJ cbx_lpm_add_sub 2012:01:25:21:13:53:SJ cbx_lpm_compare 2012:01:25:21:13:53:SJ cbx_lpm_decode 2012:01:25:21:13:53:SJ cbx_lpm_mux 2012:01:25:21:13:53:SJ cbx_mgl 2012:01:25:21:15:41:SJ cbx_stratix 2012:01:25:21:13:53:SJ cbx_stratixii 2012:01:25:21:13:53:SJ cbx_stratixiii 2012:01:25:21:13:53:SJ cbx_stratixv 2012:01:25:21:13:53:SJ cbx_util_mgl 2012:01:25:21:13:53:SJ  VERSION_END
+//VERSION_BEGIN 11.0SP1 cbx_altclkbuf 2011:07:03:21:10:32:SJ cbx_altiobuf_bidir 2011:07:03:21:10:33:SJ cbx_altiobuf_in 2011:07:03:21:10:33:SJ cbx_altiobuf_out 2011:07:03:21:10:33:SJ cbx_altpll 2011:07:03:21:10:33:SJ cbx_cycloneii 2011:07:03:21:10:33:SJ cbx_lpm_add_sub 2011:07:03:21:10:33:SJ cbx_lpm_compare 2011:07:03:21:10:33:SJ cbx_lpm_decode 2011:07:03:21:10:33:SJ cbx_lpm_mux 2011:07:03:21:10:33:SJ cbx_mgl 2011:07:03:21:11:41:SJ cbx_stratix 2011:07:03:21:10:33:SJ cbx_stratixii 2011:07:03:21:10:33:SJ cbx_stratixiii 2011:07:03:21:10:33:SJ cbx_stratixv 2011:07:03:21:10:33:SJ cbx_util_mgl 2011:07:03:21:10:33:SJ  VERSION_END
 
 //synthesis_resources = cycloneiii_pll 1 reg 1 
 //synopsys translate_off

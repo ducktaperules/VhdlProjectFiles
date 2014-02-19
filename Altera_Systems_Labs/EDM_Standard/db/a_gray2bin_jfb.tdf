@@ -1,5 +1,5 @@
 --a_gray2bin carry_chain="MANUAL" carry_chain_length=48 device_family="Cyclone III" ignore_carry_buffers="OFF" WIDTH=7 bin gray
---VERSION_BEGIN 11.1SP2 cbx_a_gray2bin 2012:01:25:21:13:53:SJ cbx_mgl 2012:01:25:21:15:41:SJ  VERSION_END
+--VERSION_BEGIN 11.0SP1 cbx_a_gray2bin 2011:07:03:21:10:32:SJ cbx_mgl 2011:07:03:21:11:41:SJ  VERSION_END
 
 
 -- Copyright (C) 1991-2011 Altera Corporation

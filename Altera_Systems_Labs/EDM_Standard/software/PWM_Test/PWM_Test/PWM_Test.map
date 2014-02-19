@@ -1,0 +1,1376 @@
+Archive member included because of file (symbol)
+
+../PWM_Test_bsp/\libhal_bsp.a(alt_main.o)
+                              ../PWM_Test_bsp//obj/HAL/src/crt0.o (alt_main)
+../PWM_Test_bsp/\libhal_bsp.a(alt_sys_init.o)
+                              ../PWM_Test_bsp/\libhal_bsp.a(alt_main.o) (alt_irq_init)
+../PWM_Test_bsp/\libhal_bsp.a(altera_avalon_cfi_flash.o)
+                              ../PWM_Test_bsp/\libhal_bsp.a(alt_sys_init.o) (alt_flash_cfi_init)
+../PWM_Test_bsp/\libhal_bsp.a(altera_avalon_cfi_flash_table.o)
+                              ../PWM_Test_bsp/\libhal_bsp.a(altera_avalon_cfi_flash.o) (alt_set_flash_width_func)
+../PWM_Test_bsp/\libhal_bsp.a(altera_avalon_jtag_uart_fd.o)
+                              ../PWM_Test_bsp/\libhal_bsp.a(alt_sys_init.o) (altera_avalon_jtag_uart_read_fd)
+../PWM_Test_bsp/\libhal_bsp.a(altera_avalon_jtag_uart_init.o)
+                              ../PWM_Test_bsp/\libhal_bsp.a(alt_sys_init.o) (altera_avalon_jtag_uart_init)
+../PWM_Test_bsp/\libhal_bsp.a(altera_avalon_jtag_uart_ioctl.o)
+                              ../PWM_Test_bsp/\libhal_bsp.a(altera_avalon_jtag_uart_fd.o) (altera_avalon_jtag_uart_ioctl)
+../PWM_Test_bsp/\libhal_bsp.a(altera_avalon_jtag_uart_read.o)
+                              ../PWM_Test_bsp/\libhal_bsp.a(altera_avalon_jtag_uart_fd.o) (altera_avalon_jtag_uart_read)
+../PWM_Test_bsp/\libhal_bsp.a(altera_avalon_jtag_uart_write.o)
+                              ../PWM_Test_bsp/\libhal_bsp.a(altera_avalon_jtag_uart_fd.o) (altera_avalon_jtag_uart_write)
+../PWM_Test_bsp/\libhal_bsp.a(altera_avalon_lcd_16207.o)
+                              ../PWM_Test_bsp/\libhal_bsp.a(alt_sys_init.o) (altera_avalon_lcd_16207_init)
+../PWM_Test_bsp/\libhal_bsp.a(altera_avalon_lcd_16207_fd.o)
+                              ../PWM_Test_bsp/\libhal_bsp.a(alt_sys_init.o) (altera_avalon_lcd_16207_write_fd)
+../PWM_Test_bsp/\libhal_bsp.a(altera_avalon_timer_sc.o)
+                              ../PWM_Test_bsp/\libhal_bsp.a(alt_sys_init.o) (alt_avalon_timer_sc_init)
+../PWM_Test_bsp/\libhal_bsp.a(altera_avalon_uart_fd.o)
+                              ../PWM_Test_bsp/\libhal_bsp.a(alt_sys_init.o) (altera_avalon_uart_read_fd)
+../PWM_Test_bsp/\libhal_bsp.a(altera_avalon_uart_init.o)
+                              ../PWM_Test_bsp/\libhal_bsp.a(alt_sys_init.o) (altera_avalon_uart_init)
+../PWM_Test_bsp/\libhal_bsp.a(altera_avalon_uart_read.o)
+                              ../PWM_Test_bsp/\libhal_bsp.a(altera_avalon_uart_fd.o) (altera_avalon_uart_read)
+../PWM_Test_bsp/\libhal_bsp.a(altera_avalon_uart_write.o)
+                              ../PWM_Test_bsp/\libhal_bsp.a(altera_avalon_uart_fd.o) (altera_avalon_uart_write)
+../PWM_Test_bsp/\libhal_bsp.a(alt_alarm_start.o)
+                              ../PWM_Test_bsp/\libhal_bsp.a(altera_avalon_jtag_uart_init.o) (alt_alarm_start)
+../PWM_Test_bsp/\libhal_bsp.a(alt_close.o)
+                              ../PWM_Test_bsp/\libhal_bsp.a(alt_main.o) (close)
+../PWM_Test_bsp/\libhal_bsp.a(alt_dcache_flush.o)
+                              ../PWM_Test_bsp/\libhal_bsp.a(altera_avalon_cfi_flash.o) (alt_dcache_flush)
+../PWM_Test_bsp/\libhal_bsp.a(alt_dev.o)
+                              ../PWM_Test_bsp/\libhal_bsp.a(alt_sys_init.o) (alt_dev_list)
+../PWM_Test_bsp/\libhal_bsp.a(alt_dev_llist_insert.o)
+                              ../PWM_Test_bsp/\libhal_bsp.a(alt_sys_init.o) (alt_dev_llist_insert)
+../PWM_Test_bsp/\libhal_bsp.a(alt_do_ctors.o)
+                              ../PWM_Test_bsp/\libhal_bsp.a(alt_main.o) (_do_ctors)
+../PWM_Test_bsp/\libhal_bsp.a(alt_do_dtors.o)
+                              ../PWM_Test_bsp/\libhal_bsp.a(alt_main.o) (_do_dtors)
+../PWM_Test_bsp/\libhal_bsp.a(alt_errno.o)
+                              ../PWM_Test_bsp/\libhal_bsp.a(altera_avalon_uart_read.o) (alt_errno)
+../PWM_Test_bsp/\libhal_bsp.a(alt_flash_dev.o)
+                              ../PWM_Test_bsp/\libhal_bsp.a(altera_avalon_cfi_flash.o) (alt_flash_dev_list)
+../PWM_Test_bsp/\libhal_bsp.a(alt_iic.o)
+                              ../PWM_Test_bsp/\libhal_bsp.a(altera_avalon_jtag_uart_init.o) (alt_ic_isr_register)
+../PWM_Test_bsp/\libhal_bsp.a(alt_iic_isr_register.o)
+                              ../PWM_Test_bsp/\libhal_bsp.a(alt_iic.o) (alt_iic_isr_register)
+../PWM_Test_bsp/\libhal_bsp.a(alt_io_redirect.o)
+                              ../PWM_Test_bsp/\libhal_bsp.a(alt_main.o) (alt_io_redirect)
+../PWM_Test_bsp/\libhal_bsp.a(alt_irq_entry.o)
+                              ../PWM_Test_bsp/\libhal_bsp.a(alt_iic_isr_register.o) (alt_irq_entry)
+../PWM_Test_bsp/\libhal_bsp.a(alt_irq_handler.o)
+                              ../PWM_Test_bsp/\libhal_bsp.a(alt_iic_isr_register.o) (alt_irq_handler)
+../PWM_Test_bsp/\libhal_bsp.a(alt_irq_vars.o)
+                              ../PWM_Test_bsp/\libhal_bsp.a(alt_iic.o) (alt_irq_active)
+../PWM_Test_bsp/\libhal_bsp.a(alt_open.o)
+                              ../PWM_Test_bsp/\libhal_bsp.a(alt_io_redirect.o) (open)
+../PWM_Test_bsp/\libhal_bsp.a(alt_release_fd.o)
+                              ../PWM_Test_bsp/\libhal_bsp.a(alt_close.o) (alt_release_fd)
+../PWM_Test_bsp/\libhal_bsp.a(alt_tick.o)
+                              ../PWM_Test_bsp/\libhal_bsp.a(altera_avalon_jtag_uart_init.o) (_alt_tick_rate)
+../PWM_Test_bsp/\libhal_bsp.a(alt_usleep.o)
+                              ../PWM_Test_bsp/\libhal_bsp.a(altera_avalon_lcd_16207.o) (usleep)
+../PWM_Test_bsp/\libhal_bsp.a(altera_nios2_irq.o)
+                              ../PWM_Test_bsp/\libhal_bsp.a(alt_sys_init.o) (altera_nios2_irq_init)
+../PWM_Test_bsp/\libhal_bsp.a(altera_avalon_cfi_flash_amd.o)
+                              ../PWM_Test_bsp/\libhal_bsp.a(altera_avalon_cfi_flash_table.o) (alt_program_amd)
+../PWM_Test_bsp/\libhal_bsp.a(altera_avalon_cfi_flash_intel.o)
+                              ../PWM_Test_bsp/\libhal_bsp.a(altera_avalon_cfi_flash_table.o) (alt_program_intel)
+../PWM_Test_bsp/\libhal_bsp.a(alt_busy_sleep.o)
+                              ../PWM_Test_bsp/\libhal_bsp.a(alt_usleep.o) (alt_busy_sleep)
+../PWM_Test_bsp/\libhal_bsp.a(alt_exception_entry.o)
+                              ../PWM_Test_bsp/\libhal_bsp.a(alt_irq_entry.o) (alt_exception)
+../PWM_Test_bsp/\libhal_bsp.a(alt_find_dev.o)
+                              ../PWM_Test_bsp/\libhal_bsp.a(alt_flash_dev.o) (alt_find_dev)
+../PWM_Test_bsp/\libhal_bsp.a(alt_find_file.o)
+                              ../PWM_Test_bsp/\libhal_bsp.a(alt_open.o) (alt_find_file)
+../PWM_Test_bsp/\libhal_bsp.a(alt_get_fd.o)
+                              ../PWM_Test_bsp/\libhal_bsp.a(alt_open.o) (alt_get_fd)
+../PWM_Test_bsp/\libhal_bsp.a(alt_instruction_exception_entry.o)
+                              ../PWM_Test_bsp/\libhal_bsp.a(alt_exception_entry.o) (alt_instruction_exception_entry)
+c:/altera/12.0sp2/nios2eds/bin/gnu/h-i686-mingw32/bin/../lib/gcc/nios2-elf/4.1.2/../../../../nios2-elf/lib\libc.a(lib_a-atexit.o)
+                              ../PWM_Test_bsp/\libhal_bsp.a(alt_main.o) (atexit)
+c:/altera/12.0sp2/nios2eds/bin/gnu/h-i686-mingw32/bin/../lib/gcc/nios2-elf/4.1.2/../../../../nios2-elf/lib\libc.a(lib_a-ctype_.o)
+                              ../PWM_Test_bsp/\libhal_bsp.a(altera_avalon_lcd_16207.o) (__ctype_ptr)
+c:/altera/12.0sp2/nios2eds/bin/gnu/h-i686-mingw32/bin/../lib/gcc/nios2-elf/4.1.2/../../../../nios2-elf/lib\libc.a(lib_a-exit.o)
+                              ../PWM_Test_bsp/\libhal_bsp.a(alt_main.o) (exit)
+c:/altera/12.0sp2/nios2eds/bin/gnu/h-i686-mingw32/bin/../lib/gcc/nios2-elf/4.1.2/../../../../nios2-elf/lib\libc.a(lib_a-impure.o)
+                              c:/altera/12.0sp2/nios2eds/bin/gnu/h-i686-mingw32/bin/../lib/gcc/nios2-elf/4.1.2/../../../../nios2-elf/lib\libc.a(lib_a-exit.o) (_global_impure_ptr)
+c:/altera/12.0sp2/nios2eds/bin/gnu/h-i686-mingw32/bin/../lib/gcc/nios2-elf/4.1.2/../../../../nios2-elf/lib\libc.a(lib_a-int_errno.o)
+                              ../PWM_Test_bsp/\libhal_bsp.a(altera_avalon_uart_read.o) (errno)
+c:/altera/12.0sp2/nios2eds/bin/gnu/h-i686-mingw32/bin/../lib/gcc/nios2-elf/4.1.2/../../../../nios2-elf/lib\libc.a(lib_a-memcmp.o)
+                              ../PWM_Test_bsp/\libhal_bsp.a(altera_avalon_cfi_flash.o) (memcmp)
+c:/altera/12.0sp2/nios2eds/bin/gnu/h-i686-mingw32/bin/../lib/gcc/nios2-elf/4.1.2/../../../../nios2-elf/lib\libc.a(lib_a-memcpy.o)
+                              ../PWM_Test_bsp/\libhal_bsp.a(altera_avalon_cfi_flash.o) (memcpy)
+c:/altera/12.0sp2/nios2eds/bin/gnu/h-i686-mingw32/bin/../lib/gcc/nios2-elf/4.1.2/../../../../nios2-elf/lib\libc.a(lib_a-memset.o)
+                              ../PWM_Test_bsp/\libhal_bsp.a(altera_avalon_lcd_16207.o) (memset)
+c:/altera/12.0sp2/nios2eds/bin/gnu/h-i686-mingw32/bin/../lib/gcc/nios2-elf/4.1.2/../../../../nios2-elf/lib\libc.a(lib_a-strlen.o)
+                              ../PWM_Test_bsp/\libhal_bsp.a(alt_find_dev.o) (strlen)
+c:/altera/12.0sp2/nios2eds/bin/gnu/h-i686-mingw32/bin/../lib/gcc/nios2-elf/4.1.2/../../../../nios2-elf/lib\libc.a(lib_a-__atexit.o)
+                              c:/altera/12.0sp2/nios2eds/bin/gnu/h-i686-mingw32/bin/../lib/gcc/nios2-elf/4.1.2/../../../../nios2-elf/lib\libc.a(lib_a-atexit.o) (__register_exitproc)
+c:/altera/12.0sp2/nios2eds/bin/gnu/h-i686-mingw32/bin/../lib/gcc/nios2-elf/4.1.2/../../../../nios2-elf/lib\libc.a(lib_a-__call_atexit.o)
+                              c:/altera/12.0sp2/nios2eds/bin/gnu/h-i686-mingw32/bin/../lib/gcc/nios2-elf/4.1.2/../../../../nios2-elf/lib\libc.a(lib_a-exit.o) (__call_exitprocs)
+../PWM_Test_bsp/\libhal_bsp.a(alt_exit.o)
+                              c:/altera/12.0sp2/nios2eds/bin/gnu/h-i686-mingw32/bin/../lib/gcc/nios2-elf/4.1.2/../../../../nios2-elf/lib\libc.a(lib_a-exit.o) (_exit)
+
+Allocating common symbols
+Common symbol       size              file
+
+alt_irq             0x100             ../PWM_Test_bsp/\libhal_bsp.a(alt_irq_handler.o)
+errno               0x4               c:/altera/12.0sp2/nios2eds/bin/gnu/h-i686-mingw32/bin/../lib/gcc/nios2-elf/4.1.2/../../../../nios2-elf/lib\libc.a(lib_a-int_errno.o)
+_atexit0            0x190             c:/altera/12.0sp2/nios2eds/bin/gnu/h-i686-mingw32/bin/../lib/gcc/nios2-elf/4.1.2/../../../../nios2-elf/lib\libc.a(lib_a-atexit.o)
+
+Memory Configuration
+
+Name             Origin             Length             Attributes
+sdram            0x01800000         0x00800000
+reset            0x02400000         0x00000020
+cfi_flash        0x02400020         0x003fffe0
+onchip_mem_BEFORE_EXCEPTION 0x02808000         0x00000020
+onchip_mem       0x02808020         0x000077e0
+*default*        0x00000000         0xffffffff
+
+Linker script and memory map
+
+LOAD ../PWM_Test_bsp//obj/HAL/src/crt0.o
+LOAD obj/hello_world.o
+LOAD obj/pwm.o
+LOAD c:/altera/12.0sp2/nios2eds/bin/gnu/h-i686-mingw32/bin/../lib/gcc/nios2-elf/4.1.2/../../../../nios2-elf/lib\libstdc++.a
+LOAD c:/altera/12.0sp2/nios2eds/bin/gnu/h-i686-mingw32/bin/../lib/gcc/nios2-elf/4.1.2/../../../../nios2-elf/lib\libm.a
+LOAD c:/altera/12.0sp2/nios2eds/bin/gnu/h-i686-mingw32/bin/../lib/gcc/nios2-elf/4.1.2\libgcc.a
+START GROUP
+LOAD c:/altera/12.0sp2/nios2eds/bin/gnu/h-i686-mingw32/bin/../lib/gcc/nios2-elf/4.1.2/../../../../nios2-elf/lib\libc.a
+LOAD c:/altera/12.0sp2/nios2eds/bin/gnu/h-i686-mingw32/bin/../lib/gcc/nios2-elf/4.1.2\libgcc.a
+LOAD ../PWM_Test_bsp/\libhal_bsp.a
+END GROUP
+LOAD c:/altera/12.0sp2/nios2eds/bin/gnu/h-i686-mingw32/bin/../lib/gcc/nios2-elf/4.1.2\libgcc.a
+                0x01800000                __alt_mem_sdram = 0x1800000
+                0x02400000                __alt_mem_cfi_flash = 0x2400000
+                0x02808000                __alt_mem_onchip_mem = 0x2808000
+
+.entry          0x02400000        0x0
+ *(.entry)
+ .entry         0x02400000        0x0 ../PWM_Test_bsp//obj/HAL/src/crt0.o
+                0x02400000                __reset
+
+.exceptions     0x02808020      0x20c
+                0x02808020                PROVIDE (__ram_exceptions_start, ABSOLUTE (.))
+                0x02808020                . = ALIGN (0x20)
+ *(.irq)
+ *(.exceptions.entry.label)
+ .exceptions.entry.label
+                0x02808020        0x0 ../PWM_Test_bsp/\libhal_bsp.a(alt_irq_entry.o)
+                0x02808020                alt_irq_entry
+ .exceptions.entry.label
+                0x02808020        0x0 ../PWM_Test_bsp/\libhal_bsp.a(alt_exception_entry.o)
+                0x02808020                alt_exception
+ *(.exceptions.entry.user)
+ *(.exceptions.entry)
+ .exceptions.entry
+                0x02808020       0x54 ../PWM_Test_bsp/\libhal_bsp.a(alt_exception_entry.o)
+ *(.exceptions.irqtest.user)
+ *(.exceptions.irqtest)
+ .exceptions.irqtest
+                0x02808074       0x10 ../PWM_Test_bsp/\libhal_bsp.a(alt_irq_entry.o)
+ *(.exceptions.irqhandler.user)
+ *(.exceptions.irqhandler)
+ .exceptions.irqhandler
+                0x02808084        0x4 ../PWM_Test_bsp/\libhal_bsp.a(alt_irq_entry.o)
+ *(.exceptions.irqreturn.user)
+ *(.exceptions.irqreturn)
+ .exceptions.irqreturn
+                0x02808088        0x4 ../PWM_Test_bsp/\libhal_bsp.a(alt_irq_entry.o)
+ *(.exceptions.notirq.label)
+ .exceptions.notirq.label
+                0x0280808c        0x0 ../PWM_Test_bsp/\libhal_bsp.a(alt_irq_entry.o)
+ *(.exceptions.notirq.user)
+ *(.exceptions.notirq)
+ .exceptions.notirq
+                0x0280808c        0x8 ../PWM_Test_bsp/\libhal_bsp.a(alt_exception_entry.o)
+ *(.exceptions.soft.user)
+ *(.exceptions.soft)
+ *(.exceptions.unknown.user)
+ *(.exceptions.unknown)
+ .exceptions.unknown
+                0x02808094       0x14 ../PWM_Test_bsp/\libhal_bsp.a(alt_exception_entry.o)
+ *(.exceptions.exit.label)
+ .exceptions.exit.label
+                0x028080a8        0x0 ../PWM_Test_bsp/\libhal_bsp.a(alt_irq_entry.o)
+ .exceptions.exit.label
+                0x028080a8        0x0 ../PWM_Test_bsp/\libhal_bsp.a(alt_exception_entry.o)
+ *(.exceptions.exit.user)
+ *(.exceptions.exit)
+ .exceptions.exit
+                0x028080a8       0x54 ../PWM_Test_bsp/\libhal_bsp.a(alt_exception_entry.o)
+ *(.exceptions)
+ .exceptions    0x028080fc       0xc8 ../PWM_Test_bsp/\libhal_bsp.a(alt_irq_handler.o)
+                0x028080fc                alt_irq_handler
+ .exceptions    0x028081c4       0x68 ../PWM_Test_bsp/\libhal_bsp.a(alt_instruction_exception_entry.o)
+                0x028081c4                alt_instruction_exception_entry
+                0x0280822c                PROVIDE (__ram_exceptions_end, ABSOLUTE (.))
+                0x02808020                PROVIDE (__flash_exceptions_start, LOADADDR (.exceptions))
+
+.text           0x01800000     0x6884
+                0x01800000                PROVIDE (stext, ABSOLUTE (.))
+ *(.interp)
+ *(.hash)
+ *(.dynsym)
+ *(.dynstr)
+ *(.gnu.version)
+ *(.gnu.version_d)
+ *(.gnu.version_r)
+ *(.rel.init)
+ *(.rela.init)
+ *(.rel.text .rel.text.* .rel.gnu.linkonce.t.*)
+ *(.rela.text .rela.text.* .rela.gnu.linkonce.t.*)
+ *(.rel.fini)
+ *(.rela.fini)
+ *(.rel.rodata .rel.rodata.* .rel.gnu.linkonce.r.*)
+ *(.rela.rodata .rela.rodata.* .rela.gnu.linkonce.r.*)
+ *(.rel.data .rel.data.* .rel.gnu.linkonce.d.*)
+ *(.rela.data .rela.data.* .rela.gnu.linkonce.d.*)
+ *(.rel.tdata .rel.tdata.* .rel.gnu.linkonce.td.*)
+ *(.rela.tdata .rela.tdata.* .rela.gnu.linkonce.td.*)
+ *(.rel.tbss .rel.tbss.* .rel.gnu.linkonce.tb.*)
+ *(.rela.tbss .rela.tbss.* .rela.gnu.linkonce.tb.*)
+ *(.rel.ctors)
+ *(.rela.ctors)
+ *(.rel.dtors)
+ *(.rela.dtors)
+ *(.rel.got)
+ *(.rela.got)
+ *(.rel.sdata .rel.sdata.* .rel.gnu.linkonce.s.*)
+ *(.rela.sdata .rela.sdata.* .rela.gnu.linkonce.s.*)
+ *(.rel.sbss .rel.sbss.* .rel.gnu.linkonce.sb.*)
+ *(.rela.sbss .rela.sbss.* .rela.gnu.linkonce.sb.*)
+ *(.rel.sdata2 .rel.sdata2.* .rel.gnu.linkonce.s2.*)
+ *(.rela.sdata2 .rela.sdata2.* .rela.gnu.linkonce.s2.*)
+ *(.rel.sbss2 .rel.sbss2.* .rel.gnu.linkonce.sb2.*)
+ *(.rela.sbss2 .rela.sbss2.* .rela.gnu.linkonce.sb2.*)
+ *(.rel.bss .rel.bss.* .rel.gnu.linkonce.b.*)
+ *(.rela.bss .rela.bss.* .rela.gnu.linkonce.b.*)
+ *(.rel.plt)
+ *(.rela.plt)
+ *(.rel.dyn)
+ *(.init)
+ *(.plt)
+ *(.text .stub .text.* .gnu.linkonce.t.*)
+ .text          0x01800000       0x48 ../PWM_Test_bsp//obj/HAL/src/crt0.o
+                0x01800000                _start
+ .text          0x01800048       0xd0 obj/hello_world.o
+                0x01800048                main
+ .text          0x01800118      0x238 obj/pwm.o
+                0x01800118                Set_PWM_Duty_Cycle
+                0x018001d4                Initilise_PWM
+ .text          0x01800350       0x6c ../PWM_Test_bsp/\libhal_bsp.a(alt_main.o)
+                0x01800350                alt_main
+ .text          0x018003bc      0x108 ../PWM_Test_bsp/\libhal_bsp.a(alt_sys_init.o)
+                0x018003bc                alt_irq_init
+                0x018003f0                alt_sys_init
+ .text          0x018004c4      0x8d8 ../PWM_Test_bsp/\libhal_bsp.a(altera_avalon_cfi_flash.o)
+                0x018004c4                alt_flash_cfi_init
+                0x01800598                alt_flash_cfi_write
+                0x01800858                alt_flash_cfi_get_info
+                0x018008e8                alt_flash_cfi_read
+                0x01800950                alt_write_value_to_flash
+                0x01800ab4                alt_flash_program_block
+ .text          0x01800d9c     0x1448 ../PWM_Test_bsp/\libhal_bsp.a(altera_avalon_cfi_flash_table.o)
+                0x01800d9c                alt_read_query_entry_8bit
+                0x01800ddc                alt_read_query_entry_16bit
+                0x01800e20                alt_read_query_entry_32bit
+                0x01800e68                alt_write_flash_command_8bit_device_8bit_mode
+                0x01800ea4                alt_write_flash_command_16bit_device_8bit_mode
+                0x01800f20                alt_write_flash_command_32bit_device_8bit_mode
+                0x01800f68                alt_write_flash_command_16bit_device_16bit_mode
+                0x01800fac                alt_write_flash_command_32bit_device_16bit_mode
+                0x01800ff4                alt_write_flash_command_32bit_device_32bit_mode
+                0x0180103c                alt_write_native_8bit
+                0x01801070                alt_write_native_16bit
+                0x018010a4                alt_write_native_32bit
+                0x018010d4                alt_set_flash_width_func
+                0x018012b4                alt_set_flash_algorithm_func
+                0x018013dc                alt_read_cfi_table
+                0x0180195c                alt_read_cfi_width
+                0x01802108                alt_check_primary_table
+ .text          0x018021e4      0x148 ../PWM_Test_bsp/\libhal_bsp.a(altera_avalon_jtag_uart_fd.o)
+                0x018021e4                altera_avalon_jtag_uart_read_fd
+                0x0180223c                altera_avalon_jtag_uart_write_fd
+                0x01802294                altera_avalon_jtag_uart_close_fd
+                0x018022dc                altera_avalon_jtag_uart_ioctl_fd
+ .text          0x0180232c      0x40c ../PWM_Test_bsp/\libhal_bsp.a(altera_avalon_jtag_uart_init.o)
+                0x0180232c                altera_avalon_jtag_uart_init
+                0x018026c4                altera_avalon_jtag_uart_close
+ .text          0x01802738       0xf4 ../PWM_Test_bsp/\libhal_bsp.a(altera_avalon_jtag_uart_ioctl.o)
+                0x01802738                altera_avalon_jtag_uart_ioctl
+ .text          0x0180282c      0x224 ../PWM_Test_bsp/\libhal_bsp.a(altera_avalon_jtag_uart_read.o)
+                0x0180282c                altera_avalon_jtag_uart_read
+ .text          0x01802a50      0x240 ../PWM_Test_bsp/\libhal_bsp.a(altera_avalon_jtag_uart_write.o)
+                0x01802a50                altera_avalon_jtag_uart_write
+ .text          0x01802c90      0xee0 ../PWM_Test_bsp/\libhal_bsp.a(altera_avalon_lcd_16207.o)
+                0x01803464                altera_avalon_lcd_16207_write
+                0x01803a34                altera_avalon_lcd_16207_init
+ .text          0x01803b70       0x58 ../PWM_Test_bsp/\libhal_bsp.a(altera_avalon_lcd_16207_fd.o)
+                0x01803b70                altera_avalon_lcd_16207_write_fd
+ .text          0x01803bc8      0x100 ../PWM_Test_bsp/\libhal_bsp.a(altera_avalon_timer_sc.o)
+                0x01803c38                alt_avalon_timer_sc_init
+ .text          0x01803cc8       0xf8 ../PWM_Test_bsp/\libhal_bsp.a(altera_avalon_uart_fd.o)
+                0x01803cc8                altera_avalon_uart_read_fd
+                0x01803d20                altera_avalon_uart_write_fd
+                0x01803d78                altera_avalon_uart_close_fd
+ .text          0x01803dc0      0x400 ../PWM_Test_bsp/\libhal_bsp.a(altera_avalon_uart_init.o)
+                0x01803dc0                altera_avalon_uart_init
+                0x01804160                altera_avalon_uart_close
+ .text          0x018041c0      0x290 ../PWM_Test_bsp/\libhal_bsp.a(altera_avalon_uart_read.o)
+                0x018041c0                altera_avalon_uart_read
+ .text          0x01804450      0x228 ../PWM_Test_bsp/\libhal_bsp.a(altera_avalon_uart_write.o)
+                0x01804450                altera_avalon_uart_write
+ .text          0x01804678      0x154 ../PWM_Test_bsp/\libhal_bsp.a(alt_alarm_start.o)
+                0x01804678                alt_alarm_start
+ .text          0x018047cc      0x15c ../PWM_Test_bsp/\libhal_bsp.a(alt_close.o)
+                0x018047cc                close
+ .text          0x01804928       0x78 ../PWM_Test_bsp/\libhal_bsp.a(alt_dcache_flush.o)
+                0x01804928                alt_dcache_flush
+ .text          0x018049a0       0x2c ../PWM_Test_bsp/\libhal_bsp.a(alt_dev.o)
+ .text          0x018049cc      0x114 ../PWM_Test_bsp/\libhal_bsp.a(alt_dev_llist_insert.o)
+                0x018049cc                alt_dev_llist_insert
+ .text          0x01804ae0       0x64 ../PWM_Test_bsp/\libhal_bsp.a(alt_do_ctors.o)
+                0x01804ae0                _do_ctors
+ .text          0x01804b44       0x64 ../PWM_Test_bsp/\libhal_bsp.a(alt_do_dtors.o)
+                0x01804b44                _do_dtors
+ .text          0x01804ba8        0x0 ../PWM_Test_bsp/\libhal_bsp.a(alt_errno.o)
+ .text          0x01804ba8       0xd0 ../PWM_Test_bsp/\libhal_bsp.a(alt_flash_dev.o)
+                0x01804ba8                alt_flash_open_dev
+                0x01804c24                alt_flash_close_dev
+ .text          0x01804c78      0x1d4 ../PWM_Test_bsp/\libhal_bsp.a(alt_iic.o)
+                0x01804c78                alt_ic_isr_register
+                0x01804cc8                alt_ic_irq_enable
+                0x01804d64                alt_ic_irq_disable
+                0x01804e04                alt_ic_irq_enabled
+ .text          0x01804e4c       0xf8 ../PWM_Test_bsp/\libhal_bsp.a(alt_iic_isr_register.o)
+                0x01804e4c                alt_iic_isr_register
+ .text          0x01804f44      0x13c ../PWM_Test_bsp/\libhal_bsp.a(alt_io_redirect.o)
+                0x01805008                alt_io_redirect
+ .text          0x01805080        0x0 ../PWM_Test_bsp/\libhal_bsp.a(alt_irq_entry.o)
+ .text          0x01805080        0x0 ../PWM_Test_bsp/\libhal_bsp.a(alt_irq_handler.o)
+ .text          0x01805080        0x0 ../PWM_Test_bsp/\libhal_bsp.a(alt_irq_vars.o)
+ .text          0x01805080      0x2c4 ../PWM_Test_bsp/\libhal_bsp.a(alt_open.o)
+                0x0180515c                open
+ .text          0x01805344       0x60 ../PWM_Test_bsp/\libhal_bsp.a(alt_release_fd.o)
+                0x01805344                alt_release_fd
+ .text          0x018053a4      0x1a4 ../PWM_Test_bsp/\libhal_bsp.a(alt_tick.o)
+                0x018053a4                alt_alarm_stop
+                0x0180543c                alt_tick
+ .text          0x01805548       0x30 ../PWM_Test_bsp/\libhal_bsp.a(alt_usleep.o)
+                0x01805548                usleep
+ .text          0x01805578       0x20 ../PWM_Test_bsp/\libhal_bsp.a(altera_nios2_irq.o)
+                0x01805578                altera_nios2_irq_init
+ .text          0x01805598      0x460 ../PWM_Test_bsp/\libhal_bsp.a(altera_avalon_cfi_flash_amd.o)
+                0x01805598                alt_program_amd
+                0x01805600                alt_erase_block_amd
+ .text          0x018059f8      0x460 ../PWM_Test_bsp/\libhal_bsp.a(altera_avalon_cfi_flash_intel.o)
+                0x018059f8                alt_program_intel
+                0x01805a7c                alt_erase_block_intel
+ .text          0x01805e58      0x12c ../PWM_Test_bsp/\libhal_bsp.a(alt_busy_sleep.o)
+                0x01805e58                alt_busy_sleep
+ .text          0x01805f84        0x0 ../PWM_Test_bsp/\libhal_bsp.a(alt_exception_entry.o)
+ .text          0x01805f84       0x94 ../PWM_Test_bsp/\libhal_bsp.a(alt_find_dev.o)
+                0x01805f84                alt_find_dev
+ .text          0x01806018      0x120 ../PWM_Test_bsp/\libhal_bsp.a(alt_find_file.o)
+                0x01806018                alt_find_file
+ .text          0x01806138       0xb8 ../PWM_Test_bsp/\libhal_bsp.a(alt_get_fd.o)
+                0x01806138                alt_get_fd
+ .text          0x018061f0       0xdc ../PWM_Test_bsp/\libhal_bsp.a(alt_instruction_exception_entry.o)
+                0x018061f0                alt_exception_cause_generated_bad_addr
+ .text          0x018062cc       0x14 c:/altera/12.0sp2/nios2eds/bin/gnu/h-i686-mingw32/bin/../lib/gcc/nios2-elf/4.1.2/../../../../nios2-elf/lib\libc.a(lib_a-atexit.o)
+                0x018062cc                atexit
+ .text          0x018062e0        0x0 c:/altera/12.0sp2/nios2eds/bin/gnu/h-i686-mingw32/bin/../lib/gcc/nios2-elf/4.1.2/../../../../nios2-elf/lib\libc.a(lib_a-ctype_.o)
+ .text          0x018062e0       0x38 c:/altera/12.0sp2/nios2eds/bin/gnu/h-i686-mingw32/bin/../lib/gcc/nios2-elf/4.1.2/../../../../nios2-elf/lib\libc.a(lib_a-exit.o)
+                0x018062e0                exit
+ .text          0x01806318        0x0 c:/altera/12.0sp2/nios2eds/bin/gnu/h-i686-mingw32/bin/../lib/gcc/nios2-elf/4.1.2/../../../../nios2-elf/lib\libc.a(lib_a-impure.o)
+ .text          0x01806318        0x0 c:/altera/12.0sp2/nios2eds/bin/gnu/h-i686-mingw32/bin/../lib/gcc/nios2-elf/4.1.2/../../../../nios2-elf/lib\libc.a(lib_a-int_errno.o)
+ .text          0x01806318       0x74 c:/altera/12.0sp2/nios2eds/bin/gnu/h-i686-mingw32/bin/../lib/gcc/nios2-elf/4.1.2/../../../../nios2-elf/lib\libc.a(lib_a-memcmp.o)
+                0x01806318                memcmp
+ .text          0x0180638c       0xa0 c:/altera/12.0sp2/nios2eds/bin/gnu/h-i686-mingw32/bin/../lib/gcc/nios2-elf/4.1.2/../../../../nios2-elf/lib\libc.a(lib_a-memcpy.o)
+                0x0180638c                memcpy
+ .text          0x0180642c       0x98 c:/altera/12.0sp2/nios2eds/bin/gnu/h-i686-mingw32/bin/../lib/gcc/nios2-elf/4.1.2/../../../../nios2-elf/lib\libc.a(lib_a-memset.o)
+                0x0180642c                memset
+ .text          0x018064c4       0x74 c:/altera/12.0sp2/nios2eds/bin/gnu/h-i686-mingw32/bin/../lib/gcc/nios2-elf/4.1.2/../../../../nios2-elf/lib\libc.a(lib_a-strlen.o)
+                0x018064c4                strlen
+ .text          0x01806538      0x134 c:/altera/12.0sp2/nios2eds/bin/gnu/h-i686-mingw32/bin/../lib/gcc/nios2-elf/4.1.2/../../../../nios2-elf/lib\libc.a(lib_a-__atexit.o)
+                0x01806538                __register_exitproc
+ .text          0x0180666c      0x1b4 c:/altera/12.0sp2/nios2eds/bin/gnu/h-i686-mingw32/bin/../lib/gcc/nios2-elf/4.1.2/../../../../nios2-elf/lib\libc.a(lib_a-__call_atexit.o)
+                0x01806670                __call_exitprocs
+ .text          0x01806820       0x60 ../PWM_Test_bsp/\libhal_bsp.a(alt_exit.o)
+                0x01806860                _exit
+ *(.gnu.warning.*)
+ *(.fini)
+                0x01806880                PROVIDE (__etext, ABSOLUTE (.))
+                0x01806880                PROVIDE (_etext, ABSOLUTE (.))
+                0x01806880                PROVIDE (etext, ABSOLUTE (.))
+ *(.eh_frame_hdr)
+                0x01806880                . = ALIGN (0x4)
+                0x01806880                PROVIDE (__preinit_array_start, ABSOLUTE (.))
+ *(.preinit_array)
+                0x01806880                PROVIDE (__preinit_array_end, ABSOLUTE (.))
+                0x01806880                PROVIDE (__init_array_start, ABSOLUTE (.))
+ *(.init_array)
+                0x01806880                PROVIDE (__init_array_end, ABSOLUTE (.))
+                0x01806880                PROVIDE (__fini_array_start, ABSOLUTE (.))
+ *(.fini_array)
+                0x01806880                PROVIDE (__fini_array_end, ABSOLUTE (.))
+ *(.eh_frame)
+ *(.gcc_except_table)
+ *(.dynamic)
+                0x01806880                PROVIDE (__CTOR_LIST__, ABSOLUTE (.))
+ *(.ctors)
+ *(SORT(.ctors.*))
+ .ctors.65535   0x01806880        0x4 c:/altera/12.0sp2/nios2eds/bin/gnu/h-i686-mingw32/bin/../lib/gcc/nios2-elf/4.1.2/../../../../nios2-elf/lib\libc.a(lib_a-__call_atexit.o)
+                0x01806884                PROVIDE (__CTOR_END__, ABSOLUTE (.))
+                0x01806884                PROVIDE (__DTOR_LIST__, ABSOLUTE (.))
+ *(.dtors)
+ *(SORT(.dtors.*))
+                0x01806884                PROVIDE (__DTOR_END__, ABSOLUTE (.))
+ *(.jcr)
+                0x01806884                . = ALIGN (0x4)
+
+.rodata         0x01806884      0x2dc
+                0x01806884                PROVIDE (__ram_rodata_start, ABSOLUTE (.))
+                0x01806884                . = ALIGN (0x4)
+ *(.rodata .rodata.* .gnu.linkonce.r.*)
+ .rodata        0x01806884       0x10 ../PWM_Test_bsp/\libhal_bsp.a(alt_main.o)
+ .rodata        0x01806894       0x38 ../PWM_Test_bsp/\libhal_bsp.a(alt_sys_init.o)
+ .rodata        0x018068cc        0xc ../PWM_Test_bsp/\libhal_bsp.a(alt_dev.o)
+ .rodata        0x018068d8      0x281 c:/altera/12.0sp2/nios2eds/bin/gnu/h-i686-mingw32/bin/../lib/gcc/nios2-elf/4.1.2/../../../../nios2-elf/lib\libc.a(lib_a-ctype_.o)
+                0x018068d8                _ctype_
+ *fill*         0x01806b59        0x3 00
+ .rodata.str1.4
+                0x01806b5c        0x4 c:/altera/12.0sp2/nios2eds/bin/gnu/h-i686-mingw32/bin/../lib/gcc/nios2-elf/4.1.2/../../../../nios2-elf/lib\libc.a(lib_a-impure.o)
+ *(.rodata1)
+                0x01806b60                . = ALIGN (0x4)
+                0x01806b60                PROVIDE (__ram_rodata_end, ABSOLUTE (.))
+                0x01806884                PROVIDE (__flash_rodata_start, LOADADDR (.rodata))
+
+.rwdata         0x01806b60     0x1900
+                0x01806b60                PROVIDE (__ram_rwdata_start, ABSOLUTE (.))
+                0x01806b60                . = ALIGN (0x4)
+ *(.got.plt)
+ *(.got)
+ *(.data1)
+ *(.data .data.* .gnu.linkonce.d.*)
+ .data          0x01806b60        0x0 ../PWM_Test_bsp//obj/HAL/src/crt0.o
+ .data          0x01806b60        0x0 obj/hello_world.o
+ .data          0x01806b60        0x0 obj/pwm.o
+ .data          0x01806b60        0x0 ../PWM_Test_bsp/\libhal_bsp.a(alt_main.o)
+ .data          0x01806b60     0x131c ../PWM_Test_bsp/\libhal_bsp.a(alt_sys_init.o)
+ .data          0x01807e7c        0x0 ../PWM_Test_bsp/\libhal_bsp.a(altera_avalon_cfi_flash.o)
+ .data          0x01807e7c        0x0 ../PWM_Test_bsp/\libhal_bsp.a(altera_avalon_cfi_flash_table.o)
+ .data          0x01807e7c        0x0 ../PWM_Test_bsp/\libhal_bsp.a(altera_avalon_jtag_uart_fd.o)
+ .data          0x01807e7c        0x0 ../PWM_Test_bsp/\libhal_bsp.a(altera_avalon_jtag_uart_init.o)
+ .data          0x01807e7c        0x0 ../PWM_Test_bsp/\libhal_bsp.a(altera_avalon_jtag_uart_ioctl.o)
+ .data          0x01807e7c        0x0 ../PWM_Test_bsp/\libhal_bsp.a(altera_avalon_jtag_uart_read.o)
+ .data          0x01807e7c        0x0 ../PWM_Test_bsp/\libhal_bsp.a(altera_avalon_jtag_uart_write.o)
+ .data          0x01807e7c        0x0 ../PWM_Test_bsp/\libhal_bsp.a(altera_avalon_lcd_16207.o)
+ .data          0x01807e7c        0x0 ../PWM_Test_bsp/\libhal_bsp.a(altera_avalon_lcd_16207_fd.o)
+ .data          0x01807e7c        0x0 ../PWM_Test_bsp/\libhal_bsp.a(altera_avalon_timer_sc.o)
+ .data          0x01807e7c        0x0 ../PWM_Test_bsp/\libhal_bsp.a(altera_avalon_uart_fd.o)
+ .data          0x01807e7c        0x0 ../PWM_Test_bsp/\libhal_bsp.a(altera_avalon_uart_init.o)
+ .data          0x01807e7c        0x0 ../PWM_Test_bsp/\libhal_bsp.a(altera_avalon_uart_read.o)
+ .data          0x01807e7c        0x0 ../PWM_Test_bsp/\libhal_bsp.a(altera_avalon_uart_write.o)
+ .data          0x01807e7c        0x0 ../PWM_Test_bsp/\libhal_bsp.a(alt_alarm_start.o)
+ .data          0x01807e7c        0x0 ../PWM_Test_bsp/\libhal_bsp.a(alt_close.o)
+ .data          0x01807e7c        0x0 ../PWM_Test_bsp/\libhal_bsp.a(alt_dcache_flush.o)
+ .data          0x01807e7c      0x1a8 ../PWM_Test_bsp/\libhal_bsp.a(alt_dev.o)
+                0x01807e7c                alt_dev_null
+                0x01807ea4                alt_fd_list
+ .data          0x01808024        0x0 ../PWM_Test_bsp/\libhal_bsp.a(alt_dev_llist_insert.o)
+ .data          0x01808024        0x0 ../PWM_Test_bsp/\libhal_bsp.a(alt_do_ctors.o)
+ .data          0x01808024        0x0 ../PWM_Test_bsp/\libhal_bsp.a(alt_do_dtors.o)
+ .data          0x01808024        0x0 ../PWM_Test_bsp/\libhal_bsp.a(alt_errno.o)
+ .data          0x01808024        0x0 ../PWM_Test_bsp/\libhal_bsp.a(alt_flash_dev.o)
+ .data          0x01808024        0x0 ../PWM_Test_bsp/\libhal_bsp.a(alt_iic.o)
+ .data          0x01808024        0x0 ../PWM_Test_bsp/\libhal_bsp.a(alt_iic_isr_register.o)
+ .data          0x01808024        0x0 ../PWM_Test_bsp/\libhal_bsp.a(alt_io_redirect.o)
+ .data          0x01808024        0x0 ../PWM_Test_bsp/\libhal_bsp.a(alt_irq_entry.o)
+ .data          0x01808024        0x0 ../PWM_Test_bsp/\libhal_bsp.a(alt_irq_handler.o)
+ .data          0x01808024        0x0 ../PWM_Test_bsp/\libhal_bsp.a(alt_irq_vars.o)
+ .data          0x01808024        0x0 ../PWM_Test_bsp/\libhal_bsp.a(alt_open.o)
+ .data          0x01808024        0x0 ../PWM_Test_bsp/\libhal_bsp.a(alt_release_fd.o)
+ .data          0x01808024        0x0 ../PWM_Test_bsp/\libhal_bsp.a(alt_tick.o)
+ .data          0x01808024        0x0 ../PWM_Test_bsp/\libhal_bsp.a(alt_usleep.o)
+ .data          0x01808024        0x0 ../PWM_Test_bsp/\libhal_bsp.a(altera_nios2_irq.o)
+ .data          0x01808024        0x0 ../PWM_Test_bsp/\libhal_bsp.a(altera_avalon_cfi_flash_amd.o)
+ .data          0x01808024        0x0 ../PWM_Test_bsp/\libhal_bsp.a(altera_avalon_cfi_flash_intel.o)
+ .data          0x01808024        0x0 ../PWM_Test_bsp/\libhal_bsp.a(alt_busy_sleep.o)
+ .data          0x01808024        0x0 ../PWM_Test_bsp/\libhal_bsp.a(alt_exception_entry.o)
+ .data          0x01808024        0x0 ../PWM_Test_bsp/\libhal_bsp.a(alt_find_dev.o)
+ .data          0x01808024        0x0 ../PWM_Test_bsp/\libhal_bsp.a(alt_find_file.o)
+ .data          0x01808024        0x0 ../PWM_Test_bsp/\libhal_bsp.a(alt_get_fd.o)
+ .data          0x01808024        0x0 ../PWM_Test_bsp/\libhal_bsp.a(alt_instruction_exception_entry.o)
+ .data          0x01808024        0x0 c:/altera/12.0sp2/nios2eds/bin/gnu/h-i686-mingw32/bin/../lib/gcc/nios2-elf/4.1.2/../../../../nios2-elf/lib\libc.a(lib_a-atexit.o)
+ .data          0x01808024        0x0 c:/altera/12.0sp2/nios2eds/bin/gnu/h-i686-mingw32/bin/../lib/gcc/nios2-elf/4.1.2/../../../../nios2-elf/lib\libc.a(lib_a-ctype_.o)
+ .data          0x01808024        0x0 c:/altera/12.0sp2/nios2eds/bin/gnu/h-i686-mingw32/bin/../lib/gcc/nios2-elf/4.1.2/../../../../nios2-elf/lib\libc.a(lib_a-exit.o)
+ .data          0x01808024      0x400 c:/altera/12.0sp2/nios2eds/bin/gnu/h-i686-mingw32/bin/../lib/gcc/nios2-elf/4.1.2/../../../../nios2-elf/lib\libc.a(lib_a-impure.o)
+ .data          0x01808424        0x0 c:/altera/12.0sp2/nios2eds/bin/gnu/h-i686-mingw32/bin/../lib/gcc/nios2-elf/4.1.2/../../../../nios2-elf/lib\libc.a(lib_a-int_errno.o)
+ .data          0x01808424        0x0 c:/altera/12.0sp2/nios2eds/bin/gnu/h-i686-mingw32/bin/../lib/gcc/nios2-elf/4.1.2/../../../../nios2-elf/lib\libc.a(lib_a-memcmp.o)
+ .data          0x01808424        0x0 c:/altera/12.0sp2/nios2eds/bin/gnu/h-i686-mingw32/bin/../lib/gcc/nios2-elf/4.1.2/../../../../nios2-elf/lib\libc.a(lib_a-memcpy.o)
+ .data          0x01808424        0x0 c:/altera/12.0sp2/nios2eds/bin/gnu/h-i686-mingw32/bin/../lib/gcc/nios2-elf/4.1.2/../../../../nios2-elf/lib\libc.a(lib_a-memset.o)
+ .data          0x01808424        0x0 c:/altera/12.0sp2/nios2eds/bin/gnu/h-i686-mingw32/bin/../lib/gcc/nios2-elf/4.1.2/../../../../nios2-elf/lib\libc.a(lib_a-strlen.o)
+ .data          0x01808424        0x0 c:/altera/12.0sp2/nios2eds/bin/gnu/h-i686-mingw32/bin/../lib/gcc/nios2-elf/4.1.2/../../../../nios2-elf/lib\libc.a(lib_a-__atexit.o)
+ .data          0x01808424        0x0 c:/altera/12.0sp2/nios2eds/bin/gnu/h-i686-mingw32/bin/../lib/gcc/nios2-elf/4.1.2/../../../../nios2-elf/lib\libc.a(lib_a-__call_atexit.o)
+ .data          0x01808424        0x0 ../PWM_Test_bsp/\libhal_bsp.a(alt_exit.o)
+                0x01810424                _gp = ABSOLUTE ((. + 0x8000))
+                0x01810424                PROVIDE (gp, _gp)
+ *(.rwdata .rwdata.*)
+ *(.sdata .sdata.* .gnu.linkonce.s.*)
+ .sdata         0x01808424        0x4 ../PWM_Test_bsp/\libhal_bsp.a(altera_avalon_lcd_16207.o)
+ .sdata         0x01808428       0x14 ../PWM_Test_bsp/\libhal_bsp.a(alt_dev.o)
+                0x01808428                alt_fs_list
+                0x01808430                alt_dev_list
+                0x01808438                alt_max_fd
+ .sdata         0x0180843c        0x4 ../PWM_Test_bsp/\libhal_bsp.a(alt_errno.o)
+                0x0180843c                alt_errno
+ .sdata         0x01808440        0x8 ../PWM_Test_bsp/\libhal_bsp.a(alt_flash_dev.o)
+                0x01808440                alt_flash_dev_list
+ .sdata         0x01808448        0x4 ../PWM_Test_bsp/\libhal_bsp.a(alt_irq_vars.o)
+                0x01808448                alt_priority_mask
+ .sdata         0x0180844c        0x8 ../PWM_Test_bsp/\libhal_bsp.a(alt_tick.o)
+                0x0180844c                alt_alarm_list
+ .sdata         0x01808454        0x4 c:/altera/12.0sp2/nios2eds/bin/gnu/h-i686-mingw32/bin/../lib/gcc/nios2-elf/4.1.2/../../../../nios2-elf/lib\libc.a(lib_a-ctype_.o)
+                0x01808454                __ctype_ptr
+ .sdata         0x01808458        0x8 c:/altera/12.0sp2/nios2eds/bin/gnu/h-i686-mingw32/bin/../lib/gcc/nios2-elf/4.1.2/../../../../nios2-elf/lib\libc.a(lib_a-impure.o)
+                0x01808458                _impure_ptr
+                0x0180845c                _global_impure_ptr
+ *(.sdata2 .sdata2.* .gnu.linkonce.s2.*)
+                0x01808460                . = ALIGN (0x4)
+                0x01808460                _edata = ABSOLUTE (.)
+                0x01808460                PROVIDE (edata, ABSOLUTE (.))
+                0x01808460                PROVIDE (__ram_rwdata_end, ABSOLUTE (.))
+                0x01806b60                PROVIDE (__flash_rwdata_start, LOADADDR (.rwdata))
+
+.bss            0x01808460      0x2b0
+                0x01808460                __bss_start = ABSOLUTE (.)
+                0x01808460                PROVIDE (__sbss_start, ABSOLUTE (.))
+                0x01808460                PROVIDE (___sbss_start, ABSOLUTE (.))
+ *(.dynsbss)
+ *(.sbss .sbss.* .gnu.linkonce.sb.*)
+ .sbss          0x01808460        0xc ../PWM_Test_bsp/\libhal_bsp.a(alt_main.o)
+                0x01808460                alt_argc
+                0x01808464                alt_argv
+                0x01808468                alt_envp
+ .sbss          0x0180846c        0x4 ../PWM_Test_bsp/\libhal_bsp.a(alt_irq_vars.o)
+                0x0180846c                alt_irq_active
+ .sbss          0x01808470        0x8 ../PWM_Test_bsp/\libhal_bsp.a(alt_tick.o)
+                0x01808470                _alt_tick_rate
+                0x01808474                _alt_nticks
+ .sbss          0x01808478        0x4 ../PWM_Test_bsp/\libhal_bsp.a(alt_instruction_exception_entry.o)
+                0x01808478                alt_instruction_exception_handler
+ .sbss          0x0180847c        0x4 c:/altera/12.0sp2/nios2eds/bin/gnu/h-i686-mingw32/bin/../lib/gcc/nios2-elf/4.1.2/../../../../nios2-elf/lib\libc.a(lib_a-int_errno.o)
+                0x0180847c                errno
+ *(.sbss2 .sbss2.* .gnu.linkonce.sb2.*)
+ *(.scommon)
+                0x01808480                PROVIDE (__sbss_end, ABSOLUTE (.))
+                0x01808480                PROVIDE (___sbss_end, ABSOLUTE (.))
+ *(.dynbss)
+ *(.bss .bss.* .gnu.linkonce.b.*)
+ .bss           0x01808480        0x0 ../PWM_Test_bsp//obj/HAL/src/crt0.o
+ .bss           0x01808480        0x0 obj/hello_world.o
+ .bss           0x01808480        0x0 obj/pwm.o
+ .bss           0x01808480        0x0 ../PWM_Test_bsp/\libhal_bsp.a(alt_main.o)
+ .bss           0x01808480        0x0 ../PWM_Test_bsp/\libhal_bsp.a(alt_sys_init.o)
+ .bss           0x01808480        0x0 ../PWM_Test_bsp/\libhal_bsp.a(altera_avalon_cfi_flash.o)
+ .bss           0x01808480        0x0 ../PWM_Test_bsp/\libhal_bsp.a(altera_avalon_cfi_flash_table.o)
+ .bss           0x01808480        0x0 ../PWM_Test_bsp/\libhal_bsp.a(altera_avalon_jtag_uart_fd.o)
+ .bss           0x01808480        0x0 ../PWM_Test_bsp/\libhal_bsp.a(altera_avalon_jtag_uart_init.o)
+ .bss           0x01808480        0x0 ../PWM_Test_bsp/\libhal_bsp.a(altera_avalon_jtag_uart_ioctl.o)
+ .bss           0x01808480        0x0 ../PWM_Test_bsp/\libhal_bsp.a(altera_avalon_jtag_uart_read.o)
+ .bss           0x01808480        0x0 ../PWM_Test_bsp/\libhal_bsp.a(altera_avalon_jtag_uart_write.o)
+ .bss           0x01808480        0x0 ../PWM_Test_bsp/\libhal_bsp.a(altera_avalon_lcd_16207.o)
+ .bss           0x01808480        0x0 ../PWM_Test_bsp/\libhal_bsp.a(altera_avalon_lcd_16207_fd.o)
+ .bss           0x01808480        0x0 ../PWM_Test_bsp/\libhal_bsp.a(altera_avalon_timer_sc.o)
+ .bss           0x01808480        0x0 ../PWM_Test_bsp/\libhal_bsp.a(altera_avalon_uart_fd.o)
+ .bss           0x01808480        0x0 ../PWM_Test_bsp/\libhal_bsp.a(altera_avalon_uart_init.o)
+ .bss           0x01808480        0x0 ../PWM_Test_bsp/\libhal_bsp.a(altera_avalon_uart_read.o)
+ .bss           0x01808480        0x0 ../PWM_Test_bsp/\libhal_bsp.a(altera_avalon_uart_write.o)
+ .bss           0x01808480        0x0 ../PWM_Test_bsp/\libhal_bsp.a(alt_alarm_start.o)
+ .bss           0x01808480        0x0 ../PWM_Test_bsp/\libhal_bsp.a(alt_close.o)
+ .bss           0x01808480        0x0 ../PWM_Test_bsp/\libhal_bsp.a(alt_dcache_flush.o)
+ .bss           0x01808480        0x0 ../PWM_Test_bsp/\libhal_bsp.a(alt_dev.o)
+ .bss           0x01808480        0x0 ../PWM_Test_bsp/\libhal_bsp.a(alt_dev_llist_insert.o)
+ .bss           0x01808480        0x0 ../PWM_Test_bsp/\libhal_bsp.a(alt_do_ctors.o)
+ .bss           0x01808480        0x0 ../PWM_Test_bsp/\libhal_bsp.a(alt_do_dtors.o)
+ .bss           0x01808480        0x0 ../PWM_Test_bsp/\libhal_bsp.a(alt_errno.o)
+ .bss           0x01808480        0x0 ../PWM_Test_bsp/\libhal_bsp.a(alt_flash_dev.o)
+ .bss           0x01808480        0x0 ../PWM_Test_bsp/\libhal_bsp.a(alt_iic.o)
+ .bss           0x01808480        0x0 ../PWM_Test_bsp/\libhal_bsp.a(alt_iic_isr_register.o)
+ .bss           0x01808480        0x0 ../PWM_Test_bsp/\libhal_bsp.a(alt_io_redirect.o)
+ .bss           0x01808480        0x0 ../PWM_Test_bsp/\libhal_bsp.a(alt_irq_entry.o)
+ .bss           0x01808480        0x0 ../PWM_Test_bsp/\libhal_bsp.a(alt_irq_handler.o)
+ .bss           0x01808480        0x0 ../PWM_Test_bsp/\libhal_bsp.a(alt_irq_vars.o)
+ .bss           0x01808480        0x0 ../PWM_Test_bsp/\libhal_bsp.a(alt_open.o)
+ .bss           0x01808480        0x0 ../PWM_Test_bsp/\libhal_bsp.a(alt_release_fd.o)
+ .bss           0x01808480        0x0 ../PWM_Test_bsp/\libhal_bsp.a(alt_tick.o)
+ .bss           0x01808480        0x0 ../PWM_Test_bsp/\libhal_bsp.a(alt_usleep.o)
+ .bss           0x01808480        0x0 ../PWM_Test_bsp/\libhal_bsp.a(altera_nios2_irq.o)
+ .bss           0x01808480        0x0 ../PWM_Test_bsp/\libhal_bsp.a(altera_avalon_cfi_flash_amd.o)
+ .bss           0x01808480        0x0 ../PWM_Test_bsp/\libhal_bsp.a(altera_avalon_cfi_flash_intel.o)
+ .bss           0x01808480        0x0 ../PWM_Test_bsp/\libhal_bsp.a(alt_busy_sleep.o)
+ .bss           0x01808480        0x0 ../PWM_Test_bsp/\libhal_bsp.a(alt_exception_entry.o)
+ .bss           0x01808480        0x0 ../PWM_Test_bsp/\libhal_bsp.a(alt_find_dev.o)
+ .bss           0x01808480        0x0 ../PWM_Test_bsp/\libhal_bsp.a(alt_find_file.o)
+ .bss           0x01808480        0x0 ../PWM_Test_bsp/\libhal_bsp.a(alt_get_fd.o)
+ .bss           0x01808480        0x0 ../PWM_Test_bsp/\libhal_bsp.a(alt_instruction_exception_entry.o)
+ .bss           0x01808480        0x0 c:/altera/12.0sp2/nios2eds/bin/gnu/h-i686-mingw32/bin/../lib/gcc/nios2-elf/4.1.2/../../../../nios2-elf/lib\libc.a(lib_a-atexit.o)
+ .bss           0x01808480        0x0 c:/altera/12.0sp2/nios2eds/bin/gnu/h-i686-mingw32/bin/../lib/gcc/nios2-elf/4.1.2/../../../../nios2-elf/lib\libc.a(lib_a-ctype_.o)
+ .bss           0x01808480        0x0 c:/altera/12.0sp2/nios2eds/bin/gnu/h-i686-mingw32/bin/../lib/gcc/nios2-elf/4.1.2/../../../../nios2-elf/lib\libc.a(lib_a-exit.o)
+ .bss           0x01808480        0x0 c:/altera/12.0sp2/nios2eds/bin/gnu/h-i686-mingw32/bin/../lib/gcc/nios2-elf/4.1.2/../../../../nios2-elf/lib\libc.a(lib_a-impure.o)
+ .bss           0x01808480        0x0 c:/altera/12.0sp2/nios2eds/bin/gnu/h-i686-mingw32/bin/../lib/gcc/nios2-elf/4.1.2/../../../../nios2-elf/lib\libc.a(lib_a-int_errno.o)
+ .bss           0x01808480        0x0 c:/altera/12.0sp2/nios2eds/bin/gnu/h-i686-mingw32/bin/../lib/gcc/nios2-elf/4.1.2/../../../../nios2-elf/lib\libc.a(lib_a-memcmp.o)
+ .bss           0x01808480        0x0 c:/altera/12.0sp2/nios2eds/bin/gnu/h-i686-mingw32/bin/../lib/gcc/nios2-elf/4.1.2/../../../../nios2-elf/lib\libc.a(lib_a-memcpy.o)
+ .bss           0x01808480        0x0 c:/altera/12.0sp2/nios2eds/bin/gnu/h-i686-mingw32/bin/../lib/gcc/nios2-elf/4.1.2/../../../../nios2-elf/lib\libc.a(lib_a-memset.o)
+ .bss           0x01808480        0x0 c:/altera/12.0sp2/nios2eds/bin/gnu/h-i686-mingw32/bin/../lib/gcc/nios2-elf/4.1.2/../../../../nios2-elf/lib\libc.a(lib_a-strlen.o)
+ .bss           0x01808480        0x0 c:/altera/12.0sp2/nios2eds/bin/gnu/h-i686-mingw32/bin/../lib/gcc/nios2-elf/4.1.2/../../../../nios2-elf/lib\libc.a(lib_a-__atexit.o)
+ .bss           0x01808480        0x0 c:/altera/12.0sp2/nios2eds/bin/gnu/h-i686-mingw32/bin/../lib/gcc/nios2-elf/4.1.2/../../../../nios2-elf/lib\libc.a(lib_a-__call_atexit.o)
+ .bss           0x01808480        0x0 ../PWM_Test_bsp/\libhal_bsp.a(alt_exit.o)
+ *(COMMON)
+ COMMON         0x01808480      0x100 ../PWM_Test_bsp/\libhal_bsp.a(alt_irq_handler.o)
+                0x01808480                alt_irq
+ COMMON         0x01808580      0x190 c:/altera/12.0sp2/nios2eds/bin/gnu/h-i686-mingw32/bin/../lib/gcc/nios2-elf/4.1.2/../../../../nios2-elf/lib\libc.a(lib_a-atexit.o)
+                0x01808580                _atexit0
+                0x01808710                . = ALIGN (0x4)
+                0x01808710                __bss_end = ABSOLUTE (.)
+
+.sdram          0x01808710        0x0
+                0x01808710                PROVIDE (_alt_partition_sdram_start, ABSOLUTE (.))
+ *(.sdram. sdram.*)
+                0x01808710                . = ALIGN (0x4)
+                0x01808710                PROVIDE (_alt_partition_sdram_end, ABSOLUTE (.))
+                0x01808710                _end = ABSOLUTE (.)
+                0x01808710                end = ABSOLUTE (.)
+                0x01808710                __alt_stack_base = ABSOLUTE (.)
+                0x01808710                PROVIDE (_alt_partition_sdram_load_addr, LOADADDR (.sdram))
+
+.cfi_flash      0x02400020        0x0
+                0x02400020                PROVIDE (_alt_partition_cfi_flash_start, ABSOLUTE (.))
+ *(.cfi_flash. cfi_flash.*)
+                0x02400020                . = ALIGN (0x4)
+                0x02400020                PROVIDE (_alt_partition_cfi_flash_end, ABSOLUTE (.))
+                0x02400020                PROVIDE (_alt_partition_cfi_flash_load_addr, LOADADDR (.cfi_flash))
+
+.onchip_mem     0x0280822c        0x0
+                0x0280822c                PROVIDE (_alt_partition_onchip_mem_start, ABSOLUTE (.))
+ *(.onchip_mem. onchip_mem.*)
+                0x0280822c                . = ALIGN (0x4)
+                0x0280822c                PROVIDE (_alt_partition_onchip_mem_end, ABSOLUTE (.))
+                0x0280822c                PROVIDE (_alt_partition_onchip_mem_load_addr, LOADADDR (.onchip_mem))
+
+.stab
+ *(.stab)
+
+.stabstr
+ *(.stabstr)
+
+.stab.excl
+ *(.stab.excl)
+
+.stab.exclstr
+ *(.stab.exclstr)
+
+.stab.index
+ *(.stab.index)
+
+.stab.indexstr
+ *(.stab.indexstr)
+
+.comment        0x00000000       0x26
+ *(.comment)
+ .comment       0x00000000       0x26 obj/hello_world.o
+                                 0x27 (size before relaxing)
+ .comment       0x00000000       0x27 obj/pwm.o
+ .comment       0x00000000       0x27 ../PWM_Test_bsp/\libhal_bsp.a(alt_main.o)
+ .comment       0x00000000       0x27 ../PWM_Test_bsp/\libhal_bsp.a(alt_sys_init.o)
+ .comment       0x00000000       0x27 ../PWM_Test_bsp/\libhal_bsp.a(altera_avalon_cfi_flash.o)
+ .comment       0x00000000       0x27 ../PWM_Test_bsp/\libhal_bsp.a(altera_avalon_cfi_flash_table.o)
+ .comment       0x00000000       0x27 ../PWM_Test_bsp/\libhal_bsp.a(altera_avalon_jtag_uart_fd.o)
+ .comment       0x00000000       0x27 ../PWM_Test_bsp/\libhal_bsp.a(altera_avalon_jtag_uart_init.o)
+ .comment       0x00000000       0x27 ../PWM_Test_bsp/\libhal_bsp.a(altera_avalon_jtag_uart_ioctl.o)
+ .comment       0x00000000       0x27 ../PWM_Test_bsp/\libhal_bsp.a(altera_avalon_jtag_uart_read.o)
+ .comment       0x00000000       0x27 ../PWM_Test_bsp/\libhal_bsp.a(altera_avalon_jtag_uart_write.o)
+ .comment       0x00000000       0x27 ../PWM_Test_bsp/\libhal_bsp.a(altera_avalon_lcd_16207.o)
+ .comment       0x00000000       0x27 ../PWM_Test_bsp/\libhal_bsp.a(altera_avalon_lcd_16207_fd.o)
+ .comment       0x00000000       0x27 ../PWM_Test_bsp/\libhal_bsp.a(altera_avalon_timer_sc.o)
+ .comment       0x00000000       0x27 ../PWM_Test_bsp/\libhal_bsp.a(altera_avalon_uart_fd.o)
+ .comment       0x00000000       0x27 ../PWM_Test_bsp/\libhal_bsp.a(altera_avalon_uart_init.o)
+ .comment       0x00000000       0x27 ../PWM_Test_bsp/\libhal_bsp.a(altera_avalon_uart_read.o)
+ .comment       0x00000000       0x27 ../PWM_Test_bsp/\libhal_bsp.a(altera_avalon_uart_write.o)
+ .comment       0x00000000       0x27 ../PWM_Test_bsp/\libhal_bsp.a(alt_alarm_start.o)
+ .comment       0x00000000       0x27 ../PWM_Test_bsp/\libhal_bsp.a(alt_close.o)
+ .comment       0x00000000       0x27 ../PWM_Test_bsp/\libhal_bsp.a(alt_dcache_flush.o)
+ .comment       0x00000000       0x27 ../PWM_Test_bsp/\libhal_bsp.a(alt_dev.o)
+ .comment       0x00000000       0x27 ../PWM_Test_bsp/\libhal_bsp.a(alt_dev_llist_insert.o)
+ .comment       0x00000000       0x27 ../PWM_Test_bsp/\libhal_bsp.a(alt_do_ctors.o)
+ .comment       0x00000000       0x27 ../PWM_Test_bsp/\libhal_bsp.a(alt_do_dtors.o)
+ .comment       0x00000000       0x27 ../PWM_Test_bsp/\libhal_bsp.a(alt_errno.o)
+ .comment       0x00000000       0x27 ../PWM_Test_bsp/\libhal_bsp.a(alt_flash_dev.o)
+ .comment       0x00000000       0x27 ../PWM_Test_bsp/\libhal_bsp.a(alt_iic.o)
+ .comment       0x00000000       0x27 ../PWM_Test_bsp/\libhal_bsp.a(alt_iic_isr_register.o)
+ .comment       0x00000000       0x27 ../PWM_Test_bsp/\libhal_bsp.a(alt_io_redirect.o)
+ .comment       0x00000000       0x27 ../PWM_Test_bsp/\libhal_bsp.a(alt_irq_handler.o)
+ .comment       0x00000000       0x27 ../PWM_Test_bsp/\libhal_bsp.a(alt_irq_vars.o)
+ .comment       0x00000000       0x27 ../PWM_Test_bsp/\libhal_bsp.a(alt_open.o)
+ .comment       0x00000000       0x27 ../PWM_Test_bsp/\libhal_bsp.a(alt_release_fd.o)
+ .comment       0x00000000       0x27 ../PWM_Test_bsp/\libhal_bsp.a(alt_tick.o)
+ .comment       0x00000000       0x27 ../PWM_Test_bsp/\libhal_bsp.a(alt_usleep.o)
+ .comment       0x00000000       0x27 ../PWM_Test_bsp/\libhal_bsp.a(altera_nios2_irq.o)
+ .comment       0x00000000       0x27 ../PWM_Test_bsp/\libhal_bsp.a(altera_avalon_cfi_flash_amd.o)
+ .comment       0x00000000       0x27 ../PWM_Test_bsp/\libhal_bsp.a(altera_avalon_cfi_flash_intel.o)
+ .comment       0x00000000       0x27 ../PWM_Test_bsp/\libhal_bsp.a(alt_busy_sleep.o)
+ .comment       0x00000000       0x27 ../PWM_Test_bsp/\libhal_bsp.a(alt_find_dev.o)
+ .comment       0x00000000       0x27 ../PWM_Test_bsp/\libhal_bsp.a(alt_find_file.o)
+ .comment       0x00000000       0x27 ../PWM_Test_bsp/\libhal_bsp.a(alt_get_fd.o)
+ .comment       0x00000000       0x27 ../PWM_Test_bsp/\libhal_bsp.a(alt_instruction_exception_entry.o)
+ .comment       0x00000000       0x27 c:/altera/12.0sp2/nios2eds/bin/gnu/h-i686-mingw32/bin/../lib/gcc/nios2-elf/4.1.2/../../../../nios2-elf/lib\libc.a(lib_a-atexit.o)
+ .comment       0x00000000       0x27 c:/altera/12.0sp2/nios2eds/bin/gnu/h-i686-mingw32/bin/../lib/gcc/nios2-elf/4.1.2/../../../../nios2-elf/lib\libc.a(lib_a-ctype_.o)
+ .comment       0x00000000       0x27 c:/altera/12.0sp2/nios2eds/bin/gnu/h-i686-mingw32/bin/../lib/gcc/nios2-elf/4.1.2/../../../../nios2-elf/lib\libc.a(lib_a-exit.o)
+ .comment       0x00000000       0x27 c:/altera/12.0sp2/nios2eds/bin/gnu/h-i686-mingw32/bin/../lib/gcc/nios2-elf/4.1.2/../../../../nios2-elf/lib\libc.a(lib_a-impure.o)
+ .comment       0x00000000       0x27 c:/altera/12.0sp2/nios2eds/bin/gnu/h-i686-mingw32/bin/../lib/gcc/nios2-elf/4.1.2/../../../../nios2-elf/lib\libc.a(lib_a-int_errno.o)
+ .comment       0x00000000       0x27 c:/altera/12.0sp2/nios2eds/bin/gnu/h-i686-mingw32/bin/../lib/gcc/nios2-elf/4.1.2/../../../../nios2-elf/lib\libc.a(lib_a-memcmp.o)
+ .comment       0x00000000       0x27 c:/altera/12.0sp2/nios2eds/bin/gnu/h-i686-mingw32/bin/../lib/gcc/nios2-elf/4.1.2/../../../../nios2-elf/lib\libc.a(lib_a-memcpy.o)
+ .comment       0x00000000       0x27 c:/altera/12.0sp2/nios2eds/bin/gnu/h-i686-mingw32/bin/../lib/gcc/nios2-elf/4.1.2/../../../../nios2-elf/lib\libc.a(lib_a-memset.o)
+ .comment       0x00000000       0x27 c:/altera/12.0sp2/nios2eds/bin/gnu/h-i686-mingw32/bin/../lib/gcc/nios2-elf/4.1.2/../../../../nios2-elf/lib\libc.a(lib_a-strlen.o)
+ .comment       0x00000000       0x27 c:/altera/12.0sp2/nios2eds/bin/gnu/h-i686-mingw32/bin/../lib/gcc/nios2-elf/4.1.2/../../../../nios2-elf/lib\libc.a(lib_a-__atexit.o)
+ .comment       0x00000000       0x27 c:/altera/12.0sp2/nios2eds/bin/gnu/h-i686-mingw32/bin/../lib/gcc/nios2-elf/4.1.2/../../../../nios2-elf/lib\libc.a(lib_a-__call_atexit.o)
+ .comment       0x00000000       0x27 ../PWM_Test_bsp/\libhal_bsp.a(alt_exit.o)
+
+.debug
+ *(.debug)
+
+.line
+ *(.line)
+
+.debug_srcinfo
+ *(.debug_srcinfo)
+
+.debug_sfnames
+ *(.debug_sfnames)
+
+.debug_aranges  0x00000000      0x6f8
+ *(.debug_aranges)
+ .debug_aranges
+                0x00000000       0x20 ../PWM_Test_bsp//obj/HAL/src/crt0.o
+ .debug_aranges
+                0x00000020       0x20 obj/hello_world.o
+ .debug_aranges
+                0x00000040       0x20 obj/pwm.o
+ .debug_aranges
+                0x00000060       0x20 ../PWM_Test_bsp/\libhal_bsp.a(alt_main.o)
+ .debug_aranges
+                0x00000080       0x20 ../PWM_Test_bsp/\libhal_bsp.a(alt_sys_init.o)
+ .debug_aranges
+                0x000000a0       0x20 ../PWM_Test_bsp/\libhal_bsp.a(altera_avalon_cfi_flash.o)
+ .debug_aranges
+                0x000000c0       0x20 ../PWM_Test_bsp/\libhal_bsp.a(altera_avalon_cfi_flash_table.o)
+ .debug_aranges
+                0x000000e0       0x20 ../PWM_Test_bsp/\libhal_bsp.a(altera_avalon_jtag_uart_fd.o)
+ .debug_aranges
+                0x00000100       0x20 ../PWM_Test_bsp/\libhal_bsp.a(altera_avalon_jtag_uart_init.o)
+ .debug_aranges
+                0x00000120       0x20 ../PWM_Test_bsp/\libhal_bsp.a(altera_avalon_jtag_uart_ioctl.o)
+ .debug_aranges
+                0x00000140       0x20 ../PWM_Test_bsp/\libhal_bsp.a(altera_avalon_jtag_uart_read.o)
+ .debug_aranges
+                0x00000160       0x20 ../PWM_Test_bsp/\libhal_bsp.a(altera_avalon_jtag_uart_write.o)
+ .debug_aranges
+                0x00000180       0x20 ../PWM_Test_bsp/\libhal_bsp.a(altera_avalon_lcd_16207.o)
+ .debug_aranges
+                0x000001a0       0x20 ../PWM_Test_bsp/\libhal_bsp.a(altera_avalon_lcd_16207_fd.o)
+ .debug_aranges
+                0x000001c0       0x20 ../PWM_Test_bsp/\libhal_bsp.a(altera_avalon_timer_sc.o)
+ .debug_aranges
+                0x000001e0       0x20 ../PWM_Test_bsp/\libhal_bsp.a(altera_avalon_uart_fd.o)
+ .debug_aranges
+                0x00000200       0x20 ../PWM_Test_bsp/\libhal_bsp.a(altera_avalon_uart_init.o)
+ .debug_aranges
+                0x00000220       0x20 ../PWM_Test_bsp/\libhal_bsp.a(altera_avalon_uart_read.o)
+ .debug_aranges
+                0x00000240       0x20 ../PWM_Test_bsp/\libhal_bsp.a(altera_avalon_uart_write.o)
+ .debug_aranges
+                0x00000260       0x20 ../PWM_Test_bsp/\libhal_bsp.a(alt_alarm_start.o)
+ .debug_aranges
+                0x00000280       0x20 ../PWM_Test_bsp/\libhal_bsp.a(alt_close.o)
+ .debug_aranges
+                0x000002a0       0x20 ../PWM_Test_bsp/\libhal_bsp.a(alt_dcache_flush.o)
+ .debug_aranges
+                0x000002c0       0x20 ../PWM_Test_bsp/\libhal_bsp.a(alt_dev.o)
+ .debug_aranges
+                0x000002e0       0x20 ../PWM_Test_bsp/\libhal_bsp.a(alt_dev_llist_insert.o)
+ .debug_aranges
+                0x00000300       0x20 ../PWM_Test_bsp/\libhal_bsp.a(alt_do_ctors.o)
+ .debug_aranges
+                0x00000320       0x20 ../PWM_Test_bsp/\libhal_bsp.a(alt_do_dtors.o)
+ .debug_aranges
+                0x00000340       0x20 ../PWM_Test_bsp/\libhal_bsp.a(alt_flash_dev.o)
+ .debug_aranges
+                0x00000360       0x20 ../PWM_Test_bsp/\libhal_bsp.a(alt_iic.o)
+ .debug_aranges
+                0x00000380       0x20 ../PWM_Test_bsp/\libhal_bsp.a(alt_iic_isr_register.o)
+ .debug_aranges
+                0x000003a0       0x20 ../PWM_Test_bsp/\libhal_bsp.a(alt_io_redirect.o)
+ .debug_aranges
+                0x000003c0       0x30 ../PWM_Test_bsp/\libhal_bsp.a(alt_irq_entry.o)
+ .debug_aranges
+                0x000003f0       0x28 ../PWM_Test_bsp/\libhal_bsp.a(alt_irq_handler.o)
+ .debug_aranges
+                0x00000418       0x20 ../PWM_Test_bsp/\libhal_bsp.a(alt_open.o)
+ .debug_aranges
+                0x00000438       0x20 ../PWM_Test_bsp/\libhal_bsp.a(alt_release_fd.o)
+ .debug_aranges
+                0x00000458       0x20 ../PWM_Test_bsp/\libhal_bsp.a(alt_tick.o)
+ .debug_aranges
+                0x00000478       0x20 ../PWM_Test_bsp/\libhal_bsp.a(alt_usleep.o)
+ .debug_aranges
+                0x00000498       0x20 ../PWM_Test_bsp/\libhal_bsp.a(altera_nios2_irq.o)
+ .debug_aranges
+                0x000004b8       0x20 ../PWM_Test_bsp/\libhal_bsp.a(altera_avalon_cfi_flash_amd.o)
+ .debug_aranges
+                0x000004d8       0x20 ../PWM_Test_bsp/\libhal_bsp.a(altera_avalon_cfi_flash_intel.o)
+ .debug_aranges
+                0x000004f8       0x20 ../PWM_Test_bsp/\libhal_bsp.a(alt_busy_sleep.o)
+ .debug_aranges
+                0x00000518       0x38 ../PWM_Test_bsp/\libhal_bsp.a(alt_exception_entry.o)
+ .debug_aranges
+                0x00000550       0x20 ../PWM_Test_bsp/\libhal_bsp.a(alt_find_dev.o)
+ .debug_aranges
+                0x00000570       0x20 ../PWM_Test_bsp/\libhal_bsp.a(alt_find_file.o)
+ .debug_aranges
+                0x00000590       0x20 ../PWM_Test_bsp/\libhal_bsp.a(alt_get_fd.o)
+ .debug_aranges
+                0x000005b0       0x28 ../PWM_Test_bsp/\libhal_bsp.a(alt_instruction_exception_entry.o)
+ .debug_aranges
+                0x000005d8       0x20 c:/altera/12.0sp2/nios2eds/bin/gnu/h-i686-mingw32/bin/../lib/gcc/nios2-elf/4.1.2/../../../../nios2-elf/lib\libc.a(lib_a-atexit.o)
+ .debug_aranges
+                0x000005f8       0x20 c:/altera/12.0sp2/nios2eds/bin/gnu/h-i686-mingw32/bin/../lib/gcc/nios2-elf/4.1.2/../../../../nios2-elf/lib\libc.a(lib_a-exit.o)
+ .debug_aranges
+                0x00000618       0x20 c:/altera/12.0sp2/nios2eds/bin/gnu/h-i686-mingw32/bin/../lib/gcc/nios2-elf/4.1.2/../../../../nios2-elf/lib\libc.a(lib_a-memcmp.o)
+ .debug_aranges
+                0x00000638       0x20 c:/altera/12.0sp2/nios2eds/bin/gnu/h-i686-mingw32/bin/../lib/gcc/nios2-elf/4.1.2/../../../../nios2-elf/lib\libc.a(lib_a-memcpy.o)
+ .debug_aranges
+                0x00000658       0x20 c:/altera/12.0sp2/nios2eds/bin/gnu/h-i686-mingw32/bin/../lib/gcc/nios2-elf/4.1.2/../../../../nios2-elf/lib\libc.a(lib_a-memset.o)
+ .debug_aranges
+                0x00000678       0x20 c:/altera/12.0sp2/nios2eds/bin/gnu/h-i686-mingw32/bin/../lib/gcc/nios2-elf/4.1.2/../../../../nios2-elf/lib\libc.a(lib_a-strlen.o)
+ .debug_aranges
+                0x00000698       0x20 c:/altera/12.0sp2/nios2eds/bin/gnu/h-i686-mingw32/bin/../lib/gcc/nios2-elf/4.1.2/../../../../nios2-elf/lib\libc.a(lib_a-__atexit.o)
+ .debug_aranges
+                0x000006b8       0x20 c:/altera/12.0sp2/nios2eds/bin/gnu/h-i686-mingw32/bin/../lib/gcc/nios2-elf/4.1.2/../../../../nios2-elf/lib\libc.a(lib_a-__call_atexit.o)
+ .debug_aranges
+                0x000006d8       0x20 ../PWM_Test_bsp/\libhal_bsp.a(alt_exit.o)
+
+.debug_pubnames
+                0x00000000      0xe68
+ *(.debug_pubnames)
+ .debug_pubnames
+                0x00000000       0x1b obj/hello_world.o
+ .debug_pubnames
+                0x0000001b       0x3b obj/pwm.o
+ .debug_pubnames
+                0x00000056       0x46 ../PWM_Test_bsp/\libhal_bsp.a(alt_main.o)
+ .debug_pubnames
+                0x0000009c       0x34 ../PWM_Test_bsp/\libhal_bsp.a(alt_sys_init.o)
+ .debug_pubnames
+                0x000000d0       0xac ../PWM_Test_bsp/\libhal_bsp.a(altera_avalon_cfi_flash.o)
+ .debug_pubnames
+                0x0000017c      0x27a ../PWM_Test_bsp/\libhal_bsp.a(altera_avalon_cfi_flash_table.o)
+ .debug_pubnames
+                0x000003f6       0xa5 ../PWM_Test_bsp/\libhal_bsp.a(altera_avalon_jtag_uart_fd.o)
+ .debug_pubnames
+                0x0000049b       0x55 ../PWM_Test_bsp/\libhal_bsp.a(altera_avalon_jtag_uart_init.o)
+ .debug_pubnames
+                0x000004f0       0x34 ../PWM_Test_bsp/\libhal_bsp.a(altera_avalon_jtag_uart_ioctl.o)
+ .debug_pubnames
+                0x00000524       0x33 ../PWM_Test_bsp/\libhal_bsp.a(altera_avalon_jtag_uart_read.o)
+ .debug_pubnames
+                0x00000557       0x34 ../PWM_Test_bsp/\libhal_bsp.a(altera_avalon_jtag_uart_write.o)
+ .debug_pubnames
+                0x0000058b       0x55 ../PWM_Test_bsp/\libhal_bsp.a(altera_avalon_lcd_16207.o)
+ .debug_pubnames
+                0x000005e0       0x37 ../PWM_Test_bsp/\libhal_bsp.a(altera_avalon_lcd_16207_fd.o)
+ .debug_pubnames
+                0x00000617       0x2f ../PWM_Test_bsp/\libhal_bsp.a(altera_avalon_timer_sc.o)
+ .debug_pubnames
+                0x00000646       0x71 ../PWM_Test_bsp/\libhal_bsp.a(altera_avalon_uart_fd.o)
+ .debug_pubnames
+                0x000006b7       0x4b ../PWM_Test_bsp/\libhal_bsp.a(altera_avalon_uart_init.o)
+ .debug_pubnames
+                0x00000702       0x2e ../PWM_Test_bsp/\libhal_bsp.a(altera_avalon_uart_read.o)
+ .debug_pubnames
+                0x00000730       0x2f ../PWM_Test_bsp/\libhal_bsp.a(altera_avalon_uart_write.o)
+ .debug_pubnames
+                0x0000075f       0x26 ../PWM_Test_bsp/\libhal_bsp.a(alt_alarm_start.o)
+ .debug_pubnames
+                0x00000785       0x1c ../PWM_Test_bsp/\libhal_bsp.a(alt_close.o)
+ .debug_pubnames
+                0x000007a1       0x27 ../PWM_Test_bsp/\libhal_bsp.a(alt_dcache_flush.o)
+ .debug_pubnames
+                0x000007c8       0x63 ../PWM_Test_bsp/\libhal_bsp.a(alt_dev.o)
+ .debug_pubnames
+                0x0000082b       0x2b ../PWM_Test_bsp/\libhal_bsp.a(alt_dev_llist_insert.o)
+ .debug_pubnames
+                0x00000856       0x20 ../PWM_Test_bsp/\libhal_bsp.a(alt_do_ctors.o)
+ .debug_pubnames
+                0x00000876       0x20 ../PWM_Test_bsp/\libhal_bsp.a(alt_do_dtors.o)
+ .debug_pubnames
+                0x00000896       0x20 ../PWM_Test_bsp/\libhal_bsp.a(alt_errno.o)
+ .debug_pubnames
+                0x000008b6       0x58 ../PWM_Test_bsp/\libhal_bsp.a(alt_flash_dev.o)
+ .debug_pubnames
+                0x0000090e       0x6e ../PWM_Test_bsp/\libhal_bsp.a(alt_iic.o)
+ .debug_pubnames
+                0x0000097c       0x2b ../PWM_Test_bsp/\libhal_bsp.a(alt_iic_isr_register.o)
+ .debug_pubnames
+                0x000009a7       0x26 ../PWM_Test_bsp/\libhal_bsp.a(alt_io_redirect.o)
+ .debug_pubnames
+                0x000009cd       0x32 ../PWM_Test_bsp/\libhal_bsp.a(alt_irq_handler.o)
+ .debug_pubnames
+                0x000009ff       0x3b ../PWM_Test_bsp/\libhal_bsp.a(alt_irq_vars.o)
+ .debug_pubnames
+                0x00000a3a       0x1b ../PWM_Test_bsp/\libhal_bsp.a(alt_open.o)
+ .debug_pubnames
+                0x00000a55       0x25 ../PWM_Test_bsp/\libhal_bsp.a(alt_release_fd.o)
+ .debug_pubnames
+                0x00000a7a       0x68 ../PWM_Test_bsp/\libhal_bsp.a(alt_tick.o)
+ .debug_pubnames
+                0x00000ae2       0x1d ../PWM_Test_bsp/\libhal_bsp.a(alt_usleep.o)
+ .debug_pubnames
+                0x00000aff       0x2c ../PWM_Test_bsp/\libhal_bsp.a(altera_nios2_irq.o)
+ .debug_pubnames
+                0x00000b2b       0x3e ../PWM_Test_bsp/\libhal_bsp.a(altera_avalon_cfi_flash_amd.o)
+ .debug_pubnames
+                0x00000b69       0x42 ../PWM_Test_bsp/\libhal_bsp.a(altera_avalon_cfi_flash_intel.o)
+ .debug_pubnames
+                0x00000bab       0x25 ../PWM_Test_bsp/\libhal_bsp.a(alt_busy_sleep.o)
+ .debug_pubnames
+                0x00000bd0       0x23 ../PWM_Test_bsp/\libhal_bsp.a(alt_find_dev.o)
+ .debug_pubnames
+                0x00000bf3       0x24 ../PWM_Test_bsp/\libhal_bsp.a(alt_find_file.o)
+ .debug_pubnames
+                0x00000c17       0x21 ../PWM_Test_bsp/\libhal_bsp.a(alt_get_fd.o)
+ .debug_pubnames
+                0x00000c38       0x87 ../PWM_Test_bsp/\libhal_bsp.a(alt_instruction_exception_entry.o)
+ .debug_pubnames
+                0x00000cbf       0x2a c:/altera/12.0sp2/nios2eds/bin/gnu/h-i686-mingw32/bin/../lib/gcc/nios2-elf/4.1.2/../../../../nios2-elf/lib\libc.a(lib_a-atexit.o)
+ .debug_pubnames
+                0x00000ce9       0x2e c:/altera/12.0sp2/nios2eds/bin/gnu/h-i686-mingw32/bin/../lib/gcc/nios2-elf/4.1.2/../../../../nios2-elf/lib\libc.a(lib_a-ctype_.o)
+ .debug_pubnames
+                0x00000d17       0x1b c:/altera/12.0sp2/nios2eds/bin/gnu/h-i686-mingw32/bin/../lib/gcc/nios2-elf/4.1.2/../../../../nios2-elf/lib\libc.a(lib_a-exit.o)
+ .debug_pubnames
+                0x00000d32       0x39 c:/altera/12.0sp2/nios2eds/bin/gnu/h-i686-mingw32/bin/../lib/gcc/nios2-elf/4.1.2/../../../../nios2-elf/lib\libc.a(lib_a-impure.o)
+ .debug_pubnames
+                0x00000d6b       0x1c c:/altera/12.0sp2/nios2eds/bin/gnu/h-i686-mingw32/bin/../lib/gcc/nios2-elf/4.1.2/../../../../nios2-elf/lib\libc.a(lib_a-int_errno.o)
+ .debug_pubnames
+                0x00000d87       0x1d c:/altera/12.0sp2/nios2eds/bin/gnu/h-i686-mingw32/bin/../lib/gcc/nios2-elf/4.1.2/../../../../nios2-elf/lib\libc.a(lib_a-memcmp.o)
+ .debug_pubnames
+                0x00000da4       0x1d c:/altera/12.0sp2/nios2eds/bin/gnu/h-i686-mingw32/bin/../lib/gcc/nios2-elf/4.1.2/../../../../nios2-elf/lib\libc.a(lib_a-memcpy.o)
+ .debug_pubnames
+                0x00000dc1       0x1d c:/altera/12.0sp2/nios2eds/bin/gnu/h-i686-mingw32/bin/../lib/gcc/nios2-elf/4.1.2/../../../../nios2-elf/lib\libc.a(lib_a-memset.o)
+ .debug_pubnames
+                0x00000dde       0x1d c:/altera/12.0sp2/nios2eds/bin/gnu/h-i686-mingw32/bin/../lib/gcc/nios2-elf/4.1.2/../../../../nios2-elf/lib\libc.a(lib_a-strlen.o)
+ .debug_pubnames
+                0x00000dfb       0x2a c:/altera/12.0sp2/nios2eds/bin/gnu/h-i686-mingw32/bin/../lib/gcc/nios2-elf/4.1.2/../../../../nios2-elf/lib\libc.a(lib_a-__atexit.o)
+ .debug_pubnames
+                0x00000e25       0x27 c:/altera/12.0sp2/nios2eds/bin/gnu/h-i686-mingw32/bin/../lib/gcc/nios2-elf/4.1.2/../../../../nios2-elf/lib\libc.a(lib_a-__call_atexit.o)
+ .debug_pubnames
+                0x00000e4c       0x1c ../PWM_Test_bsp/\libhal_bsp.a(alt_exit.o)
+
+.debug_info     0x00000000    0x10d29
+ *(.debug_info .gnu.linkonce.wi.*)
+ .debug_info    0x00000000       0xa7 ../PWM_Test_bsp//obj/HAL/src/crt0.o
+ .debug_info    0x000000a7       0xad obj/hello_world.o
+ .debug_info    0x00000154       0xd5 obj/pwm.o
+ .debug_info    0x00000229      0x24d ../PWM_Test_bsp/\libhal_bsp.a(alt_main.o)
+ .debug_info    0x00000476      0xfd7 ../PWM_Test_bsp/\libhal_bsp.a(alt_sys_init.o)
+ .debug_info    0x0000144d      0xb71 ../PWM_Test_bsp/\libhal_bsp.a(altera_avalon_cfi_flash.o)
+ .debug_info    0x00001fbe      0xe5d ../PWM_Test_bsp/\libhal_bsp.a(altera_avalon_cfi_flash_table.o)
+ .debug_info    0x00002e1b      0x801 ../PWM_Test_bsp/\libhal_bsp.a(altera_avalon_jtag_uart_fd.o)
+ .debug_info    0x0000361c      0x629 ../PWM_Test_bsp/\libhal_bsp.a(altera_avalon_jtag_uart_init.o)
+ .debug_info    0x00003c45      0x46b ../PWM_Test_bsp/\libhal_bsp.a(altera_avalon_jtag_uart_ioctl.o)
+ .debug_info    0x000040b0      0x56e ../PWM_Test_bsp/\libhal_bsp.a(altera_avalon_jtag_uart_read.o)
+ .debug_info    0x0000461e      0x566 ../PWM_Test_bsp/\libhal_bsp.a(altera_avalon_jtag_uart_write.o)
+ .debug_info    0x00004b84      0x916 ../PWM_Test_bsp/\libhal_bsp.a(altera_avalon_lcd_16207.o)
+ .debug_info    0x0000549a      0x73a ../PWM_Test_bsp/\libhal_bsp.a(altera_avalon_lcd_16207_fd.o)
+ .debug_info    0x00005bd4      0x3b3 ../PWM_Test_bsp/\libhal_bsp.a(altera_avalon_timer_sc.o)
+ .debug_info    0x00005f87      0x664 ../PWM_Test_bsp/\libhal_bsp.a(altera_avalon_uart_fd.o)
+ .debug_info    0x000065eb      0x536 ../PWM_Test_bsp/\libhal_bsp.a(altera_avalon_uart_init.o)
+ .debug_info    0x00006b21      0x4ea ../PWM_Test_bsp/\libhal_bsp.a(altera_avalon_uart_read.o)
+ .debug_info    0x0000700b      0x4e8 ../PWM_Test_bsp/\libhal_bsp.a(altera_avalon_uart_write.o)
+ .debug_info    0x000074f3      0x46a ../PWM_Test_bsp/\libhal_bsp.a(alt_alarm_start.o)
+ .debug_info    0x0000795d      0x48f ../PWM_Test_bsp/\libhal_bsp.a(alt_close.o)
+ .debug_info    0x00007dec      0x1cc ../PWM_Test_bsp/\libhal_bsp.a(alt_dcache_flush.o)
+ .debug_info    0x00007fb8      0x6a7 ../PWM_Test_bsp/\libhal_bsp.a(alt_dev.o)
+ .debug_info    0x0000865f      0x2df ../PWM_Test_bsp/\libhal_bsp.a(alt_dev_llist_insert.o)
+ .debug_info    0x0000893e      0x137 ../PWM_Test_bsp/\libhal_bsp.a(alt_do_ctors.o)
+ .debug_info    0x00008a75      0x136 ../PWM_Test_bsp/\libhal_bsp.a(alt_do_dtors.o)
+ .debug_info    0x00008bab      0x18c ../PWM_Test_bsp/\libhal_bsp.a(alt_errno.o)
+ .debug_info    0x00008d37      0x5c1 ../PWM_Test_bsp/\libhal_bsp.a(alt_flash_dev.o)
+ .debug_info    0x000092f8      0x4bb ../PWM_Test_bsp/\libhal_bsp.a(alt_iic.o)
+ .debug_info    0x000097b3      0x33c ../PWM_Test_bsp/\libhal_bsp.a(alt_iic_isr_register.o)
+ .debug_info    0x00009aef      0x6bd ../PWM_Test_bsp/\libhal_bsp.a(alt_io_redirect.o)
+ .debug_info    0x0000a1ac       0xac ../PWM_Test_bsp/\libhal_bsp.a(alt_irq_entry.o)
+ .debug_info    0x0000a258      0x29d ../PWM_Test_bsp/\libhal_bsp.a(alt_irq_handler.o)
+ .debug_info    0x0000a4f5      0x18f ../PWM_Test_bsp/\libhal_bsp.a(alt_irq_vars.o)
+ .debug_info    0x0000a684      0x54d ../PWM_Test_bsp/\libhal_bsp.a(alt_open.o)
+ .debug_info    0x0000abd1      0x41a ../PWM_Test_bsp/\libhal_bsp.a(alt_release_fd.o)
+ .debug_info    0x0000afeb      0x426 ../PWM_Test_bsp/\libhal_bsp.a(alt_tick.o)
+ .debug_info    0x0000b411      0x190 ../PWM_Test_bsp/\libhal_bsp.a(alt_usleep.o)
+ .debug_info    0x0000b5a1      0x181 ../PWM_Test_bsp/\libhal_bsp.a(altera_nios2_irq.o)
+ .debug_info    0x0000b722      0x911 ../PWM_Test_bsp/\libhal_bsp.a(altera_avalon_cfi_flash_amd.o)
+ .debug_info    0x0000c033      0x907 ../PWM_Test_bsp/\libhal_bsp.a(altera_avalon_cfi_flash_intel.o)
+ .debug_info    0x0000c93a      0x1d3 ../PWM_Test_bsp/\libhal_bsp.a(alt_busy_sleep.o)
+ .debug_info    0x0000cb0d       0xb2 ../PWM_Test_bsp/\libhal_bsp.a(alt_exception_entry.o)
+ .debug_info    0x0000cbbf      0x440 ../PWM_Test_bsp/\libhal_bsp.a(alt_find_dev.o)
+ .debug_info    0x0000cfff      0x447 ../PWM_Test_bsp/\libhal_bsp.a(alt_find_file.o)
+ .debug_info    0x0000d446      0x488 ../PWM_Test_bsp/\libhal_bsp.a(alt_get_fd.o)
+ .debug_info    0x0000d8ce      0x5f6 ../PWM_Test_bsp/\libhal_bsp.a(alt_instruction_exception_entry.o)
+ .debug_info    0x0000dec4      0x181 c:/altera/12.0sp2/nios2eds/bin/gnu/h-i686-mingw32/bin/../lib/gcc/nios2-elf/4.1.2/../../../../nios2-elf/lib\libc.a(lib_a-atexit.o)
+ .debug_info    0x0000e045       0xa0 c:/altera/12.0sp2/nios2eds/bin/gnu/h-i686-mingw32/bin/../lib/gcc/nios2-elf/4.1.2/../../../../nios2-elf/lib\libc.a(lib_a-ctype_.o)
+ .debug_info    0x0000e0e5      0x93f c:/altera/12.0sp2/nios2eds/bin/gnu/h-i686-mingw32/bin/../lib/gcc/nios2-elf/4.1.2/../../../../nios2-elf/lib\libc.a(lib_a-exit.o)
+ .debug_info    0x0000ea24      0x93d c:/altera/12.0sp2/nios2eds/bin/gnu/h-i686-mingw32/bin/../lib/gcc/nios2-elf/4.1.2/../../../../nios2-elf/lib\libc.a(lib_a-impure.o)
+ .debug_info    0x0000f361       0x8c c:/altera/12.0sp2/nios2eds/bin/gnu/h-i686-mingw32/bin/../lib/gcc/nios2-elf/4.1.2/../../../../nios2-elf/lib\libc.a(lib_a-int_errno.o)
+ .debug_info    0x0000f3ed      0x115 c:/altera/12.0sp2/nios2eds/bin/gnu/h-i686-mingw32/bin/../lib/gcc/nios2-elf/4.1.2/../../../../nios2-elf/lib\libc.a(lib_a-memcmp.o)
+ .debug_info    0x0000f502      0x106 c:/altera/12.0sp2/nios2eds/bin/gnu/h-i686-mingw32/bin/../lib/gcc/nios2-elf/4.1.2/../../../../nios2-elf/lib\libc.a(lib_a-memcpy.o)
+ .debug_info    0x0000f608      0x113 c:/altera/12.0sp2/nios2eds/bin/gnu/h-i686-mingw32/bin/../lib/gcc/nios2-elf/4.1.2/../../../../nios2-elf/lib\libc.a(lib_a-memset.o)
+ .debug_info    0x0000f71b       0xdb c:/altera/12.0sp2/nios2eds/bin/gnu/h-i686-mingw32/bin/../lib/gcc/nios2-elf/4.1.2/../../../../nios2-elf/lib\libc.a(lib_a-strlen.o)
+ .debug_info    0x0000f7f6      0x99c c:/altera/12.0sp2/nios2eds/bin/gnu/h-i686-mingw32/bin/../lib/gcc/nios2-elf/4.1.2/../../../../nios2-elf/lib\libc.a(lib_a-__atexit.o)
+ .debug_info    0x00010192      0x9e2 c:/altera/12.0sp2/nios2eds/bin/gnu/h-i686-mingw32/bin/../lib/gcc/nios2-elf/4.1.2/../../../../nios2-elf/lib\libc.a(lib_a-__call_atexit.o)
+ .debug_info    0x00010b74      0x1b5 ../PWM_Test_bsp/\libhal_bsp.a(alt_exit.o)
+
+.debug_abbrev   0x00000000     0x3670
+ *(.debug_abbrev)
+ .debug_abbrev  0x00000000       0x14 ../PWM_Test_bsp//obj/HAL/src/crt0.o
+ .debug_abbrev  0x00000014       0x4e obj/hello_world.o
+ .debug_abbrev  0x00000062       0x78 obj/pwm.o
+ .debug_abbrev  0x000000da       0xb7 ../PWM_Test_bsp/\libhal_bsp.a(alt_main.o)
+ .debug_abbrev  0x00000191      0x17d ../PWM_Test_bsp/\libhal_bsp.a(alt_sys_init.o)
+ .debug_abbrev  0x0000030e      0x1bf ../PWM_Test_bsp/\libhal_bsp.a(altera_avalon_cfi_flash.o)
+ .debug_abbrev  0x000004cd      0x185 ../PWM_Test_bsp/\libhal_bsp.a(altera_avalon_cfi_flash_table.o)
+ .debug_abbrev  0x00000652       0xf7 ../PWM_Test_bsp/\libhal_bsp.a(altera_avalon_jtag_uart_fd.o)
+ .debug_abbrev  0x00000749      0x17c ../PWM_Test_bsp/\libhal_bsp.a(altera_avalon_jtag_uart_init.o)
+ .debug_abbrev  0x000008c5       0xf0 ../PWM_Test_bsp/\libhal_bsp.a(altera_avalon_jtag_uart_ioctl.o)
+ .debug_abbrev  0x000009b5      0x191 ../PWM_Test_bsp/\libhal_bsp.a(altera_avalon_jtag_uart_read.o)
+ .debug_abbrev  0x00000b46      0x18d ../PWM_Test_bsp/\libhal_bsp.a(altera_avalon_jtag_uart_write.o)
+ .debug_abbrev  0x00000cd3      0x1c3 ../PWM_Test_bsp/\libhal_bsp.a(altera_avalon_lcd_16207.o)
+ .debug_abbrev  0x00000e96      0x104 ../PWM_Test_bsp/\libhal_bsp.a(altera_avalon_lcd_16207_fd.o)
+ .debug_abbrev  0x00000f9a      0x137 ../PWM_Test_bsp/\libhal_bsp.a(altera_avalon_timer_sc.o)
+ .debug_abbrev  0x000010d1       0xe8 ../PWM_Test_bsp/\libhal_bsp.a(altera_avalon_uart_fd.o)
+ .debug_abbrev  0x000011b9      0x148 ../PWM_Test_bsp/\libhal_bsp.a(altera_avalon_uart_init.o)
+ .debug_abbrev  0x00001301      0x174 ../PWM_Test_bsp/\libhal_bsp.a(altera_avalon_uart_read.o)
+ .debug_abbrev  0x00001475      0x17b ../PWM_Test_bsp/\libhal_bsp.a(altera_avalon_uart_write.o)
+ .debug_abbrev  0x000015f0      0x172 ../PWM_Test_bsp/\libhal_bsp.a(alt_alarm_start.o)
+ .debug_abbrev  0x00001762       0xfb ../PWM_Test_bsp/\libhal_bsp.a(alt_close.o)
+ .debug_abbrev  0x0000185d       0x7a ../PWM_Test_bsp/\libhal_bsp.a(alt_dcache_flush.o)
+ .debug_abbrev  0x000018d7       0xc7 ../PWM_Test_bsp/\libhal_bsp.a(alt_dev.o)
+ .debug_abbrev  0x0000199e       0xf6 ../PWM_Test_bsp/\libhal_bsp.a(alt_dev_llist_insert.o)
+ .debug_abbrev  0x00001a94       0x76 ../PWM_Test_bsp/\libhal_bsp.a(alt_do_ctors.o)
+ .debug_abbrev  0x00001b0a       0x76 ../PWM_Test_bsp/\libhal_bsp.a(alt_do_dtors.o)
+ .debug_abbrev  0x00001b80       0x5e ../PWM_Test_bsp/\libhal_bsp.a(alt_errno.o)
+ .debug_abbrev  0x00001bde      0x121 ../PWM_Test_bsp/\libhal_bsp.a(alt_flash_dev.o)
+ .debug_abbrev  0x00001cff      0x134 ../PWM_Test_bsp/\libhal_bsp.a(alt_iic.o)
+ .debug_abbrev  0x00001e33      0x14e ../PWM_Test_bsp/\libhal_bsp.a(alt_iic_isr_register.o)
+ .debug_abbrev  0x00001f81       0xf0 ../PWM_Test_bsp/\libhal_bsp.a(alt_io_redirect.o)
+ .debug_abbrev  0x00002071       0x12 ../PWM_Test_bsp/\libhal_bsp.a(alt_irq_entry.o)
+ .debug_abbrev  0x00002083      0x10c ../PWM_Test_bsp/\libhal_bsp.a(alt_irq_handler.o)
+ .debug_abbrev  0x0000218f       0x44 ../PWM_Test_bsp/\libhal_bsp.a(alt_irq_vars.o)
+ .debug_abbrev  0x000021d3      0x112 ../PWM_Test_bsp/\libhal_bsp.a(alt_open.o)
+ .debug_abbrev  0x000022e5       0xc1 ../PWM_Test_bsp/\libhal_bsp.a(alt_release_fd.o)
+ .debug_abbrev  0x000023a6      0x150 ../PWM_Test_bsp/\libhal_bsp.a(alt_tick.o)
+ .debug_abbrev  0x000024f6       0x5d ../PWM_Test_bsp/\libhal_bsp.a(alt_usleep.o)
+ .debug_abbrev  0x00002553       0x3f ../PWM_Test_bsp/\libhal_bsp.a(altera_nios2_irq.o)
+ .debug_abbrev  0x00002592      0x14d ../PWM_Test_bsp/\libhal_bsp.a(altera_avalon_cfi_flash_amd.o)
+ .debug_abbrev  0x000026df      0x14d ../PWM_Test_bsp/\libhal_bsp.a(altera_avalon_cfi_flash_intel.o)
+ .debug_abbrev  0x0000282c       0x6c ../PWM_Test_bsp/\libhal_bsp.a(alt_busy_sleep.o)
+ .debug_abbrev  0x00002898       0x12 ../PWM_Test_bsp/\libhal_bsp.a(alt_exception_entry.o)
+ .debug_abbrev  0x000028aa       0xcf ../PWM_Test_bsp/\libhal_bsp.a(alt_find_dev.o)
+ .debug_abbrev  0x00002979       0xcf ../PWM_Test_bsp/\libhal_bsp.a(alt_find_file.o)
+ .debug_abbrev  0x00002a48       0xfb ../PWM_Test_bsp/\libhal_bsp.a(alt_get_fd.o)
+ .debug_abbrev  0x00002b43       0xa3 ../PWM_Test_bsp/\libhal_bsp.a(alt_instruction_exception_entry.o)
+ .debug_abbrev  0x00002be6       0xb7 c:/altera/12.0sp2/nios2eds/bin/gnu/h-i686-mingw32/bin/../lib/gcc/nios2-elf/4.1.2/../../../../nios2-elf/lib\libc.a(lib_a-atexit.o)
+ .debug_abbrev  0x00002c9d       0x61 c:/altera/12.0sp2/nios2eds/bin/gnu/h-i686-mingw32/bin/../lib/gcc/nios2-elf/4.1.2/../../../../nios2-elf/lib\libc.a(lib_a-ctype_.o)
+ .debug_abbrev  0x00002cfe      0x16e c:/altera/12.0sp2/nios2eds/bin/gnu/h-i686-mingw32/bin/../lib/gcc/nios2-elf/4.1.2/../../../../nios2-elf/lib\libc.a(lib_a-exit.o)
+ .debug_abbrev  0x00002e6c      0x157 c:/altera/12.0sp2/nios2eds/bin/gnu/h-i686-mingw32/bin/../lib/gcc/nios2-elf/4.1.2/../../../../nios2-elf/lib\libc.a(lib_a-impure.o)
+ .debug_abbrev  0x00002fc3       0x3b c:/altera/12.0sp2/nios2eds/bin/gnu/h-i686-mingw32/bin/../lib/gcc/nios2-elf/4.1.2/../../../../nios2-elf/lib\libc.a(lib_a-int_errno.o)
+ .debug_abbrev  0x00002ffe       0x7c c:/altera/12.0sp2/nios2eds/bin/gnu/h-i686-mingw32/bin/../lib/gcc/nios2-elf/4.1.2/../../../../nios2-elf/lib\libc.a(lib_a-memcmp.o)
+ .debug_abbrev  0x0000307a       0xb5 c:/altera/12.0sp2/nios2eds/bin/gnu/h-i686-mingw32/bin/../lib/gcc/nios2-elf/4.1.2/../../../../nios2-elf/lib\libc.a(lib_a-memcpy.o)
+ .debug_abbrev  0x0000312f       0xb8 c:/altera/12.0sp2/nios2eds/bin/gnu/h-i686-mingw32/bin/../lib/gcc/nios2-elf/4.1.2/../../../../nios2-elf/lib\libc.a(lib_a-memset.o)
+ .debug_abbrev  0x000031e7       0x8b c:/altera/12.0sp2/nios2eds/bin/gnu/h-i686-mingw32/bin/../lib/gcc/nios2-elf/4.1.2/../../../../nios2-elf/lib\libc.a(lib_a-strlen.o)
+ .debug_abbrev  0x00003272      0x1ae c:/altera/12.0sp2/nios2eds/bin/gnu/h-i686-mingw32/bin/../lib/gcc/nios2-elf/4.1.2/../../../../nios2-elf/lib\libc.a(lib_a-__atexit.o)
+ .debug_abbrev  0x00003420      0x1de c:/altera/12.0sp2/nios2eds/bin/gnu/h-i686-mingw32/bin/../lib/gcc/nios2-elf/4.1.2/../../../../nios2-elf/lib\libc.a(lib_a-__call_atexit.o)
+ .debug_abbrev  0x000035fe       0x72 ../PWM_Test_bsp/\libhal_bsp.a(alt_exit.o)
+
+.debug_line     0x00000000     0x9d0a
+ *(.debug_line)
+ .debug_line    0x00000000       0x57 ../PWM_Test_bsp//obj/HAL/src/crt0.o
+ .debug_line    0x00000057      0x294 obj/hello_world.o
+ .debug_line    0x000002eb      0x1cd obj/pwm.o
+ .debug_line    0x000004b8      0x2ca ../PWM_Test_bsp/\libhal_bsp.a(alt_main.o)
+ .debug_line    0x00000782      0x3a1 ../PWM_Test_bsp/\libhal_bsp.a(alt_sys_init.o)
+ .debug_line    0x00000b23      0x573 ../PWM_Test_bsp/\libhal_bsp.a(altera_avalon_cfi_flash.o)
+ .debug_line    0x00001096      0x951 ../PWM_Test_bsp/\libhal_bsp.a(altera_avalon_cfi_flash_table.o)
+ .debug_line    0x000019e7      0x217 ../PWM_Test_bsp/\libhal_bsp.a(altera_avalon_jtag_uart_fd.o)
+ .debug_line    0x00001bfe      0x4ab ../PWM_Test_bsp/\libhal_bsp.a(altera_avalon_jtag_uart_init.o)
+ .debug_line    0x000020a9      0x317 ../PWM_Test_bsp/\libhal_bsp.a(altera_avalon_jtag_uart_ioctl.o)
+ .debug_line    0x000023c0      0x3f7 ../PWM_Test_bsp/\libhal_bsp.a(altera_avalon_jtag_uart_read.o)
+ .debug_line    0x000027b7      0x405 ../PWM_Test_bsp/\libhal_bsp.a(altera_avalon_jtag_uart_write.o)
+ .debug_line    0x00002bbc      0x8c1 ../PWM_Test_bsp/\libhal_bsp.a(altera_avalon_lcd_16207.o)
+ .debug_line    0x0000347d      0x1b7 ../PWM_Test_bsp/\libhal_bsp.a(altera_avalon_lcd_16207_fd.o)
+ .debug_line    0x00003634      0x2b3 ../PWM_Test_bsp/\libhal_bsp.a(altera_avalon_timer_sc.o)
+ .debug_line    0x000038e7      0x1d2 ../PWM_Test_bsp/\libhal_bsp.a(altera_avalon_uart_fd.o)
+ .debug_line    0x00003ab9      0x492 ../PWM_Test_bsp/\libhal_bsp.a(altera_avalon_uart_init.o)
+ .debug_line    0x00003f4b      0x404 ../PWM_Test_bsp/\libhal_bsp.a(altera_avalon_uart_read.o)
+ .debug_line    0x0000434f      0x3e5 ../PWM_Test_bsp/\libhal_bsp.a(altera_avalon_uart_write.o)
+ .debug_line    0x00004734      0x2dc ../PWM_Test_bsp/\libhal_bsp.a(alt_alarm_start.o)
+ .debug_line    0x00004a10      0x299 ../PWM_Test_bsp/\libhal_bsp.a(alt_close.o)
+ .debug_line    0x00004ca9      0x1e1 ../PWM_Test_bsp/\libhal_bsp.a(alt_dcache_flush.o)
+ .debug_line    0x00004e8a      0x254 ../PWM_Test_bsp/\libhal_bsp.a(alt_dev.o)
+ .debug_line    0x000050de      0x25a ../PWM_Test_bsp/\libhal_bsp.a(alt_dev_llist_insert.o)
+ .debug_line    0x00005338       0x83 ../PWM_Test_bsp/\libhal_bsp.a(alt_do_ctors.o)
+ .debug_line    0x000053bb       0x83 ../PWM_Test_bsp/\libhal_bsp.a(alt_do_dtors.o)
+ .debug_line    0x0000543e      0x1aa ../PWM_Test_bsp/\libhal_bsp.a(alt_errno.o)
+ .debug_line    0x000055e8      0x268 ../PWM_Test_bsp/\libhal_bsp.a(alt_flash_dev.o)
+ .debug_line    0x00005850      0x2c8 ../PWM_Test_bsp/\libhal_bsp.a(alt_iic.o)
+ .debug_line    0x00005b18      0x249 ../PWM_Test_bsp/\libhal_bsp.a(alt_iic_isr_register.o)
+ .debug_line    0x00005d61      0x2b4 ../PWM_Test_bsp/\libhal_bsp.a(alt_io_redirect.o)
+ .debug_line    0x00006015       0x6b ../PWM_Test_bsp/\libhal_bsp.a(alt_irq_entry.o)
+ .debug_line    0x00006080      0x248 ../PWM_Test_bsp/\libhal_bsp.a(alt_irq_handler.o)
+ .debug_line    0x000062c8       0x72 ../PWM_Test_bsp/\libhal_bsp.a(alt_irq_vars.o)
+ .debug_line    0x0000633a      0x2ff ../PWM_Test_bsp/\libhal_bsp.a(alt_open.o)
+ .debug_line    0x00006639       0xed ../PWM_Test_bsp/\libhal_bsp.a(alt_release_fd.o)
+ .debug_line    0x00006726      0x2dc ../PWM_Test_bsp/\libhal_bsp.a(alt_tick.o)
+ .debug_line    0x00006a02      0x202 ../PWM_Test_bsp/\libhal_bsp.a(alt_usleep.o)
+ .debug_line    0x00006c04      0x1c9 ../PWM_Test_bsp/\libhal_bsp.a(altera_nios2_irq.o)
+ .debug_line    0x00006dcd      0x445 ../PWM_Test_bsp/\libhal_bsp.a(altera_avalon_cfi_flash_amd.o)
+ .debug_line    0x00007212      0x437 ../PWM_Test_bsp/\libhal_bsp.a(altera_avalon_cfi_flash_intel.o)
+ .debug_line    0x00007649      0x25c ../PWM_Test_bsp/\libhal_bsp.a(alt_busy_sleep.o)
+ .debug_line    0x000078a5       0xb1 ../PWM_Test_bsp/\libhal_bsp.a(alt_exception_entry.o)
+ .debug_line    0x00007956      0x26b ../PWM_Test_bsp/\libhal_bsp.a(alt_find_dev.o)
+ .debug_line    0x00007bc1      0x27c ../PWM_Test_bsp/\libhal_bsp.a(alt_find_file.o)
+ .debug_line    0x00007e3d      0x297 ../PWM_Test_bsp/\libhal_bsp.a(alt_get_fd.o)
+ .debug_line    0x000080d4      0x13b ../PWM_Test_bsp/\libhal_bsp.a(alt_instruction_exception_entry.o)
+ .debug_line    0x0000820f      0x200 c:/altera/12.0sp2/nios2eds/bin/gnu/h-i686-mingw32/bin/../lib/gcc/nios2-elf/4.1.2/../../../../nios2-elf/lib\libc.a(lib_a-atexit.o)
+ .debug_line    0x0000840f       0x7e c:/altera/12.0sp2/nios2eds/bin/gnu/h-i686-mingw32/bin/../lib/gcc/nios2-elf/4.1.2/../../../../nios2-elf/lib\libc.a(lib_a-ctype_.o)
+ .debug_line    0x0000848d      0x238 c:/altera/12.0sp2/nios2eds/bin/gnu/h-i686-mingw32/bin/../lib/gcc/nios2-elf/4.1.2/../../../../nios2-elf/lib\libc.a(lib_a-exit.o)
+ .debug_line    0x000086c5      0x22d c:/altera/12.0sp2/nios2eds/bin/gnu/h-i686-mingw32/bin/../lib/gcc/nios2-elf/4.1.2/../../../../nios2-elf/lib\libc.a(lib_a-impure.o)
+ .debug_line    0x000088f2      0x1df c:/altera/12.0sp2/nios2eds/bin/gnu/h-i686-mingw32/bin/../lib/gcc/nios2-elf/4.1.2/../../../../nios2-elf/lib\libc.a(lib_a-int_errno.o)
+ .debug_line    0x00008ad1      0x29f c:/altera/12.0sp2/nios2eds/bin/gnu/h-i686-mingw32/bin/../lib/gcc/nios2-elf/4.1.2/../../../../nios2-elf/lib\libc.a(lib_a-memcmp.o)
+ .debug_line    0x00008d70      0x1ac c:/altera/12.0sp2/nios2eds/bin/gnu/h-i686-mingw32/bin/../lib/gcc/nios2-elf/4.1.2/../../../../nios2-elf/lib\libc.a(lib_a-memcpy.o)
+ .debug_line    0x00008f1c      0x301 c:/altera/12.0sp2/nios2eds/bin/gnu/h-i686-mingw32/bin/../lib/gcc/nios2-elf/4.1.2/../../../../nios2-elf/lib\libc.a(lib_a-memset.o)
+ .debug_line    0x0000921d      0x26d c:/altera/12.0sp2/nios2eds/bin/gnu/h-i686-mingw32/bin/../lib/gcc/nios2-elf/4.1.2/../../../../nios2-elf/lib\libc.a(lib_a-strlen.o)
+ .debug_line    0x0000948a      0x313 c:/altera/12.0sp2/nios2eds/bin/gnu/h-i686-mingw32/bin/../lib/gcc/nios2-elf/4.1.2/../../../../nios2-elf/lib\libc.a(lib_a-__atexit.o)
+ .debug_line    0x0000979d      0x367 c:/altera/12.0sp2/nios2eds/bin/gnu/h-i686-mingw32/bin/../lib/gcc/nios2-elf/4.1.2/../../../../nios2-elf/lib\libc.a(lib_a-__call_atexit.o)
+ .debug_line    0x00009b04      0x206 ../PWM_Test_bsp/\libhal_bsp.a(alt_exit.o)
+
+.debug_frame    0x00000000      0xff0
+ *(.debug_frame)
+ .debug_frame   0x00000000       0x2c obj/hello_world.o
+ .debug_frame   0x0000002c       0x30 obj/pwm.o
+ .debug_frame   0x0000005c       0x2c ../PWM_Test_bsp/\libhal_bsp.a(alt_main.o)
+ .debug_frame   0x00000088       0x64 ../PWM_Test_bsp/\libhal_bsp.a(alt_sys_init.o)
+ .debug_frame   0x000000ec       0xd4 ../PWM_Test_bsp/\libhal_bsp.a(altera_avalon_cfi_flash.o)
+ .debug_frame   0x000001c0      0x210 ../PWM_Test_bsp/\libhal_bsp.a(altera_avalon_cfi_flash_table.o)
+ .debug_frame   0x000003d0       0x80 ../PWM_Test_bsp/\libhal_bsp.a(altera_avalon_jtag_uart_fd.o)
+ .debug_frame   0x00000450       0x80 ../PWM_Test_bsp/\libhal_bsp.a(altera_avalon_jtag_uart_init.o)
+ .debug_frame   0x000004d0       0x2c ../PWM_Test_bsp/\libhal_bsp.a(altera_avalon_jtag_uart_ioctl.o)
+ .debug_frame   0x000004fc       0x2c ../PWM_Test_bsp/\libhal_bsp.a(altera_avalon_jtag_uart_read.o)
+ .debug_frame   0x00000528       0x2c ../PWM_Test_bsp/\libhal_bsp.a(altera_avalon_jtag_uart_write.o)
+ .debug_frame   0x00000554      0x10c ../PWM_Test_bsp/\libhal_bsp.a(altera_avalon_lcd_16207.o)
+ .debug_frame   0x00000660       0x2c ../PWM_Test_bsp/\libhal_bsp.a(altera_avalon_lcd_16207_fd.o)
+ .debug_frame   0x0000068c       0x48 ../PWM_Test_bsp/\libhal_bsp.a(altera_avalon_timer_sc.o)
+ .debug_frame   0x000006d4       0x64 ../PWM_Test_bsp/\libhal_bsp.a(altera_avalon_uart_fd.o)
+ .debug_frame   0x00000738       0x9c ../PWM_Test_bsp/\libhal_bsp.a(altera_avalon_uart_init.o)
+ .debug_frame   0x000007d4       0x48 ../PWM_Test_bsp/\libhal_bsp.a(altera_avalon_uart_read.o)
+ .debug_frame   0x0000081c       0x48 ../PWM_Test_bsp/\libhal_bsp.a(altera_avalon_uart_write.o)
+ .debug_frame   0x00000864       0x2c ../PWM_Test_bsp/\libhal_bsp.a(alt_alarm_start.o)
+ .debug_frame   0x00000890       0x48 ../PWM_Test_bsp/\libhal_bsp.a(alt_close.o)
+ .debug_frame   0x000008d8       0x2c ../PWM_Test_bsp/\libhal_bsp.a(alt_dcache_flush.o)
+ .debug_frame   0x00000904       0x2c ../PWM_Test_bsp/\libhal_bsp.a(alt_dev.o)
+ .debug_frame   0x00000930       0x48 ../PWM_Test_bsp/\libhal_bsp.a(alt_dev_llist_insert.o)
+ .debug_frame   0x00000978       0x2c ../PWM_Test_bsp/\libhal_bsp.a(alt_do_ctors.o)
+ .debug_frame   0x000009a4       0x2c ../PWM_Test_bsp/\libhal_bsp.a(alt_do_dtors.o)
+ .debug_frame   0x000009d0       0x48 ../PWM_Test_bsp/\libhal_bsp.a(alt_flash_dev.o)
+ .debug_frame   0x00000a18       0x80 ../PWM_Test_bsp/\libhal_bsp.a(alt_iic.o)
+ .debug_frame   0x00000a98       0x2c ../PWM_Test_bsp/\libhal_bsp.a(alt_iic_isr_register.o)
+ .debug_frame   0x00000ac4       0x48 ../PWM_Test_bsp/\libhal_bsp.a(alt_io_redirect.o)
+ .debug_frame   0x00000b0c       0x2c ../PWM_Test_bsp/\libhal_bsp.a(alt_irq_handler.o)
+ .debug_frame   0x00000b38       0x64 ../PWM_Test_bsp/\libhal_bsp.a(alt_open.o)
+ .debug_frame   0x00000b9c       0x2c ../PWM_Test_bsp/\libhal_bsp.a(alt_release_fd.o)
+ .debug_frame   0x00000bc8       0x48 ../PWM_Test_bsp/\libhal_bsp.a(alt_tick.o)
+ .debug_frame   0x00000c10       0x2c ../PWM_Test_bsp/\libhal_bsp.a(alt_usleep.o)
+ .debug_frame   0x00000c3c       0x2c ../PWM_Test_bsp/\libhal_bsp.a(altera_nios2_irq.o)
+ .debug_frame   0x00000c68       0x80 ../PWM_Test_bsp/\libhal_bsp.a(altera_avalon_cfi_flash_amd.o)
+ .debug_frame   0x00000ce8       0x80 ../PWM_Test_bsp/\libhal_bsp.a(altera_avalon_cfi_flash_intel.o)
+ .debug_frame   0x00000d68       0x2c ../PWM_Test_bsp/\libhal_bsp.a(alt_busy_sleep.o)
+ .debug_frame   0x00000d94       0x2c ../PWM_Test_bsp/\libhal_bsp.a(alt_find_dev.o)
+ .debug_frame   0x00000dc0       0x2c ../PWM_Test_bsp/\libhal_bsp.a(alt_find_file.o)
+ .debug_frame   0x00000dec       0x2c ../PWM_Test_bsp/\libhal_bsp.a(alt_get_fd.o)
+ .debug_frame   0x00000e18       0x48 ../PWM_Test_bsp/\libhal_bsp.a(alt_instruction_exception_entry.o)
+ .debug_frame   0x00000e60       0x20 c:/altera/12.0sp2/nios2eds/bin/gnu/h-i686-mingw32/bin/../lib/gcc/nios2-elf/4.1.2/../../../../nios2-elf/lib\libc.a(lib_a-atexit.o)
+ .debug_frame   0x00000e80       0x28 c:/altera/12.0sp2/nios2eds/bin/gnu/h-i686-mingw32/bin/../lib/gcc/nios2-elf/4.1.2/../../../../nios2-elf/lib\libc.a(lib_a-exit.o)
+ .debug_frame   0x00000ea8       0x20 c:/altera/12.0sp2/nios2eds/bin/gnu/h-i686-mingw32/bin/../lib/gcc/nios2-elf/4.1.2/../../../../nios2-elf/lib\libc.a(lib_a-memcmp.o)
+ .debug_frame   0x00000ec8       0x20 c:/altera/12.0sp2/nios2eds/bin/gnu/h-i686-mingw32/bin/../lib/gcc/nios2-elf/4.1.2/../../../../nios2-elf/lib\libc.a(lib_a-memcpy.o)
+ .debug_frame   0x00000ee8       0x20 c:/altera/12.0sp2/nios2eds/bin/gnu/h-i686-mingw32/bin/../lib/gcc/nios2-elf/4.1.2/../../../../nios2-elf/lib\libc.a(lib_a-memset.o)
+ .debug_frame   0x00000f08       0x20 c:/altera/12.0sp2/nios2eds/bin/gnu/h-i686-mingw32/bin/../lib/gcc/nios2-elf/4.1.2/../../../../nios2-elf/lib\libc.a(lib_a-strlen.o)
+ .debug_frame   0x00000f28       0x34 c:/altera/12.0sp2/nios2eds/bin/gnu/h-i686-mingw32/bin/../lib/gcc/nios2-elf/4.1.2/../../../../nios2-elf/lib\libc.a(lib_a-__atexit.o)
+ .debug_frame   0x00000f5c       0x4c c:/altera/12.0sp2/nios2eds/bin/gnu/h-i686-mingw32/bin/../lib/gcc/nios2-elf/4.1.2/../../../../nios2-elf/lib\libc.a(lib_a-__call_atexit.o)
+ .debug_frame   0x00000fa8       0x48 ../PWM_Test_bsp/\libhal_bsp.a(alt_exit.o)
+
+.debug_str      0x00000000      0xf5c
+ *(.debug_str)
+ .debug_str     0x00000000       0xdd obj/hello_world.o
+                                0x116 (size before relaxing)
+ .debug_str     0x000000dd       0x4b obj/pwm.o
+                                0x147 (size before relaxing)
+ .debug_str     0x00000128       0x12 ../PWM_Test_bsp/\libhal_bsp.a(alt_main.o)
+ .debug_str     0x0000013a       0x3f ../PWM_Test_bsp/\libhal_bsp.a(alt_sys_init.o)
+ .debug_str     0x00000179       0x82 ../PWM_Test_bsp/\libhal_bsp.a(altera_avalon_cfi_flash.o)
+ .debug_str     0x000001fb       0x6d ../PWM_Test_bsp/\libhal_bsp.a(altera_avalon_cfi_flash_table.o)
+ .debug_str     0x00000268       0x12 ../PWM_Test_bsp/\libhal_bsp.a(altera_avalon_jtag_uart_fd.o)
+ .debug_str     0x0000027a       0x1a ../PWM_Test_bsp/\libhal_bsp.a(altera_avalon_jtag_uart_init.o)
+ .debug_str     0x00000294       0x12 ../PWM_Test_bsp/\libhal_bsp.a(altera_avalon_jtag_uart_ioctl.o)
+ .debug_str     0x000002a6       0x1a ../PWM_Test_bsp/\libhal_bsp.a(altera_avalon_jtag_uart_read.o)
+ .debug_str     0x000002c0       0x1a ../PWM_Test_bsp/\libhal_bsp.a(altera_avalon_jtag_uart_write.o)
+ .debug_str     0x000002da       0x25 ../PWM_Test_bsp/\libhal_bsp.a(altera_avalon_lcd_16207.o)
+ .debug_str     0x000002ff       0x12 ../PWM_Test_bsp/\libhal_bsp.a(altera_avalon_lcd_16207_fd.o)
+ .debug_str     0x00000311       0x12 ../PWM_Test_bsp/\libhal_bsp.a(altera_avalon_timer_sc.o)
+ .debug_str     0x00000323       0x12 ../PWM_Test_bsp/\libhal_bsp.a(altera_avalon_uart_fd.o)
+ .debug_str     0x00000335       0x19 ../PWM_Test_bsp/\libhal_bsp.a(altera_avalon_uart_init.o)
+ .debug_str     0x0000034e       0x1a ../PWM_Test_bsp/\libhal_bsp.a(altera_avalon_uart_read.o)
+ .debug_str     0x00000368       0x1a ../PWM_Test_bsp/\libhal_bsp.a(altera_avalon_uart_write.o)
+ .debug_str     0x00000382       0x23 ../PWM_Test_bsp/\libhal_bsp.a(alt_alarm_start.o)
+ .debug_str     0x000003a5       0x12 ../PWM_Test_bsp/\libhal_bsp.a(alt_close.o)
+ .debug_str     0x000003b7       0x12 ../PWM_Test_bsp/\libhal_bsp.a(alt_dcache_flush.o)
+ .debug_str     0x000003c9       0x12 ../PWM_Test_bsp/\libhal_bsp.a(alt_dev.o)
+ .debug_str     0x000003db       0x12 ../PWM_Test_bsp/\libhal_bsp.a(alt_dev_llist_insert.o)
+ .debug_str     0x000003ed       0x12 ../PWM_Test_bsp/\libhal_bsp.a(alt_errno.o)
+ .debug_str     0x000003ff       0x2d ../PWM_Test_bsp/\libhal_bsp.a(alt_flash_dev.o)
+ .debug_str     0x0000042c       0x18 ../PWM_Test_bsp/\libhal_bsp.a(alt_iic.o)
+ .debug_str     0x00000444       0x1a ../PWM_Test_bsp/\libhal_bsp.a(alt_iic_isr_register.o)
+ .debug_str     0x0000045e       0x12 ../PWM_Test_bsp/\libhal_bsp.a(alt_io_redirect.o)
+ .debug_str     0x00000470       0x12 ../PWM_Test_bsp/\libhal_bsp.a(alt_irq_handler.o)
+ .debug_str     0x00000482       0x12 ../PWM_Test_bsp/\libhal_bsp.a(alt_open.o)
+ .debug_str     0x00000494       0x1a ../PWM_Test_bsp/\libhal_bsp.a(alt_tick.o)
+ .debug_str     0x000004ae       0x12 ../PWM_Test_bsp/\libhal_bsp.a(alt_usleep.o)
+ .debug_str     0x000004c0       0x12 ../PWM_Test_bsp/\libhal_bsp.a(altera_nios2_irq.o)
+ .debug_str     0x000004d2       0x76 ../PWM_Test_bsp/\libhal_bsp.a(altera_avalon_cfi_flash_amd.o)
+ .debug_str     0x00000548       0x7d ../PWM_Test_bsp/\libhal_bsp.a(altera_avalon_cfi_flash_intel.o)
+ .debug_str     0x000005c5       0x12 ../PWM_Test_bsp/\libhal_bsp.a(alt_busy_sleep.o)
+ .debug_str     0x000005d7       0x12 ../PWM_Test_bsp/\libhal_bsp.a(alt_find_dev.o)
+ .debug_str     0x000005e9       0x12 ../PWM_Test_bsp/\libhal_bsp.a(alt_find_file.o)
+ .debug_str     0x000005fb       0x12 ../PWM_Test_bsp/\libhal_bsp.a(alt_get_fd.o)
+ .debug_str     0x0000060d      0x11d c:/altera/12.0sp2/nios2eds/bin/gnu/h-i686-mingw32/bin/../lib/gcc/nios2-elf/4.1.2/../../../../nios2-elf/lib\libc.a(lib_a-atexit.o)
+                                0x1bf (size before relaxing)
+ .debug_str     0x0000072a       0xe2 c:/altera/12.0sp2/nios2eds/bin/gnu/h-i686-mingw32/bin/../lib/gcc/nios2-elf/4.1.2/../../../../nios2-elf/lib\libc.a(lib_a-ctype_.o)
+                                0x105 (size before relaxing)
+ .debug_str     0x0000080c      0x384 c:/altera/12.0sp2/nios2eds/bin/gnu/h-i686-mingw32/bin/../lib/gcc/nios2-elf/4.1.2/../../../../nios2-elf/lib\libc.a(lib_a-exit.o)
+                                0x50c (size before relaxing)
+ .debug_str     0x00000b90       0xd1 c:/altera/12.0sp2/nios2eds/bin/gnu/h-i686-mingw32/bin/../lib/gcc/nios2-elf/4.1.2/../../../../nios2-elf/lib\libc.a(lib_a-impure.o)
+                                0x51a (size before relaxing)
+ .debug_str     0x00000c61       0x3d c:/altera/12.0sp2/nios2eds/bin/gnu/h-i686-mingw32/bin/../lib/gcc/nios2-elf/4.1.2/../../../../nios2-elf/lib\libc.a(lib_a-int_errno.o)
+                                0x163 (size before relaxing)
+ .debug_str     0x00000c9e       0xd5 c:/altera/12.0sp2/nios2eds/bin/gnu/h-i686-mingw32/bin/../lib/gcc/nios2-elf/4.1.2/../../../../nios2-elf/lib\libc.a(lib_a-memcmp.o)
+                                0x16a (size before relaxing)
+ .debug_str     0x00000d73       0x69 c:/altera/12.0sp2/nios2eds/bin/gnu/h-i686-mingw32/bin/../lib/gcc/nios2-elf/4.1.2/../../../../nios2-elf/lib\libc.a(lib_a-memcpy.o)
+                                0x128 (size before relaxing)
+ .debug_str     0x00000ddc       0x56 c:/altera/12.0sp2/nios2eds/bin/gnu/h-i686-mingw32/bin/../lib/gcc/nios2-elf/4.1.2/../../../../nios2-elf/lib\libc.a(lib_a-memset.o)
+                                0x17e (size before relaxing)
+ .debug_str     0x00000e32       0x42 c:/altera/12.0sp2/nios2eds/bin/gnu/h-i686-mingw32/bin/../lib/gcc/nios2-elf/4.1.2/../../../../nios2-elf/lib\libc.a(lib_a-strlen.o)
+                                0x17d (size before relaxing)
+ .debug_str     0x00000e74       0x51 c:/altera/12.0sp2/nios2eds/bin/gnu/h-i686-mingw32/bin/../lib/gcc/nios2-elf/4.1.2/../../../../nios2-elf/lib\libc.a(lib_a-__atexit.o)
+                                0x524 (size before relaxing)
+ .debug_str     0x00000ec5       0x7b c:/altera/12.0sp2/nios2eds/bin/gnu/h-i686-mingw32/bin/../lib/gcc/nios2-elf/4.1.2/../../../../nios2-elf/lib\libc.a(lib_a-__call_atexit.o)
+                                0x54e (size before relaxing)
+ .debug_str     0x00000f40       0x1c ../PWM_Test_bsp/\libhal_bsp.a(alt_exit.o)
+
+.debug_loc      0x00000000     0x18ca
+ *(.debug_loc)
+ .debug_loc     0x00000000       0x1f obj/hello_world.o
+ .debug_loc     0x0000001f       0xaf obj/pwm.o
+ .debug_loc     0x000000ce       0x2b ../PWM_Test_bsp/\libhal_bsp.a(alt_main.o)
+ .debug_loc     0x000000f9       0x81 ../PWM_Test_bsp/\libhal_bsp.a(alt_sys_init.o)
+ .debug_loc     0x0000017a      0x12e ../PWM_Test_bsp/\libhal_bsp.a(altera_avalon_cfi_flash.o)
+ .debug_loc     0x000002a8      0x306 ../PWM_Test_bsp/\libhal_bsp.a(altera_avalon_cfi_flash_table.o)
+ .debug_loc     0x000005ae       0xac ../PWM_Test_bsp/\libhal_bsp.a(altera_avalon_jtag_uart_fd.o)
+ .debug_loc     0x0000065a       0xac ../PWM_Test_bsp/\libhal_bsp.a(altera_avalon_jtag_uart_init.o)
+ .debug_loc     0x00000706       0x2b ../PWM_Test_bsp/\libhal_bsp.a(altera_avalon_jtag_uart_ioctl.o)
+ .debug_loc     0x00000731       0x2b ../PWM_Test_bsp/\libhal_bsp.a(altera_avalon_jtag_uart_read.o)
+ .debug_loc     0x0000075c       0x2b ../PWM_Test_bsp/\libhal_bsp.a(altera_avalon_jtag_uart_write.o)
+ .debug_loc     0x00000787      0x183 ../PWM_Test_bsp/\libhal_bsp.a(altera_avalon_lcd_16207.o)
+ .debug_loc     0x0000090a       0x2b ../PWM_Test_bsp/\libhal_bsp.a(altera_avalon_lcd_16207_fd.o)
+ .debug_loc     0x00000935       0x56 ../PWM_Test_bsp/\libhal_bsp.a(altera_avalon_timer_sc.o)
+ .debug_loc     0x0000098b       0x81 ../PWM_Test_bsp/\libhal_bsp.a(altera_avalon_uart_fd.o)
+ .debug_loc     0x00000a0c       0xd7 ../PWM_Test_bsp/\libhal_bsp.a(altera_avalon_uart_init.o)
+ .debug_loc     0x00000ae3       0x57 ../PWM_Test_bsp/\libhal_bsp.a(altera_avalon_uart_read.o)
+ .debug_loc     0x00000b3a       0x56 ../PWM_Test_bsp/\libhal_bsp.a(altera_avalon_uart_write.o)
+ .debug_loc     0x00000b90       0x2b ../PWM_Test_bsp/\libhal_bsp.a(alt_alarm_start.o)
+ .debug_loc     0x00000bbb       0x56 ../PWM_Test_bsp/\libhal_bsp.a(alt_close.o)
+ .debug_loc     0x00000c11       0x2b ../PWM_Test_bsp/\libhal_bsp.a(alt_dcache_flush.o)
+ .debug_loc     0x00000c3c       0x2b ../PWM_Test_bsp/\libhal_bsp.a(alt_dev.o)
+ .debug_loc     0x00000c67       0x56 ../PWM_Test_bsp/\libhal_bsp.a(alt_dev_llist_insert.o)
+ .debug_loc     0x00000cbd       0x2b ../PWM_Test_bsp/\libhal_bsp.a(alt_do_ctors.o)
+ .debug_loc     0x00000ce8       0x2b ../PWM_Test_bsp/\libhal_bsp.a(alt_do_dtors.o)
+ .debug_loc     0x00000d13       0x56 ../PWM_Test_bsp/\libhal_bsp.a(alt_flash_dev.o)
+ .debug_loc     0x00000d69       0xac ../PWM_Test_bsp/\libhal_bsp.a(alt_iic.o)
+ .debug_loc     0x00000e15       0x2b ../PWM_Test_bsp/\libhal_bsp.a(alt_iic_isr_register.o)
+ .debug_loc     0x00000e40       0x56 ../PWM_Test_bsp/\libhal_bsp.a(alt_io_redirect.o)
+ .debug_loc     0x00000e96       0x2b ../PWM_Test_bsp/\libhal_bsp.a(alt_irq_handler.o)
+ .debug_loc     0x00000ec1       0x81 ../PWM_Test_bsp/\libhal_bsp.a(alt_open.o)
+ .debug_loc     0x00000f42       0x2b ../PWM_Test_bsp/\libhal_bsp.a(alt_release_fd.o)
+ .debug_loc     0x00000f6d       0x56 ../PWM_Test_bsp/\libhal_bsp.a(alt_tick.o)
+ .debug_loc     0x00000fc3       0x2b ../PWM_Test_bsp/\libhal_bsp.a(alt_usleep.o)
+ .debug_loc     0x00000fee       0x2b ../PWM_Test_bsp/\libhal_bsp.a(altera_nios2_irq.o)
+ .debug_loc     0x00001019       0xac ../PWM_Test_bsp/\libhal_bsp.a(altera_avalon_cfi_flash_amd.o)
+ .debug_loc     0x000010c5       0xac ../PWM_Test_bsp/\libhal_bsp.a(altera_avalon_cfi_flash_intel.o)
+ .debug_loc     0x00001171       0x2b ../PWM_Test_bsp/\libhal_bsp.a(alt_busy_sleep.o)
+ .debug_loc     0x0000119c       0x2b ../PWM_Test_bsp/\libhal_bsp.a(alt_find_dev.o)
+ .debug_loc     0x000011c7       0x2b ../PWM_Test_bsp/\libhal_bsp.a(alt_find_file.o)
+ .debug_loc     0x000011f2       0x2b ../PWM_Test_bsp/\libhal_bsp.a(alt_get_fd.o)
+ .debug_loc     0x0000121d       0x56 ../PWM_Test_bsp/\libhal_bsp.a(alt_instruction_exception_entry.o)
+ .debug_loc     0x00001273       0x1e c:/altera/12.0sp2/nios2eds/bin/gnu/h-i686-mingw32/bin/../lib/gcc/nios2-elf/4.1.2/../../../../nios2-elf/lib\libc.a(lib_a-atexit.o)
+ .debug_loc     0x00001291       0x3d c:/altera/12.0sp2/nios2eds/bin/gnu/h-i686-mingw32/bin/../lib/gcc/nios2-elf/4.1.2/../../../../nios2-elf/lib\libc.a(lib_a-exit.o)
+ .debug_loc     0x000012ce      0x114 c:/altera/12.0sp2/nios2eds/bin/gnu/h-i686-mingw32/bin/../lib/gcc/nios2-elf/4.1.2/../../../../nios2-elf/lib\libc.a(lib_a-memcmp.o)
+ .debug_loc     0x000013e2       0xca c:/altera/12.0sp2/nios2eds/bin/gnu/h-i686-mingw32/bin/../lib/gcc/nios2-elf/4.1.2/../../../../nios2-elf/lib\libc.a(lib_a-memcpy.o)
+ .debug_loc     0x000014ac       0xa1 c:/altera/12.0sp2/nios2eds/bin/gnu/h-i686-mingw32/bin/../lib/gcc/nios2-elf/4.1.2/../../../../nios2-elf/lib\libc.a(lib_a-memset.o)
+ .debug_loc     0x0000154d       0x3c c:/altera/12.0sp2/nios2eds/bin/gnu/h-i686-mingw32/bin/../lib/gcc/nios2-elf/4.1.2/../../../../nios2-elf/lib\libc.a(lib_a-strlen.o)
+ .debug_loc     0x00001589      0x120 c:/altera/12.0sp2/nios2eds/bin/gnu/h-i686-mingw32/bin/../lib/gcc/nios2-elf/4.1.2/../../../../nios2-elf/lib\libc.a(lib_a-__atexit.o)
+ .debug_loc     0x000016a9      0x1cb c:/altera/12.0sp2/nios2eds/bin/gnu/h-i686-mingw32/bin/../lib/gcc/nios2-elf/4.1.2/../../../../nios2-elf/lib\libc.a(lib_a-__call_atexit.o)
+ .debug_loc     0x00001874       0x56 ../PWM_Test_bsp/\libhal_bsp.a(alt_exit.o)
+
+.debug_macinfo
+ *(.debug_macinfo)
+
+.debug_weaknames
+ *(.debug_weaknames)
+
+.debug_funcnames
+ *(.debug_funcnames)
+
+.debug_typenames
+ *(.debug_typenames)
+
+.debug_varnames
+ *(.debug_varnames)
+
+.debug_alt_sim_info
+                0x00000000       0x50
+ *(.debug_alt_sim_info)
+ .debug_alt_sim_info
+                0x00000000       0x20 ../PWM_Test_bsp//obj/HAL/src/crt0.o
+ .debug_alt_sim_info
+                0x00000020       0x30 ../PWM_Test_bsp/\libhal_bsp.a(alt_busy_sleep.o)
+                0x02000000                __alt_data_end = 0x2000000
+                0x02000000                PROVIDE (__alt_stack_pointer, __alt_data_end)
+                0x01808710                PROVIDE (__alt_stack_limit, __alt_stack_base)
+                0x01808710                PROVIDE (__alt_heap_start, end)
+                0x02000000                PROVIDE (__alt_heap_limit, 0x2000000)
+OUTPUT(PWM_Test.elf elf32-littlenios2)
+
+.debug_ranges   0x00000000       0x70
+ .debug_ranges  0x00000000       0x28 ../PWM_Test_bsp/\libhal_bsp.a(alt_irq_entry.o)
+ .debug_ranges  0x00000028       0x30 ../PWM_Test_bsp/\libhal_bsp.a(alt_exception_entry.o)
+ .debug_ranges  0x00000058       0x18 c:/altera/12.0sp2/nios2eds/bin/gnu/h-i686-mingw32/bin/../lib/gcc/nios2-elf/4.1.2/../../../../nios2-elf/lib\libc.a(lib_a-__call_atexit.o)

@@ -39,6 +39,13 @@ set 	cpu_jtag_tck_path 	 [format "%s|%s|%s" $cpu_oci_path $cpu_wrapper $cpu_jtag
 set 	cpu_jtag_sysclk_path 	 [format "%s|%s|%s" $cpu_oci_path $cpu_wrapper $cpu_jtag_sysclk]
 set 	cpu_jtag_sr 	 [format "%s|*sr" $cpu_jtag_tck_path]
 
+set 	cpu_oci_im 	cpu_nios2_oci_im:the_cpu_nios2_oci_im
+set 	cpu_oci_traceram 	cpu_traceram_lpm_dram_bdp_component_module:cpu_traceram_lpm_dram_bdp_component
+set 	cpu_oci_itrace 	cpu_nios2_oci_itrace:the_cpu_nios2_oci_itrace
+set 	cpu_oci_im_path 	 [format "%s|%s" $cpu_oci_path $cpu_oci_im]
+set 	cpu_oci_itrace_path 	 [format "%s|%s" $cpu_oci_path $cpu_oci_itrace]
+set 	cpu_traceram_path 	 [format "%s|%s" $cpu_oci_im_path $cpu_oci_traceram]
+
 #**************************************************************
 # Set False Paths
 #**************************************************************
@@ -51,3 +58,13 @@ set_false_path -from [get_keepers *$cpu_ocimem_path|*MonDReg*] -to [get_keepers 
 set_false_path -from *$cpu_jtag_sr*    -to *$cpu_jtag_sysclk_path|*jdo*
 set_false_path -from sld_hub:*|irf_reg* -to *$cpu_jtag_sysclk_path|ir*
 set_false_path -from sld_hub:*|sld_shadow_jsm:shadow_jsm|state[1] -to *$cpu_oci_debug_path|monitor_go
+set_false_path -from [get_keepers *$cpu_oci_break_path|dbrk_hit?_latch] -to [get_keepers *$cpu_jtag_sr*]
+set_false_path -from [get_keepers *$cpu_oci_break_path|trigbrktype] -to [get_keepers *$cpu_jtag_sr*]
+set_false_path -from [get_keepers *$cpu_oci_break_path|trigger_state] -to [get_keepers *$cpu_jtag_sr*]
+
+set_false_path -from [get_keepers *$cpu_traceram_path*address*] -to [get_keepers *$cpu_jtag_sr*]
+set_false_path -from [get_keepers *$cpu_traceram_path*we_reg*] -to [get_keepers *$cpu_jtag_sr*]
+set_false_path -from [get_keepers *$cpu_oci_im_path|*trc_im_addr*] -to [get_keepers *$cpu_jtag_sr*]
+set_false_path -from [get_keepers *$cpu_oci_im_path|*trc_wrap] -to [get_keepers *$cpu_jtag_sr*]
+set_false_path -from [get_keepers *$cpu_oci_itrace_path|trc_ctrl_reg*] -to [get_keepers *$cpu_jtag_sr*]
+set_false_path -from [get_keepers *$cpu_oci_itrace_path|d1_debugack] -to [get_keepers *$cpu_jtag_sr*]
