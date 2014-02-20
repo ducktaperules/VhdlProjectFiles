@@ -16,6 +16,7 @@
    <frequency preferredWidth="311" />
   </columns>
  </clocktable>
- <window width="1488" height="956" x="0" y="0" />
- <library expandedCategories="Project,Library" />
+ <window width="1488" height="956" x="83" y="28" />
+ <library
+   expandedCategories="Library,Library/Peripherals/Microcontroller Peripherals,Library/Peripherals,Project,Library/Peripherals/Display" />
 </preferences>

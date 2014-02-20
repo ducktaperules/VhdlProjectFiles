@@ -1890,9 +1890,9 @@ module buttons_s1_arbitrator (
   input            buttons_s1_irq;
   input   [ 31: 0] buttons_s1_readdata;
   input            clk;
-  input   [  8: 0] clock_crossing_bridge_m1_address_to_slave;
+  input   [  9: 0] clock_crossing_bridge_m1_address_to_slave;
   input            clock_crossing_bridge_m1_latency_counter;
-  input   [  6: 0] clock_crossing_bridge_m1_nativeaddress;
+  input   [  7: 0] clock_crossing_bridge_m1_nativeaddress;
   input            clock_crossing_bridge_m1_read;
   input            clock_crossing_bridge_m1_write;
   input   [ 31: 0] clock_crossing_bridge_m1_writedata;
@@ -1956,7 +1956,7 @@ module buttons_s1_arbitrator (
   //assign buttons_s1_readdata_from_sa = buttons_s1_readdata so that symbol knows where to group signals which may go to master only, which is an e_assign
   assign buttons_s1_readdata_from_sa = buttons_s1_readdata;
 
-  assign clock_crossing_bridge_m1_requests_buttons_s1 = ({clock_crossing_bridge_m1_address_to_slave[8 : 4] , 4'b0} == 9'he0) & (clock_crossing_bridge_m1_read | clock_crossing_bridge_m1_write);
+  assign clock_crossing_bridge_m1_requests_buttons_s1 = ({clock_crossing_bridge_m1_address_to_slave[9 : 4] , 4'b0} == 10'h100) & (clock_crossing_bridge_m1_read | clock_crossing_bridge_m1_write);
   //buttons_s1_arb_share_counter set values, which is an e_mux
   assign buttons_s1_arb_share_set_values = 1;
 
@@ -3464,10 +3464,10 @@ module clock_crossing_bridge_s1_arbitrator (
                                            )
 ;
 
-  output  [  6: 0] clock_crossing_bridge_s1_address;
+  output  [  7: 0] clock_crossing_bridge_s1_address;
   output  [  3: 0] clock_crossing_bridge_s1_byteenable;
   output           clock_crossing_bridge_s1_endofpacket_from_sa;
-  output  [  6: 0] clock_crossing_bridge_s1_nativeaddress;
+  output  [  7: 0] clock_crossing_bridge_s1_nativeaddress;
   output           clock_crossing_bridge_s1_read;
   output  [ 31: 0] clock_crossing_bridge_s1_readdata_from_sa;
   output           clock_crossing_bridge_s1_reset_n;
@@ -3493,7 +3493,7 @@ module clock_crossing_bridge_s1_arbitrator (
   input   [ 31: 0] cpu_data_master_writedata;
   input            reset_n;
 
-  wire    [  6: 0] clock_crossing_bridge_s1_address;
+  wire    [  7: 0] clock_crossing_bridge_s1_address;
   wire             clock_crossing_bridge_s1_allgrants;
   wire             clock_crossing_bridge_s1_allow_new_arb_cycle;
   wire             clock_crossing_bridge_s1_any_bursting_master_saved_grant;
@@ -3513,7 +3513,7 @@ module clock_crossing_bridge_s1_arbitrator (
   wire             clock_crossing_bridge_s1_in_a_write_cycle;
   wire             clock_crossing_bridge_s1_master_qreq_vector;
   wire             clock_crossing_bridge_s1_move_on_to_next_transaction;
-  wire    [  6: 0] clock_crossing_bridge_s1_nativeaddress;
+  wire    [  7: 0] clock_crossing_bridge_s1_nativeaddress;
   wire             clock_crossing_bridge_s1_non_bursting_master_requests;
   wire             clock_crossing_bridge_s1_read;
   wire    [ 31: 0] clock_crossing_bridge_s1_readdata_from_sa;
@@ -3563,7 +3563,7 @@ module clock_crossing_bridge_s1_arbitrator (
   //assign clock_crossing_bridge_s1_readdata_from_sa = clock_crossing_bridge_s1_readdata so that symbol knows where to group signals which may go to master only, which is an e_assign
   assign clock_crossing_bridge_s1_readdata_from_sa = clock_crossing_bridge_s1_readdata;
 
-  assign cpu_data_master_requests_clock_crossing_bridge_s1 = ({cpu_data_master_address_to_slave[25 : 9] , 9'b0} == 26'h0) & (cpu_data_master_read | cpu_data_master_write);
+  assign cpu_data_master_requests_clock_crossing_bridge_s1 = ({cpu_data_master_address_to_slave[25 : 10] , 10'b0} == 26'h0) & (cpu_data_master_read | cpu_data_master_write);
   //assign clock_crossing_bridge_s1_waitrequest_from_sa = clock_crossing_bridge_s1_waitrequest so that symbol knows where to group signals which may go to master only, which is an e_assign
   assign clock_crossing_bridge_s1_waitrequest_from_sa = clock_crossing_bridge_s1_waitrequest;
 
@@ -3785,6 +3785,7 @@ module clock_crossing_bridge_m1_arbitrator (
                                               clock_crossing_bridge_m1_granted_my_pwm_3_avalon_slave_0,
                                               clock_crossing_bridge_m1_granted_my_pwm_4_avalon_slave_0,
                                               clock_crossing_bridge_m1_granted_my_pwm_5_avalon_slave_0,
+                                              clock_crossing_bridge_m1_granted_pio_0_s1,
                                               clock_crossing_bridge_m1_granted_port_a_s1,
                                               clock_crossing_bridge_m1_granted_profile_timer_s1,
                                               clock_crossing_bridge_m1_granted_sd_clk_s1,
@@ -3808,6 +3809,7 @@ module clock_crossing_bridge_m1_arbitrator (
                                               clock_crossing_bridge_m1_qualified_request_my_pwm_3_avalon_slave_0,
                                               clock_crossing_bridge_m1_qualified_request_my_pwm_4_avalon_slave_0,
                                               clock_crossing_bridge_m1_qualified_request_my_pwm_5_avalon_slave_0,
+                                              clock_crossing_bridge_m1_qualified_request_pio_0_s1,
                                               clock_crossing_bridge_m1_qualified_request_port_a_s1,
                                               clock_crossing_bridge_m1_qualified_request_profile_timer_s1,
                                               clock_crossing_bridge_m1_qualified_request_sd_clk_s1,
@@ -3832,6 +3834,7 @@ module clock_crossing_bridge_m1_arbitrator (
                                               clock_crossing_bridge_m1_read_data_valid_my_pwm_3_avalon_slave_0,
                                               clock_crossing_bridge_m1_read_data_valid_my_pwm_4_avalon_slave_0,
                                               clock_crossing_bridge_m1_read_data_valid_my_pwm_5_avalon_slave_0,
+                                              clock_crossing_bridge_m1_read_data_valid_pio_0_s1,
                                               clock_crossing_bridge_m1_read_data_valid_port_a_s1,
                                               clock_crossing_bridge_m1_read_data_valid_profile_timer_s1,
                                               clock_crossing_bridge_m1_read_data_valid_sd_clk_s1,
@@ -3855,6 +3858,7 @@ module clock_crossing_bridge_m1_arbitrator (
                                               clock_crossing_bridge_m1_requests_my_pwm_3_avalon_slave_0,
                                               clock_crossing_bridge_m1_requests_my_pwm_4_avalon_slave_0,
                                               clock_crossing_bridge_m1_requests_my_pwm_5_avalon_slave_0,
+                                              clock_crossing_bridge_m1_requests_pio_0_s1,
                                               clock_crossing_bridge_m1_requests_port_a_s1,
                                               clock_crossing_bridge_m1_requests_profile_timer_s1,
                                               clock_crossing_bridge_m1_requests_sd_clk_s1,
@@ -3880,6 +3884,7 @@ module clock_crossing_bridge_m1_arbitrator (
                                               d1_my_pwm_3_avalon_slave_0_end_xfer,
                                               d1_my_pwm_4_avalon_slave_0_end_xfer,
                                               d1_my_pwm_5_avalon_slave_0_end_xfer,
+                                              d1_pio_0_s1_end_xfer,
                                               d1_port_a_s1_end_xfer,
                                               d1_profile_timer_s1_end_xfer,
                                               d1_sd_clk_s1_end_xfer,
@@ -3903,6 +3908,7 @@ module clock_crossing_bridge_m1_arbitrator (
                                               my_pwm_3_avalon_slave_0_readdata_from_sa,
                                               my_pwm_4_avalon_slave_0_readdata_from_sa,
                                               my_pwm_5_avalon_slave_0_readdata_from_sa,
+                                              pio_0_s1_readdata_from_sa,
                                               port_a_s1_readdata_from_sa,
                                               profile_timer_s1_readdata_from_sa,
                                               reset_n,
@@ -3927,7 +3933,7 @@ module clock_crossing_bridge_m1_arbitrator (
                                            )
 ;
 
-  output  [  8: 0] clock_crossing_bridge_m1_address_to_slave;
+  output  [  9: 0] clock_crossing_bridge_m1_address_to_slave;
   output           clock_crossing_bridge_m1_latency_counter;
   output  [ 31: 0] clock_crossing_bridge_m1_readdata;
   output           clock_crossing_bridge_m1_readdatavalid;
@@ -3935,7 +3941,7 @@ module clock_crossing_bridge_m1_arbitrator (
   output           clock_crossing_bridge_m1_waitrequest;
   input   [ 31: 0] buttons_s1_readdata_from_sa;
   input            clk;
-  input   [  8: 0] clock_crossing_bridge_m1_address;
+  input   [  9: 0] clock_crossing_bridge_m1_address;
   input   [  3: 0] clock_crossing_bridge_m1_byteenable;
   input            clock_crossing_bridge_m1_granted_buttons_s1;
   input            clock_crossing_bridge_m1_granted_key_out_s1;
@@ -3948,6 +3954,7 @@ module clock_crossing_bridge_m1_arbitrator (
   input            clock_crossing_bridge_m1_granted_my_pwm_3_avalon_slave_0;
   input            clock_crossing_bridge_m1_granted_my_pwm_4_avalon_slave_0;
   input            clock_crossing_bridge_m1_granted_my_pwm_5_avalon_slave_0;
+  input            clock_crossing_bridge_m1_granted_pio_0_s1;
   input            clock_crossing_bridge_m1_granted_port_a_s1;
   input            clock_crossing_bridge_m1_granted_profile_timer_s1;
   input            clock_crossing_bridge_m1_granted_sd_clk_s1;
@@ -3971,6 +3978,7 @@ module clock_crossing_bridge_m1_arbitrator (
   input            clock_crossing_bridge_m1_qualified_request_my_pwm_3_avalon_slave_0;
   input            clock_crossing_bridge_m1_qualified_request_my_pwm_4_avalon_slave_0;
   input            clock_crossing_bridge_m1_qualified_request_my_pwm_5_avalon_slave_0;
+  input            clock_crossing_bridge_m1_qualified_request_pio_0_s1;
   input            clock_crossing_bridge_m1_qualified_request_port_a_s1;
   input            clock_crossing_bridge_m1_qualified_request_profile_timer_s1;
   input            clock_crossing_bridge_m1_qualified_request_sd_clk_s1;
@@ -3995,6 +4003,7 @@ module clock_crossing_bridge_m1_arbitrator (
   input            clock_crossing_bridge_m1_read_data_valid_my_pwm_3_avalon_slave_0;
   input            clock_crossing_bridge_m1_read_data_valid_my_pwm_4_avalon_slave_0;
   input            clock_crossing_bridge_m1_read_data_valid_my_pwm_5_avalon_slave_0;
+  input            clock_crossing_bridge_m1_read_data_valid_pio_0_s1;
   input            clock_crossing_bridge_m1_read_data_valid_port_a_s1;
   input            clock_crossing_bridge_m1_read_data_valid_profile_timer_s1;
   input            clock_crossing_bridge_m1_read_data_valid_sd_clk_s1;
@@ -4018,6 +4027,7 @@ module clock_crossing_bridge_m1_arbitrator (
   input            clock_crossing_bridge_m1_requests_my_pwm_3_avalon_slave_0;
   input            clock_crossing_bridge_m1_requests_my_pwm_4_avalon_slave_0;
   input            clock_crossing_bridge_m1_requests_my_pwm_5_avalon_slave_0;
+  input            clock_crossing_bridge_m1_requests_pio_0_s1;
   input            clock_crossing_bridge_m1_requests_port_a_s1;
   input            clock_crossing_bridge_m1_requests_profile_timer_s1;
   input            clock_crossing_bridge_m1_requests_sd_clk_s1;
@@ -4043,6 +4053,7 @@ module clock_crossing_bridge_m1_arbitrator (
   input            d1_my_pwm_3_avalon_slave_0_end_xfer;
   input            d1_my_pwm_4_avalon_slave_0_end_xfer;
   input            d1_my_pwm_5_avalon_slave_0_end_xfer;
+  input            d1_pio_0_s1_end_xfer;
   input            d1_port_a_s1_end_xfer;
   input            d1_profile_timer_s1_end_xfer;
   input            d1_sd_clk_s1_end_xfer;
@@ -4066,6 +4077,7 @@ module clock_crossing_bridge_m1_arbitrator (
   input   [ 31: 0] my_pwm_3_avalon_slave_0_readdata_from_sa;
   input   [ 31: 0] my_pwm_4_avalon_slave_0_readdata_from_sa;
   input   [ 31: 0] my_pwm_5_avalon_slave_0_readdata_from_sa;
+  input   [ 31: 0] pio_0_s1_readdata_from_sa;
   input   [ 31: 0] port_a_s1_readdata_from_sa;
   input   [ 15: 0] profile_timer_s1_readdata_from_sa;
   input            reset_n;
@@ -4081,8 +4093,8 @@ module clock_crossing_bridge_m1_arbitrator (
   input   [ 15: 0] user_timer_s1_readdata_from_sa;
 
   reg              active_and_waiting_last_time;
-  reg     [  8: 0] clock_crossing_bridge_m1_address_last_time;
-  wire    [  8: 0] clock_crossing_bridge_m1_address_to_slave;
+  reg     [  9: 0] clock_crossing_bridge_m1_address_last_time;
+  wire    [  9: 0] clock_crossing_bridge_m1_address_to_slave;
   reg     [  3: 0] clock_crossing_bridge_m1_byteenable_last_time;
   wire             clock_crossing_bridge_m1_is_granted_some_slave;
   reg              clock_crossing_bridge_m1_latency_counter;
@@ -4117,16 +4129,16 @@ module clock_crossing_bridge_m1_arbitrator (
   assign r_2 = 1 & (clock_crossing_bridge_m1_qualified_request_my_pwm_1_avalon_slave_0 | ~clock_crossing_bridge_m1_requests_my_pwm_1_avalon_slave_0) & ((~clock_crossing_bridge_m1_qualified_request_my_pwm_1_avalon_slave_0 | ~clock_crossing_bridge_m1_read | (1 & ~d1_my_pwm_1_avalon_slave_0_end_xfer & clock_crossing_bridge_m1_read))) & ((~clock_crossing_bridge_m1_qualified_request_my_pwm_1_avalon_slave_0 | ~clock_crossing_bridge_m1_write | (1 & clock_crossing_bridge_m1_write))) & 1 & (clock_crossing_bridge_m1_qualified_request_my_pwm_2_avalon_slave_0 | ~clock_crossing_bridge_m1_requests_my_pwm_2_avalon_slave_0) & ((~clock_crossing_bridge_m1_qualified_request_my_pwm_2_avalon_slave_0 | ~clock_crossing_bridge_m1_read | (1 & ~d1_my_pwm_2_avalon_slave_0_end_xfer & clock_crossing_bridge_m1_read))) & ((~clock_crossing_bridge_m1_qualified_request_my_pwm_2_avalon_slave_0 | ~clock_crossing_bridge_m1_write | (1 & clock_crossing_bridge_m1_write))) & 1 & (clock_crossing_bridge_m1_qualified_request_my_pwm_3_avalon_slave_0 | ~clock_crossing_bridge_m1_requests_my_pwm_3_avalon_slave_0) & ((~clock_crossing_bridge_m1_qualified_request_my_pwm_3_avalon_slave_0 | ~clock_crossing_bridge_m1_read | (1 & ~d1_my_pwm_3_avalon_slave_0_end_xfer & clock_crossing_bridge_m1_read))) & ((~clock_crossing_bridge_m1_qualified_request_my_pwm_3_avalon_slave_0 | ~clock_crossing_bridge_m1_write | (1 & clock_crossing_bridge_m1_write))) & 1 & (clock_crossing_bridge_m1_qualified_request_my_pwm_4_avalon_slave_0 | ~clock_crossing_bridge_m1_requests_my_pwm_4_avalon_slave_0) & ((~clock_crossing_bridge_m1_qualified_request_my_pwm_4_avalon_slave_0 | ~clock_crossing_bridge_m1_read | (1 & ~d1_my_pwm_4_avalon_slave_0_end_xfer & clock_crossing_bridge_m1_read))) & ((~clock_crossing_bridge_m1_qualified_request_my_pwm_4_avalon_slave_0 | ~clock_crossing_bridge_m1_write | (1 & clock_crossing_bridge_m1_write))) & 1 & (clock_crossing_bridge_m1_qualified_request_my_pwm_5_avalon_slave_0 | ~clock_crossing_bridge_m1_requests_my_pwm_5_avalon_slave_0) & ((~clock_crossing_bridge_m1_qualified_request_my_pwm_5_avalon_slave_0 | ~clock_crossing_bridge_m1_read | (1 & ~d1_my_pwm_5_avalon_slave_0_end_xfer & clock_crossing_bridge_m1_read))) & ((~clock_crossing_bridge_m1_qualified_request_my_pwm_5_avalon_slave_0 | ~clock_crossing_bridge_m1_write | (1 & clock_crossing_bridge_m1_write)));
 
   //r_3 master_run cascaded wait assignment, which is an e_assign
-  assign r_3 = 1 & (clock_crossing_bridge_m1_qualified_request_port_a_s1 | ~clock_crossing_bridge_m1_requests_port_a_s1) & ((~clock_crossing_bridge_m1_qualified_request_port_a_s1 | ~clock_crossing_bridge_m1_read | (1 & ~d1_port_a_s1_end_xfer & clock_crossing_bridge_m1_read))) & ((~clock_crossing_bridge_m1_qualified_request_port_a_s1 | ~clock_crossing_bridge_m1_write | (1 & clock_crossing_bridge_m1_write))) & 1 & (clock_crossing_bridge_m1_qualified_request_profile_timer_s1 | ~clock_crossing_bridge_m1_requests_profile_timer_s1) & ((~clock_crossing_bridge_m1_qualified_request_profile_timer_s1 | ~clock_crossing_bridge_m1_read | (1 & ~d1_profile_timer_s1_end_xfer & clock_crossing_bridge_m1_read))) & ((~clock_crossing_bridge_m1_qualified_request_profile_timer_s1 | ~clock_crossing_bridge_m1_write | (1 & clock_crossing_bridge_m1_write))) & 1 & (clock_crossing_bridge_m1_qualified_request_sd_clk_s1 | ~clock_crossing_bridge_m1_requests_sd_clk_s1) & ((~clock_crossing_bridge_m1_qualified_request_sd_clk_s1 | ~clock_crossing_bridge_m1_read | (1 & ~d1_sd_clk_s1_end_xfer & clock_crossing_bridge_m1_read))) & ((~clock_crossing_bridge_m1_qualified_request_sd_clk_s1 | ~clock_crossing_bridge_m1_write | (1 & clock_crossing_bridge_m1_write))) & 1 & (clock_crossing_bridge_m1_qualified_request_sd_cmd_s1 | ~clock_crossing_bridge_m1_requests_sd_cmd_s1) & ((~clock_crossing_bridge_m1_qualified_request_sd_cmd_s1 | ~clock_crossing_bridge_m1_read | (1 & ~d1_sd_cmd_s1_end_xfer & clock_crossing_bridge_m1_read))) & ((~clock_crossing_bridge_m1_qualified_request_sd_cmd_s1 | ~clock_crossing_bridge_m1_write | (1 & clock_crossing_bridge_m1_write))) & 1 & (clock_crossing_bridge_m1_qualified_request_sd_dat_s1 | ~clock_crossing_bridge_m1_requests_sd_dat_s1) & ((~clock_crossing_bridge_m1_qualified_request_sd_dat_s1 | ~clock_crossing_bridge_m1_read | (1 & ~d1_sd_dat_s1_end_xfer & clock_crossing_bridge_m1_read))) & ((~clock_crossing_bridge_m1_qualified_request_sd_dat_s1 | ~clock_crossing_bridge_m1_write | (1 & clock_crossing_bridge_m1_write)));
+  assign r_3 = 1 & (clock_crossing_bridge_m1_qualified_request_pio_0_s1 | ~clock_crossing_bridge_m1_requests_pio_0_s1) & ((~clock_crossing_bridge_m1_qualified_request_pio_0_s1 | ~clock_crossing_bridge_m1_read | (1 & ~d1_pio_0_s1_end_xfer & clock_crossing_bridge_m1_read))) & ((~clock_crossing_bridge_m1_qualified_request_pio_0_s1 | ~clock_crossing_bridge_m1_write | (1 & clock_crossing_bridge_m1_write))) & 1 & (clock_crossing_bridge_m1_qualified_request_port_a_s1 | ~clock_crossing_bridge_m1_requests_port_a_s1) & ((~clock_crossing_bridge_m1_qualified_request_port_a_s1 | ~clock_crossing_bridge_m1_read | (1 & ~d1_port_a_s1_end_xfer & clock_crossing_bridge_m1_read))) & ((~clock_crossing_bridge_m1_qualified_request_port_a_s1 | ~clock_crossing_bridge_m1_write | (1 & clock_crossing_bridge_m1_write))) & 1 & (clock_crossing_bridge_m1_qualified_request_profile_timer_s1 | ~clock_crossing_bridge_m1_requests_profile_timer_s1) & ((~clock_crossing_bridge_m1_qualified_request_profile_timer_s1 | ~clock_crossing_bridge_m1_read | (1 & ~d1_profile_timer_s1_end_xfer & clock_crossing_bridge_m1_read))) & ((~clock_crossing_bridge_m1_qualified_request_profile_timer_s1 | ~clock_crossing_bridge_m1_write | (1 & clock_crossing_bridge_m1_write))) & 1 & (clock_crossing_bridge_m1_qualified_request_sd_clk_s1 | ~clock_crossing_bridge_m1_requests_sd_clk_s1) & ((~clock_crossing_bridge_m1_qualified_request_sd_clk_s1 | ~clock_crossing_bridge_m1_read | (1 & ~d1_sd_clk_s1_end_xfer & clock_crossing_bridge_m1_read))) & ((~clock_crossing_bridge_m1_qualified_request_sd_clk_s1 | ~clock_crossing_bridge_m1_write | (1 & clock_crossing_bridge_m1_write))) & 1 & (clock_crossing_bridge_m1_qualified_request_sd_cmd_s1 | ~clock_crossing_bridge_m1_requests_sd_cmd_s1) & ((~clock_crossing_bridge_m1_qualified_request_sd_cmd_s1 | ~clock_crossing_bridge_m1_read | (1 & ~d1_sd_cmd_s1_end_xfer & clock_crossing_bridge_m1_read))) & ((~clock_crossing_bridge_m1_qualified_request_sd_cmd_s1 | ~clock_crossing_bridge_m1_write | (1 & clock_crossing_bridge_m1_write)));
 
   //r_4 master_run cascaded wait assignment, which is an e_assign
-  assign r_4 = 1 & (clock_crossing_bridge_m1_qualified_request_sd_wp_n_s1 | ~clock_crossing_bridge_m1_requests_sd_wp_n_s1) & ((~clock_crossing_bridge_m1_qualified_request_sd_wp_n_s1 | ~clock_crossing_bridge_m1_read | (1 & ~d1_sd_wp_n_s1_end_xfer & clock_crossing_bridge_m1_read))) & ((~clock_crossing_bridge_m1_qualified_request_sd_wp_n_s1 | ~clock_crossing_bridge_m1_write | (1 & clock_crossing_bridge_m1_write))) & 1 & (clock_crossing_bridge_m1_qualified_request_seg7_s1 | ~clock_crossing_bridge_m1_requests_seg7_s1) & ((~clock_crossing_bridge_m1_qualified_request_seg7_s1 | ~clock_crossing_bridge_m1_read | (1 & ~d1_seg7_s1_end_xfer & clock_crossing_bridge_m1_read))) & ((~clock_crossing_bridge_m1_qualified_request_seg7_s1 | ~clock_crossing_bridge_m1_write | (1 & clock_crossing_bridge_m1_write))) & 1 & (clock_crossing_bridge_m1_qualified_request_switches_s1 | ~clock_crossing_bridge_m1_requests_switches_s1) & ((~clock_crossing_bridge_m1_qualified_request_switches_s1 | ~clock_crossing_bridge_m1_read | (1 & ~d1_switches_s1_end_xfer & clock_crossing_bridge_m1_read))) & ((~clock_crossing_bridge_m1_qualified_request_switches_s1 | ~clock_crossing_bridge_m1_write | (1 & clock_crossing_bridge_m1_write))) & 1 & (clock_crossing_bridge_m1_qualified_request_sysid_control_slave | ~clock_crossing_bridge_m1_requests_sysid_control_slave) & ((~clock_crossing_bridge_m1_qualified_request_sysid_control_slave | ~clock_crossing_bridge_m1_read | (1 & ~d1_sysid_control_slave_end_xfer & clock_crossing_bridge_m1_read))) & ((~clock_crossing_bridge_m1_qualified_request_sysid_control_slave | ~clock_crossing_bridge_m1_write | (1 & clock_crossing_bridge_m1_write))) & 1 & (clock_crossing_bridge_m1_qualified_request_timer_s1 | ~clock_crossing_bridge_m1_requests_timer_s1) & ((~clock_crossing_bridge_m1_qualified_request_timer_s1 | ~clock_crossing_bridge_m1_read | (1 & ~d1_timer_s1_end_xfer & clock_crossing_bridge_m1_read))) & ((~clock_crossing_bridge_m1_qualified_request_timer_s1 | ~clock_crossing_bridge_m1_write | (1 & clock_crossing_bridge_m1_write)));
+  assign r_4 = 1 & (clock_crossing_bridge_m1_qualified_request_sd_dat_s1 | ~clock_crossing_bridge_m1_requests_sd_dat_s1) & ((~clock_crossing_bridge_m1_qualified_request_sd_dat_s1 | ~clock_crossing_bridge_m1_read | (1 & ~d1_sd_dat_s1_end_xfer & clock_crossing_bridge_m1_read))) & ((~clock_crossing_bridge_m1_qualified_request_sd_dat_s1 | ~clock_crossing_bridge_m1_write | (1 & clock_crossing_bridge_m1_write))) & 1 & (clock_crossing_bridge_m1_qualified_request_sd_wp_n_s1 | ~clock_crossing_bridge_m1_requests_sd_wp_n_s1) & ((~clock_crossing_bridge_m1_qualified_request_sd_wp_n_s1 | ~clock_crossing_bridge_m1_read | (1 & ~d1_sd_wp_n_s1_end_xfer & clock_crossing_bridge_m1_read))) & ((~clock_crossing_bridge_m1_qualified_request_sd_wp_n_s1 | ~clock_crossing_bridge_m1_write | (1 & clock_crossing_bridge_m1_write))) & 1 & (clock_crossing_bridge_m1_qualified_request_seg7_s1 | ~clock_crossing_bridge_m1_requests_seg7_s1) & ((~clock_crossing_bridge_m1_qualified_request_seg7_s1 | ~clock_crossing_bridge_m1_read | (1 & ~d1_seg7_s1_end_xfer & clock_crossing_bridge_m1_read))) & ((~clock_crossing_bridge_m1_qualified_request_seg7_s1 | ~clock_crossing_bridge_m1_write | (1 & clock_crossing_bridge_m1_write))) & 1 & (clock_crossing_bridge_m1_qualified_request_switches_s1 | ~clock_crossing_bridge_m1_requests_switches_s1) & ((~clock_crossing_bridge_m1_qualified_request_switches_s1 | ~clock_crossing_bridge_m1_read | (1 & ~d1_switches_s1_end_xfer & clock_crossing_bridge_m1_read))) & ((~clock_crossing_bridge_m1_qualified_request_switches_s1 | ~clock_crossing_bridge_m1_write | (1 & clock_crossing_bridge_m1_write))) & 1 & (clock_crossing_bridge_m1_qualified_request_sysid_control_slave | ~clock_crossing_bridge_m1_requests_sysid_control_slave) & ((~clock_crossing_bridge_m1_qualified_request_sysid_control_slave | ~clock_crossing_bridge_m1_read | (1 & ~d1_sysid_control_slave_end_xfer & clock_crossing_bridge_m1_read))) & ((~clock_crossing_bridge_m1_qualified_request_sysid_control_slave | ~clock_crossing_bridge_m1_write | (1 & clock_crossing_bridge_m1_write)));
 
   //r_5 master_run cascaded wait assignment, which is an e_assign
-  assign r_5 = 1 & (clock_crossing_bridge_m1_qualified_request_uart_s1 | ~clock_crossing_bridge_m1_requests_uart_s1) & ((~clock_crossing_bridge_m1_qualified_request_uart_s1 | ~(clock_crossing_bridge_m1_read | clock_crossing_bridge_m1_write) | (1 & ~d1_uart_s1_end_xfer & (clock_crossing_bridge_m1_read | clock_crossing_bridge_m1_write)))) & ((~clock_crossing_bridge_m1_qualified_request_uart_s1 | ~(clock_crossing_bridge_m1_read | clock_crossing_bridge_m1_write) | (1 & ~d1_uart_s1_end_xfer & (clock_crossing_bridge_m1_read | clock_crossing_bridge_m1_write)))) & 1 & (clock_crossing_bridge_m1_qualified_request_user_timer_s1 | ~clock_crossing_bridge_m1_requests_user_timer_s1) & ((~clock_crossing_bridge_m1_qualified_request_user_timer_s1 | ~clock_crossing_bridge_m1_read | (1 & ~d1_user_timer_s1_end_xfer & clock_crossing_bridge_m1_read))) & ((~clock_crossing_bridge_m1_qualified_request_user_timer_s1 | ~clock_crossing_bridge_m1_write | (1 & clock_crossing_bridge_m1_write)));
+  assign r_5 = 1 & (clock_crossing_bridge_m1_qualified_request_timer_s1 | ~clock_crossing_bridge_m1_requests_timer_s1) & ((~clock_crossing_bridge_m1_qualified_request_timer_s1 | ~clock_crossing_bridge_m1_read | (1 & ~d1_timer_s1_end_xfer & clock_crossing_bridge_m1_read))) & ((~clock_crossing_bridge_m1_qualified_request_timer_s1 | ~clock_crossing_bridge_m1_write | (1 & clock_crossing_bridge_m1_write))) & 1 & (clock_crossing_bridge_m1_qualified_request_uart_s1 | ~clock_crossing_bridge_m1_requests_uart_s1) & ((~clock_crossing_bridge_m1_qualified_request_uart_s1 | ~(clock_crossing_bridge_m1_read | clock_crossing_bridge_m1_write) | (1 & ~d1_uart_s1_end_xfer & (clock_crossing_bridge_m1_read | clock_crossing_bridge_m1_write)))) & ((~clock_crossing_bridge_m1_qualified_request_uart_s1 | ~(clock_crossing_bridge_m1_read | clock_crossing_bridge_m1_write) | (1 & ~d1_uart_s1_end_xfer & (clock_crossing_bridge_m1_read | clock_crossing_bridge_m1_write)))) & 1 & (clock_crossing_bridge_m1_qualified_request_user_timer_s1 | ~clock_crossing_bridge_m1_requests_user_timer_s1) & ((~clock_crossing_bridge_m1_qualified_request_user_timer_s1 | ~clock_crossing_bridge_m1_read | (1 & ~d1_user_timer_s1_end_xfer & clock_crossing_bridge_m1_read))) & ((~clock_crossing_bridge_m1_qualified_request_user_timer_s1 | ~clock_crossing_bridge_m1_write | (1 & clock_crossing_bridge_m1_write)));
 
   //optimize select-logic by passing only those address bits which matter.
-  assign clock_crossing_bridge_m1_address_to_slave = clock_crossing_bridge_m1_address[8 : 0];
+  assign clock_crossing_bridge_m1_address_to_slave = clock_crossing_bridge_m1_address[9 : 0];
 
   //clock_crossing_bridge_m1_read_but_no_slave_selected assignment, which is an e_register
   always @(posedge clk or negedge reset_n)
@@ -4150,6 +4162,7 @@ module clock_crossing_bridge_m1_arbitrator (
     clock_crossing_bridge_m1_granted_my_pwm_3_avalon_slave_0 |
     clock_crossing_bridge_m1_granted_my_pwm_4_avalon_slave_0 |
     clock_crossing_bridge_m1_granted_my_pwm_5_avalon_slave_0 |
+    clock_crossing_bridge_m1_granted_pio_0_s1 |
     clock_crossing_bridge_m1_granted_port_a_s1 |
     clock_crossing_bridge_m1_granted_profile_timer_s1 |
     clock_crossing_bridge_m1_granted_sd_clk_s1 |
@@ -4202,6 +4215,9 @@ module clock_crossing_bridge_m1_arbitrator (
     clock_crossing_bridge_m1_read_data_valid_my_pwm_5_avalon_slave_0 |
     clock_crossing_bridge_m1_read_but_no_slave_selected |
     pre_flush_clock_crossing_bridge_m1_readdatavalid |
+    clock_crossing_bridge_m1_read_data_valid_pio_0_s1 |
+    clock_crossing_bridge_m1_read_but_no_slave_selected |
+    pre_flush_clock_crossing_bridge_m1_readdatavalid |
     clock_crossing_bridge_m1_read_data_valid_port_a_s1 |
     clock_crossing_bridge_m1_read_but_no_slave_selected |
     pre_flush_clock_crossing_bridge_m1_readdatavalid |
@@ -4249,6 +4265,7 @@ module clock_crossing_bridge_m1_arbitrator (
     ({32 {~(clock_crossing_bridge_m1_qualified_request_my_pwm_3_avalon_slave_0 & clock_crossing_bridge_m1_read)}} | my_pwm_3_avalon_slave_0_readdata_from_sa) &
     ({32 {~(clock_crossing_bridge_m1_qualified_request_my_pwm_4_avalon_slave_0 & clock_crossing_bridge_m1_read)}} | my_pwm_4_avalon_slave_0_readdata_from_sa) &
     ({32 {~(clock_crossing_bridge_m1_qualified_request_my_pwm_5_avalon_slave_0 & clock_crossing_bridge_m1_read)}} | my_pwm_5_avalon_slave_0_readdata_from_sa) &
+    ({32 {~(clock_crossing_bridge_m1_qualified_request_pio_0_s1 & clock_crossing_bridge_m1_read)}} | pio_0_s1_readdata_from_sa) &
     ({32 {~(clock_crossing_bridge_m1_qualified_request_port_a_s1 & clock_crossing_bridge_m1_read)}} | port_a_s1_readdata_from_sa) &
     ({32 {~(clock_crossing_bridge_m1_qualified_request_profile_timer_s1 & clock_crossing_bridge_m1_read)}} | profile_timer_s1_readdata_from_sa) &
     ({32 {~(clock_crossing_bridge_m1_qualified_request_sd_clk_s1 & clock_crossing_bridge_m1_read)}} | sd_clk_s1_readdata_from_sa) &
@@ -6648,9 +6665,9 @@ module key_out_s1_arbitrator (
   output           key_out_s1_write_n;
   output  [ 31: 0] key_out_s1_writedata;
   input            clk;
-  input   [  8: 0] clock_crossing_bridge_m1_address_to_slave;
+  input   [  9: 0] clock_crossing_bridge_m1_address_to_slave;
   input            clock_crossing_bridge_m1_latency_counter;
-  input   [  6: 0] clock_crossing_bridge_m1_nativeaddress;
+  input   [  7: 0] clock_crossing_bridge_m1_nativeaddress;
   input            clock_crossing_bridge_m1_read;
   input            clock_crossing_bridge_m1_write;
   input   [ 31: 0] clock_crossing_bridge_m1_writedata;
@@ -6714,7 +6731,7 @@ module key_out_s1_arbitrator (
   //assign key_out_s1_readdata_from_sa = key_out_s1_readdata so that symbol knows where to group signals which may go to master only, which is an e_assign
   assign key_out_s1_readdata_from_sa = key_out_s1_readdata;
 
-  assign clock_crossing_bridge_m1_requests_key_out_s1 = ({clock_crossing_bridge_m1_address_to_slave[8 : 4] , 4'b0} == 9'h160) & (clock_crossing_bridge_m1_read | clock_crossing_bridge_m1_write);
+  assign clock_crossing_bridge_m1_requests_key_out_s1 = ({clock_crossing_bridge_m1_address_to_slave[9 : 4] , 4'b0} == 10'h180) & (clock_crossing_bridge_m1_read | clock_crossing_bridge_m1_write);
   //key_out_s1_arb_share_counter set values, which is an e_mux
   assign key_out_s1_arb_share_set_values = 1;
 
@@ -6927,10 +6944,10 @@ module lcd_control_slave_arbitrator (
   output           lcd_control_slave_write;
   output  [  7: 0] lcd_control_slave_writedata;
   input            clk;
-  input   [  8: 0] clock_crossing_bridge_m1_address_to_slave;
+  input   [  9: 0] clock_crossing_bridge_m1_address_to_slave;
   input   [  3: 0] clock_crossing_bridge_m1_byteenable;
   input            clock_crossing_bridge_m1_latency_counter;
-  input   [  6: 0] clock_crossing_bridge_m1_nativeaddress;
+  input   [  7: 0] clock_crossing_bridge_m1_nativeaddress;
   input            clock_crossing_bridge_m1_read;
   input            clock_crossing_bridge_m1_write;
   input   [ 31: 0] clock_crossing_bridge_m1_writedata;
@@ -6999,7 +7016,7 @@ module lcd_control_slave_arbitrator (
   //assign lcd_control_slave_readdata_from_sa = lcd_control_slave_readdata so that symbol knows where to group signals which may go to master only, which is an e_assign
   assign lcd_control_slave_readdata_from_sa = lcd_control_slave_readdata;
 
-  assign clock_crossing_bridge_m1_requests_lcd_control_slave = ({clock_crossing_bridge_m1_address_to_slave[8 : 4] , 4'b0} == 9'h110) & (clock_crossing_bridge_m1_read | clock_crossing_bridge_m1_write);
+  assign clock_crossing_bridge_m1_requests_lcd_control_slave = ({clock_crossing_bridge_m1_address_to_slave[9 : 4] , 4'b0} == 10'h130) & (clock_crossing_bridge_m1_read | clock_crossing_bridge_m1_write);
   //lcd_control_slave_arb_share_counter set values, which is an e_mux
   assign lcd_control_slave_arb_share_set_values = 1;
 
@@ -7229,9 +7246,9 @@ module lcd_light_s1_arbitrator (
   output           lcd_light_s1_write_n;
   output  [ 31: 0] lcd_light_s1_writedata;
   input            clk;
-  input   [  8: 0] clock_crossing_bridge_m1_address_to_slave;
+  input   [  9: 0] clock_crossing_bridge_m1_address_to_slave;
   input            clock_crossing_bridge_m1_latency_counter;
-  input   [  6: 0] clock_crossing_bridge_m1_nativeaddress;
+  input   [  7: 0] clock_crossing_bridge_m1_nativeaddress;
   input            clock_crossing_bridge_m1_read;
   input            clock_crossing_bridge_m1_write;
   input   [ 31: 0] clock_crossing_bridge_m1_writedata;
@@ -7295,7 +7312,7 @@ module lcd_light_s1_arbitrator (
   //assign lcd_light_s1_readdata_from_sa = lcd_light_s1_readdata so that symbol knows where to group signals which may go to master only, which is an e_assign
   assign lcd_light_s1_readdata_from_sa = lcd_light_s1_readdata;
 
-  assign clock_crossing_bridge_m1_requests_lcd_light_s1 = ({clock_crossing_bridge_m1_address_to_slave[8 : 4] , 4'b0} == 9'h140) & (clock_crossing_bridge_m1_read | clock_crossing_bridge_m1_write);
+  assign clock_crossing_bridge_m1_requests_lcd_light_s1 = ({clock_crossing_bridge_m1_address_to_slave[9 : 4] , 4'b0} == 10'h160) & (clock_crossing_bridge_m1_read | clock_crossing_bridge_m1_write);
   //lcd_light_s1_arb_share_counter set values, which is an e_mux
   assign lcd_light_s1_arb_share_set_values = 1;
 
@@ -7503,9 +7520,9 @@ module leds_s1_arbitrator (
   output           leds_s1_write_n;
   output  [ 31: 0] leds_s1_writedata;
   input            clk;
-  input   [  8: 0] clock_crossing_bridge_m1_address_to_slave;
+  input   [  9: 0] clock_crossing_bridge_m1_address_to_slave;
   input            clock_crossing_bridge_m1_latency_counter;
-  input   [  6: 0] clock_crossing_bridge_m1_nativeaddress;
+  input   [  7: 0] clock_crossing_bridge_m1_nativeaddress;
   input            clock_crossing_bridge_m1_read;
   input            clock_crossing_bridge_m1_write;
   input   [ 31: 0] clock_crossing_bridge_m1_writedata;
@@ -7569,7 +7586,7 @@ module leds_s1_arbitrator (
   //assign leds_s1_readdata_from_sa = leds_s1_readdata so that symbol knows where to group signals which may go to master only, which is an e_assign
   assign leds_s1_readdata_from_sa = leds_s1_readdata;
 
-  assign clock_crossing_bridge_m1_requests_leds_s1 = ({clock_crossing_bridge_m1_address_to_slave[8 : 4] , 4'b0} == 9'hc0) & (clock_crossing_bridge_m1_read | clock_crossing_bridge_m1_write);
+  assign clock_crossing_bridge_m1_requests_leds_s1 = ({clock_crossing_bridge_m1_address_to_slave[9 : 4] , 4'b0} == 10'he0) & (clock_crossing_bridge_m1_read | clock_crossing_bridge_m1_write);
   //leds_s1_arb_share_counter set values, which is an e_mux
   assign leds_s1_arb_share_set_values = 1;
 
@@ -7776,7 +7793,7 @@ module my_pwm_0_avalon_slave_0_arbitrator (
   output           my_pwm_0_avalon_slave_0_write_n;
   output  [ 31: 0] my_pwm_0_avalon_slave_0_writedata;
   input            clk;
-  input   [  8: 0] clock_crossing_bridge_m1_address_to_slave;
+  input   [  9: 0] clock_crossing_bridge_m1_address_to_slave;
   input            clock_crossing_bridge_m1_latency_counter;
   input            clock_crossing_bridge_m1_read;
   input            clock_crossing_bridge_m1_write;
@@ -7827,7 +7844,7 @@ module my_pwm_0_avalon_slave_0_arbitrator (
   wire             my_pwm_0_avalon_slave_0_waits_for_write;
   wire             my_pwm_0_avalon_slave_0_write_n;
   wire    [ 31: 0] my_pwm_0_avalon_slave_0_writedata;
-  wire    [  8: 0] shifted_address_to_my_pwm_0_avalon_slave_0_from_clock_crossing_bridge_m1;
+  wire    [  9: 0] shifted_address_to_my_pwm_0_avalon_slave_0_from_clock_crossing_bridge_m1;
   wire             wait_for_my_pwm_0_avalon_slave_0_counter;
   always @(posedge clk or negedge reset_n)
     begin
@@ -7842,7 +7859,7 @@ module my_pwm_0_avalon_slave_0_arbitrator (
   //assign my_pwm_0_avalon_slave_0_readdata_from_sa = my_pwm_0_avalon_slave_0_readdata so that symbol knows where to group signals which may go to master only, which is an e_assign
   assign my_pwm_0_avalon_slave_0_readdata_from_sa = my_pwm_0_avalon_slave_0_readdata;
 
-  assign clock_crossing_bridge_m1_requests_my_pwm_0_avalon_slave_0 = ({clock_crossing_bridge_m1_address_to_slave[8 : 4] , 4'b0} == 9'h170) & (clock_crossing_bridge_m1_read | clock_crossing_bridge_m1_write);
+  assign clock_crossing_bridge_m1_requests_my_pwm_0_avalon_slave_0 = ({clock_crossing_bridge_m1_address_to_slave[9 : 4] , 4'b0} == 10'h190) & (clock_crossing_bridge_m1_read | clock_crossing_bridge_m1_write);
   //my_pwm_0_avalon_slave_0_arb_share_counter set values, which is an e_mux
   assign my_pwm_0_avalon_slave_0_arb_share_set_values = 1;
 
@@ -8050,7 +8067,7 @@ module my_pwm_1_avalon_slave_0_arbitrator (
   output           my_pwm_1_avalon_slave_0_write_n;
   output  [ 31: 0] my_pwm_1_avalon_slave_0_writedata;
   input            clk;
-  input   [  8: 0] clock_crossing_bridge_m1_address_to_slave;
+  input   [  9: 0] clock_crossing_bridge_m1_address_to_slave;
   input            clock_crossing_bridge_m1_latency_counter;
   input            clock_crossing_bridge_m1_read;
   input            clock_crossing_bridge_m1_write;
@@ -8101,7 +8118,7 @@ module my_pwm_1_avalon_slave_0_arbitrator (
   wire             my_pwm_1_avalon_slave_0_waits_for_write;
   wire             my_pwm_1_avalon_slave_0_write_n;
   wire    [ 31: 0] my_pwm_1_avalon_slave_0_writedata;
-  wire    [  8: 0] shifted_address_to_my_pwm_1_avalon_slave_0_from_clock_crossing_bridge_m1;
+  wire    [  9: 0] shifted_address_to_my_pwm_1_avalon_slave_0_from_clock_crossing_bridge_m1;
   wire             wait_for_my_pwm_1_avalon_slave_0_counter;
   always @(posedge clk or negedge reset_n)
     begin
@@ -8116,7 +8133,7 @@ module my_pwm_1_avalon_slave_0_arbitrator (
   //assign my_pwm_1_avalon_slave_0_readdata_from_sa = my_pwm_1_avalon_slave_0_readdata so that symbol knows where to group signals which may go to master only, which is an e_assign
   assign my_pwm_1_avalon_slave_0_readdata_from_sa = my_pwm_1_avalon_slave_0_readdata;
 
-  assign clock_crossing_bridge_m1_requests_my_pwm_1_avalon_slave_0 = ({clock_crossing_bridge_m1_address_to_slave[8 : 4] , 4'b0} == 9'h180) & (clock_crossing_bridge_m1_read | clock_crossing_bridge_m1_write);
+  assign clock_crossing_bridge_m1_requests_my_pwm_1_avalon_slave_0 = ({clock_crossing_bridge_m1_address_to_slave[9 : 4] , 4'b0} == 10'h1a0) & (clock_crossing_bridge_m1_read | clock_crossing_bridge_m1_write);
   //my_pwm_1_avalon_slave_0_arb_share_counter set values, which is an e_mux
   assign my_pwm_1_avalon_slave_0_arb_share_set_values = 1;
 
@@ -8324,7 +8341,7 @@ module my_pwm_2_avalon_slave_0_arbitrator (
   output           my_pwm_2_avalon_slave_0_write_n;
   output  [ 31: 0] my_pwm_2_avalon_slave_0_writedata;
   input            clk;
-  input   [  8: 0] clock_crossing_bridge_m1_address_to_slave;
+  input   [  9: 0] clock_crossing_bridge_m1_address_to_slave;
   input            clock_crossing_bridge_m1_latency_counter;
   input            clock_crossing_bridge_m1_read;
   input            clock_crossing_bridge_m1_write;
@@ -8375,7 +8392,7 @@ module my_pwm_2_avalon_slave_0_arbitrator (
   wire             my_pwm_2_avalon_slave_0_waits_for_write;
   wire             my_pwm_2_avalon_slave_0_write_n;
   wire    [ 31: 0] my_pwm_2_avalon_slave_0_writedata;
-  wire    [  8: 0] shifted_address_to_my_pwm_2_avalon_slave_0_from_clock_crossing_bridge_m1;
+  wire    [  9: 0] shifted_address_to_my_pwm_2_avalon_slave_0_from_clock_crossing_bridge_m1;
   wire             wait_for_my_pwm_2_avalon_slave_0_counter;
   always @(posedge clk or negedge reset_n)
     begin
@@ -8390,7 +8407,7 @@ module my_pwm_2_avalon_slave_0_arbitrator (
   //assign my_pwm_2_avalon_slave_0_readdata_from_sa = my_pwm_2_avalon_slave_0_readdata so that symbol knows where to group signals which may go to master only, which is an e_assign
   assign my_pwm_2_avalon_slave_0_readdata_from_sa = my_pwm_2_avalon_slave_0_readdata;
 
-  assign clock_crossing_bridge_m1_requests_my_pwm_2_avalon_slave_0 = ({clock_crossing_bridge_m1_address_to_slave[8 : 4] , 4'b0} == 9'h190) & (clock_crossing_bridge_m1_read | clock_crossing_bridge_m1_write);
+  assign clock_crossing_bridge_m1_requests_my_pwm_2_avalon_slave_0 = ({clock_crossing_bridge_m1_address_to_slave[9 : 4] , 4'b0} == 10'h1b0) & (clock_crossing_bridge_m1_read | clock_crossing_bridge_m1_write);
   //my_pwm_2_avalon_slave_0_arb_share_counter set values, which is an e_mux
   assign my_pwm_2_avalon_slave_0_arb_share_set_values = 1;
 
@@ -8598,7 +8615,7 @@ module my_pwm_3_avalon_slave_0_arbitrator (
   output           my_pwm_3_avalon_slave_0_write_n;
   output  [ 31: 0] my_pwm_3_avalon_slave_0_writedata;
   input            clk;
-  input   [  8: 0] clock_crossing_bridge_m1_address_to_slave;
+  input   [  9: 0] clock_crossing_bridge_m1_address_to_slave;
   input            clock_crossing_bridge_m1_latency_counter;
   input            clock_crossing_bridge_m1_read;
   input            clock_crossing_bridge_m1_write;
@@ -8649,7 +8666,7 @@ module my_pwm_3_avalon_slave_0_arbitrator (
   wire             my_pwm_3_avalon_slave_0_waits_for_write;
   wire             my_pwm_3_avalon_slave_0_write_n;
   wire    [ 31: 0] my_pwm_3_avalon_slave_0_writedata;
-  wire    [  8: 0] shifted_address_to_my_pwm_3_avalon_slave_0_from_clock_crossing_bridge_m1;
+  wire    [  9: 0] shifted_address_to_my_pwm_3_avalon_slave_0_from_clock_crossing_bridge_m1;
   wire             wait_for_my_pwm_3_avalon_slave_0_counter;
   always @(posedge clk or negedge reset_n)
     begin
@@ -8664,7 +8681,7 @@ module my_pwm_3_avalon_slave_0_arbitrator (
   //assign my_pwm_3_avalon_slave_0_readdata_from_sa = my_pwm_3_avalon_slave_0_readdata so that symbol knows where to group signals which may go to master only, which is an e_assign
   assign my_pwm_3_avalon_slave_0_readdata_from_sa = my_pwm_3_avalon_slave_0_readdata;
 
-  assign clock_crossing_bridge_m1_requests_my_pwm_3_avalon_slave_0 = ({clock_crossing_bridge_m1_address_to_slave[8 : 4] , 4'b0} == 9'h1a0) & (clock_crossing_bridge_m1_read | clock_crossing_bridge_m1_write);
+  assign clock_crossing_bridge_m1_requests_my_pwm_3_avalon_slave_0 = ({clock_crossing_bridge_m1_address_to_slave[9 : 4] , 4'b0} == 10'h1c0) & (clock_crossing_bridge_m1_read | clock_crossing_bridge_m1_write);
   //my_pwm_3_avalon_slave_0_arb_share_counter set values, which is an e_mux
   assign my_pwm_3_avalon_slave_0_arb_share_set_values = 1;
 
@@ -8872,7 +8889,7 @@ module my_pwm_4_avalon_slave_0_arbitrator (
   output           my_pwm_4_avalon_slave_0_write_n;
   output  [ 31: 0] my_pwm_4_avalon_slave_0_writedata;
   input            clk;
-  input   [  8: 0] clock_crossing_bridge_m1_address_to_slave;
+  input   [  9: 0] clock_crossing_bridge_m1_address_to_slave;
   input            clock_crossing_bridge_m1_latency_counter;
   input            clock_crossing_bridge_m1_read;
   input            clock_crossing_bridge_m1_write;
@@ -8923,7 +8940,7 @@ module my_pwm_4_avalon_slave_0_arbitrator (
   wire             my_pwm_4_avalon_slave_0_waits_for_write;
   wire             my_pwm_4_avalon_slave_0_write_n;
   wire    [ 31: 0] my_pwm_4_avalon_slave_0_writedata;
-  wire    [  8: 0] shifted_address_to_my_pwm_4_avalon_slave_0_from_clock_crossing_bridge_m1;
+  wire    [  9: 0] shifted_address_to_my_pwm_4_avalon_slave_0_from_clock_crossing_bridge_m1;
   wire             wait_for_my_pwm_4_avalon_slave_0_counter;
   always @(posedge clk or negedge reset_n)
     begin
@@ -8938,7 +8955,7 @@ module my_pwm_4_avalon_slave_0_arbitrator (
   //assign my_pwm_4_avalon_slave_0_readdata_from_sa = my_pwm_4_avalon_slave_0_readdata so that symbol knows where to group signals which may go to master only, which is an e_assign
   assign my_pwm_4_avalon_slave_0_readdata_from_sa = my_pwm_4_avalon_slave_0_readdata;
 
-  assign clock_crossing_bridge_m1_requests_my_pwm_4_avalon_slave_0 = ({clock_crossing_bridge_m1_address_to_slave[8 : 4] , 4'b0} == 9'h1b0) & (clock_crossing_bridge_m1_read | clock_crossing_bridge_m1_write);
+  assign clock_crossing_bridge_m1_requests_my_pwm_4_avalon_slave_0 = ({clock_crossing_bridge_m1_address_to_slave[9 : 4] , 4'b0} == 10'h1d0) & (clock_crossing_bridge_m1_read | clock_crossing_bridge_m1_write);
   //my_pwm_4_avalon_slave_0_arb_share_counter set values, which is an e_mux
   assign my_pwm_4_avalon_slave_0_arb_share_set_values = 1;
 
@@ -9146,7 +9163,7 @@ module my_pwm_5_avalon_slave_0_arbitrator (
   output           my_pwm_5_avalon_slave_0_write_n;
   output  [ 31: 0] my_pwm_5_avalon_slave_0_writedata;
   input            clk;
-  input   [  8: 0] clock_crossing_bridge_m1_address_to_slave;
+  input   [  9: 0] clock_crossing_bridge_m1_address_to_slave;
   input            clock_crossing_bridge_m1_latency_counter;
   input            clock_crossing_bridge_m1_read;
   input            clock_crossing_bridge_m1_write;
@@ -9197,7 +9214,7 @@ module my_pwm_5_avalon_slave_0_arbitrator (
   wire             my_pwm_5_avalon_slave_0_waits_for_write;
   wire             my_pwm_5_avalon_slave_0_write_n;
   wire    [ 31: 0] my_pwm_5_avalon_slave_0_writedata;
-  wire    [  8: 0] shifted_address_to_my_pwm_5_avalon_slave_0_from_clock_crossing_bridge_m1;
+  wire    [  9: 0] shifted_address_to_my_pwm_5_avalon_slave_0_from_clock_crossing_bridge_m1;
   wire             wait_for_my_pwm_5_avalon_slave_0_counter;
   always @(posedge clk or negedge reset_n)
     begin
@@ -9212,7 +9229,7 @@ module my_pwm_5_avalon_slave_0_arbitrator (
   //assign my_pwm_5_avalon_slave_0_readdata_from_sa = my_pwm_5_avalon_slave_0_readdata so that symbol knows where to group signals which may go to master only, which is an e_assign
   assign my_pwm_5_avalon_slave_0_readdata_from_sa = my_pwm_5_avalon_slave_0_readdata;
 
-  assign clock_crossing_bridge_m1_requests_my_pwm_5_avalon_slave_0 = ({clock_crossing_bridge_m1_address_to_slave[8 : 4] , 4'b0} == 9'h1c0) & (clock_crossing_bridge_m1_read | clock_crossing_bridge_m1_write);
+  assign clock_crossing_bridge_m1_requests_my_pwm_5_avalon_slave_0 = ({clock_crossing_bridge_m1_address_to_slave[9 : 4] , 4'b0} == 10'h1e0) & (clock_crossing_bridge_m1_read | clock_crossing_bridge_m1_write);
   //my_pwm_5_avalon_slave_0_arb_share_counter set values, which is an e_mux
   assign my_pwm_5_avalon_slave_0_arb_share_set_values = 1;
 
@@ -9849,6 +9866,280 @@ endmodule
 // altera message_level Level1 
 // altera message_off 10034 10035 10036 10037 10230 10240 10030 
 
+module pio_0_s1_arbitrator (
+                             // inputs:
+                              clk,
+                              clock_crossing_bridge_m1_address_to_slave,
+                              clock_crossing_bridge_m1_latency_counter,
+                              clock_crossing_bridge_m1_nativeaddress,
+                              clock_crossing_bridge_m1_read,
+                              clock_crossing_bridge_m1_write,
+                              clock_crossing_bridge_m1_writedata,
+                              pio_0_s1_readdata,
+                              reset_n,
+
+                             // outputs:
+                              clock_crossing_bridge_m1_granted_pio_0_s1,
+                              clock_crossing_bridge_m1_qualified_request_pio_0_s1,
+                              clock_crossing_bridge_m1_read_data_valid_pio_0_s1,
+                              clock_crossing_bridge_m1_requests_pio_0_s1,
+                              d1_pio_0_s1_end_xfer,
+                              pio_0_s1_address,
+                              pio_0_s1_chipselect,
+                              pio_0_s1_readdata_from_sa,
+                              pio_0_s1_reset_n,
+                              pio_0_s1_write_n,
+                              pio_0_s1_writedata
+                           )
+;
+
+  output           clock_crossing_bridge_m1_granted_pio_0_s1;
+  output           clock_crossing_bridge_m1_qualified_request_pio_0_s1;
+  output           clock_crossing_bridge_m1_read_data_valid_pio_0_s1;
+  output           clock_crossing_bridge_m1_requests_pio_0_s1;
+  output           d1_pio_0_s1_end_xfer;
+  output  [  2: 0] pio_0_s1_address;
+  output           pio_0_s1_chipselect;
+  output  [ 31: 0] pio_0_s1_readdata_from_sa;
+  output           pio_0_s1_reset_n;
+  output           pio_0_s1_write_n;
+  output  [ 31: 0] pio_0_s1_writedata;
+  input            clk;
+  input   [  9: 0] clock_crossing_bridge_m1_address_to_slave;
+  input            clock_crossing_bridge_m1_latency_counter;
+  input   [  7: 0] clock_crossing_bridge_m1_nativeaddress;
+  input            clock_crossing_bridge_m1_read;
+  input            clock_crossing_bridge_m1_write;
+  input   [ 31: 0] clock_crossing_bridge_m1_writedata;
+  input   [ 31: 0] pio_0_s1_readdata;
+  input            reset_n;
+
+  wire             clock_crossing_bridge_m1_arbiterlock;
+  wire             clock_crossing_bridge_m1_arbiterlock2;
+  wire             clock_crossing_bridge_m1_continuerequest;
+  wire             clock_crossing_bridge_m1_granted_pio_0_s1;
+  wire             clock_crossing_bridge_m1_qualified_request_pio_0_s1;
+  wire             clock_crossing_bridge_m1_read_data_valid_pio_0_s1;
+  wire             clock_crossing_bridge_m1_requests_pio_0_s1;
+  wire             clock_crossing_bridge_m1_saved_grant_pio_0_s1;
+  reg              d1_pio_0_s1_end_xfer;
+  reg              d1_reasons_to_wait;
+  reg              enable_nonzero_assertions;
+  wire             end_xfer_arb_share_counter_term_pio_0_s1;
+  wire             in_a_read_cycle;
+  wire             in_a_write_cycle;
+  wire    [  2: 0] pio_0_s1_address;
+  wire             pio_0_s1_allgrants;
+  wire             pio_0_s1_allow_new_arb_cycle;
+  wire             pio_0_s1_any_bursting_master_saved_grant;
+  wire             pio_0_s1_any_continuerequest;
+  wire             pio_0_s1_arb_counter_enable;
+  reg              pio_0_s1_arb_share_counter;
+  wire             pio_0_s1_arb_share_counter_next_value;
+  wire             pio_0_s1_arb_share_set_values;
+  wire             pio_0_s1_beginbursttransfer_internal;
+  wire             pio_0_s1_begins_xfer;
+  wire             pio_0_s1_chipselect;
+  wire             pio_0_s1_end_xfer;
+  wire             pio_0_s1_firsttransfer;
+  wire             pio_0_s1_grant_vector;
+  wire             pio_0_s1_in_a_read_cycle;
+  wire             pio_0_s1_in_a_write_cycle;
+  wire             pio_0_s1_master_qreq_vector;
+  wire             pio_0_s1_non_bursting_master_requests;
+  wire    [ 31: 0] pio_0_s1_readdata_from_sa;
+  reg              pio_0_s1_reg_firsttransfer;
+  wire             pio_0_s1_reset_n;
+  reg              pio_0_s1_slavearbiterlockenable;
+  wire             pio_0_s1_slavearbiterlockenable2;
+  wire             pio_0_s1_unreg_firsttransfer;
+  wire             pio_0_s1_waits_for_read;
+  wire             pio_0_s1_waits_for_write;
+  wire             pio_0_s1_write_n;
+  wire    [ 31: 0] pio_0_s1_writedata;
+  wire             wait_for_pio_0_s1_counter;
+  always @(posedge clk or negedge reset_n)
+    begin
+      if (reset_n == 0)
+          d1_reasons_to_wait <= 0;
+      else 
+        d1_reasons_to_wait <= ~pio_0_s1_end_xfer;
+    end
+
+
+  assign pio_0_s1_begins_xfer = ~d1_reasons_to_wait & ((clock_crossing_bridge_m1_qualified_request_pio_0_s1));
+  //assign pio_0_s1_readdata_from_sa = pio_0_s1_readdata so that symbol knows where to group signals which may go to master only, which is an e_assign
+  assign pio_0_s1_readdata_from_sa = pio_0_s1_readdata;
+
+  assign clock_crossing_bridge_m1_requests_pio_0_s1 = ({clock_crossing_bridge_m1_address_to_slave[9 : 5] , 5'b0} == 10'hc0) & (clock_crossing_bridge_m1_read | clock_crossing_bridge_m1_write);
+  //pio_0_s1_arb_share_counter set values, which is an e_mux
+  assign pio_0_s1_arb_share_set_values = 1;
+
+  //pio_0_s1_non_bursting_master_requests mux, which is an e_mux
+  assign pio_0_s1_non_bursting_master_requests = clock_crossing_bridge_m1_requests_pio_0_s1;
+
+  //pio_0_s1_any_bursting_master_saved_grant mux, which is an e_mux
+  assign pio_0_s1_any_bursting_master_saved_grant = 0;
+
+  //pio_0_s1_arb_share_counter_next_value assignment, which is an e_assign
+  assign pio_0_s1_arb_share_counter_next_value = pio_0_s1_firsttransfer ? (pio_0_s1_arb_share_set_values - 1) : |pio_0_s1_arb_share_counter ? (pio_0_s1_arb_share_counter - 1) : 0;
+
+  //pio_0_s1_allgrants all slave grants, which is an e_mux
+  assign pio_0_s1_allgrants = |pio_0_s1_grant_vector;
+
+  //pio_0_s1_end_xfer assignment, which is an e_assign
+  assign pio_0_s1_end_xfer = ~(pio_0_s1_waits_for_read | pio_0_s1_waits_for_write);
+
+  //end_xfer_arb_share_counter_term_pio_0_s1 arb share counter enable term, which is an e_assign
+  assign end_xfer_arb_share_counter_term_pio_0_s1 = pio_0_s1_end_xfer & (~pio_0_s1_any_bursting_master_saved_grant | in_a_read_cycle | in_a_write_cycle);
+
+  //pio_0_s1_arb_share_counter arbitration counter enable, which is an e_assign
+  assign pio_0_s1_arb_counter_enable = (end_xfer_arb_share_counter_term_pio_0_s1 & pio_0_s1_allgrants) | (end_xfer_arb_share_counter_term_pio_0_s1 & ~pio_0_s1_non_bursting_master_requests);
+
+  //pio_0_s1_arb_share_counter counter, which is an e_register
+  always @(posedge clk or negedge reset_n)
+    begin
+      if (reset_n == 0)
+          pio_0_s1_arb_share_counter <= 0;
+      else if (pio_0_s1_arb_counter_enable)
+          pio_0_s1_arb_share_counter <= pio_0_s1_arb_share_counter_next_value;
+    end
+
+
+  //pio_0_s1_slavearbiterlockenable slave enables arbiterlock, which is an e_register
+  always @(posedge clk or negedge reset_n)
+    begin
+      if (reset_n == 0)
+          pio_0_s1_slavearbiterlockenable <= 0;
+      else if ((|pio_0_s1_master_qreq_vector & end_xfer_arb_share_counter_term_pio_0_s1) | (end_xfer_arb_share_counter_term_pio_0_s1 & ~pio_0_s1_non_bursting_master_requests))
+          pio_0_s1_slavearbiterlockenable <= |pio_0_s1_arb_share_counter_next_value;
+    end
+
+
+  //clock_crossing_bridge/m1 pio_0/s1 arbiterlock, which is an e_assign
+  assign clock_crossing_bridge_m1_arbiterlock = pio_0_s1_slavearbiterlockenable & clock_crossing_bridge_m1_continuerequest;
+
+  //pio_0_s1_slavearbiterlockenable2 slave enables arbiterlock2, which is an e_assign
+  assign pio_0_s1_slavearbiterlockenable2 = |pio_0_s1_arb_share_counter_next_value;
+
+  //clock_crossing_bridge/m1 pio_0/s1 arbiterlock2, which is an e_assign
+  assign clock_crossing_bridge_m1_arbiterlock2 = pio_0_s1_slavearbiterlockenable2 & clock_crossing_bridge_m1_continuerequest;
+
+  //pio_0_s1_any_continuerequest at least one master continues requesting, which is an e_assign
+  assign pio_0_s1_any_continuerequest = 1;
+
+  //clock_crossing_bridge_m1_continuerequest continued request, which is an e_assign
+  assign clock_crossing_bridge_m1_continuerequest = 1;
+
+  assign clock_crossing_bridge_m1_qualified_request_pio_0_s1 = clock_crossing_bridge_m1_requests_pio_0_s1 & ~((clock_crossing_bridge_m1_read & ((clock_crossing_bridge_m1_latency_counter != 0))));
+  //local readdatavalid clock_crossing_bridge_m1_read_data_valid_pio_0_s1, which is an e_mux
+  assign clock_crossing_bridge_m1_read_data_valid_pio_0_s1 = clock_crossing_bridge_m1_granted_pio_0_s1 & clock_crossing_bridge_m1_read & ~pio_0_s1_waits_for_read;
+
+  //pio_0_s1_writedata mux, which is an e_mux
+  assign pio_0_s1_writedata = clock_crossing_bridge_m1_writedata;
+
+  //master is always granted when requested
+  assign clock_crossing_bridge_m1_granted_pio_0_s1 = clock_crossing_bridge_m1_qualified_request_pio_0_s1;
+
+  //clock_crossing_bridge/m1 saved-grant pio_0/s1, which is an e_assign
+  assign clock_crossing_bridge_m1_saved_grant_pio_0_s1 = clock_crossing_bridge_m1_requests_pio_0_s1;
+
+  //allow new arb cycle for pio_0/s1, which is an e_assign
+  assign pio_0_s1_allow_new_arb_cycle = 1;
+
+  //placeholder chosen master
+  assign pio_0_s1_grant_vector = 1;
+
+  //placeholder vector of master qualified-requests
+  assign pio_0_s1_master_qreq_vector = 1;
+
+  //pio_0_s1_reset_n assignment, which is an e_assign
+  assign pio_0_s1_reset_n = reset_n;
+
+  assign pio_0_s1_chipselect = clock_crossing_bridge_m1_granted_pio_0_s1;
+  //pio_0_s1_firsttransfer first transaction, which is an e_assign
+  assign pio_0_s1_firsttransfer = pio_0_s1_begins_xfer ? pio_0_s1_unreg_firsttransfer : pio_0_s1_reg_firsttransfer;
+
+  //pio_0_s1_unreg_firsttransfer first transaction, which is an e_assign
+  assign pio_0_s1_unreg_firsttransfer = ~(pio_0_s1_slavearbiterlockenable & pio_0_s1_any_continuerequest);
+
+  //pio_0_s1_reg_firsttransfer first transaction, which is an e_register
+  always @(posedge clk or negedge reset_n)
+    begin
+      if (reset_n == 0)
+          pio_0_s1_reg_firsttransfer <= 1'b1;
+      else if (pio_0_s1_begins_xfer)
+          pio_0_s1_reg_firsttransfer <= pio_0_s1_unreg_firsttransfer;
+    end
+
+
+  //pio_0_s1_beginbursttransfer_internal begin burst transfer, which is an e_assign
+  assign pio_0_s1_beginbursttransfer_internal = pio_0_s1_begins_xfer;
+
+  //~pio_0_s1_write_n assignment, which is an e_mux
+  assign pio_0_s1_write_n = ~(clock_crossing_bridge_m1_granted_pio_0_s1 & clock_crossing_bridge_m1_write);
+
+  //pio_0_s1_address mux, which is an e_mux
+  assign pio_0_s1_address = clock_crossing_bridge_m1_nativeaddress;
+
+  //d1_pio_0_s1_end_xfer register, which is an e_register
+  always @(posedge clk or negedge reset_n)
+    begin
+      if (reset_n == 0)
+          d1_pio_0_s1_end_xfer <= 1;
+      else 
+        d1_pio_0_s1_end_xfer <= pio_0_s1_end_xfer;
+    end
+
+
+  //pio_0_s1_waits_for_read in a cycle, which is an e_mux
+  assign pio_0_s1_waits_for_read = pio_0_s1_in_a_read_cycle & pio_0_s1_begins_xfer;
+
+  //pio_0_s1_in_a_read_cycle assignment, which is an e_assign
+  assign pio_0_s1_in_a_read_cycle = clock_crossing_bridge_m1_granted_pio_0_s1 & clock_crossing_bridge_m1_read;
+
+  //in_a_read_cycle assignment, which is an e_mux
+  assign in_a_read_cycle = pio_0_s1_in_a_read_cycle;
+
+  //pio_0_s1_waits_for_write in a cycle, which is an e_mux
+  assign pio_0_s1_waits_for_write = pio_0_s1_in_a_write_cycle & 0;
+
+  //pio_0_s1_in_a_write_cycle assignment, which is an e_assign
+  assign pio_0_s1_in_a_write_cycle = clock_crossing_bridge_m1_granted_pio_0_s1 & clock_crossing_bridge_m1_write;
+
+  //in_a_write_cycle assignment, which is an e_mux
+  assign in_a_write_cycle = pio_0_s1_in_a_write_cycle;
+
+  assign wait_for_pio_0_s1_counter = 0;
+
+//synthesis translate_off
+//////////////// SIMULATION-ONLY CONTENTS
+  //pio_0/s1 enable non-zero assertions, which is an e_register
+  always @(posedge clk or negedge reset_n)
+    begin
+      if (reset_n == 0)
+          enable_nonzero_assertions <= 0;
+      else 
+        enable_nonzero_assertions <= 1'b1;
+    end
+
+
+
+//////////////// END SIMULATION-ONLY CONTENTS
+
+//synthesis translate_on
+
+endmodule
+
+
+// synthesis translate_off
+`timescale 1ns / 1ps
+// synthesis translate_on
+
+// turn off superfluous verilog processor warnings 
+// altera message_level Level1 
+// altera message_off 10034 10035 10036 10037 10230 10240 10030 
+
 module port_a_s1_arbitrator (
                               // inputs:
                                clk,
@@ -9891,9 +10182,9 @@ module port_a_s1_arbitrator (
   output           port_a_s1_write_n;
   output  [ 31: 0] port_a_s1_writedata;
   input            clk;
-  input   [  8: 0] clock_crossing_bridge_m1_address_to_slave;
+  input   [  9: 0] clock_crossing_bridge_m1_address_to_slave;
   input            clock_crossing_bridge_m1_latency_counter;
-  input   [  6: 0] clock_crossing_bridge_m1_nativeaddress;
+  input   [  7: 0] clock_crossing_bridge_m1_nativeaddress;
   input            clock_crossing_bridge_m1_read;
   input            clock_crossing_bridge_m1_write;
   input   [ 31: 0] clock_crossing_bridge_m1_writedata;
@@ -9959,7 +10250,7 @@ module port_a_s1_arbitrator (
   //assign port_a_s1_readdata_from_sa = port_a_s1_readdata so that symbol knows where to group signals which may go to master only, which is an e_assign
   assign port_a_s1_readdata_from_sa = port_a_s1_readdata;
 
-  assign clock_crossing_bridge_m1_requests_port_a_s1 = ({clock_crossing_bridge_m1_address_to_slave[8 : 5] , 5'b0} == 9'ha0) & (clock_crossing_bridge_m1_read | clock_crossing_bridge_m1_write);
+  assign clock_crossing_bridge_m1_requests_port_a_s1 = ({clock_crossing_bridge_m1_address_to_slave[9 : 5] , 5'b0} == 10'ha0) & (clock_crossing_bridge_m1_read | clock_crossing_bridge_m1_write);
   //port_a_s1_arb_share_counter set values, which is an e_mux
   assign port_a_s1_arb_share_set_values = 1;
 
@@ -10173,9 +10464,9 @@ module profile_timer_s1_arbitrator (
   output           profile_timer_s1_write_n;
   output  [ 15: 0] profile_timer_s1_writedata;
   input            clk;
-  input   [  8: 0] clock_crossing_bridge_m1_address_to_slave;
+  input   [  9: 0] clock_crossing_bridge_m1_address_to_slave;
   input            clock_crossing_bridge_m1_latency_counter;
-  input   [  6: 0] clock_crossing_bridge_m1_nativeaddress;
+  input   [  7: 0] clock_crossing_bridge_m1_nativeaddress;
   input            clock_crossing_bridge_m1_read;
   input            clock_crossing_bridge_m1_write;
   input   [ 31: 0] clock_crossing_bridge_m1_writedata;
@@ -10241,7 +10532,7 @@ module profile_timer_s1_arbitrator (
   //assign profile_timer_s1_readdata_from_sa = profile_timer_s1_readdata so that symbol knows where to group signals which may go to master only, which is an e_assign
   assign profile_timer_s1_readdata_from_sa = profile_timer_s1_readdata;
 
-  assign clock_crossing_bridge_m1_requests_profile_timer_s1 = ({clock_crossing_bridge_m1_address_to_slave[8 : 6] , 6'b0} == 9'h0) & (clock_crossing_bridge_m1_read | clock_crossing_bridge_m1_write);
+  assign clock_crossing_bridge_m1_requests_profile_timer_s1 = ({clock_crossing_bridge_m1_address_to_slave[9 : 6] , 6'b0} == 10'h0) & (clock_crossing_bridge_m1_read | clock_crossing_bridge_m1_write);
   //profile_timer_s1_arb_share_counter set values, which is an e_mux
   assign profile_timer_s1_arb_share_set_values = 1;
 
@@ -10452,9 +10743,9 @@ module sd_clk_s1_arbitrator (
   output           sd_clk_s1_write_n;
   output  [ 31: 0] sd_clk_s1_writedata;
   input            clk;
-  input   [  8: 0] clock_crossing_bridge_m1_address_to_slave;
+  input   [  9: 0] clock_crossing_bridge_m1_address_to_slave;
   input            clock_crossing_bridge_m1_latency_counter;
-  input   [  6: 0] clock_crossing_bridge_m1_nativeaddress;
+  input   [  7: 0] clock_crossing_bridge_m1_nativeaddress;
   input            clock_crossing_bridge_m1_read;
   input            clock_crossing_bridge_m1_write;
   input   [ 31: 0] clock_crossing_bridge_m1_writedata;
@@ -10518,7 +10809,7 @@ module sd_clk_s1_arbitrator (
   //assign sd_clk_s1_readdata_from_sa = sd_clk_s1_readdata so that symbol knows where to group signals which may go to master only, which is an e_assign
   assign sd_clk_s1_readdata_from_sa = sd_clk_s1_readdata;
 
-  assign clock_crossing_bridge_m1_requests_sd_clk_s1 = ({clock_crossing_bridge_m1_address_to_slave[8 : 4] , 4'b0} == 9'h120) & (clock_crossing_bridge_m1_read | clock_crossing_bridge_m1_write);
+  assign clock_crossing_bridge_m1_requests_sd_clk_s1 = ({clock_crossing_bridge_m1_address_to_slave[9 : 4] , 4'b0} == 10'h140) & (clock_crossing_bridge_m1_read | clock_crossing_bridge_m1_write);
   //sd_clk_s1_arb_share_counter set values, which is an e_mux
   assign sd_clk_s1_arb_share_set_values = 1;
 
@@ -10726,9 +11017,9 @@ module sd_cmd_s1_arbitrator (
   output           sd_cmd_s1_write_n;
   output  [ 31: 0] sd_cmd_s1_writedata;
   input            clk;
-  input   [  8: 0] clock_crossing_bridge_m1_address_to_slave;
+  input   [  9: 0] clock_crossing_bridge_m1_address_to_slave;
   input            clock_crossing_bridge_m1_latency_counter;
-  input   [  6: 0] clock_crossing_bridge_m1_nativeaddress;
+  input   [  7: 0] clock_crossing_bridge_m1_nativeaddress;
   input            clock_crossing_bridge_m1_read;
   input            clock_crossing_bridge_m1_write;
   input   [ 31: 0] clock_crossing_bridge_m1_writedata;
@@ -10792,7 +11083,7 @@ module sd_cmd_s1_arbitrator (
   //assign sd_cmd_s1_readdata_from_sa = sd_cmd_s1_readdata so that symbol knows where to group signals which may go to master only, which is an e_assign
   assign sd_cmd_s1_readdata_from_sa = sd_cmd_s1_readdata;
 
-  assign clock_crossing_bridge_m1_requests_sd_cmd_s1 = ({clock_crossing_bridge_m1_address_to_slave[8 : 4] , 4'b0} == 9'h100) & (clock_crossing_bridge_m1_read | clock_crossing_bridge_m1_write);
+  assign clock_crossing_bridge_m1_requests_sd_cmd_s1 = ({clock_crossing_bridge_m1_address_to_slave[9 : 4] , 4'b0} == 10'h120) & (clock_crossing_bridge_m1_read | clock_crossing_bridge_m1_write);
   //sd_cmd_s1_arb_share_counter set values, which is an e_mux
   assign sd_cmd_s1_arb_share_set_values = 1;
 
@@ -11000,9 +11291,9 @@ module sd_dat_s1_arbitrator (
   output           sd_dat_s1_write_n;
   output  [ 31: 0] sd_dat_s1_writedata;
   input            clk;
-  input   [  8: 0] clock_crossing_bridge_m1_address_to_slave;
+  input   [  9: 0] clock_crossing_bridge_m1_address_to_slave;
   input            clock_crossing_bridge_m1_latency_counter;
-  input   [  6: 0] clock_crossing_bridge_m1_nativeaddress;
+  input   [  7: 0] clock_crossing_bridge_m1_nativeaddress;
   input            clock_crossing_bridge_m1_read;
   input            clock_crossing_bridge_m1_write;
   input   [ 31: 0] clock_crossing_bridge_m1_writedata;
@@ -11066,7 +11357,7 @@ module sd_dat_s1_arbitrator (
   //assign sd_dat_s1_readdata_from_sa = sd_dat_s1_readdata so that symbol knows where to group signals which may go to master only, which is an e_assign
   assign sd_dat_s1_readdata_from_sa = sd_dat_s1_readdata;
 
-  assign clock_crossing_bridge_m1_requests_sd_dat_s1 = ({clock_crossing_bridge_m1_address_to_slave[8 : 4] , 4'b0} == 9'h130) & (clock_crossing_bridge_m1_read | clock_crossing_bridge_m1_write);
+  assign clock_crossing_bridge_m1_requests_sd_dat_s1 = ({clock_crossing_bridge_m1_address_to_slave[9 : 4] , 4'b0} == 10'h150) & (clock_crossing_bridge_m1_read | clock_crossing_bridge_m1_write);
   //sd_dat_s1_arb_share_counter set values, which is an e_mux
   assign sd_dat_s1_arb_share_set_values = 1;
 
@@ -11267,9 +11558,9 @@ module sd_wp_n_s1_arbitrator (
   output  [ 31: 0] sd_wp_n_s1_readdata_from_sa;
   output           sd_wp_n_s1_reset_n;
   input            clk;
-  input   [  8: 0] clock_crossing_bridge_m1_address_to_slave;
+  input   [  9: 0] clock_crossing_bridge_m1_address_to_slave;
   input            clock_crossing_bridge_m1_latency_counter;
-  input   [  6: 0] clock_crossing_bridge_m1_nativeaddress;
+  input   [  7: 0] clock_crossing_bridge_m1_nativeaddress;
   input            clock_crossing_bridge_m1_read;
   input            clock_crossing_bridge_m1_write;
   input            reset_n;
@@ -11329,7 +11620,7 @@ module sd_wp_n_s1_arbitrator (
   //assign sd_wp_n_s1_readdata_from_sa = sd_wp_n_s1_readdata so that symbol knows where to group signals which may go to master only, which is an e_assign
   assign sd_wp_n_s1_readdata_from_sa = sd_wp_n_s1_readdata;
 
-  assign clock_crossing_bridge_m1_requests_sd_wp_n_s1 = (({clock_crossing_bridge_m1_address_to_slave[8 : 4] , 4'b0} == 9'hf0) & (clock_crossing_bridge_m1_read | clock_crossing_bridge_m1_write)) & clock_crossing_bridge_m1_read;
+  assign clock_crossing_bridge_m1_requests_sd_wp_n_s1 = (({clock_crossing_bridge_m1_address_to_slave[9 : 4] , 4'b0} == 10'h110) & (clock_crossing_bridge_m1_read | clock_crossing_bridge_m1_write)) & clock_crossing_bridge_m1_read;
   //sd_wp_n_s1_arb_share_counter set values, which is an e_mux
   assign sd_wp_n_s1_arb_share_set_values = 1;
 
@@ -12725,9 +13016,9 @@ module seg7_s1_arbitrator (
   output           seg7_s1_write_n;
   output  [ 31: 0] seg7_s1_writedata;
   input            clk;
-  input   [  8: 0] clock_crossing_bridge_m1_address_to_slave;
+  input   [  9: 0] clock_crossing_bridge_m1_address_to_slave;
   input            clock_crossing_bridge_m1_latency_counter;
-  input   [  6: 0] clock_crossing_bridge_m1_nativeaddress;
+  input   [  7: 0] clock_crossing_bridge_m1_nativeaddress;
   input            clock_crossing_bridge_m1_read;
   input            clock_crossing_bridge_m1_write;
   input   [ 31: 0] clock_crossing_bridge_m1_writedata;
@@ -12791,7 +13082,7 @@ module seg7_s1_arbitrator (
   //assign seg7_s1_readdata_from_sa = seg7_s1_readdata so that symbol knows where to group signals which may go to master only, which is an e_assign
   assign seg7_s1_readdata_from_sa = seg7_s1_readdata;
 
-  assign clock_crossing_bridge_m1_requests_seg7_s1 = ({clock_crossing_bridge_m1_address_to_slave[8 : 4] , 4'b0} == 9'h150) & (clock_crossing_bridge_m1_read | clock_crossing_bridge_m1_write);
+  assign clock_crossing_bridge_m1_requests_seg7_s1 = ({clock_crossing_bridge_m1_address_to_slave[9 : 4] , 4'b0} == 10'h170) & (clock_crossing_bridge_m1_read | clock_crossing_bridge_m1_write);
   //seg7_s1_arb_share_counter set values, which is an e_mux
   assign seg7_s1_arb_share_set_values = 1;
 
@@ -13002,9 +13293,9 @@ module switches_s1_arbitrator (
   output           switches_s1_write_n;
   output  [ 31: 0] switches_s1_writedata;
   input            clk;
-  input   [  8: 0] clock_crossing_bridge_m1_address_to_slave;
+  input   [  9: 0] clock_crossing_bridge_m1_address_to_slave;
   input            clock_crossing_bridge_m1_latency_counter;
-  input   [  6: 0] clock_crossing_bridge_m1_nativeaddress;
+  input   [  7: 0] clock_crossing_bridge_m1_nativeaddress;
   input            clock_crossing_bridge_m1_read;
   input            clock_crossing_bridge_m1_write;
   input   [ 31: 0] clock_crossing_bridge_m1_writedata;
@@ -13070,7 +13361,7 @@ module switches_s1_arbitrator (
   //assign switches_s1_readdata_from_sa = switches_s1_readdata so that symbol knows where to group signals which may go to master only, which is an e_assign
   assign switches_s1_readdata_from_sa = switches_s1_readdata;
 
-  assign clock_crossing_bridge_m1_requests_switches_s1 = ({clock_crossing_bridge_m1_address_to_slave[8 : 4] , 4'b0} == 9'hd0) & (clock_crossing_bridge_m1_read | clock_crossing_bridge_m1_write);
+  assign clock_crossing_bridge_m1_requests_switches_s1 = ({clock_crossing_bridge_m1_address_to_slave[9 : 4] , 4'b0} == 10'hf0) & (clock_crossing_bridge_m1_read | clock_crossing_bridge_m1_write);
   //switches_s1_arb_share_counter set values, which is an e_mux
   assign switches_s1_arb_share_set_values = 1;
 
@@ -13274,9 +13565,9 @@ module sysid_control_slave_arbitrator (
   output  [ 31: 0] sysid_control_slave_readdata_from_sa;
   output           sysid_control_slave_reset_n;
   input            clk;
-  input   [  8: 0] clock_crossing_bridge_m1_address_to_slave;
+  input   [  9: 0] clock_crossing_bridge_m1_address_to_slave;
   input            clock_crossing_bridge_m1_latency_counter;
-  input   [  6: 0] clock_crossing_bridge_m1_nativeaddress;
+  input   [  7: 0] clock_crossing_bridge_m1_nativeaddress;
   input            clock_crossing_bridge_m1_read;
   input            clock_crossing_bridge_m1_write;
   input            reset_n;
@@ -13336,7 +13627,7 @@ module sysid_control_slave_arbitrator (
   //assign sysid_control_slave_readdata_from_sa = sysid_control_slave_readdata so that symbol knows where to group signals which may go to master only, which is an e_assign
   assign sysid_control_slave_readdata_from_sa = sysid_control_slave_readdata;
 
-  assign clock_crossing_bridge_m1_requests_sysid_control_slave = (({clock_crossing_bridge_m1_address_to_slave[8 : 3] , 3'b0} == 9'h1d0) & (clock_crossing_bridge_m1_read | clock_crossing_bridge_m1_write)) & clock_crossing_bridge_m1_read;
+  assign clock_crossing_bridge_m1_requests_sysid_control_slave = (({clock_crossing_bridge_m1_address_to_slave[9 : 3] , 3'b0} == 10'h200) & (clock_crossing_bridge_m1_read | clock_crossing_bridge_m1_write)) & clock_crossing_bridge_m1_read;
   //sysid_control_slave_arb_share_counter set values, which is an e_mux
   assign sysid_control_slave_arb_share_set_values = 1;
 
@@ -13540,9 +13831,9 @@ module timer_s1_arbitrator (
   output           timer_s1_write_n;
   output  [ 15: 0] timer_s1_writedata;
   input            clk;
-  input   [  8: 0] clock_crossing_bridge_m1_address_to_slave;
+  input   [  9: 0] clock_crossing_bridge_m1_address_to_slave;
   input            clock_crossing_bridge_m1_latency_counter;
-  input   [  6: 0] clock_crossing_bridge_m1_nativeaddress;
+  input   [  7: 0] clock_crossing_bridge_m1_nativeaddress;
   input            clock_crossing_bridge_m1_read;
   input            clock_crossing_bridge_m1_write;
   input   [ 31: 0] clock_crossing_bridge_m1_writedata;
@@ -13608,7 +13899,7 @@ module timer_s1_arbitrator (
   //assign timer_s1_readdata_from_sa = timer_s1_readdata so that symbol knows where to group signals which may go to master only, which is an e_assign
   assign timer_s1_readdata_from_sa = timer_s1_readdata;
 
-  assign clock_crossing_bridge_m1_requests_timer_s1 = ({clock_crossing_bridge_m1_address_to_slave[8 : 5] , 5'b0} == 9'h40) & (clock_crossing_bridge_m1_read | clock_crossing_bridge_m1_write);
+  assign clock_crossing_bridge_m1_requests_timer_s1 = ({clock_crossing_bridge_m1_address_to_slave[9 : 5] , 5'b0} == 10'h40) & (clock_crossing_bridge_m1_read | clock_crossing_bridge_m1_write);
   //timer_s1_arb_share_counter set values, which is an e_mux
   assign timer_s1_arb_share_set_values = 1;
 
@@ -14550,9 +14841,9 @@ module uart_s1_arbitrator (
   output           uart_s1_write_n;
   output  [ 15: 0] uart_s1_writedata;
   input            clk;
-  input   [  8: 0] clock_crossing_bridge_m1_address_to_slave;
+  input   [  9: 0] clock_crossing_bridge_m1_address_to_slave;
   input            clock_crossing_bridge_m1_latency_counter;
-  input   [  6: 0] clock_crossing_bridge_m1_nativeaddress;
+  input   [  7: 0] clock_crossing_bridge_m1_nativeaddress;
   input            clock_crossing_bridge_m1_read;
   input            clock_crossing_bridge_m1_write;
   input   [ 31: 0] clock_crossing_bridge_m1_writedata;
@@ -14624,7 +14915,7 @@ module uart_s1_arbitrator (
   //assign uart_s1_readdata_from_sa = uart_s1_readdata so that symbol knows where to group signals which may go to master only, which is an e_assign
   assign uart_s1_readdata_from_sa = uart_s1_readdata;
 
-  assign clock_crossing_bridge_m1_requests_uart_s1 = ({clock_crossing_bridge_m1_address_to_slave[8 : 5] , 5'b0} == 9'h60) & (clock_crossing_bridge_m1_read | clock_crossing_bridge_m1_write);
+  assign clock_crossing_bridge_m1_requests_uart_s1 = ({clock_crossing_bridge_m1_address_to_slave[9 : 5] , 5'b0} == 10'h60) & (clock_crossing_bridge_m1_read | clock_crossing_bridge_m1_write);
   //assign uart_s1_dataavailable_from_sa = uart_s1_dataavailable so that symbol knows where to group signals which may go to master only, which is an e_assign
   assign uart_s1_dataavailable_from_sa = uart_s1_dataavailable;
 
@@ -14848,9 +15139,9 @@ module user_timer_s1_arbitrator (
   output           user_timer_s1_write_n;
   output  [ 15: 0] user_timer_s1_writedata;
   input            clk;
-  input   [  8: 0] clock_crossing_bridge_m1_address_to_slave;
+  input   [  9: 0] clock_crossing_bridge_m1_address_to_slave;
   input            clock_crossing_bridge_m1_latency_counter;
-  input   [  6: 0] clock_crossing_bridge_m1_nativeaddress;
+  input   [  7: 0] clock_crossing_bridge_m1_nativeaddress;
   input            clock_crossing_bridge_m1_read;
   input            clock_crossing_bridge_m1_write;
   input   [ 31: 0] clock_crossing_bridge_m1_writedata;
@@ -14916,7 +15207,7 @@ module user_timer_s1_arbitrator (
   //assign user_timer_s1_readdata_from_sa = user_timer_s1_readdata so that symbol knows where to group signals which may go to master only, which is an e_assign
   assign user_timer_s1_readdata_from_sa = user_timer_s1_readdata;
 
-  assign clock_crossing_bridge_m1_requests_user_timer_s1 = ({clock_crossing_bridge_m1_address_to_slave[8 : 5] , 5'b0} == 9'h80) & (clock_crossing_bridge_m1_read | clock_crossing_bridge_m1_write);
+  assign clock_crossing_bridge_m1_requests_user_timer_s1 = ({clock_crossing_bridge_m1_address_to_slave[9 : 5] , 5'b0} == 10'h80) & (clock_crossing_bridge_m1_read | clock_crossing_bridge_m1_write);
   //user_timer_s1_arb_share_counter set values, which is an e_mux
   assign user_timer_s1_arb_share_set_values = 1;
 
@@ -15336,6 +15627,9 @@ module DE0_SOPC (
                   // the_my_pwm_5
                    pwm_out_from_the_my_pwm_5,
 
+                  // the_pio_0
+                   bidir_port_to_and_from_the_pio_0,
+
                   // the_port_a
                    bidir_port_to_and_from_the_port_a,
 
@@ -15388,7 +15682,8 @@ module DE0_SOPC (
   output           LCD_RW_from_the_lcd;
   inout   [  7: 0] LCD_data_to_and_from_the_lcd;
   output  [ 21: 0] address_to_the_cfi_flash;
-  inout   [  7: 0] bidir_port_to_and_from_the_port_a;
+  inout   [  7: 0] bidir_port_to_and_from_the_pio_0;
+  inout   [  3: 0] bidir_port_to_and_from_the_port_a;
   inout            bidir_port_to_and_from_the_sd_cmd;
   inout            bidir_port_to_and_from_the_sd_dat;
   inout   [ 15: 0] data_to_and_from_the_cfi_flash;
@@ -15534,7 +15829,8 @@ module DE0_SOPC (
   wire             altpll_0_pll_slave_reset;
   wire             altpll_0_pll_slave_write;
   wire    [ 31: 0] altpll_0_pll_slave_writedata;
-  wire    [  7: 0] bidir_port_to_and_from_the_port_a;
+  wire    [  7: 0] bidir_port_to_and_from_the_pio_0;
+  wire    [  3: 0] bidir_port_to_and_from_the_port_a;
   wire             bidir_port_to_and_from_the_sd_cmd;
   wire             bidir_port_to_and_from_the_sd_dat;
   wire    [  1: 0] buttons_s1_address;
@@ -15548,8 +15844,8 @@ module DE0_SOPC (
   wire    [ 31: 0] buttons_s1_writedata;
   wire             cfi_flash_s1_wait_counter_eq_0;
   wire             clk_reset_n;
-  wire    [  8: 0] clock_crossing_bridge_m1_address;
-  wire    [  8: 0] clock_crossing_bridge_m1_address_to_slave;
+  wire    [  9: 0] clock_crossing_bridge_m1_address;
+  wire    [  9: 0] clock_crossing_bridge_m1_address_to_slave;
   wire    [  3: 0] clock_crossing_bridge_m1_byteenable;
   wire             clock_crossing_bridge_m1_endofpacket;
   wire             clock_crossing_bridge_m1_granted_buttons_s1;
@@ -15563,6 +15859,7 @@ module DE0_SOPC (
   wire             clock_crossing_bridge_m1_granted_my_pwm_3_avalon_slave_0;
   wire             clock_crossing_bridge_m1_granted_my_pwm_4_avalon_slave_0;
   wire             clock_crossing_bridge_m1_granted_my_pwm_5_avalon_slave_0;
+  wire             clock_crossing_bridge_m1_granted_pio_0_s1;
   wire             clock_crossing_bridge_m1_granted_port_a_s1;
   wire             clock_crossing_bridge_m1_granted_profile_timer_s1;
   wire             clock_crossing_bridge_m1_granted_sd_clk_s1;
@@ -15576,7 +15873,7 @@ module DE0_SOPC (
   wire             clock_crossing_bridge_m1_granted_uart_s1;
   wire             clock_crossing_bridge_m1_granted_user_timer_s1;
   wire             clock_crossing_bridge_m1_latency_counter;
-  wire    [  6: 0] clock_crossing_bridge_m1_nativeaddress;
+  wire    [  7: 0] clock_crossing_bridge_m1_nativeaddress;
   wire             clock_crossing_bridge_m1_qualified_request_buttons_s1;
   wire             clock_crossing_bridge_m1_qualified_request_key_out_s1;
   wire             clock_crossing_bridge_m1_qualified_request_lcd_control_slave;
@@ -15588,6 +15885,7 @@ module DE0_SOPC (
   wire             clock_crossing_bridge_m1_qualified_request_my_pwm_3_avalon_slave_0;
   wire             clock_crossing_bridge_m1_qualified_request_my_pwm_4_avalon_slave_0;
   wire             clock_crossing_bridge_m1_qualified_request_my_pwm_5_avalon_slave_0;
+  wire             clock_crossing_bridge_m1_qualified_request_pio_0_s1;
   wire             clock_crossing_bridge_m1_qualified_request_port_a_s1;
   wire             clock_crossing_bridge_m1_qualified_request_profile_timer_s1;
   wire             clock_crossing_bridge_m1_qualified_request_sd_clk_s1;
@@ -15612,6 +15910,7 @@ module DE0_SOPC (
   wire             clock_crossing_bridge_m1_read_data_valid_my_pwm_3_avalon_slave_0;
   wire             clock_crossing_bridge_m1_read_data_valid_my_pwm_4_avalon_slave_0;
   wire             clock_crossing_bridge_m1_read_data_valid_my_pwm_5_avalon_slave_0;
+  wire             clock_crossing_bridge_m1_read_data_valid_pio_0_s1;
   wire             clock_crossing_bridge_m1_read_data_valid_port_a_s1;
   wire             clock_crossing_bridge_m1_read_data_valid_profile_timer_s1;
   wire             clock_crossing_bridge_m1_read_data_valid_sd_clk_s1;
@@ -15637,6 +15936,7 @@ module DE0_SOPC (
   wire             clock_crossing_bridge_m1_requests_my_pwm_3_avalon_slave_0;
   wire             clock_crossing_bridge_m1_requests_my_pwm_4_avalon_slave_0;
   wire             clock_crossing_bridge_m1_requests_my_pwm_5_avalon_slave_0;
+  wire             clock_crossing_bridge_m1_requests_pio_0_s1;
   wire             clock_crossing_bridge_m1_requests_port_a_s1;
   wire             clock_crossing_bridge_m1_requests_profile_timer_s1;
   wire             clock_crossing_bridge_m1_requests_sd_clk_s1;
@@ -15653,11 +15953,11 @@ module DE0_SOPC (
   wire             clock_crossing_bridge_m1_waitrequest;
   wire             clock_crossing_bridge_m1_write;
   wire    [ 31: 0] clock_crossing_bridge_m1_writedata;
-  wire    [  6: 0] clock_crossing_bridge_s1_address;
+  wire    [  7: 0] clock_crossing_bridge_s1_address;
   wire    [  3: 0] clock_crossing_bridge_s1_byteenable;
   wire             clock_crossing_bridge_s1_endofpacket;
   wire             clock_crossing_bridge_s1_endofpacket_from_sa;
-  wire    [  6: 0] clock_crossing_bridge_s1_nativeaddress;
+  wire    [  7: 0] clock_crossing_bridge_s1_nativeaddress;
   wire             clock_crossing_bridge_s1_read;
   wire    [ 31: 0] clock_crossing_bridge_s1_readdata;
   wire    [ 31: 0] clock_crossing_bridge_s1_readdata_from_sa;
@@ -15797,6 +16097,7 @@ module DE0_SOPC (
   wire             d1_my_pwm_4_avalon_slave_0_end_xfer;
   wire             d1_my_pwm_5_avalon_slave_0_end_xfer;
   wire             d1_onchip_mem_s1_end_xfer;
+  wire             d1_pio_0_s1_end_xfer;
   wire             d1_port_a_s1_end_xfer;
   wire             d1_profile_timer_s1_end_xfer;
   wire             d1_sd_clk_s1_end_xfer;
@@ -15925,6 +16226,13 @@ module DE0_SOPC (
   wire             out_port_from_the_sd_clk;
   wire    [ 31: 0] out_port_from_the_seg7;
   wire             phasedone_from_the_altpll_0;
+  wire    [  2: 0] pio_0_s1_address;
+  wire             pio_0_s1_chipselect;
+  wire    [ 31: 0] pio_0_s1_readdata;
+  wire    [ 31: 0] pio_0_s1_readdata_from_sa;
+  wire             pio_0_s1_reset_n;
+  wire             pio_0_s1_write_n;
+  wire    [ 31: 0] pio_0_s1_writedata;
   wire             pll_cpu;
   wire             pll_cpu_reset_n;
   wire             pll_io;
@@ -16439,6 +16747,7 @@ module DE0_SOPC (
       .clock_crossing_bridge_m1_granted_my_pwm_3_avalon_slave_0           (clock_crossing_bridge_m1_granted_my_pwm_3_avalon_slave_0),
       .clock_crossing_bridge_m1_granted_my_pwm_4_avalon_slave_0           (clock_crossing_bridge_m1_granted_my_pwm_4_avalon_slave_0),
       .clock_crossing_bridge_m1_granted_my_pwm_5_avalon_slave_0           (clock_crossing_bridge_m1_granted_my_pwm_5_avalon_slave_0),
+      .clock_crossing_bridge_m1_granted_pio_0_s1                          (clock_crossing_bridge_m1_granted_pio_0_s1),
       .clock_crossing_bridge_m1_granted_port_a_s1                         (clock_crossing_bridge_m1_granted_port_a_s1),
       .clock_crossing_bridge_m1_granted_profile_timer_s1                  (clock_crossing_bridge_m1_granted_profile_timer_s1),
       .clock_crossing_bridge_m1_granted_sd_clk_s1                         (clock_crossing_bridge_m1_granted_sd_clk_s1),
@@ -16463,6 +16772,7 @@ module DE0_SOPC (
       .clock_crossing_bridge_m1_qualified_request_my_pwm_3_avalon_slave_0 (clock_crossing_bridge_m1_qualified_request_my_pwm_3_avalon_slave_0),
       .clock_crossing_bridge_m1_qualified_request_my_pwm_4_avalon_slave_0 (clock_crossing_bridge_m1_qualified_request_my_pwm_4_avalon_slave_0),
       .clock_crossing_bridge_m1_qualified_request_my_pwm_5_avalon_slave_0 (clock_crossing_bridge_m1_qualified_request_my_pwm_5_avalon_slave_0),
+      .clock_crossing_bridge_m1_qualified_request_pio_0_s1                (clock_crossing_bridge_m1_qualified_request_pio_0_s1),
       .clock_crossing_bridge_m1_qualified_request_port_a_s1               (clock_crossing_bridge_m1_qualified_request_port_a_s1),
       .clock_crossing_bridge_m1_qualified_request_profile_timer_s1        (clock_crossing_bridge_m1_qualified_request_profile_timer_s1),
       .clock_crossing_bridge_m1_qualified_request_sd_clk_s1               (clock_crossing_bridge_m1_qualified_request_sd_clk_s1),
@@ -16487,6 +16797,7 @@ module DE0_SOPC (
       .clock_crossing_bridge_m1_read_data_valid_my_pwm_3_avalon_slave_0   (clock_crossing_bridge_m1_read_data_valid_my_pwm_3_avalon_slave_0),
       .clock_crossing_bridge_m1_read_data_valid_my_pwm_4_avalon_slave_0   (clock_crossing_bridge_m1_read_data_valid_my_pwm_4_avalon_slave_0),
       .clock_crossing_bridge_m1_read_data_valid_my_pwm_5_avalon_slave_0   (clock_crossing_bridge_m1_read_data_valid_my_pwm_5_avalon_slave_0),
+      .clock_crossing_bridge_m1_read_data_valid_pio_0_s1                  (clock_crossing_bridge_m1_read_data_valid_pio_0_s1),
       .clock_crossing_bridge_m1_read_data_valid_port_a_s1                 (clock_crossing_bridge_m1_read_data_valid_port_a_s1),
       .clock_crossing_bridge_m1_read_data_valid_profile_timer_s1          (clock_crossing_bridge_m1_read_data_valid_profile_timer_s1),
       .clock_crossing_bridge_m1_read_data_valid_sd_clk_s1                 (clock_crossing_bridge_m1_read_data_valid_sd_clk_s1),
@@ -16512,6 +16823,7 @@ module DE0_SOPC (
       .clock_crossing_bridge_m1_requests_my_pwm_3_avalon_slave_0          (clock_crossing_bridge_m1_requests_my_pwm_3_avalon_slave_0),
       .clock_crossing_bridge_m1_requests_my_pwm_4_avalon_slave_0          (clock_crossing_bridge_m1_requests_my_pwm_4_avalon_slave_0),
       .clock_crossing_bridge_m1_requests_my_pwm_5_avalon_slave_0          (clock_crossing_bridge_m1_requests_my_pwm_5_avalon_slave_0),
+      .clock_crossing_bridge_m1_requests_pio_0_s1                         (clock_crossing_bridge_m1_requests_pio_0_s1),
       .clock_crossing_bridge_m1_requests_port_a_s1                        (clock_crossing_bridge_m1_requests_port_a_s1),
       .clock_crossing_bridge_m1_requests_profile_timer_s1                 (clock_crossing_bridge_m1_requests_profile_timer_s1),
       .clock_crossing_bridge_m1_requests_sd_clk_s1                        (clock_crossing_bridge_m1_requests_sd_clk_s1),
@@ -16539,6 +16851,7 @@ module DE0_SOPC (
       .d1_my_pwm_3_avalon_slave_0_end_xfer                                (d1_my_pwm_3_avalon_slave_0_end_xfer),
       .d1_my_pwm_4_avalon_slave_0_end_xfer                                (d1_my_pwm_4_avalon_slave_0_end_xfer),
       .d1_my_pwm_5_avalon_slave_0_end_xfer                                (d1_my_pwm_5_avalon_slave_0_end_xfer),
+      .d1_pio_0_s1_end_xfer                                               (d1_pio_0_s1_end_xfer),
       .d1_port_a_s1_end_xfer                                              (d1_port_a_s1_end_xfer),
       .d1_profile_timer_s1_end_xfer                                       (d1_profile_timer_s1_end_xfer),
       .d1_sd_clk_s1_end_xfer                                              (d1_sd_clk_s1_end_xfer),
@@ -16562,6 +16875,7 @@ module DE0_SOPC (
       .my_pwm_3_avalon_slave_0_readdata_from_sa                           (my_pwm_3_avalon_slave_0_readdata_from_sa),
       .my_pwm_4_avalon_slave_0_readdata_from_sa                           (my_pwm_4_avalon_slave_0_readdata_from_sa),
       .my_pwm_5_avalon_slave_0_readdata_from_sa                           (my_pwm_5_avalon_slave_0_readdata_from_sa),
+      .pio_0_s1_readdata_from_sa                                          (pio_0_s1_readdata_from_sa),
       .port_a_s1_readdata_from_sa                                         (port_a_s1_readdata_from_sa),
       .profile_timer_s1_readdata_from_sa                                  (profile_timer_s1_readdata_from_sa),
       .reset_n                                                            (pll_io_reset_n),
@@ -17317,6 +17631,42 @@ module DE0_SOPC (
       .reset      (onchip_mem_s1_reset),
       .write      (onchip_mem_s1_write),
       .writedata  (onchip_mem_s1_writedata)
+    );
+
+  pio_0_s1_arbitrator the_pio_0_s1
+    (
+      .clk                                                 (pll_io),
+      .clock_crossing_bridge_m1_address_to_slave           (clock_crossing_bridge_m1_address_to_slave),
+      .clock_crossing_bridge_m1_granted_pio_0_s1           (clock_crossing_bridge_m1_granted_pio_0_s1),
+      .clock_crossing_bridge_m1_latency_counter            (clock_crossing_bridge_m1_latency_counter),
+      .clock_crossing_bridge_m1_nativeaddress              (clock_crossing_bridge_m1_nativeaddress),
+      .clock_crossing_bridge_m1_qualified_request_pio_0_s1 (clock_crossing_bridge_m1_qualified_request_pio_0_s1),
+      .clock_crossing_bridge_m1_read                       (clock_crossing_bridge_m1_read),
+      .clock_crossing_bridge_m1_read_data_valid_pio_0_s1   (clock_crossing_bridge_m1_read_data_valid_pio_0_s1),
+      .clock_crossing_bridge_m1_requests_pio_0_s1          (clock_crossing_bridge_m1_requests_pio_0_s1),
+      .clock_crossing_bridge_m1_write                      (clock_crossing_bridge_m1_write),
+      .clock_crossing_bridge_m1_writedata                  (clock_crossing_bridge_m1_writedata),
+      .d1_pio_0_s1_end_xfer                                (d1_pio_0_s1_end_xfer),
+      .pio_0_s1_address                                    (pio_0_s1_address),
+      .pio_0_s1_chipselect                                 (pio_0_s1_chipselect),
+      .pio_0_s1_readdata                                   (pio_0_s1_readdata),
+      .pio_0_s1_readdata_from_sa                           (pio_0_s1_readdata_from_sa),
+      .pio_0_s1_reset_n                                    (pio_0_s1_reset_n),
+      .pio_0_s1_write_n                                    (pio_0_s1_write_n),
+      .pio_0_s1_writedata                                  (pio_0_s1_writedata),
+      .reset_n                                             (pll_io_reset_n)
+    );
+
+  pio_0 the_pio_0
+    (
+      .address    (pio_0_s1_address),
+      .bidir_port (bidir_port_to_and_from_the_pio_0),
+      .chipselect (pio_0_s1_chipselect),
+      .clk        (pll_io),
+      .readdata   (pio_0_s1_readdata),
+      .reset_n    (pio_0_s1_reset_n),
+      .write_n    (pio_0_s1_write_n),
+      .writedata  (pio_0_s1_writedata)
     );
 
   port_a_s1_arbitrator the_port_a_s1
@@ -18244,6 +18594,7 @@ endmodule
 `include "clock_crossing_bridge.v"
 `include "DE0_SOPC_clock_1.v"
 `include "sd_cmd.v"
+`include "pio_0.v"
 `include "sd_wp_n.v"
 `include "lcd.v"
 `include "user_timer.v"
@@ -18275,7 +18626,8 @@ module test_bench
   wire    [  7: 0] LCD_data_to_and_from_the_lcd;
   wire    [ 21: 0] address_to_the_cfi_flash;
   wire             areset_to_the_altpll_0;
-  wire    [  7: 0] bidir_port_to_and_from_the_port_a;
+  wire    [  7: 0] bidir_port_to_and_from_the_pio_0;
+  wire    [  3: 0] bidir_port_to_and_from_the_port_a;
   wire             bidir_port_to_and_from_the_sd_cmd;
   wire             bidir_port_to_and_from_the_sd_dat;
   reg              clk;
@@ -18354,6 +18706,7 @@ module test_bench
       .LCD_data_to_and_from_the_lcd               (LCD_data_to_and_from_the_lcd),
       .address_to_the_cfi_flash                   (address_to_the_cfi_flash),
       .areset_to_the_altpll_0                     (areset_to_the_altpll_0),
+      .bidir_port_to_and_from_the_pio_0           (bidir_port_to_and_from_the_pio_0),
       .bidir_port_to_and_from_the_port_a          (bidir_port_to_and_from_the_port_a),
       .bidir_port_to_and_from_the_sd_cmd          (bidir_port_to_and_from_the_sd_cmd),
       .bidir_port_to_and_from_the_sd_dat          (bidir_port_to_and_from_the_sd_dat),

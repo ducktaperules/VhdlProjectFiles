@@ -120,12 +120,12 @@ module DE0_TOP
 		GPIO1_CLKOUT,					//	GPIO Connection 1 Clock Out Bus
 //		GPIO1_D,							//	GPIO Connection 1 Data Bus
 	   // Motor PWM outputs
-	   PWM_BASE,
-	   PWM_SHOULDER,
-		PWM_ELBOW,
-	   PWM_WRIST,
-		PWM_GRIPPER,
-	   PWM_AUX,
+	   PWM_0,
+	   PWM_1,
+		PWM_2,
+	   PWM_3,
+		PWM_4,
+	   PWM_5,
 		
 	 PORT_A,
 	 KEY_OUT
@@ -206,14 +206,14 @@ input			SD_WP_N;				//	SD Card Write Protect
 input	[1:0]	GPIO1_CLKIN;			//	GPIO Connection 1 Clock In Bus
 output	[1:0]	GPIO1_CLKOUT;			//	GPIO Connection 1 Clock Out Bus
 //inout	[31:0]	GPIO1_D;				//	GPIO Connection 1 Data Bus
-output	   PWM_BASE;
-output	   PWM_SHOULDER;
-output		PWM_ELBOW;
-output	   PWM_WRIST;
-output		PWM_GRIPPER;
-output	   PWM_AUX;
+output	   PWM_0;
+output	   PWM_1;
+output		PWM_2;
+output	   PWM_3;
+output		PWM_4;
+output	   PWM_5;
 
-inout [7:0] PORT_A;
+inout [3:0] PORT_A;
 output [3:0] KEY_OUT;
 	
 	
@@ -255,22 +255,22 @@ DE0_SOPC DE0_SOPC_inst(
 						// the_seg7
 						 .out_port_from_the_seg7({HEX3_DP, HEX3_D, HEX2_DP, HEX2_D, HEX1_DP, HEX1_D, HEX0_DP, HEX0_D}),							
 						 //the_right_motor_pwm
-						 .pwm_out_from_the_my_pwm_0(PWM_BASE),
+						 .pwm_out_from_the_my_pwm_0(PWM_0),
 
                   // the_my_pwm_1
-                   .pwm_out_from_the_my_pwm_1(PWM_SHOULDER),
+                   .pwm_out_from_the_my_pwm_1(PWM_1),
 
                   // the_my_pwm_2
-                   .pwm_out_from_the_my_pwm_2(PWM_ELBOW),
+                   .pwm_out_from_the_my_pwm_2(PWM_2),
 
                   // the_my_pwm_3
-                   .pwm_out_from_the_my_pwm_3(PWM_WRIST),
+                   .pwm_out_from_the_my_pwm_3(PWM_3),
 
                   // the_my_pwm_4
-                   .pwm_out_from_the_my_pwm_4(PWM_GRIPPER),
+                   .pwm_out_from_the_my_pwm_4(PWM_4),
 
                   // the_my_pwm_5
-                   .pwm_out_from_the_my_pwm_5(PWM_AUX),
+                   .pwm_out_from_the_my_pwm_5(PWM_5),
 
 							  // porta
 						 .bidir_port_to_and_from_the_port_a(PORT_A),

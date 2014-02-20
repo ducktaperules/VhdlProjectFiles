@@ -34,7 +34,7 @@ module port_a (
               )
 ;
 
-  inout   [  7: 0] bidir_port;
+  inout   [  3: 0] bidir_port;
   output           irq;
   output  [ 31: 0] readdata;
   input   [  2: 0] address;
@@ -44,34 +44,34 @@ module port_a (
   input            write_n;
   input   [ 31: 0] writedata;
 
-  wire    [  7: 0] bidir_port;
+  wire    [  3: 0] bidir_port;
   wire             clk_en;
-  reg     [  7: 0] d1_data_in;
-  reg     [  7: 0] d2_data_in;
-  reg     [  7: 0] data_dir;
-  wire    [  7: 0] data_in;
-  reg     [  7: 0] data_out;
-  reg     [  7: 0] edge_capture;
+  reg     [  3: 0] d1_data_in;
+  reg     [  3: 0] d2_data_in;
+  reg     [  3: 0] data_dir;
+  wire    [  3: 0] data_in;
+  reg     [  3: 0] data_out;
+  reg     [  3: 0] edge_capture;
   wire             edge_capture_wr_strobe;
-  wire    [  7: 0] edge_detect;
+  wire    [  3: 0] edge_detect;
   wire             irq;
-  reg     [  7: 0] irq_mask;
-  wire    [  7: 0] read_mux_out;
+  reg     [  3: 0] irq_mask;
+  wire    [  3: 0] read_mux_out;
   reg     [ 31: 0] readdata;
   wire             wr_strobe;
   assign clk_en = 1;
   //s1, which is an e_avalon_slave
-  assign read_mux_out = ({8 {(address == 0)}} & data_in) |
-    ({8 {(address == 1)}} & data_dir) |
-    ({8 {(address == 2)}} & irq_mask) |
-    ({8 {(address == 3)}} & edge_capture);
+  assign read_mux_out = ({4 {(address == 0)}} & data_in) |
+    ({4 {(address == 1)}} & data_dir) |
+    ({4 {(address == 2)}} & irq_mask) |
+    ({4 {(address == 3)}} & edge_capture);
 
   always @(posedge clk or negedge reset_n)
     begin
       if (reset_n == 0)
           readdata <= 0;
       else if (clk_en)
-          readdata <= {{{32 - 8}{1'b0}},read_mux_out};
+          readdata <= {{{32 - 4}{1'b0}},read_mux_out};
     end
 
 
@@ -82,7 +82,7 @@ module port_a (
           data_out <= 0;
       else if (clk_en)
           if (wr_strobe)
-              data_out <= (address == 5)? data_out & ~writedata[7 : 0]: (address == 4)? data_out | writedata[7 : 0]: (address == 0)? writedata[7 : 0]: data_out;
+              data_out <= (address == 5)? data_out & ~writedata[3 : 0]: (address == 4)? data_out | writedata[3 : 0]: (address == 0)? writedata[3 : 0]: data_out;
     end
 
 
@@ -90,17 +90,13 @@ module port_a (
   assign bidir_port[1] = data_dir[1] ? data_out[1] : 1'bZ;
   assign bidir_port[2] = data_dir[2] ? data_out[2] : 1'bZ;
   assign bidir_port[3] = data_dir[3] ? data_out[3] : 1'bZ;
-  assign bidir_port[4] = data_dir[4] ? data_out[4] : 1'bZ;
-  assign bidir_port[5] = data_dir[5] ? data_out[5] : 1'bZ;
-  assign bidir_port[6] = data_dir[6] ? data_out[6] : 1'bZ;
-  assign bidir_port[7] = data_dir[7] ? data_out[7] : 1'bZ;
   assign data_in = bidir_port;
   always @(posedge clk or negedge reset_n)
     begin
       if (reset_n == 0)
           data_dir <= 0;
       else if (chipselect && ~write_n && (address == 1))
-          data_dir <= writedata[7 : 0];
+          data_dir <= writedata[3 : 0];
     end
 
 
@@ -109,7 +105,7 @@ module port_a (
       if (reset_n == 0)
           irq_mask <= 0;
       else if (chipselect && ~write_n && (address == 2))
-          irq_mask <= writedata[7 : 0];
+          irq_mask <= writedata[3 : 0];
     end
 
 
@@ -160,54 +156,6 @@ module port_a (
               edge_capture[3] <= 0;
           else if (edge_detect[3])
               edge_capture[3] <= -1;
-    end
-
-
-  always @(posedge clk or negedge reset_n)
-    begin
-      if (reset_n == 0)
-          edge_capture[4] <= 0;
-      else if (clk_en)
-          if (edge_capture_wr_strobe && writedata[4])
-              edge_capture[4] <= 0;
-          else if (edge_detect[4])
-              edge_capture[4] <= -1;
-    end
-
-
-  always @(posedge clk or negedge reset_n)
-    begin
-      if (reset_n == 0)
-          edge_capture[5] <= 0;
-      else if (clk_en)
-          if (edge_capture_wr_strobe && writedata[5])
-              edge_capture[5] <= 0;
-          else if (edge_detect[5])
-              edge_capture[5] <= -1;
-    end
-
-
-  always @(posedge clk or negedge reset_n)
-    begin
-      if (reset_n == 0)
-          edge_capture[6] <= 0;
-      else if (clk_en)
-          if (edge_capture_wr_strobe && writedata[6])
-              edge_capture[6] <= 0;
-          else if (edge_detect[6])
-              edge_capture[6] <= -1;
-    end
-
-
-  always @(posedge clk or negedge reset_n)
-    begin
-      if (reset_n == 0)
-          edge_capture[7] <= 0;
-      else if (clk_en)
-          if (edge_capture_wr_strobe && writedata[7])
-              edge_capture[7] <= 0;
-          else if (edge_detect[7])
-              edge_capture[7] <= -1;
     end
 
 

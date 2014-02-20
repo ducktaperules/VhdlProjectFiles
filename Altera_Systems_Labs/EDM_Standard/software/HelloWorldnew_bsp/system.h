@@ -4,7 +4,7 @@
  * Machine generated for CPU 'cpu' in SOPC Builder design 'DE0_SOPC'
  * SOPC Builder design path: C:/Users/Queron/Documents/GitHub/VhdlProjectFiles/Altera_Systems_Labs/EDM_Standard/DE0_SOPC.sopcinfo
  *
- * Generated: Tue Feb 18 15:00:13 GMT 2014
+ * Generated: Thu Feb 20 17:09:30 GMT 2014
  */
 
 /*
@@ -212,7 +212,7 @@
  */
 
 #define ALT_MODULE_CLASS_buttons altera_avalon_pio
-#define BUTTONS_BASE 0xe0
+#define BUTTONS_BASE 0x100
 #define BUTTONS_BIT_CLEARING_EDGE_REGISTER 0
 #define BUTTONS_BIT_MODIFYING_OUTPUT_REGISTER 0
 #define BUTTONS_CAPTURE 1
@@ -287,7 +287,7 @@
  */
 
 #define ALT_MODULE_CLASS_key_out altera_avalon_pio
-#define KEY_OUT_BASE 0x160
+#define KEY_OUT_BASE 0x180
 #define KEY_OUT_BIT_CLEARING_EDGE_REGISTER 0
 #define KEY_OUT_BIT_MODIFYING_OUTPUT_REGISTER 0
 #define KEY_OUT_CAPTURE 0
@@ -314,7 +314,7 @@
  */
 
 #define ALT_MODULE_CLASS_lcd altera_avalon_lcd_16207
-#define LCD_BASE 0x110
+#define LCD_BASE 0x130
 #define LCD_IRQ -1
 #define LCD_IRQ_INTERRUPT_CONTROLLER_ID -1
 #define LCD_NAME "/dev/lcd"
@@ -328,7 +328,7 @@
  */
 
 #define ALT_MODULE_CLASS_lcd_light altera_avalon_pio
-#define LCD_LIGHT_BASE 0x140
+#define LCD_LIGHT_BASE 0x160
 #define LCD_LIGHT_BIT_CLEARING_EDGE_REGISTER 0
 #define LCD_LIGHT_BIT_MODIFYING_OUTPUT_REGISTER 0
 #define LCD_LIGHT_CAPTURE 0
@@ -355,7 +355,7 @@
  */
 
 #define ALT_MODULE_CLASS_leds altera_avalon_pio
-#define LEDS_BASE 0xc0
+#define LEDS_BASE 0xe0
 #define LEDS_BIT_CLEARING_EDGE_REGISTER 0
 #define LEDS_BIT_MODIFYING_OUTPUT_REGISTER 0
 #define LEDS_CAPTURE 0
@@ -382,7 +382,7 @@
  */
 
 #define ALT_MODULE_CLASS_my_pwm_0 my_pwm
-#define MY_PWM_0_BASE 0x170
+#define MY_PWM_0_BASE 0x190
 #define MY_PWM_0_IRQ -1
 #define MY_PWM_0_IRQ_INTERRUPT_CONTROLLER_ID -1
 #define MY_PWM_0_NAME "/dev/my_pwm_0"
@@ -396,7 +396,7 @@
  */
 
 #define ALT_MODULE_CLASS_my_pwm_1 my_pwm
-#define MY_PWM_1_BASE 0x180
+#define MY_PWM_1_BASE 0x1a0
 #define MY_PWM_1_IRQ -1
 #define MY_PWM_1_IRQ_INTERRUPT_CONTROLLER_ID -1
 #define MY_PWM_1_NAME "/dev/my_pwm_1"
@@ -410,7 +410,7 @@
  */
 
 #define ALT_MODULE_CLASS_my_pwm_2 my_pwm
-#define MY_PWM_2_BASE 0x190
+#define MY_PWM_2_BASE 0x1b0
 #define MY_PWM_2_IRQ -1
 #define MY_PWM_2_IRQ_INTERRUPT_CONTROLLER_ID -1
 #define MY_PWM_2_NAME "/dev/my_pwm_2"
@@ -424,7 +424,7 @@
  */
 
 #define ALT_MODULE_CLASS_my_pwm_3 my_pwm
-#define MY_PWM_3_BASE 0x1a0
+#define MY_PWM_3_BASE 0x1c0
 #define MY_PWM_3_IRQ -1
 #define MY_PWM_3_IRQ_INTERRUPT_CONTROLLER_ID -1
 #define MY_PWM_3_NAME "/dev/my_pwm_3"
@@ -438,7 +438,7 @@
  */
 
 #define ALT_MODULE_CLASS_my_pwm_4 my_pwm
-#define MY_PWM_4_BASE 0x1b0
+#define MY_PWM_4_BASE 0x1d0
 #define MY_PWM_4_IRQ -1
 #define MY_PWM_4_IRQ_INTERRUPT_CONTROLLER_ID -1
 #define MY_PWM_4_NAME "/dev/my_pwm_4"
@@ -452,7 +452,7 @@
  */
 
 #define ALT_MODULE_CLASS_my_pwm_5 my_pwm
-#define MY_PWM_5_BASE 0x1c0
+#define MY_PWM_5_BASE 0x1e0
 #define MY_PWM_5_IRQ -1
 #define MY_PWM_5_IRQ_INTERRUPT_CONTROLLER_ID -1
 #define MY_PWM_5_NAME "/dev/my_pwm_5"
@@ -490,6 +490,33 @@
 
 
 /*
+ * pio_0 configuration
+ *
+ */
+
+#define ALT_MODULE_CLASS_pio_0 altera_avalon_pio
+#define PIO_0_BASE 0xc0
+#define PIO_0_BIT_CLEARING_EDGE_REGISTER 0
+#define PIO_0_BIT_MODIFYING_OUTPUT_REGISTER 1
+#define PIO_0_CAPTURE 0
+#define PIO_0_DATA_WIDTH 8
+#define PIO_0_DO_TEST_BENCH_WIRING 0
+#define PIO_0_DRIVEN_SIM_VALUE 0x0
+#define PIO_0_EDGE_TYPE "NONE"
+#define PIO_0_FREQ 10000000u
+#define PIO_0_HAS_IN 0
+#define PIO_0_HAS_OUT 0
+#define PIO_0_HAS_TRI 1
+#define PIO_0_IRQ -1
+#define PIO_0_IRQ_INTERRUPT_CONTROLLER_ID -1
+#define PIO_0_IRQ_TYPE "NONE"
+#define PIO_0_NAME "/dev/pio_0"
+#define PIO_0_RESET_VALUE 0x0
+#define PIO_0_SPAN 32
+#define PIO_0_TYPE "altera_avalon_pio"
+
+
+/*
  * port_a configuration
  *
  */
@@ -499,7 +526,7 @@
 #define PORT_A_BIT_CLEARING_EDGE_REGISTER 1
 #define PORT_A_BIT_MODIFYING_OUTPUT_REGISTER 1
 #define PORT_A_CAPTURE 1
-#define PORT_A_DATA_WIDTH 8
+#define PORT_A_DATA_WIDTH 4
 #define PORT_A_DO_TEST_BENCH_WIRING 0
 #define PORT_A_DRIVEN_SIM_VALUE 0x0
 #define PORT_A_EDGE_TYPE "RISING"
@@ -548,7 +575,7 @@
  */
 
 #define ALT_MODULE_CLASS_sd_clk altera_avalon_pio
-#define SD_CLK_BASE 0x120
+#define SD_CLK_BASE 0x140
 #define SD_CLK_BIT_CLEARING_EDGE_REGISTER 0
 #define SD_CLK_BIT_MODIFYING_OUTPUT_REGISTER 0
 #define SD_CLK_CAPTURE 0
@@ -575,7 +602,7 @@
  */
 
 #define ALT_MODULE_CLASS_sd_cmd altera_avalon_pio
-#define SD_CMD_BASE 0x100
+#define SD_CMD_BASE 0x120
 #define SD_CMD_BIT_CLEARING_EDGE_REGISTER 0
 #define SD_CMD_BIT_MODIFYING_OUTPUT_REGISTER 0
 #define SD_CMD_CAPTURE 0
@@ -602,7 +629,7 @@
  */
 
 #define ALT_MODULE_CLASS_sd_dat altera_avalon_pio
-#define SD_DAT_BASE 0x130
+#define SD_DAT_BASE 0x150
 #define SD_DAT_BIT_CLEARING_EDGE_REGISTER 0
 #define SD_DAT_BIT_MODIFYING_OUTPUT_REGISTER 0
 #define SD_DAT_CAPTURE 0
@@ -629,7 +656,7 @@
  */
 
 #define ALT_MODULE_CLASS_sd_wp_n altera_avalon_pio
-#define SD_WP_N_BASE 0xf0
+#define SD_WP_N_BASE 0x110
 #define SD_WP_N_BIT_CLEARING_EDGE_REGISTER 0
 #define SD_WP_N_BIT_MODIFYING_OUTPUT_REGISTER 0
 #define SD_WP_N_CAPTURE 0
@@ -695,7 +722,7 @@
  */
 
 #define ALT_MODULE_CLASS_seg7 altera_avalon_pio
-#define SEG7_BASE 0x150
+#define SEG7_BASE 0x170
 #define SEG7_BIT_CLEARING_EDGE_REGISTER 0
 #define SEG7_BIT_MODIFYING_OUTPUT_REGISTER 0
 #define SEG7_CAPTURE 0
@@ -722,7 +749,7 @@
  */
 
 #define ALT_MODULE_CLASS_switches altera_avalon_pio
-#define SWITCHES_BASE 0xd0
+#define SWITCHES_BASE 0xf0
 #define SWITCHES_BIT_CLEARING_EDGE_REGISTER 0
 #define SWITCHES_BIT_MODIFYING_OUTPUT_REGISTER 0
 #define SWITCHES_CAPTURE 1
@@ -749,13 +776,13 @@
  */
 
 #define ALT_MODULE_CLASS_sysid altera_avalon_sysid
-#define SYSID_BASE 0x1d0
+#define SYSID_BASE 0x200
 #define SYSID_ID 0u
 #define SYSID_IRQ -1
 #define SYSID_IRQ_INTERRUPT_CONTROLLER_ID -1
 #define SYSID_NAME "/dev/sysid"
 #define SYSID_SPAN 8
-#define SYSID_TIMESTAMP 1392314294u
+#define SYSID_TIMESTAMP 1392908957u
 #define SYSID_TYPE "altera_avalon_sysid"
 
 

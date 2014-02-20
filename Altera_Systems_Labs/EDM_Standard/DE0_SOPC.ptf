@@ -744,42 +744,42 @@ SYSTEM DE0_SOPC
             Entry clock_crossing_bridge/s1
             {
                address = "0x00000000";
-               span = "0x00000200";
+               span = "0x00000400";
                is_bridge = "1";
             }
             Entry leds/s1
-            {
-               address = "0x000000c0";
-               span = "0x00000010";
-               is_bridge = "0";
-            }
-            Entry switches/s1
-            {
-               address = "0x000000d0";
-               span = "0x00000010";
-               is_bridge = "0";
-            }
-            Entry buttons/s1
             {
                address = "0x000000e0";
                span = "0x00000010";
                is_bridge = "0";
             }
-            Entry sd_wp_n/s1
+            Entry switches/s1
             {
                address = "0x000000f0";
                span = "0x00000010";
                is_bridge = "0";
             }
-            Entry sd_cmd/s1
+            Entry buttons/s1
             {
                address = "0x00000100";
                span = "0x00000010";
                is_bridge = "0";
             }
+            Entry sd_wp_n/s1
+            {
+               address = "0x00000110";
+               span = "0x00000010";
+               is_bridge = "0";
+            }
+            Entry sd_cmd/s1
+            {
+               address = "0x00000120";
+               span = "0x00000010";
+               is_bridge = "0";
+            }
             Entry sysid/control_slave
             {
-               address = "0x000001d0";
+               address = "0x00000200";
                span = "0x00000008";
                is_bridge = "0";
             }
@@ -791,25 +791,25 @@ SYSTEM DE0_SOPC
             }
             Entry lcd/control_slave
             {
-               address = "0x00000110";
+               address = "0x00000130";
                span = "0x00000010";
                is_bridge = "0";
             }
             Entry sd_clk/s1
             {
-               address = "0x00000120";
+               address = "0x00000140";
                span = "0x00000010";
                is_bridge = "0";
             }
             Entry sd_dat/s1
             {
-               address = "0x00000130";
+               address = "0x00000150";
                span = "0x00000010";
                is_bridge = "0";
             }
             Entry lcd_light/s1
             {
-               address = "0x00000140";
+               address = "0x00000160";
                span = "0x00000010";
                is_bridge = "0";
             }
@@ -821,7 +821,7 @@ SYSTEM DE0_SOPC
             }
             Entry seg7/s1
             {
-               address = "0x00000150";
+               address = "0x00000170";
                span = "0x00000010";
                is_bridge = "0";
             }
@@ -845,44 +845,50 @@ SYSTEM DE0_SOPC
             }
             Entry key_out/s1
             {
-               address = "0x00000160";
+               address = "0x00000180";
                span = "0x00000010";
                is_bridge = "0";
             }
             Entry my_pwm_0/avalon_slave_0
             {
-               address = "0x00000170";
+               address = "0x00000190";
                span = "0x00000010";
                is_bridge = "0";
             }
             Entry my_pwm_1/avalon_slave_0
             {
-               address = "0x00000180";
+               address = "0x000001a0";
                span = "0x00000010";
                is_bridge = "0";
             }
             Entry my_pwm_2/avalon_slave_0
             {
-               address = "0x00000190";
+               address = "0x000001b0";
                span = "0x00000010";
                is_bridge = "0";
             }
             Entry my_pwm_3/avalon_slave_0
             {
-               address = "0x000001a0";
+               address = "0x000001c0";
                span = "0x00000010";
                is_bridge = "0";
             }
             Entry my_pwm_4/avalon_slave_0
             {
-               address = "0x000001b0";
+               address = "0x000001d0";
                span = "0x00000010";
                is_bridge = "0";
             }
             Entry my_pwm_5/avalon_slave_0
             {
-               address = "0x000001c0";
+               address = "0x000001e0";
                span = "0x00000010";
+               is_bridge = "0";
+            }
+            Entry pio_0/s1
+            {
+               address = "0x000000c0";
+               span = "0x00000020";
                is_bridge = "0";
             }
             Entry altpll_0/pll_slave
@@ -3131,9 +3137,9 @@ SYSTEM DE0_SOPC
             MASTERED_BY clock_crossing_bridge/m1
             {
                priority = "1";
-               Offset_Address = "0x000001d0";
+               Offset_Address = "0x00000200";
             }
-            Base_Address = "0x000001d0";
+            Base_Address = "0x00000200";
             Has_IRQ = "0";
             Address_Group = "0";
          }
@@ -3151,7 +3157,7 @@ SYSTEM DE0_SOPC
          Has_Clock = "1";
          View 
          {
-            Settings_Summary = "System ID (at last Generate):<br> <b>00000000</b>    (unique ID tag) <br> <b>52FD07B6</b> (timestamp: Thu Feb 13, 2014 @5:58 PM)";
+            Settings_Summary = "System ID (at last Generate):<br> <b>00000000</b>    (unique ID tag) <br> <b>53061A9D</b> (timestamp: Thu Feb 20, 2014 @3:09 PM)";
             MESSAGES 
             {
             }
@@ -3160,7 +3166,7 @@ SYSTEM DE0_SOPC
       WIZARD_SCRIPT_ARGUMENTS 
       {
          id = "0u";
-         timestamp = "1392314294u";
+         timestamp = "1392908957u";
          regenerate_values = "0";
          MAKE 
          {
@@ -3169,7 +3175,7 @@ SYSTEM DE0_SOPC
                verifysysid 
                {
                   All_Depends_On = "0";
-                  Command = "nios2-download $(JTAG_CABLE)                                --sidp=0x000001d0 --id=0 --timestamp=1392314294";
+                  Command = "nios2-download $(JTAG_CABLE)                                --sidp=0x00000200 --id=0 --timestamp=1392908957";
                   Is_Phony = "1";
                   Target_File = "dummy_verifysysid_file";
                }
@@ -3432,9 +3438,9 @@ SYSTEM DE0_SOPC
             MASTERED_BY clock_crossing_bridge/m1
             {
                priority = "1";
-               Offset_Address = "0x00000110";
+               Offset_Address = "0x00000130";
             }
-            Base_Address = "0x00000110";
+            Base_Address = "0x00000130";
             Has_IRQ = "0";
             Address_Group = "0";
          }
@@ -3586,9 +3592,9 @@ SYSTEM DE0_SOPC
             MASTERED_BY clock_crossing_bridge/m1
             {
                priority = "1";
-               Offset_Address = "0x00000120";
+               Offset_Address = "0x00000140";
             }
-            Base_Address = "0x00000120";
+            Base_Address = "0x00000140";
             Has_IRQ = "0";
             Address_Group = "0";
             Is_Readable = "0";
@@ -3750,9 +3756,9 @@ SYSTEM DE0_SOPC
             MASTERED_BY clock_crossing_bridge/m1
             {
                priority = "1";
-               Offset_Address = "0x00000130";
+               Offset_Address = "0x00000150";
             }
-            Base_Address = "0x00000130";
+            Base_Address = "0x00000150";
             Has_IRQ = "0";
             Address_Group = "0";
             Is_Readable = "1";
@@ -3914,9 +3920,9 @@ SYSTEM DE0_SOPC
             MASTERED_BY clock_crossing_bridge/m1
             {
                priority = "1";
-               Offset_Address = "0x00000100";
+               Offset_Address = "0x00000120";
             }
-            Base_Address = "0x00000100";
+            Base_Address = "0x00000120";
             Has_IRQ = "0";
             Address_Group = "0";
             Is_Readable = "1";
@@ -4057,9 +4063,9 @@ SYSTEM DE0_SOPC
             MASTERED_BY clock_crossing_bridge/m1
             {
                priority = "1";
-               Offset_Address = "0x000000f0";
+               Offset_Address = "0x00000110";
             }
-            Base_Address = "0x000000f0";
+            Base_Address = "0x00000110";
             Has_IRQ = "0";
             Address_Group = "0";
             Is_Readable = "1";
@@ -4233,9 +4239,9 @@ SYSTEM DE0_SOPC
             MASTERED_BY clock_crossing_bridge/m1
             {
                priority = "1";
-               Offset_Address = "0x000000e0";
+               Offset_Address = "0x00000100";
             }
-            Base_Address = "0x000000e0";
+            Base_Address = "0x00000100";
             Address_Group = "0";
             Is_Readable = "1";
             Is_Writable = "1";
@@ -4408,9 +4414,9 @@ SYSTEM DE0_SOPC
             MASTERED_BY clock_crossing_bridge/m1
             {
                priority = "1";
-               Offset_Address = "0x000000d0";
+               Offset_Address = "0x000000f0";
             }
-            Base_Address = "0x000000d0";
+            Base_Address = "0x000000f0";
             Address_Group = "0";
             Is_Readable = "1";
             Is_Writable = "1";
@@ -4571,9 +4577,9 @@ SYSTEM DE0_SOPC
             MASTERED_BY clock_crossing_bridge/m1
             {
                priority = "1";
-               Offset_Address = "0x000000c0";
+               Offset_Address = "0x000000e0";
             }
-            Base_Address = "0x000000c0";
+            Base_Address = "0x000000e0";
             Has_IRQ = "0";
             Address_Group = "0";
             Is_Readable = "0";
@@ -5605,9 +5611,9 @@ SYSTEM DE0_SOPC
             MASTERED_BY clock_crossing_bridge/m1
             {
                priority = "1";
-               Offset_Address = "0x00000140";
+               Offset_Address = "0x00000160";
             }
-            Base_Address = "0x00000140";
+            Base_Address = "0x00000160";
             Has_IRQ = "0";
             Address_Group = "0";
             Is_Readable = "0";
@@ -5704,14 +5710,14 @@ SYSTEM DE0_SOPC
             PORT slave_address
             {
                type = "address";
-               width = "7";
+               width = "8";
                direction = "input";
                Is_Enabled = "1";
             }
             PORT slave_nativeaddress
             {
                type = "nativeaddress";
-               width = "7";
+               width = "8";
                direction = "input";
                Is_Enabled = "1";
             }
@@ -5783,7 +5789,7 @@ SYSTEM DE0_SOPC
             Address_Alignment = "dynamic";
             Well_Behaved_Waitrequest = "0";
             Is_Nonvolatile_Storage = "0";
-            Address_Span = "512";
+            Address_Span = "1024";
             Read_Latency = "0";
             Is_Memory_Device = "0";
             Maximum_Pending_Read_Transactions = "32";
@@ -5792,7 +5798,7 @@ SYSTEM DE0_SOPC
             Write_Latency = "0";
             Is_Flash = "0";
             Data_Width = "32";
-            Address_Width = "7";
+            Address_Width = "8";
             Opaque_Bridges_To = "m1";
             Maximum_Burst_Size = "1";
             Register_Incoming_Signals = "0";
@@ -5839,14 +5845,14 @@ SYSTEM DE0_SOPC
             PORT master_address
             {
                type = "address";
-               width = "9";
+               width = "10";
                direction = "output";
                Is_Enabled = "1";
             }
             PORT master_nativeaddress
             {
                type = "nativeaddress";
-               width = "7";
+               width = "8";
                direction = "output";
                Is_Enabled = "1";
             }
@@ -5917,7 +5923,7 @@ SYSTEM DE0_SOPC
             Do_Stream_Writes = "0";
             Max_Address_Width = "32";
             Data_Width = "32";
-            Address_Width = "9";
+            Address_Width = "10";
             Opaque_Bridges_To = "s1";
             Maximum_Burst_Size = "1";
             Register_Incoming_Signals = "0";
@@ -5935,37 +5941,37 @@ SYSTEM DE0_SOPC
          {
             Entry leds/s1
             {
-               address = "0x000000c0";
+               address = "0x000000e0";
                span = "0x00000010";
                is_bridge = "0";
             }
             Entry switches/s1
             {
-               address = "0x000000d0";
+               address = "0x000000f0";
                span = "0x00000010";
                is_bridge = "0";
             }
             Entry buttons/s1
             {
-               address = "0x000000e0";
+               address = "0x00000100";
                span = "0x00000010";
                is_bridge = "0";
             }
             Entry sd_wp_n/s1
             {
-               address = "0x000000f0";
+               address = "0x00000110";
                span = "0x00000010";
                is_bridge = "0";
             }
             Entry sd_cmd/s1
             {
-               address = "0x00000100";
+               address = "0x00000120";
                span = "0x00000010";
                is_bridge = "0";
             }
             Entry sysid/control_slave
             {
-               address = "0x000001d0";
+               address = "0x00000200";
                span = "0x00000008";
                is_bridge = "0";
             }
@@ -5977,25 +5983,25 @@ SYSTEM DE0_SOPC
             }
             Entry lcd/control_slave
             {
-               address = "0x00000110";
+               address = "0x00000130";
                span = "0x00000010";
                is_bridge = "0";
             }
             Entry sd_clk/s1
             {
-               address = "0x00000120";
+               address = "0x00000140";
                span = "0x00000010";
                is_bridge = "0";
             }
             Entry sd_dat/s1
             {
-               address = "0x00000130";
+               address = "0x00000150";
                span = "0x00000010";
                is_bridge = "0";
             }
             Entry lcd_light/s1
             {
-               address = "0x00000140";
+               address = "0x00000160";
                span = "0x00000010";
                is_bridge = "0";
             }
@@ -6007,7 +6013,7 @@ SYSTEM DE0_SOPC
             }
             Entry seg7/s1
             {
-               address = "0x00000150";
+               address = "0x00000170";
                span = "0x00000010";
                is_bridge = "0";
             }
@@ -6031,44 +6037,50 @@ SYSTEM DE0_SOPC
             }
             Entry key_out/s1
             {
-               address = "0x00000160";
+               address = "0x00000180";
                span = "0x00000010";
                is_bridge = "0";
             }
             Entry my_pwm_0/avalon_slave_0
             {
-               address = "0x00000170";
+               address = "0x00000190";
                span = "0x00000010";
                is_bridge = "0";
             }
             Entry my_pwm_1/avalon_slave_0
             {
-               address = "0x00000180";
+               address = "0x000001a0";
                span = "0x00000010";
                is_bridge = "0";
             }
             Entry my_pwm_2/avalon_slave_0
             {
-               address = "0x00000190";
+               address = "0x000001b0";
                span = "0x00000010";
                is_bridge = "0";
             }
             Entry my_pwm_3/avalon_slave_0
             {
-               address = "0x000001a0";
+               address = "0x000001c0";
                span = "0x00000010";
                is_bridge = "0";
             }
             Entry my_pwm_4/avalon_slave_0
             {
-               address = "0x000001b0";
+               address = "0x000001d0";
                span = "0x00000010";
                is_bridge = "0";
             }
             Entry my_pwm_5/avalon_slave_0
             {
-               address = "0x000001c0";
+               address = "0x000001e0";
                span = "0x00000010";
+               is_bridge = "0";
+            }
+            Entry pio_0/s1
+            {
+               address = "0x000000c0";
+               span = "0x00000020";
                is_bridge = "0";
             }
          }
@@ -6081,7 +6093,7 @@ SYSTEM DE0_SOPC
          Upstream_FIFO_Depth = "64";
          Downstream_FIFO_Depth = "16";
          Data_Width = "32";
-         Native_Address_Width = "7";
+         Native_Address_Width = "8";
          Use_Byte_Enable = "1";
          Use_Burst_Count = "0";
          Maximum_Burst_Size = "8";
@@ -6204,9 +6216,9 @@ SYSTEM DE0_SOPC
             MASTERED_BY clock_crossing_bridge/m1
             {
                priority = "1";
-               Offset_Address = "0x00000150";
+               Offset_Address = "0x00000170";
             }
-            Base_Address = "0x00000150";
+            Base_Address = "0x00000170";
             Has_IRQ = "0";
             Address_Group = "0";
             Is_Readable = "0";
@@ -6693,7 +6705,7 @@ SYSTEM DE0_SOPC
          PORT bidir_port
          {
             type = "export";
-            width = "8";
+            width = "4";
             direction = "inout";
             Is_Enabled = "1";
          }
@@ -6740,7 +6752,7 @@ SYSTEM DE0_SOPC
          has_out = "0";
          has_in = "0";
          capture = "1";
-         Data_Width = "8";
+         Data_Width = "4";
          reset_value = "0";
          edge_type = "RISING";
          irq_type = "EDGE";
@@ -6843,9 +6855,9 @@ SYSTEM DE0_SOPC
             MASTERED_BY clock_crossing_bridge/m1
             {
                priority = "1";
-               Offset_Address = "0x00000160";
+               Offset_Address = "0x00000180";
             }
-            Base_Address = "0x00000160";
+            Base_Address = "0x00000180";
             Has_IRQ = "0";
             Address_Group = "0";
             Is_Readable = "0";
@@ -7187,9 +7199,9 @@ SYSTEM DE0_SOPC
             MASTERED_BY clock_crossing_bridge/m1
             {
                priority = "1";
-               Offset_Address = "0x00000170";
+               Offset_Address = "0x00000190";
             }
-            Base_Address = "0x00000170";
+            Base_Address = "0x00000190";
             Address_Group = "0";
          }
       }
@@ -7319,9 +7331,9 @@ SYSTEM DE0_SOPC
             MASTERED_BY clock_crossing_bridge/m1
             {
                priority = "1";
-               Offset_Address = "0x00000180";
+               Offset_Address = "0x000001a0";
             }
-            Base_Address = "0x00000180";
+            Base_Address = "0x000001a0";
             Address_Group = "0";
          }
       }
@@ -7451,9 +7463,9 @@ SYSTEM DE0_SOPC
             MASTERED_BY clock_crossing_bridge/m1
             {
                priority = "1";
-               Offset_Address = "0x00000190";
+               Offset_Address = "0x000001b0";
             }
-            Base_Address = "0x00000190";
+            Base_Address = "0x000001b0";
             Address_Group = "0";
          }
       }
@@ -7583,9 +7595,9 @@ SYSTEM DE0_SOPC
             MASTERED_BY clock_crossing_bridge/m1
             {
                priority = "1";
-               Offset_Address = "0x000001a0";
+               Offset_Address = "0x000001c0";
             }
-            Base_Address = "0x000001a0";
+            Base_Address = "0x000001c0";
             Address_Group = "0";
          }
       }
@@ -7715,9 +7727,9 @@ SYSTEM DE0_SOPC
             MASTERED_BY clock_crossing_bridge/m1
             {
                priority = "1";
-               Offset_Address = "0x000001b0";
+               Offset_Address = "0x000001d0";
             }
-            Base_Address = "0x000001b0";
+            Base_Address = "0x000001d0";
             Address_Group = "0";
          }
       }
@@ -7847,9 +7859,9 @@ SYSTEM DE0_SOPC
             MASTERED_BY clock_crossing_bridge/m1
             {
                priority = "1";
-               Offset_Address = "0x000001c0";
+               Offset_Address = "0x000001e0";
             }
-            Base_Address = "0x000001c0";
+            Base_Address = "0x000001e0";
             Address_Group = "0";
          }
       }
@@ -7999,6 +8011,170 @@ SYSTEM DE0_SOPC
       }
       WIZARD_SCRIPT_ARGUMENTS 
       {
+      }
+   }
+   MODULE pio_0
+   {
+      SLAVE s1
+      {
+         PORT_WIRING 
+         {
+            PORT clk
+            {
+               type = "clk";
+               width = "1";
+               direction = "input";
+               Is_Enabled = "1";
+            }
+            PORT reset_n
+            {
+               type = "reset_n";
+               width = "1";
+               direction = "input";
+               Is_Enabled = "1";
+            }
+            PORT address
+            {
+               type = "address";
+               width = "3";
+               direction = "input";
+               Is_Enabled = "1";
+            }
+            PORT write_n
+            {
+               type = "write_n";
+               width = "1";
+               direction = "input";
+               Is_Enabled = "1";
+            }
+            PORT writedata
+            {
+               type = "writedata";
+               width = "32";
+               direction = "input";
+               Is_Enabled = "1";
+            }
+            PORT chipselect
+            {
+               type = "chipselect";
+               width = "1";
+               direction = "input";
+               Is_Enabled = "1";
+            }
+            PORT readdata
+            {
+               type = "readdata";
+               width = "32";
+               direction = "output";
+               Is_Enabled = "1";
+            }
+         }
+         SYSTEM_BUILDER_INFO 
+         {
+            Bus_Type = "avalon";
+            Write_Wait_States = "0cycles";
+            Read_Wait_States = "1cycles";
+            Hold_Time = "0cycles";
+            Setup_Time = "0cycles";
+            Is_Printable_Device = "0";
+            Address_Alignment = "native";
+            Well_Behaved_Waitrequest = "0";
+            Is_Nonvolatile_Storage = "0";
+            Read_Latency = "0";
+            Is_Memory_Device = "0";
+            Maximum_Pending_Read_Transactions = "0";
+            Minimum_Uninterrupted_Run_Length = "1";
+            Accepts_Internal_Connections = "1";
+            Write_Latency = "0";
+            Is_Flash = "0";
+            Data_Width = "32";
+            Address_Width = "3";
+            Maximum_Burst_Size = "1";
+            Register_Incoming_Signals = "0";
+            Register_Outgoing_Signals = "0";
+            Interleave_Bursts = "0";
+            Linewrap_Bursts = "0";
+            Burst_On_Burst_Boundaries_Only = "0";
+            Always_Burst_Max_Burst = "0";
+            Is_Big_Endian = "0";
+            Is_Enabled = "1";
+            MASTERED_BY clock_crossing_bridge/m1
+            {
+               priority = "1";
+               Offset_Address = "0x000000c0";
+            }
+            Base_Address = "0x000000c0";
+            Has_IRQ = "0";
+            Address_Group = "0";
+            Is_Readable = "1";
+            Is_Writable = "1";
+         }
+      }
+      PORT_WIRING 
+      {
+         PORT bidir_port
+         {
+            type = "export";
+            width = "8";
+            direction = "inout";
+            Is_Enabled = "1";
+         }
+         PORT in_port
+         {
+            direction = "input";
+            Is_Enabled = "0";
+            width = "32";
+         }
+         PORT out_port
+         {
+            direction = "output";
+            Is_Enabled = "0";
+            width = "32";
+         }
+      }
+      class = "altera_avalon_pio";
+      class_version = "7.08110";
+      SYSTEM_BUILDER_INFO 
+      {
+         Is_Enabled = "1";
+         Instantiate_In_System_Module = "1";
+         Wire_Test_Bench_Values = "1";
+         Top_Level_Ports_Are_Enumerated = "1";
+         Clock_Source = "pll_io";
+         Has_Clock = "1";
+         Date_Modified = "";
+         View 
+         {
+            MESSAGES 
+            {
+            }
+            Settings_Summary = " 32-bit PIO using <br>
+					 tri-state pins with edge type NONE and interrupt source NONE
+					
+					";
+         }
+      }
+      WIZARD_SCRIPT_ARGUMENTS 
+      {
+         Do_Test_Bench_Wiring = "0";
+         Driven_Sim_Value = "0";
+         has_tri = "1";
+         has_out = "0";
+         has_in = "0";
+         capture = "0";
+         Data_Width = "8";
+         reset_value = "0";
+         edge_type = "NONE";
+         irq_type = "NONE";
+         bit_clearing_edge_register = "0";
+         bit_modifying_output_register = "1";
+      }
+      HDL_INFO 
+      {
+         Precompiled_Simulation_Library_Files = "";
+         Simulation_HDL_Files = "";
+         Synthesis_HDL_Files = "__PROJECT_DIRECTORY__/pio_0.v";
+         Synthesis_Only_Files = "";
       }
    }
 }

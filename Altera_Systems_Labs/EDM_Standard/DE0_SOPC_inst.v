@@ -7,6 +7,7 @@
       .LCD_data_to_and_from_the_lcd               (LCD_data_to_and_from_the_lcd),
       .address_to_the_cfi_flash                   (address_to_the_cfi_flash),
       .areset_to_the_altpll_0                     (areset_to_the_altpll_0),
+      .bidir_port_to_and_from_the_pio_0           (bidir_port_to_and_from_the_pio_0),
       .bidir_port_to_and_from_the_port_a          (bidir_port_to_and_from_the_port_a),
       .bidir_port_to_and_from_the_sd_cmd          (bidir_port_to_and_from_the_sd_cmd),
       .bidir_port_to_and_from_the_sd_dat          (bidir_port_to_and_from_the_sd_dat),

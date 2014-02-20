@@ -585,7 +585,7 @@
    <SOPCModuleParameter>
     <C>117</C>
     <Name>dataSlaveMapParam</Name>
-    <Value><![CDATA[<address-map><slave name='profile_timer.s1' start='0x0' end='0x40' /><slave name='timer.s1' start='0x40' end='0x60' /><slave name='uart.s1' start='0x60' end='0x80' /><slave name='user_timer.s1' start='0x80' end='0xA0' /><slave name='port_a.s1' start='0xA0' end='0xC0' /><slave name='leds.s1' start='0xC0' end='0xD0' /><slave name='switches.s1' start='0xD0' end='0xE0' /><slave name='buttons.s1' start='0xE0' end='0xF0' /><slave name='sd_wp_n.s1' start='0xF0' end='0x100' /><slave name='sd_cmd.s1' start='0x100' end='0x110' /><slave name='lcd.control_slave' start='0x110' end='0x120' /><slave name='sd_clk.s1' start='0x120' end='0x130' /><slave name='sd_dat.s1' start='0x130' end='0x140' /><slave name='lcd_light.s1' start='0x140' end='0x150' /><slave name='seg7.s1' start='0x150' end='0x160' /><slave name='key_out.s1' start='0x160' end='0x170' /><slave name='my_pwm_0.avalon_slave_0' start='0x170' end='0x180' /><slave name='my_pwm_1.avalon_slave_0' start='0x180' end='0x190' /><slave name='my_pwm_2.avalon_slave_0' start='0x190' end='0x1A0' /><slave name='my_pwm_3.avalon_slave_0' start='0x1A0' end='0x1B0' /><slave name='my_pwm_4.avalon_slave_0' start='0x1B0' end='0x1C0' /><slave name='my_pwm_5.avalon_slave_0' start='0x1C0' end='0x1D0' /><slave name='sysid.control_slave' start='0x1D0' end='0x1D8' /><slave name='sdram.s1' start='0x1800000' end='0x2000000' /><slave name='cfi_flash.s1' start='0x2400000' end='0x2800000' /><slave name='onchip_mem.s1' start='0x2808000' end='0x280F800' /><slave name='cpu.jtag_debug_module' start='0x2810800' end='0x2811000' /><slave name='altpll_0.pll_slave' start='0x2811000' end='0x2811010' /><slave name='jtag_uart.avalon_jtag_slave' start='0x2811010' end='0x2811018' /></address-map>]]></Value>
+    <Value><![CDATA[<address-map><slave name='profile_timer.s1' start='0x0' end='0x40' /><slave name='timer.s1' start='0x40' end='0x60' /><slave name='uart.s1' start='0x60' end='0x80' /><slave name='user_timer.s1' start='0x80' end='0xA0' /><slave name='port_a.s1' start='0xA0' end='0xC0' /><slave name='pio_0.s1' start='0xC0' end='0xE0' /><slave name='leds.s1' start='0xE0' end='0xF0' /><slave name='switches.s1' start='0xF0' end='0x100' /><slave name='buttons.s1' start='0x100' end='0x110' /><slave name='sd_wp_n.s1' start='0x110' end='0x120' /><slave name='sd_cmd.s1' start='0x120' end='0x130' /><slave name='lcd.control_slave' start='0x130' end='0x140' /><slave name='sd_clk.s1' start='0x140' end='0x150' /><slave name='sd_dat.s1' start='0x150' end='0x160' /><slave name='lcd_light.s1' start='0x160' end='0x170' /><slave name='seg7.s1' start='0x170' end='0x180' /><slave name='key_out.s1' start='0x180' end='0x190' /><slave name='my_pwm_0.avalon_slave_0' start='0x190' end='0x1A0' /><slave name='my_pwm_1.avalon_slave_0' start='0x1A0' end='0x1B0' /><slave name='my_pwm_2.avalon_slave_0' start='0x1B0' end='0x1C0' /><slave name='my_pwm_3.avalon_slave_0' start='0x1C0' end='0x1D0' /><slave name='my_pwm_4.avalon_slave_0' start='0x1D0' end='0x1E0' /><slave name='my_pwm_5.avalon_slave_0' start='0x1E0' end='0x1F0' /><slave name='sysid.control_slave' start='0x200' end='0x208' /><slave name='sdram.s1' start='0x1800000' end='0x2000000' /><slave name='cfi_flash.s1' start='0x2400000' end='0x2800000' /><slave name='onchip_mem.s1' start='0x2808000' end='0x280F800' /><slave name='cpu.jtag_debug_module' start='0x2810800' end='0x2811000' /><slave name='altpll_0.pll_slave' start='0x2811000' end='0x2811010' /><slave name='jtag_uart.avalon_jtag_slave' start='0x2811010' end='0x2811018' /></address-map>]]></Value>
    </SOPCModuleParameter>
    <SOPCModuleParameter>
     <C>118</C>
@@ -871,7 +871,7 @@
    <SOPCModuleParameter>
     <C>175</C>
     <Name>timestamp</Name>
-    <Value>1392314294</Value>
+    <Value>1392908957</Value>
    </SOPCModuleParameter>
   </SOPCModule>
   <SOPCModule>
@@ -1667,7 +1667,7 @@
    <SOPCModuleParameter>
     <C>337</C>
     <Name>slaveAddressWidth</Name>
-    <Value>7</Value>
+    <Value>8</Value>
    </SOPCModuleParameter>
    <SOPCModuleParameter>
     <C>338</C>
@@ -1923,7 +1923,7 @@
    <SOPCModuleParameter>
     <C>389</C>
     <Name>width</Name>
-    <Value>8</Value>
+    <Value>4</Value>
    </SOPCModuleParameter>
   </SOPCModule>
   <SOPCModule>
@@ -4040,7 +4040,71 @@
     <Value>Cyclone III</Value>
    </SOPCModuleParameter>
   </SOPCModule>
-  <SystemID>745231430</SystemID>
+  <SOPCModule>
+   <C>809</C>
+   <ModuleType>altera_avalon_pio</ModuleType>
+   <SOPCModuleParameter>
+    <C>810</C>
+    <Name>bitClearingEdgeCapReg</Name>
+    <Value>false</Value>
+   </SOPCModuleParameter>
+   <SOPCModuleParameter>
+    <C>811</C>
+    <Name>bitModifyingOutReg</Name>
+    <Value>true</Value>
+   </SOPCModuleParameter>
+   <SOPCModuleParameter>
+    <C>812</C>
+    <Name>captureEdge</Name>
+    <Value>false</Value>
+   </SOPCModuleParameter>
+   <SOPCModuleParameter>
+    <C>813</C>
+    <Name>clockRate</Name>
+    <Value>10000000</Value>
+   </SOPCModuleParameter>
+   <SOPCModuleParameter>
+    <C>814</C>
+    <Name>direction</Name>
+    <Value>Bidir</Value>
+   </SOPCModuleParameter>
+   <SOPCModuleParameter>
+    <C>815</C>
+    <Name>edgeType</Name>
+    <Value>RISING</Value>
+   </SOPCModuleParameter>
+   <SOPCModuleParameter>
+    <C>816</C>
+    <Name>generateIRQ</Name>
+    <Value>false</Value>
+   </SOPCModuleParameter>
+   <SOPCModuleParameter>
+    <C>817</C>
+    <Name>irqType</Name>
+    <Value>LEVEL</Value>
+   </SOPCModuleParameter>
+   <SOPCModuleParameter>
+    <C>818</C>
+    <Name>resetValue</Name>
+    <Value>0</Value>
+   </SOPCModuleParameter>
+   <SOPCModuleParameter>
+    <C>819</C>
+    <Name>simDoTestBenchWiring</Name>
+    <Value>false</Value>
+   </SOPCModuleParameter>
+   <SOPCModuleParameter>
+    <C>820</C>
+    <Name>simDrivenValue</Name>
+    <Value>0</Value>
+   </SOPCModuleParameter>
+   <SOPCModuleParameter>
+    <C>821</C>
+    <Name>width</Name>
+    <Value>8</Value>
+   </SOPCModuleParameter>
+  </SOPCModule>
+  <SystemID>1339653204</SystemID>
  </SOPCSystem>
  <SchemaVersion>schema_2011-03-02</SchemaVersion>
 </ProgramExecution>

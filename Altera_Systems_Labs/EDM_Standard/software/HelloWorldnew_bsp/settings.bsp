@@ -2,10 +2,10 @@
 <sch:Settings xmlns:sch="http://www.altera.com/embeddedsw/bsp/schema">
         <BspType>hal</BspType>
         <BspVersion>default</BspVersion>
-        <BspGeneratedTimeStamp>18-Feb-2014 15:00:11</BspGeneratedTimeStamp>
-        <BspGeneratedUnixTimeStamp>1392735611911</BspGeneratedUnixTimeStamp>
+        <BspGeneratedTimeStamp>Feb 20, 2014 6:04:53 PM</BspGeneratedTimeStamp>
+        <BspGeneratedUnixTimeStamp>1392919493632</BspGeneratedUnixTimeStamp>
         <BspGeneratedLocation>C:\Users\Queron\Documents\GitHub\VhdlProjectFiles\Altera_Systems_Labs\EDM_Standard\software\HelloWorldnew_bsp</BspGeneratedLocation>
-        <BspSettingsFile>.\settings.bsp</BspSettingsFile>
+        <BspSettingsFile>C:\Users\Queron\Documents\GitHub\VhdlProjectFiles\Altera_Systems_Labs\EDM_Standard\software\HelloWorldnew_bsp\settings.bsp</BspSettingsFile>
         <SopcDesignFile>C:\Users\Queron\Documents\GitHub\VhdlProjectFiles\Altera_Systems_Labs\EDM_Standard\DE0_SOPC.sopcinfo</SopcDesignFile>
         <JdiFile>default</JdiFile>
         <Cpu>cpu</Cpu>
@@ -905,110 +905,116 @@
                 <attributes/>
         </MemoryMap>
         <MemoryMap>
+                <slaveDescriptor>pio_0</slaveDescriptor>
+                <addressRange>0x000000C0 - 0x000000DF</addressRange>
+                <addressSpan>32</addressSpan>
+                <attributes/>
+        </MemoryMap>
+        <MemoryMap>
                 <slaveDescriptor>leds</slaveDescriptor>
-                <addressRange>0x000000C0 - 0x000000CF</addressRange>
-                <addressSpan>16</addressSpan>
-                <attributes/>
-        </MemoryMap>
-        <MemoryMap>
-                <slaveDescriptor>switches</slaveDescriptor>
-                <addressRange>0x000000D0 - 0x000000DF</addressRange>
-                <addressSpan>16</addressSpan>
-                <attributes/>
-        </MemoryMap>
-        <MemoryMap>
-                <slaveDescriptor>buttons</slaveDescriptor>
                 <addressRange>0x000000E0 - 0x000000EF</addressRange>
                 <addressSpan>16</addressSpan>
                 <attributes/>
         </MemoryMap>
         <MemoryMap>
-                <slaveDescriptor>sd_wp_n</slaveDescriptor>
+                <slaveDescriptor>switches</slaveDescriptor>
                 <addressRange>0x000000F0 - 0x000000FF</addressRange>
                 <addressSpan>16</addressSpan>
                 <attributes/>
         </MemoryMap>
         <MemoryMap>
-                <slaveDescriptor>sd_cmd</slaveDescriptor>
+                <slaveDescriptor>buttons</slaveDescriptor>
                 <addressRange>0x00000100 - 0x0000010F</addressRange>
                 <addressSpan>16</addressSpan>
                 <attributes/>
         </MemoryMap>
         <MemoryMap>
-                <slaveDescriptor>lcd</slaveDescriptor>
+                <slaveDescriptor>sd_wp_n</slaveDescriptor>
                 <addressRange>0x00000110 - 0x0000011F</addressRange>
                 <addressSpan>16</addressSpan>
-                <attributes>printable</attributes>
+                <attributes/>
         </MemoryMap>
         <MemoryMap>
-                <slaveDescriptor>sd_clk</slaveDescriptor>
+                <slaveDescriptor>sd_cmd</slaveDescriptor>
                 <addressRange>0x00000120 - 0x0000012F</addressRange>
                 <addressSpan>16</addressSpan>
                 <attributes/>
         </MemoryMap>
         <MemoryMap>
-                <slaveDescriptor>sd_dat</slaveDescriptor>
+                <slaveDescriptor>lcd</slaveDescriptor>
                 <addressRange>0x00000130 - 0x0000013F</addressRange>
                 <addressSpan>16</addressSpan>
-                <attributes/>
+                <attributes>printable</attributes>
         </MemoryMap>
         <MemoryMap>
-                <slaveDescriptor>lcd_light</slaveDescriptor>
+                <slaveDescriptor>sd_clk</slaveDescriptor>
                 <addressRange>0x00000140 - 0x0000014F</addressRange>
                 <addressSpan>16</addressSpan>
                 <attributes/>
         </MemoryMap>
         <MemoryMap>
-                <slaveDescriptor>seg7</slaveDescriptor>
+                <slaveDescriptor>sd_dat</slaveDescriptor>
                 <addressRange>0x00000150 - 0x0000015F</addressRange>
                 <addressSpan>16</addressSpan>
                 <attributes/>
         </MemoryMap>
         <MemoryMap>
-                <slaveDescriptor>key_out</slaveDescriptor>
+                <slaveDescriptor>lcd_light</slaveDescriptor>
                 <addressRange>0x00000160 - 0x0000016F</addressRange>
                 <addressSpan>16</addressSpan>
                 <attributes/>
         </MemoryMap>
         <MemoryMap>
-                <slaveDescriptor>my_pwm_0</slaveDescriptor>
+                <slaveDescriptor>seg7</slaveDescriptor>
                 <addressRange>0x00000170 - 0x0000017F</addressRange>
                 <addressSpan>16</addressSpan>
                 <attributes/>
         </MemoryMap>
         <MemoryMap>
-                <slaveDescriptor>my_pwm_1</slaveDescriptor>
+                <slaveDescriptor>key_out</slaveDescriptor>
                 <addressRange>0x00000180 - 0x0000018F</addressRange>
                 <addressSpan>16</addressSpan>
                 <attributes/>
         </MemoryMap>
         <MemoryMap>
-                <slaveDescriptor>my_pwm_2</slaveDescriptor>
+                <slaveDescriptor>my_pwm_0</slaveDescriptor>
                 <addressRange>0x00000190 - 0x0000019F</addressRange>
                 <addressSpan>16</addressSpan>
                 <attributes/>
         </MemoryMap>
         <MemoryMap>
-                <slaveDescriptor>my_pwm_3</slaveDescriptor>
+                <slaveDescriptor>my_pwm_1</slaveDescriptor>
                 <addressRange>0x000001A0 - 0x000001AF</addressRange>
                 <addressSpan>16</addressSpan>
                 <attributes/>
         </MemoryMap>
         <MemoryMap>
-                <slaveDescriptor>my_pwm_4</slaveDescriptor>
+                <slaveDescriptor>my_pwm_2</slaveDescriptor>
                 <addressRange>0x000001B0 - 0x000001BF</addressRange>
                 <addressSpan>16</addressSpan>
                 <attributes/>
         </MemoryMap>
         <MemoryMap>
-                <slaveDescriptor>my_pwm_5</slaveDescriptor>
+                <slaveDescriptor>my_pwm_3</slaveDescriptor>
                 <addressRange>0x000001C0 - 0x000001CF</addressRange>
                 <addressSpan>16</addressSpan>
                 <attributes/>
         </MemoryMap>
         <MemoryMap>
+                <slaveDescriptor>my_pwm_4</slaveDescriptor>
+                <addressRange>0x000001D0 - 0x000001DF</addressRange>
+                <addressSpan>16</addressSpan>
+                <attributes/>
+        </MemoryMap>
+        <MemoryMap>
+                <slaveDescriptor>my_pwm_5</slaveDescriptor>
+                <addressRange>0x000001E0 - 0x000001EF</addressRange>
+                <addressSpan>16</addressSpan>
+                <attributes/>
+        </MemoryMap>
+        <MemoryMap>
                 <slaveDescriptor>sysid</slaveDescriptor>
-                <addressRange>0x000001D0 - 0x000001D7</addressRange>
+                <addressRange>0x00000200 - 0x00000207</addressRange>
                 <addressSpan>8</addressSpan>
                 <attributes/>
         </MemoryMap>

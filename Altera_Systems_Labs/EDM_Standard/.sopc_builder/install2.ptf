@@ -1,7 +1,7 @@
 PACKAGE install2 
 {
    # This file informs the Nios II IDE of non-legacy component paths.
-   # Generated 2014.02.13.18:02:29
+   # Generated 2014.02.20.15:09:18
    COMPONENT Altera_UP_SD_Card_Avalon_Interface 
    {
       VERSION 1.0 

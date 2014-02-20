@@ -2,25 +2,25 @@ Altera SOPC Builder Version 11.01 Build 208
 Copyright (c) 1999-2009 Altera Corporation.  All rights reserved.
 
 
-# 2014.02.13 18:03:04 (*) mk_custom_sdk starting
-# 2014.02.13 18:03:04 (*) Reading project /home/netlab/s2hughes/Altera_Systems_Labs/EDM_Standard/DE0_SOPC.ptf.
+# 2014.02.20 15:10:03 (*) mk_custom_sdk starting
+# 2014.02.20 15:10:03 (*) Reading project /home/netlab/s2hughes/Altera_Systems_Labs/EDM_Standard/DE0_SOPC.ptf.
 
-# 2014.02.13 18:03:05 (*) Finding all CPUs
-# 2014.02.13 18:03:05 (*) Finding all available components
-# 2014.02.13 18:03:05 (*) Reading /home/netlab/s2hughes/Altera_Systems_Labs/EDM_Standard/.sopc_builder/install.ptf
+# 2014.02.20 15:10:04 (*) Finding all CPUs
+# 2014.02.20 15:10:04 (*) Finding all available components
+# 2014.02.20 15:10:04 (*) Reading /home/netlab/s2hughes/Altera_Systems_Labs/EDM_Standard/.sopc_builder/install.ptf
 
-# 2014.02.13 18:03:05 (*) Found 63 components
+# 2014.02.20 15:10:04 (*) Found 63 components
 
-# 2014.02.13 18:03:05 (*) Finding all peripherals
+# 2014.02.20 15:10:04 (*) Finding all peripherals
 
-# 2014.02.13 18:03:05 (*) Finding software components
+# 2014.02.20 15:10:04 (*) Finding software components
 
-# 2014.02.13 18:03:06 (*) (Legacy SDK Generation Skipped)
-# 2014.02.13 18:03:06 (*) (All TCL Script Generation Skipped)
-# 2014.02.13 18:03:06 (*) (No Libraries Built)
-# 2014.02.13 18:03:06 (*) (Contents Generation Skipped)
-# 2014.02.13 18:03:06 (*) mk_custom_sdk finishing
-# 2014.02.13 18:03:06 (*) Starting generation for system: DE0_SOPC.
+# 2014.02.20 15:10:05 (*) (Legacy SDK Generation Skipped)
+# 2014.02.20 15:10:05 (*) (All TCL Script Generation Skipped)
+# 2014.02.20 15:10:05 (*) (No Libraries Built)
+# 2014.02.20 15:10:05 (*) (Contents Generation Skipped)
+# 2014.02.20 15:10:05 (*) mk_custom_sdk finishing
+# 2014.02.20 15:10:05 (*) Starting generation for system: DE0_SOPC.
 
 .
 .
@@ -29,106 +29,110 @@ Copyright (c) 1999-2009 Altera Corporation.  All rights reserved.
 .
 .
 .
-.
-......
-.
+..
 .....
-......
+.
+..
+.......
+...
 
-# 2014.02.13 18:03:08 (*) Running Generator Program for cpu
+# 2014.02.20 15:10:06 (*) Running Generator Program for cpu
 
-# 2014.02.13 18:03:08 (*) Starting Nios II generation
-# 2014.02.13 18:03:08 (*)   Checking for plaintext license.
-# 2014.02.13 18:03:09 (*)   Plaintext license not found.
-# 2014.02.13 18:03:09 (*)   Checking for encrypted license (non-evaluation).
-# 2014.02.13 18:03:09 (*)   Encrypted license found.  SOF will not be time-limited.
-# 2014.02.13 18:03:09 (*)   Getting CPU configuration settings
-# 2014.02.13 18:03:09 (*)   Elaborating CPU configuration settings
-# 2014.02.13 18:03:09 (*)   Creating all objects for CPU
-# 2014.02.13 18:03:09 (*)     Testbench
-# 2014.02.13 18:03:09 (*)     Instruction decoding
-# 2014.02.13 18:03:09 (*)       Instruction fields
-# 2014.02.13 18:03:09 (*)       Instruction decodes
-# 2014.02.13 18:03:10 (*)       Signals for RTL simulation waveforms
-# 2014.02.13 18:03:10 (*)       Instruction controls
-# 2014.02.13 18:03:10 (*)     Pipeline frontend
-# 2014.02.13 18:03:10 (*)     Pipeline backend
-# 2014.02.13 18:03:13 (*)   Generating HDL from CPU objects
-# 2014.02.13 18:03:15 (*)   Creating encrypted HDL
-# 2014.02.13 18:03:17 (*) Done Nios II generation
+# 2014.02.20 15:10:07 (*) Starting Nios II generation
+# 2014.02.20 15:10:07 (*)   Checking for plaintext license.
+# 2014.02.20 15:10:08 (*)   Plaintext license not found.
+# 2014.02.20 15:10:08 (*)   Checking for encrypted license (non-evaluation).
+# 2014.02.20 15:10:09 (*)   Encrypted license found.  SOF will not be time-limited.
+# 2014.02.20 15:10:09 (*)   Getting CPU configuration settings
+# 2014.02.20 15:10:09 (*)   Elaborating CPU configuration settings
+# 2014.02.20 15:10:09 (*)   Creating all objects for CPU
+# 2014.02.20 15:10:09 (*)     Testbench
+# 2014.02.20 15:10:09 (*)     Instruction decoding
+# 2014.02.20 15:10:09 (*)       Instruction fields
+# 2014.02.20 15:10:09 (*)       Instruction decodes
+# 2014.02.20 15:10:10 (*)       Signals for RTL simulation waveforms
+# 2014.02.20 15:10:10 (*)       Instruction controls
+# 2014.02.20 15:10:10 (*)     Pipeline frontend
+# 2014.02.20 15:10:10 (*)     Pipeline backend
+# 2014.02.20 15:10:13 (*)   Generating HDL from CPU objects
+# 2014.02.20 15:10:15 (*)   Creating encrypted HDL
+# 2014.02.20 15:10:17 (*) Done Nios II generation
 
-# 2014.02.13 18:03:17 (*) Running Generator Program for jtag_uart
+# 2014.02.20 15:10:17 (*) Running Generator Program for jtag_uart
 
-# 2014.02.13 18:03:18 (*) Running Generator Program for uart
+# 2014.02.20 15:10:18 (*) Running Generator Program for uart
 
-# 2014.02.13 18:03:20 (*) Running Generator Program for onchip_mem
+# 2014.02.20 15:10:20 (*) Running Generator Program for onchip_mem
 
-# 2014.02.13 18:03:21 (*) Running Generator Program for sysid
+# 2014.02.20 15:10:21 (*) Running Generator Program for sysid
 
-# 2014.02.13 18:03:22 (*) Running Generator Program for timer
+# 2014.02.20 15:10:22 (*) Running Generator Program for timer
 
-# 2014.02.13 18:03:23 (*) Running Generator Program for lcd
+# 2014.02.20 15:10:23 (*) Running Generator Program for lcd
 
-# 2014.02.13 18:03:24 (*) Running Generator Program for sd_clk
+# 2014.02.20 15:10:24 (*) Running Generator Program for sd_clk
 
-# 2014.02.13 18:03:25 (*) Running Generator Program for sd_dat
+# 2014.02.20 15:10:25 (*) Running Generator Program for sd_dat
 
-# 2014.02.13 18:03:26 (*) Running Generator Program for sd_cmd
+# 2014.02.20 15:10:26 (*) Running Generator Program for sd_cmd
 
-# 2014.02.13 18:03:27 (*) Running Generator Program for sd_wp_n
+# 2014.02.20 15:10:27 (*) Running Generator Program for sd_wp_n
 
-# 2014.02.13 18:03:28 (*) Running Generator Program for buttons
+# 2014.02.20 15:10:28 (*) Running Generator Program for buttons
 
-# 2014.02.13 18:03:29 (*) Running Generator Program for switches
+# 2014.02.20 15:10:29 (*) Running Generator Program for switches
 
-# 2014.02.13 18:03:30 (*) Running Generator Program for leds
+# 2014.02.20 15:10:30 (*) Running Generator Program for leds
 
-# 2014.02.13 18:03:31 (*) Running Generator Program for cfi_flash
+# 2014.02.20 15:10:31 (*) Running Generator Program for cfi_flash
 
-# 2014.02.13 18:03:32 (*) Running Generator Program for sdram
+# 2014.02.20 15:10:32 (*) Running Generator Program for sdram
 
-# 2014.02.13 18:03:33 (*) Running Generator Program for lcd_light
+# 2014.02.20 15:10:33 (*) Running Generator Program for lcd_light
 
-# 2014.02.13 18:03:34 (*) Running Generator Program for seg7
+# 2014.02.20 15:10:34 (*) Running Generator Program for seg7
 
-# 2014.02.13 18:03:35 (*) Running Generator Program for profile_timer
+# 2014.02.20 15:10:35 (*) Running Generator Program for profile_timer
 
-# 2014.02.13 18:03:36 (*) Running Generator Program for user_timer
+# 2014.02.20 15:10:36 (*) Running Generator Program for user_timer
 
-# 2014.02.13 18:03:37 (*) Running Generator Program for port_a
+# 2014.02.20 15:10:37 (*) Running Generator Program for port_a
 
-# 2014.02.13 18:03:38 (*) Running Generator Program for key_out
+# 2014.02.20 15:10:38 (*) Running Generator Program for key_out
 
-# 2014.02.13 18:03:39 (*) Running Generator Program for DE0_SOPC_clock_0
+# 2014.02.20 15:10:39 (*) Running Generator Program for pio_0
 
-# 2014.02.13 18:03:40 (*) Running Generator Program for DE0_SOPC_clock_1
+# 2014.02.20 15:10:40 (*) Running Generator Program for DE0_SOPC_clock_0
 
-# 2014.02.13 18:03:41 (*) Running Generator Program for DE0_SOPC_clock_2
+# 2014.02.20 15:10:42 (*) Running Generator Program for DE0_SOPC_clock_1
 
-# 2014.02.13 18:03:43 (*) Running Generator Program for clock_crossing_bridge
+# 2014.02.20 15:10:43 (*) Running Generator Program for DE0_SOPC_clock_2
+
+# 2014.02.20 15:10:44 (*) Running Generator Program for clock_crossing_bridge
 
 .
 
 
-# 2014.02.13 18:03:44 (*) Running Test Generator Program for sdram
+# 2014.02.20 15:10:45 (*) Running Test Generator Program for sdram
 
-# 2014.02.13 18:03:44 (*) Making arbitration and system (top) modules.
+# 2014.02.20 15:10:46 (*) Making arbitration and system (top) modules.
 
-# 2014.02.13 18:03:53 (*) Generating Quartus symbol for top level: DE0_SOPC
+# 2014.02.20 15:10:55 (*) Generating Quartus symbol for top level: DE0_SOPC
 
-# 2014.02.13 18:03:53 (*) Symbol /home/netlab/s2hughes/Altera_Systems_Labs/EDM_Standard/DE0_SOPC.bsf already exists, no need to regenerate
-# 2014.02.13 18:03:53 (*) Creating command-line system-generation script: /home/netlab/s2hughes/Altera_Systems_Labs/EDM_Standard/DE0_SOPC_generation_script
+# 2014.02.20 15:10:55 (*) Generating Symbol /home/netlab/s2hughes/Altera_Systems_Labs/EDM_Standard/DE0_SOPC.bsf
 
-# 2014.02.13 18:03:54 (*) Running setup for HDL simulator: modelsim
+# 2014.02.20 15:10:55 (*) Creating command-line system-generation script: /home/netlab/s2hughes/Altera_Systems_Labs/EDM_Standard/DE0_SOPC_generation_script
+
+# 2014.02.20 15:10:56 (*) Running setup for HDL simulator: modelsim
 
 
-# 2014.02.13 18:03:54 (*) Completed generation for system: DE0_SOPC.
-# 2014.02.13 18:03:54 (*) THE FOLLOWING SYSTEM ITEMS HAVE BEEN GENERATED:
+# 2014.02.20 15:10:56 (*) Completed generation for system: DE0_SOPC.
+# 2014.02.20 15:10:56 (*) THE FOLLOWING SYSTEM ITEMS HAVE BEEN GENERATED:
   SOPC Builder database : /home/netlab/s2hughes/Altera_Systems_Labs/EDM_Standard/DE0_SOPC.ptf 
   System HDL Model : /home/netlab/s2hughes/Altera_Systems_Labs/EDM_Standard/DE0_SOPC.v 
   System Generation Script : /home/netlab/s2hughes/Altera_Systems_Labs/EDM_Standard/DE0_SOPC_generation_script 
 
-# 2014.02.13 18:03:54 (*) SUCCESS: SYSTEM GENERATION COMPLETED.
+# 2014.02.20 15:10:56 (*) SUCCESS: SYSTEM GENERATION COMPLETED.
 
 
 Press 'Exit' to exit.

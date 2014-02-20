@@ -31,7 +31,7 @@ int main()
 
   while(1)
   {
-	  if((pwm == 125) || (pwm == 25))
+	  if((pwm == 100) || (pwm == 50))
 		{
 			dir = !dir;
 		}
@@ -45,12 +45,12 @@ int main()
 		  pwm--;
 	  }
 	  //write to the pwm modules
-	  Set_Servo_Position('G', pwm);
-	  Set_Servo_Position('W', 60);
-	  Set_Servo_Position('E', 70);
-	  Set_Servo_Position('S', 80);
-	  Set_Servo_Position('B', 90);
-	  usleep(100000);
+	  Set_Servo_Position('G', 75);
+	  Set_Servo_Position('W', pwm);
+	  Set_Servo_Position('E', pwm);
+	  Set_Servo_Position('S', pwm);
+	  Set_Servo_Position('B', pwm);
+	  usleep(50000);
 	  printf("set to %d\n", pwm);
   }
 
