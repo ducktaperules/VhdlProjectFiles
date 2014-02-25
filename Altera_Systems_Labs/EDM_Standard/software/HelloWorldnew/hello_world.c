@@ -28,6 +28,8 @@ int main()
   printf("initialised\n");
   int pwm = 75;
   int dir = 1;
+  int pwm2 = 150;
+  int dir2 = 1;
 
   while(1)
   {
@@ -44,12 +46,25 @@ int main()
 	  {
 		  pwm--;
 	  }
+	  if((pwm2 == 200) || (pwm2 == 100))
+	  		{
+	  			dir2 = !dir2;
+	  		}
+
+	  if(dir2 == 1)
+	  	  {
+	  		  pwm2++;
+	  	  }
+	  else if(dir2 == 0)
+	  	  {
+	  		  pwm2--;
+	  	  }
 	  //write to the pwm modules
-	  Set_Servo_Position('G', 75);
-	  Set_Servo_Position('W', pwm);
-	  Set_Servo_Position('E', pwm);
-	  Set_Servo_Position('S', pwm);
-	  Set_Servo_Position('B', pwm);
+	  Set_Servo_Position('G', 150);
+	  Set_Servo_Position('W', pwm2);
+	  Set_Servo_Position('E', pwm2);
+	  Set_Servo_Position('S', pwm2);
+	  Set_Servo_Position('B', pwm2);
 	  usleep(50000);
 	  printf("set to %d\n", pwm);
   }
