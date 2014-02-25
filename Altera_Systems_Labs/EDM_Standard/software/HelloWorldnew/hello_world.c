@@ -15,59 +15,63 @@
  */
 
 #include <stdio.h>
+#include <stdlib.h>
+#include <unistd.h> // usleep()
 #include "pwm.h"
+#include "utilities.h"
 
-int main()
-{
+int main() {
 	printf("lololol lolol\n");
-  Initilise_PWM('G');
-  Initilise_PWM('W');
-  Initilise_PWM('E');
-  Initilise_PWM('S');
-  Initilise_PWM('B');
-  printf("initialised\n");
-  int pwm = 75;
-  int dir = 1;
-  int pwm2 = 150;
-  int dir2 = 1;
+	//Initilise_PWM('G');
+	Initilise_PWM('W');
+	//Initilise_PWM('E');
+	//Initilise_PWM('S');
+	//Initilise_PWM('B');
+	printf("initialise\n");
+	int interpolations = 100;
+	int X = 0;
+	int i;
 
-  while(1)
-  {
-	  if((pwm == 100) || (pwm == 50))
-		{
-			dir = !dir;
+	while (1) {
+		for (i = 0; i < interpolations; i++) {
+			X = smoothstep(-45, 45, interpolations, i);
+			printf("%d,%d \n", i, X);
+			Set_Servo_Position('W', X);
+			usleep(10000);
 		}
+		usleep(200000);
+//		for (i = 0; i < interpolations; i++) {
+//			X = smoothstep(-45, 45, interpolations, i);
+//			printf("%d,%d \n", i, X);
+//			Set_Servo_Position('W', X);
+//			usleep(10000);
+//		}
+////		usleep(200000);
 
-	  if(dir == 1)
-	  {
-		  pwm++;
-	  }
-	  else if(dir == 0)
-	  {
-		  pwm--;
-	  }
-	  if((pwm2 == 200) || (pwm2 == 100))
-	  		{
-	  			dir2 = !dir2;
-	  		}
+	}
 
-	  if(dir2 == 1)
-	  	  {
-	  		  pwm2++;
-	  	  }
-	  else if(dir2 == 0)
-	  	  {
-	  		  pwm2--;
-	  	  }
-	  //write to the pwm modules
-	  Set_Servo_Position('G', 150);
-	  Set_Servo_Position('W', pwm2);
-	  Set_Servo_Position('E', pwm2);
-	  Set_Servo_Position('S', pwm2);
-	  Set_Servo_Position('B', pwm2);
-	  usleep(50000);
-	  printf("set to %d\n", pwm);
-  }
-
-  return 0;
+	return 0;
 }
+
+//if((pwm2 == -45) || (pwm2 == 45))
+//	  		{
+//	  			dir2 = !dir2;
+//	  		}
+//
+//	  if(dir2 == 1)
+//	  	  {
+//	  		  pwm2++;
+//	  	  }
+//	  else if(dir2 == 0)
+//	  	  {
+//	  		  pwm2--;
+//	  	  }
+//	  //write to the pwm modules
+//	  Set_Servo_Position('G', 150);
+//	  Set_Servo_Position('W', pwm2);
+//	  Set_Servo_Position('E', pwm2);
+//	  Set_Servo_Position('S', pwm2);
+//	  pwm = Set_Servo_Position('B', pwm2);
+//	  usleep(50000);
+//	  printf("seting to %d ", pwm2);
+//	  printf("mapped to %d \n", pwm);

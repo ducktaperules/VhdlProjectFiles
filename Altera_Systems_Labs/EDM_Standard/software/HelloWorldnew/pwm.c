@@ -3,6 +3,7 @@
 #include "altera_avalon_pio_regs.h"
 #include "alt_types.h"
 #include "pwm.h"
+#include "utilities.h"
 
 /***********************************Initilise PWM Modules*****************************************
  *
@@ -138,27 +139,28 @@ int Set_PWM_Duty_Cycle ( int Channel, int Duty_Cycle)
  **************************************************************************************************/
 int Set_Servo_Position (char Servo, int Position)
 {
+	int pulseWidth = map(Position,-90,90,50,250);
     switch (Servo)
     {
         case 'G' :
-        	Set_PWM_Duty_Cycle(1, Position);
+        	Set_PWM_Duty_Cycle(1, pulseWidth);
             break;
         case 'W' :
-        	Set_PWM_Duty_Cycle(2, Position);
+        	Set_PWM_Duty_Cycle(2, pulseWidth);
             break;
         case 'E' :
-        	Set_PWM_Duty_Cycle(3, Position);
+        	Set_PWM_Duty_Cycle(3, pulseWidth);
             break;
         case 'S' :
-        	Set_PWM_Duty_Cycle(4, Position);
-        	Set_PWM_Duty_Cycle(5, Position);
+        	Set_PWM_Duty_Cycle(4, pulseWidth);
+        	Set_PWM_Duty_Cycle(5, pulseWidth);
             break;
         case 'B' :
-        	Set_PWM_Duty_Cycle(6, Position);
+        	Set_PWM_Duty_Cycle(6, pulseWidth);
             break;
         default :
             //unrecognised channal selected
             return 0;
     }
-    return 1;
+    return pulseWidth;
 }
