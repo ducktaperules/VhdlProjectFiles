@@ -38,11 +38,12 @@ long map(long x, long in_min, long in_max, long out_min, long out_max)
  *
  **************************************************************************************************/
 
-long smoothstep(long startVal, long endVal, long totalItterations, long currentItteration)
+int smoothstep(int startVal, int endVal, int totalItterations, int currentItteration)
 {
 	float v; //temp value for progras through move between 0 and 1
-
+	int v2;
 	v = (float)currentItteration / totalItterations;
 	v = ((v) * (v) * (3 - 2 * (v)));
-	return  (endVal * v) + (startVal * (1 - v));
+	v2 = (int)round(((endVal * v) + (startVal * (1 - v))));
+	return  v2;
 }

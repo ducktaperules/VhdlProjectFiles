@@ -9,6 +9,6 @@
 #define UTILITIES_H_
 
 long map(long x, long in_min, long in_max, long out_min, long out_max);
-long smoothstep(long startVal, long endVal, long totalItterations, long currentItteration);
+int smoothstep(int startVal, int endVal, int totalItterations, int currentItteration);
 
 #endif /* UTILITIES_H_ */

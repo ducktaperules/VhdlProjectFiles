@@ -20,33 +20,52 @@
 #include "pwm.h"
 #include "utilities.h"
 
+
+
 int main() {
-	printf("lololol lolol\n");
+	//printf("lololol lolol\n");
 	//Initilise_PWM('G');
 	Initilise_PWM('W');
 	//Initilise_PWM('E');
 	//Initilise_PWM('S');
 	//Initilise_PWM('B');
-	printf("initialise\n");
-	int interpolations = 100;
+	////printf("initialise\n");
+	//int positions[][] = {1,45,-45,-30,-15};
+	int positions[5][2] = {{ 0, 100 },
+						   { 45, 500 },
+						   { -45, 400 },
+						   { 45, 800 },
+						   { -15, 200 }};
+	int interpolations = 500;
 	int X = 0;
 	int i;
+	int oldPosition = 0;
+	int newPosition = 0;
+	int move = 0;
 
 	while (1) {
+		oldPosition = newPosition;
+		newPosition = positions[move][0];
+		interpolations = positions[move][1];
+		//printf("%d,%d \n", newPosition, interpolations);
+
 		for (i = 0; i < interpolations; i++) {
-			X = smoothstep(-45, 45, interpolations, i);
-			printf("%d,%d \n", i, X);
+			X = smoothstep(oldPosition, newPosition, interpolations, i);
+			printf("%d,%d \n", interpolations, X);
 			Set_Servo_Position('W', X);
-			usleep(10000);
+			usleep(1000);
 		}
-		usleep(200000);
-//		for (i = 0; i < interpolations; i++) {
-//			X = smoothstep(-45, 45, interpolations, i);
-//			printf("%d,%d \n", i, X);
-//			Set_Servo_Position('W', X);
-//			usleep(10000);
-//		}
-////		usleep(200000);
+		usleep(1000000);
+
+		move=move+1;
+		if(move>=5){move=0;}
+		//		for (i = 0; i < interpolations; i++) {
+		//			X = smoothstep(-45, 45, interpolations, i);
+		//			printf("%d,%d \n", i, X);
+		//			Set_Servo_Position('W', X);
+		//			usleep(10000);
+		//		}
+		////		usleep(200000);
 
 	}
 
