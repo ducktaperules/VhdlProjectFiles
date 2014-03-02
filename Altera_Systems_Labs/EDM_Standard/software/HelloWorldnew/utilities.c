@@ -6,35 +6,43 @@
  */
 
 #include "utilities.h"
+#include "math.h"
 
-/***********************************map*****************************************
+/***********************************Map*****************************************
  *
  *  Author      : Queron Williams
  *  Date        : 25/02/2014
- *  Inputs      : Module_To_Initilise specifies which of the PWM modules to start-up
- *  Outputs     : 1 if module successfully initilised
- *                0 if input is out of range
- *
- *  Description : This module runs the start up sequence for whichever PWM module is specified
- *                by the input variable
- *
+ *  Inputs      : x = value to be mapped. inMin = minimum of value to be mapped.
+ *  			  inMax = maximum of value to be mapped. outMin = minimum value of output.
+ *  			  outMax = maximum value of output.
+ *  Outputs     : Value in the output range proportional to the input value
+ *  			  within the input range
+ *  Description : This module allows a value between 2 bounds to be linearly mapped
+ *  			  from one range to another.
  **************************************************************************************************/
 
-long map(long x, long in_min, long in_max, long out_min, long out_max)
+long map(long x, long inMin, long inMax, long outMin, long outMax)
 {
-  return (x - in_min) * (out_max - out_min) / (in_max - in_min) + out_min;
+  return (x - inMin) * (outMax - outMin) / (inMax - inMin) + outMin;
 }
 
 /***********************************smoothstep*****************************************
  *
  *  Author      : Queron Williams
  *  Date        : 25/02/2014
- *  Inputs      : Module_To_Initilise specifies which of the PWM modules to start-up
- *  Outputs     : 1 if module successfully initilised
- *                0 if input is out of range
+ *  Inputs      : startVal = initial value, endVal = final value,
+ *  			  totalItterations = number of steps between input initial and end values,
+ *  			  currentItteration =  how many steps into the move
+ *  Outputs     : Value between initial value and end value calculated using
+ *  			  scalar interpolation
  *
- *  Description : This module runs the start up sequence for whichever PWM module is specified
- *                by the input variable
+ *  Description : Smoothstep is a scalar interpolation function.
+ *  			  The function interpolates smoothly between two input values based
+ *  			  on a third one that should be between the first two, this produces an s-curve
+ *				  The slope of the smoothstep function tends toward zero at both edges.
+ *				  This makes it easy to create a sequence of transitions using smoothstep
+ *				  to interpolate each segment rather than using a more sophisticated or
+ *				  expensive interpolation technique
  *
  **************************************************************************************************/
 

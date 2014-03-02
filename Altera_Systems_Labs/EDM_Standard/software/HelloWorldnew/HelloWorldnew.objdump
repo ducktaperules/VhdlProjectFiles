@@ -31,49 +31,49 @@ Idx Name          Size      VMA       LMA       File off  Algn
                   CONTENTS, READONLY
   7 .debug_aranges 00000ed8  00000000  00000000  00015258  2**3
                   CONTENTS, READONLY, DEBUGGING
-  8 .debug_pubnames 00001aa2  00000000  00000000  00016130  2**0
+  8 .debug_pubnames 00001a9c  00000000  00000000  00016130  2**0
                   CONTENTS, READONLY, DEBUGGING
-  9 .debug_info   0002a264  00000000  00000000  00017bd2  2**0
+  9 .debug_info   0002a300  00000000  00000000  00017bcc  2**0
                   CONTENTS, READONLY, DEBUGGING
- 10 .debug_abbrev 000091bc  00000000  00000000  00041e36  2**0
+ 10 .debug_abbrev 000091de  00000000  00000000  00041ecc  2**0
                   CONTENTS, READONLY, DEBUGGING
- 11 .debug_line   000174cb  00000000  00000000  0004aff2  2**0
+ 11 .debug_line   000175f4  00000000  00000000  0004b0aa  2**0
                   CONTENTS, READONLY, DEBUGGING
- 12 .debug_frame  0000207c  00000000  00000000  000624c0  2**2
+ 12 .debug_frame  0000207c  00000000  00000000  000626a0  2**2
                   CONTENTS, READONLY, DEBUGGING
- 13 .debug_str    00002598  00000000  00000000  0006453c  2**0
+ 13 .debug_str    000025aa  00000000  00000000  0006471c  2**0
                   CONTENTS, READONLY, DEBUGGING
- 14 .debug_loc    0000cc7a  00000000  00000000  00066ad4  2**0
+ 14 .debug_loc    0000cc7a  00000000  00000000  00066cc6  2**0
                   CONTENTS, READONLY, DEBUGGING
- 15 .debug_alt_sim_info 00000050  00000000  00000000  00073750  2**2
+ 15 .debug_alt_sim_info 00000050  00000000  00000000  00073940  2**2
                   CONTENTS, READONLY, DEBUGGING
- 16 .debug_ranges 00000a18  00000000  00000000  000737a0  2**3
+ 16 .debug_ranges 00000a18  00000000  00000000  00073990  2**3
                   CONTENTS, READONLY, DEBUGGING
- 17 .thread_model 00000003  00000000  00000000  00077d3d  2**0
+ 17 .thread_model 00000003  00000000  00000000  00077f27  2**0
                   CONTENTS, READONLY
- 18 .cpu          00000003  00000000  00000000  00077d40  2**0
+ 18 .cpu          00000003  00000000  00000000  00077f2a  2**0
                   CONTENTS, READONLY
- 19 .simulation_enabled 00000001  00000000  00000000  00077d43  2**0
+ 19 .simulation_enabled 00000001  00000000  00000000  00077f2d  2**0
                   CONTENTS, READONLY
- 20 .sysid_hash   00000004  00000000  00000000  00077d44  2**0
+ 20 .sysid_hash   00000004  00000000  00000000  00077f2e  2**0
                   CONTENTS, READONLY
- 21 .sysid_base   00000004  00000000  00000000  00077d48  2**0
+ 21 .sysid_base   00000004  00000000  00000000  00077f32  2**0
                   CONTENTS, READONLY
- 22 .sysid_time   00000004  00000000  00000000  00077d4c  2**0
+ 22 .sysid_time   00000004  00000000  00000000  00077f36  2**0
                   CONTENTS, READONLY
- 23 .stderr_dev   00000009  00000000  00000000  00077d50  2**0
+ 23 .stderr_dev   00000009  00000000  00000000  00077f3a  2**0
                   CONTENTS, READONLY
- 24 .stdin_dev    00000009  00000000  00000000  00077d59  2**0
+ 24 .stdin_dev    00000009  00000000  00000000  00077f43  2**0
                   CONTENTS, READONLY
- 25 .stdout_dev   00000009  00000000  00000000  00077d62  2**0
+ 25 .stdout_dev   00000009  00000000  00000000  00077f4c  2**0
                   CONTENTS, READONLY
- 26 .sopc_system_name 00000008  00000000  00000000  00077d6b  2**0
+ 26 .sopc_system_name 00000008  00000000  00000000  00077f55  2**0
                   CONTENTS, READONLY
- 27 .quartus_project_dir 00000052  00000000  00000000  00077d73  2**0
+ 27 .quartus_project_dir 00000052  00000000  00000000  00077f5d  2**0
                   CONTENTS, READONLY
- 28 .jdi          00004101  00000000  00000000  00077dc5  2**0
+ 28 .jdi          00004101  00000000  00000000  00077faf  2**0
                   CONTENTS, READONLY
- 29 .sopcinfo     000c4d50  00000000  00000000  0007bec6  2**0
+ 29 .sopcinfo     000c4d50  00000000  00000000  0007c0b0  2**0
                   CONTENTS, READONLY
 SYMBOL TABLE:
 02400000 l    d  .entry	00000000 .entry
@@ -365,11 +365,11 @@ SYMBOL TABLE:
 02808000 g       *ABS*	00000000 __alt_mem_onchip_mem
 028080fc g     F .exceptions	000000c8 alt_irq_handler
 01811d18 g     O .rwdata	00000028 alt_dev_null
+0180037c g     F .text	000000f8 setPwmDutyCycle
 01801278 g     F .text	000000c8 __unpack_f
 0180bc90 g     F .text	000000ac alt_set_flash_algorithm_func
 01806c3c g     F .text	00000070 __hi0bits
 01800f88 g     F .text	000000d8 __fixdfsi
-01800474 g     F .text	00000150 Set_Servo_Position
 0180b844 g     F .text	0000003c alt_write_flash_command_8bit_device_8bit_mode
 018131fc g     O .rwdata	00000008 alt_dev_list
 0180ac18 g     F .text	00000120 write
@@ -396,7 +396,6 @@ SYMBOL TABLE:
 0180e754 g     F .text	00000048 altera_avalon_uart_close_fd
 0180d42c g     F .text	00000240 altera_avalon_jtag_uart_write
 0180aea0 g     F .text	0000009c alt_flash_cfi_init
-01800194 g     F .text	000001e8 Initilise_PWM
 018052bc g     F .text	00000004 __sfp_lock_acquire
 01806918 g     F .text	000000e4 memchr
 0180185c g     F .text	00001eac ___vfprintf_internal_r
@@ -440,7 +439,6 @@ SYMBOL TABLE:
 018083c8 g     F .text	00000060 __sread
 01810f10 g     O .rodata	00000010 __thenan_sf
 018107dc g     F .text	00000120 alt_find_file
-0180037c g     F .text	000000f8 Set_PWM_Duty_Cycle
 0180f34c g     F .text	000000b4 alt_dev_llist_insert
 0180a90c g     F .text	00000020 __malloc_lock
 0180ab2c g     F .text	000000bc sbrk
@@ -471,6 +469,7 @@ SYMBOL TABLE:
 01810f20 g     O .rodata	00000014 __thenan_df
 01805524 g     F .text	0000012c _malloc_trim_r
 01810f08 g       *ABS*	00000000 __CTOR_END__
+01800474 g     F .text	00000150 setServoPosition
 01808428 g     F .text	000000bc strcmp
 01810f08 g       *ABS*	00000000 __DTOR_LIST__
 01809c1c g     F .text	00000088 __nedf2
@@ -480,6 +479,7 @@ SYMBOL TABLE:
 01813234 g     O .bss	00000004 _PathLocale
 01810a90 g     F .text	00000014 atexit
 01808558 g     F .text	00000078 _write_r
+01800194 g     F .text	000001e8 initilisePwm
 01806028 g     F .text	0000001c setlocale
 018131dc g     O .rwdata	00000004 _impure_ptr
 01813248 g     O .bss	00000004 alt_argc
@@ -999,11 +999,10 @@ int main() {
  1800050:	df001015 	stw	fp,64(sp)
  1800054:	df001004 	addi	fp,sp,64
 	//printf("lololol lolol\n");
-	//Initilise_PWM('G');
-	Initilise_PWM('W');
+	initilisePwm('W');
  1800058:	010015c4 	movi	r4,87
- 180005c:	18001940 	call	1800194 <Initilise_PWM>
-	//int positions[][] = {1,45,-45,-30,-15};
+ 180005c:	18001940 	call	1800194 <initilisePwm>
+	////printf("initialise\n");
 	int positions[5][2] = {{ 0, 100 },
 						   { 45, 500 },
 						   { -45, 400 },
@@ -1080,10 +1079,10 @@ int main() {
  1800130:	e17ff517 	ldw	r5,-44(fp)
  1800134:	e1bff417 	ldw	r6,-48(fp)
  1800138:	180178c0 	call	180178c <printf>
-			Set_Servo_Position('W', X);
+			setServoPosition('W', X);
  180013c:	010015c4 	movi	r4,87
  1800140:	e17ff417 	ldw	r5,-48(fp)
- 1800144:	18004740 	call	1800474 <Set_Servo_Position>
+ 1800144:	18004740 	call	1800474 <setServoPosition>
 			usleep(1000);
  1800148:	0100fa04 	movi	r4,1000
  180014c:	180abe80 	call	180abe8 <usleep>
@@ -1101,7 +1100,7 @@ int main() {
  1800164:	18bfea16 	blt	r3,r2,1800110 <main+0xc8>
 			X = smoothstep(oldPosition, newPosition, interpolations, i);
 			printf("%d,%d \n", interpolations, X);
-			Set_Servo_Position('W', X);
+			setServoPosition('W', X);
 			usleep(1000);
 		}
 		usleep(1000000);
@@ -1118,32 +1117,29 @@ int main() {
  1800184:	10800150 	cmplti	r2,r2,5
  1800188:	103fcf1e 	bne	r2,zero,18000c8 <main+0x80>
  180018c:	e03ff015 	stw	zero,-64(fp)
-		//			Set_Servo_Position('W', X);
-		//			usleep(10000);
-		//		}
-		////		usleep(200000);
+
 
 	}
  1800190:	003fcd06 	br	18000c8 <main+0x80>
 
-01800194 <Initilise_PWM>:
+01800194 <initilisePwm>:
  *  Description : This module runs the start up sequence for whichever PWM module is specified
  *                by the input variable
  *
  **************************************************************************************************/
-int Initilise_PWM(char Module_To_Initilise)
+int initilisePwm(char moduleToInitilise)
 {
  1800194:	defffd04 	addi	sp,sp,-12
  1800198:	df000215 	stw	fp,8(sp)
  180019c:	df000204 	addi	fp,sp,8
  18001a0:	e13ffe05 	stb	r4,-8(fp)
-    switch (Module_To_Initilise)
+    switch (moduleToInitilise)
  18001a4:	e0bffe07 	ldb	r2,-8(fp)
  18001a8:	10bfef84 	addi	r2,r2,-66
  18001ac:	e0bfff15 	stw	r2,-4(fp)
  18001b0:	e0ffff17 	ldw	r3,-4(fp)
  18001b4:	188005a8 	cmpgeui	r2,r3,22
- 18001b8:	10006b1e 	bne	r2,zero,1800368 <Initilise_PWM+0x1d4>
+ 18001b8:	10006b1e 	bne	r2,zero,1800368 <initilisePwm+0x1d4>
  18001bc:	e13fff17 	ldw	r4,-4(fp)
  18001c0:	e13fff17 	ldw	r4,-4(fp)
  18001c4:	2105883a 	add	r2,r4,r4
@@ -1194,7 +1190,7 @@ int Initilise_PWM(char Module_To_Initilise)
  1800260:	00800044 	movi	r2,1
  1800264:	18800035 	stwio	r2,0(r3)
             break;
- 1800268:	00003f06 	br	1800368 <Initilise_PWM+0x1d4>
+ 1800268:	00003f06 	br	1800368 <initilisePwm+0x1d4>
 
         case 'S' :
             IOWR_ALTERA_AVALON_PWM_CLK_DIV(MY_PWM_3_BASE, 50);
@@ -1231,7 +1227,7 @@ int Initilise_PWM(char Module_To_Initilise)
  18002c4:	00800044 	movi	r2,1
  18002c8:	18800035 	stwio	r2,0(r3)
             break;
- 18002cc:	00002606 	br	1800368 <Initilise_PWM+0x1d4>
+ 18002cc:	00002606 	br	1800368 <initilisePwm+0x1d4>
 
         case 'E' :
             IOWR_ALTERA_AVALON_PWM_CLK_DIV(MY_PWM_2_BASE, 50);
@@ -1251,7 +1247,7 @@ int Initilise_PWM(char Module_To_Initilise)
  18002f8:	00800044 	movi	r2,1
  18002fc:	18800035 	stwio	r2,0(r3)
             break;
- 1800300:	00001906 	br	1800368 <Initilise_PWM+0x1d4>
+ 1800300:	00001906 	br	1800368 <initilisePwm+0x1d4>
 
         case 'W' :
             IOWR_ALTERA_AVALON_PWM_CLK_DIV(MY_PWM_1_BASE, 50);
@@ -1271,7 +1267,7 @@ int Initilise_PWM(char Module_To_Initilise)
  180032c:	00800044 	movi	r2,1
  1800330:	18800035 	stwio	r2,0(r3)
             break;
- 1800334:	00000c06 	br	1800368 <Initilise_PWM+0x1d4>
+ 1800334:	00000c06 	br	1800368 <initilisePwm+0x1d4>
 
         case 'G' :
             IOWR_ALTERA_AVALON_PWM_CLK_DIV(MY_PWM_0_BASE,50);//100
@@ -1303,12 +1299,12 @@ int Initilise_PWM(char Module_To_Initilise)
  1800374:	dec00104 	addi	sp,sp,4
  1800378:	f800283a 	ret
 
-0180037c <Set_PWM_Duty_Cycle>:
+0180037c <setPwmDutyCycle>:
  *
  *  Description : This module updates the duty cycle for the selected PWM module
  *
  **************************************************************************************************/
-int Set_PWM_Duty_Cycle ( int Channel, int Duty_Cycle)
+int setPwmDutyCycle ( int channel, int dutyCycle)
 {
  180037c:	defffb04 	addi	sp,sp,-20
  1800380:	df000415 	stw	fp,16(sp)
@@ -1317,13 +1313,13 @@ int Set_PWM_Duty_Cycle ( int Channel, int Duty_Cycle)
  180038c:	e17ffe15 	stw	r5,-8(fp)
     //get address of PWM Channel
 
-    int Address = 0;
+    int address = 0;
  1800390:	e03ffc15 	stw	zero,-16(fp)
 
-    switch (Channel)
+    switch (channel)
  1800394:	e0bffd17 	ldw	r2,-12(fp)
  1800398:	108001e8 	cmpgeui	r2,r2,7
- 180039c:	1000211e 	bne	r2,zero,1800424 <Set_PWM_Duty_Cycle+0xa8>
+ 180039c:	1000211e 	bne	r2,zero,1800424 <setPwmDutyCycle+0xa8>
  18003a0:	e0bffd17 	ldw	r2,-12(fp)
  18003a4:	1085883a 	add	r2,r2,r2
  18003a8:	1087883a 	add	r3,r2,r2
@@ -1336,71 +1332,71 @@ int Set_PWM_Duty_Cycle ( int Channel, int Duty_Cycle)
  18003c4:	018003dc 	xori	r6,zero,15
  18003c8:	018003e8 	cmpgeui	r6,zero,15
  18003cc:	018003f4 	movhi	r6,15
- 18003d0:	01800400 	call	180040 <__alt_mem_sdram-0x167ffc0>
+ 18003d0:	01800400 	call	180040 <_start-0x167ffc0>
  18003d4:	0180040c 	andi	r6,zero,16
  18003d8:	01800418 	cmpnei	r6,zero,16
     {
         case 1 :
-            Address = MY_PWM_0_BASE;
+            address = MY_PWM_0_BASE;
  18003dc:	00806404 	movi	r2,400
  18003e0:	e0bffc15 	stw	r2,-16(fp)
             break;
- 18003e4:	00001106 	br	180042c <Set_PWM_Duty_Cycle+0xb0>
+ 18003e4:	00001106 	br	180042c <setPwmDutyCycle+0xb0>
         case 2 :
-            Address = MY_PWM_1_BASE;
+            address = MY_PWM_1_BASE;
  18003e8:	00806804 	movi	r2,416
  18003ec:	e0bffc15 	stw	r2,-16(fp)
             break;
- 18003f0:	00000e06 	br	180042c <Set_PWM_Duty_Cycle+0xb0>
+ 18003f0:	00000e06 	br	180042c <setPwmDutyCycle+0xb0>
         case 3 :
-            Address = MY_PWM_2_BASE;
+            address = MY_PWM_2_BASE;
  18003f4:	00806c04 	movi	r2,432
  18003f8:	e0bffc15 	stw	r2,-16(fp)
             break;
- 18003fc:	00000b06 	br	180042c <Set_PWM_Duty_Cycle+0xb0>
+ 18003fc:	00000b06 	br	180042c <setPwmDutyCycle+0xb0>
         case 4 :
-            Address = MY_PWM_3_BASE;
+            address = MY_PWM_3_BASE;
  1800400:	00807004 	movi	r2,448
  1800404:	e0bffc15 	stw	r2,-16(fp)
             break;
- 1800408:	00000806 	br	180042c <Set_PWM_Duty_Cycle+0xb0>
+ 1800408:	00000806 	br	180042c <setPwmDutyCycle+0xb0>
         case 5 :
-            Address = MY_PWM_4_BASE;
+            address = MY_PWM_4_BASE;
  180040c:	00807404 	movi	r2,464
  1800410:	e0bffc15 	stw	r2,-16(fp)
             break;
- 1800414:	00000506 	br	180042c <Set_PWM_Duty_Cycle+0xb0>
+ 1800414:	00000506 	br	180042c <setPwmDutyCycle+0xb0>
         case 6 :
-            Address = MY_PWM_5_BASE;
+            address = MY_PWM_5_BASE;
  1800418:	00807804 	movi	r2,480
  180041c:	e0bffc15 	stw	r2,-16(fp)
             break;
- 1800420:	00000206 	br	180042c <Set_PWM_Duty_Cycle+0xb0>
+ 1800420:	00000206 	br	180042c <setPwmDutyCycle+0xb0>
         default :
             //unrecognised channal selected
             return 0;
  1800424:	e03fff15 	stw	zero,-4(fp)
- 1800428:	00000d06 	br	1800460 <Set_PWM_Duty_Cycle+0xe4>
+ 1800428:	00000d06 	br	1800460 <setPwmDutyCycle+0xe4>
 
     }
 
     //check the desired PWM module is active
-    if(IORD_ALTERA_AVALON_PWM_CONTROL(Address) == 0)
+    if(IORD_ALTERA_AVALON_PWM_CONTROL(address) == 0)
  180042c:	e0bffc17 	ldw	r2,-16(fp)
  1800430:	10800304 	addi	r2,r2,12
  1800434:	10800037 	ldwio	r2,0(r2)
  1800438:	1004c03a 	cmpne	r2,r2,zero
- 180043c:	1000021e 	bne	r2,zero,1800448 <Set_PWM_Duty_Cycle+0xcc>
+ 180043c:	1000021e 	bne	r2,zero,1800448 <setPwmDutyCycle+0xcc>
     {
         return 0;
  1800440:	e03fff15 	stw	zero,-4(fp)
- 1800444:	00000606 	br	1800460 <Set_PWM_Duty_Cycle+0xe4>
+ 1800444:	00000606 	br	1800460 <setPwmDutyCycle+0xe4>
 
     //check duty cycle is within bounds (0-100)
     //if(Duty_Cycle > 125) Duty_Cycle = 125;
     //if(Duty_Cycle < 25) Duty_Cycle = 0;
     //set the channel to the desired Duty Cycle
-    IOWR_ALTERA_AVALON_PWM_DUTY(Address, Duty_Cycle);
+    IOWR_ALTERA_AVALON_PWM_DUTY(address, dutyCycle);
  1800448:	e0bffc17 	ldw	r2,-16(fp)
  180044c:	1007883a 	mov	r3,r2
  1800450:	e0bffe17 	ldw	r2,-8(fp)
@@ -1416,12 +1412,12 @@ int Set_PWM_Duty_Cycle ( int Channel, int Duty_Cycle)
  180046c:	dec00104 	addi	sp,sp,4
  1800470:	f800283a 	ret
 
-01800474 <Set_Servo_Position>:
- *
- *  Description : This module updates the duty cycle for the selected PWM module
+01800474 <setServoPosition>:
+ *  Description : This module converts an input angle to a pulse width and passes it
+ *  			  to the corresponding PWM module
  *
  **************************************************************************************************/
-int Set_Servo_Position (char Servo, int Position)
+int setServoPosition (char servo, int position)
 {
  1800474:	defff804 	addi	sp,sp,-32
  1800478:	dfc00715 	stw	ra,28(sp)
@@ -1429,7 +1425,7 @@ int Set_Servo_Position (char Servo, int Position)
  1800480:	df000604 	addi	fp,sp,24
  1800484:	e17ffd15 	stw	r5,-12(fp)
  1800488:	e13ffc05 	stb	r4,-16(fp)
-	int pulseWidth = map(Position,-90,90,50,250);
+	int pulseWidth = map(position,-90,90,50,250);
  180048c:	00803e84 	movi	r2,250
  1800490:	d8800015 	stw	r2,0(sp)
  1800494:	e13ffd17 	ldw	r4,-12(fp)
@@ -1438,13 +1434,13 @@ int Set_Servo_Position (char Servo, int Position)
  18004a0:	01c00c84 	movi	r7,50
  18004a4:	18005c40 	call	18005c4 <map>
  18004a8:	e0bffb15 	stw	r2,-20(fp)
-    switch (Servo)
+    switch (servo)
  18004ac:	e0bffc07 	ldb	r2,-16(fp)
  18004b0:	10bfef84 	addi	r2,r2,-66
  18004b4:	e0bfff15 	stw	r2,-4(fp)
  18004b8:	e0ffff17 	ldw	r3,-4(fp)
  18004bc:	188005a8 	cmpgeui	r2,r3,22
- 18004c0:	1000361e 	bne	r2,zero,180059c <Set_Servo_Position+0x128>
+ 18004c0:	1000361e 	bne	r2,zero,180059c <setServoPosition+0x128>
  18004c4:	e13fff17 	ldw	r4,-4(fp)
  18004c8:	e13fff17 	ldw	r4,-4(fp)
  18004cc:	2105883a 	add	r2,r4,r4
@@ -1459,7 +1455,7 @@ int Set_Servo_Position (char Servo, int Position)
  18004f0:	0180059c 	xori	r6,zero,22
  18004f4:	01800560 	cmpeqi	r6,zero,21
  18004f8:	0180059c 	xori	r6,zero,22
- 18004fc:	01800540 	call	180054 <__alt_mem_sdram-0x167ffac>
+ 18004fc:	01800540 	call	180054 <_start-0x167ffac>
  1800500:	0180059c 	xori	r6,zero,22
  1800504:	0180059c 	xori	r6,zero,22
  1800508:	0180059c 	xori	r6,zero,22
@@ -1478,49 +1474,49 @@ int Set_Servo_Position (char Servo, int Position)
  180053c:	01800550 	cmplti	r6,zero,21
     {
         case 'G' :
-        	Set_PWM_Duty_Cycle(1, pulseWidth);
+        	setPwmDutyCycle(1, pulseWidth);
  1800540:	01000044 	movi	r4,1
  1800544:	e17ffb17 	ldw	r5,-20(fp)
- 1800548:	180037c0 	call	180037c <Set_PWM_Duty_Cycle>
+ 1800548:	180037c0 	call	180037c <setPwmDutyCycle>
             break;
- 180054c:	00001506 	br	18005a4 <Set_Servo_Position+0x130>
+ 180054c:	00001506 	br	18005a4 <setServoPosition+0x130>
         case 'W' :
-        	Set_PWM_Duty_Cycle(2, pulseWidth);
+        	setPwmDutyCycle(2, pulseWidth);
  1800550:	01000084 	movi	r4,2
  1800554:	e17ffb17 	ldw	r5,-20(fp)
- 1800558:	180037c0 	call	180037c <Set_PWM_Duty_Cycle>
+ 1800558:	180037c0 	call	180037c <setPwmDutyCycle>
             break;
- 180055c:	00001106 	br	18005a4 <Set_Servo_Position+0x130>
+ 180055c:	00001106 	br	18005a4 <setServoPosition+0x130>
         case 'E' :
-        	Set_PWM_Duty_Cycle(3, pulseWidth);
+        	setPwmDutyCycle(3, pulseWidth);
  1800560:	010000c4 	movi	r4,3
  1800564:	e17ffb17 	ldw	r5,-20(fp)
- 1800568:	180037c0 	call	180037c <Set_PWM_Duty_Cycle>
+ 1800568:	180037c0 	call	180037c <setPwmDutyCycle>
             break;
- 180056c:	00000d06 	br	18005a4 <Set_Servo_Position+0x130>
+ 180056c:	00000d06 	br	18005a4 <setServoPosition+0x130>
         case 'S' :
-        	Set_PWM_Duty_Cycle(4, pulseWidth);
+        	setPwmDutyCycle(4, pulseWidth);
  1800570:	01000104 	movi	r4,4
  1800574:	e17ffb17 	ldw	r5,-20(fp)
- 1800578:	180037c0 	call	180037c <Set_PWM_Duty_Cycle>
-        	Set_PWM_Duty_Cycle(5, pulseWidth);
+ 1800578:	180037c0 	call	180037c <setPwmDutyCycle>
+        	setPwmDutyCycle(5, pulseWidth);
  180057c:	01000144 	movi	r4,5
  1800580:	e17ffb17 	ldw	r5,-20(fp)
- 1800584:	180037c0 	call	180037c <Set_PWM_Duty_Cycle>
+ 1800584:	180037c0 	call	180037c <setPwmDutyCycle>
             break;
- 1800588:	00000606 	br	18005a4 <Set_Servo_Position+0x130>
+ 1800588:	00000606 	br	18005a4 <setServoPosition+0x130>
         case 'B' :
-        	Set_PWM_Duty_Cycle(6, pulseWidth);
+        	setPwmDutyCycle(6, pulseWidth);
  180058c:	01000184 	movi	r4,6
  1800590:	e17ffb17 	ldw	r5,-20(fp)
- 1800594:	180037c0 	call	180037c <Set_PWM_Duty_Cycle>
+ 1800594:	180037c0 	call	180037c <setPwmDutyCycle>
             break;
- 1800598:	00000206 	br	18005a4 <Set_Servo_Position+0x130>
+ 1800598:	00000206 	br	18005a4 <setServoPosition+0x130>
         default :
             //unrecognised channal selected
             return 0;
  180059c:	e03ffe15 	stw	zero,-8(fp)
- 18005a0:	00000206 	br	18005ac <Set_Servo_Position+0x138>
+ 18005a0:	00000206 	br	18005ac <setServoPosition+0x138>
     }
     return pulseWidth;
  18005a4:	e0bffb17 	ldw	r2,-20(fp)
@@ -1534,11 +1530,11 @@ int Set_Servo_Position (char Servo, int Position)
  18005c0:	f800283a 	ret
 
 018005c4 <map>:
- *                by the input variable
- *
+ *  Description : This module allows a value between 2 bounds to be linearly mapped
+ *  			  from one range to another.
  **************************************************************************************************/
 
-long map(long x, long in_min, long in_max, long out_min, long out_max)
+long map(long x, long inMin, long inMax, long outMin, long outMax)
 {
  18005c4:	defffb04 	addi	sp,sp,-20
  18005c8:	df000415 	stw	fp,16(sp)
@@ -1547,7 +1543,7 @@ long map(long x, long in_min, long in_max, long out_min, long out_max)
  18005d4:	e17ffd15 	stw	r5,-12(fp)
  18005d8:	e1bffe15 	stw	r6,-8(fp)
  18005dc:	e1ffff15 	stw	r7,-4(fp)
-  return (x - in_min) * (out_max - out_min) / (in_max - in_min) + out_min;
+  return (x - inMin) * (outMax - outMin) / (inMax - inMin) + outMin;
  18005e0:	e0fffc17 	ldw	r3,-16(fp)
  18005e4:	e0bffd17 	ldw	r2,-12(fp)
  18005e8:	1889c83a 	sub	r4,r3,r2
@@ -1568,7 +1564,7 @@ long map(long x, long in_min, long in_max, long out_min, long out_max)
  1800620:	f800283a 	ret
 
 01800624 <smoothstep>:
- *                by the input variable
+ *				  expensive interpolation technique
  *
  **************************************************************************************************/
 
@@ -2923,7 +2919,7 @@ int smoothstep(int startVal, int endVal, int totalItterations, int currentIttera
  1801a80:	10c5883a 	add	r2,r2,r3
  1801a84:	11000017 	ldw	r4,0(r2)
  1801a88:	2000683a 	jmp	r4
- 1801a8c:	01802a00 	call	1802a0 <__alt_mem_sdram-0x167fd60>
+ 1801a8c:	01802a00 	call	1802a0 <_start-0x167fd60>
  1801a90:	01801bf0 	cmpltui	r6,zero,111
  1801a94:	01801bf0 	cmpltui	r6,zero,111
  1801a98:	018029ec 	andhi	r6,zero,167
@@ -23036,7 +23032,7 @@ int alt_exception_cause_generated_bad_addr(alt_exception_cause cause)
  1810e08:	20000726 	beq	r4,zero,1810e28 <__call_exitprocs+0x1a0>
  1810e0c:	b9000015 	stw	r4,0(r23)
  1810e10:	8809883a 	mov	r4,r17
- 1810e14:	00000000 	call	0 <__alt_mem_sdram-0x1800000>
+ 1810e14:	00000000 	call	0 <_start-0x1800000>
  1810e18:	bc400017 	ldw	r17,0(r23)
  1810e1c:	883fb71e 	bne	r17,zero,1810cfc <__call_exitprocs+0x74>
  1810e20:	003fc506 	br	1810d38 <__call_exitprocs+0xb0>
@@ -23110,9 +23106,9 @@ void ALT_EXIT (int exit_code)
   while (1);
  1810e94:	003fff06 	br	1810e94 <_exit+0x1c>
  1810e98:	00000010 	cmplti	zero,zero,0
- 1810e9c:	00000000 	call	0 <__alt_mem_sdram-0x1800000>
- 1810ea0:	00527a01 	jmpi	527a0 <__alt_mem_sdram-0x17ad860>
- 1810ea4:	011f7c01 	jmpi	11f7c0 <__alt_mem_sdram-0x16e0840>
+ 1810e9c:	00000000 	call	0 <_start-0x1800000>
+ 1810ea0:	00527a01 	jmpi	527a0 <_start-0x17ad860>
+ 1810ea4:	011f7c01 	jmpi	11f7c0 <_start-0x16e0840>
  1810ea8:	001b0c0b 	ldhu	zero,27696(zero)
  1810eac:	00000028 	cmpgeui	zero,zero,0
  1810eb0:	00000018 	cmpnei	zero,zero,0

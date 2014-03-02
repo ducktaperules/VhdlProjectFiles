@@ -10,11 +10,11 @@
 #define IORD_ALTERA_AVALON_PWM_CONTROL(base)           IORD(base, 3)
 #define IOWR_ALTERA_AVALON_PWM_CONTROL(base, data)     IOWR(base, 3, data)
 
-int Initilise_PWM(char Module_To_Initilise);
+int InitilisePwm(char moduleToInitilise);
 
-int Set_PWM_Duty_Cycle ( int Channel, int Duty_Cycle);
+int setPwmDutyCycle ( int channel, int dutyCycle);
 
-int Set_Servo_Position ( char Servo, int Position);
+int setServoPosition ( char servo, int position);
 
 #endif /*PWM_H_*/
 

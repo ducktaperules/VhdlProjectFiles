@@ -24,13 +24,8 @@
 
 int main() {
 	//printf("lololol lolol\n");
-	//Initilise_PWM('G');
-	Initilise_PWM('W');
-	//Initilise_PWM('E');
-	//Initilise_PWM('S');
-	//Initilise_PWM('B');
+	initilisePwm('W');
 	////printf("initialise\n");
-	//int positions[][] = {1,45,-45,-30,-15};
 	int positions[5][2] = {{ 0, 100 },
 						   { 45, 500 },
 						   { -45, 400 },
@@ -52,45 +47,16 @@ int main() {
 		for (i = 0; i < interpolations; i++) {
 			X = smoothstep(oldPosition, newPosition, interpolations, i);
 			printf("%d,%d \n", interpolations, X);
-			Set_Servo_Position('W', X);
+			setServoPosition('W', X);
 			usleep(1000);
 		}
 		usleep(1000000);
 
 		move=move+1;
 		if(move>=5){move=0;}
-		//		for (i = 0; i < interpolations; i++) {
-		//			X = smoothstep(-45, 45, interpolations, i);
-		//			printf("%d,%d \n", i, X);
-		//			Set_Servo_Position('W', X);
-		//			usleep(10000);
-		//		}
-		////		usleep(200000);
+
 
 	}
 
 	return 0;
 }
-
-//if((pwm2 == -45) || (pwm2 == 45))
-//	  		{
-//	  			dir2 = !dir2;
-//	  		}
-//
-//	  if(dir2 == 1)
-//	  	  {
-//	  		  pwm2++;
-//	  	  }
-//	  else if(dir2 == 0)
-//	  	  {
-//	  		  pwm2--;
-//	  	  }
-//	  //write to the pwm modules
-//	  Set_Servo_Position('G', 150);
-//	  Set_Servo_Position('W', pwm2);
-//	  Set_Servo_Position('E', pwm2);
-//	  Set_Servo_Position('S', pwm2);
-//	  pwm = Set_Servo_Position('B', pwm2);
-//	  usleep(50000);
-//	  printf("seting to %d ", pwm2);
-//	  printf("mapped to %d \n", pwm);

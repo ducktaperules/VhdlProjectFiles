@@ -7,7 +7,7 @@
 
 /***********************************Initilise PWM Modules*****************************************
  *
- *  Author      : Sam Hughes
+ *  Author      : Sam Hughes, Queron Williams
  *  Date        : 11/02/2014
  *  Inputs      : Module_To_Initilise specifies which of the PWM modules to start-up
  *  Outputs     : 1 if module successfully initilised
@@ -17,9 +17,9 @@
  *                by the input variable
  *
  **************************************************************************************************/
-int Initilise_PWM(char Module_To_Initilise)
+int initilisePwm(char moduleToInitilise)
 {
-    switch (Module_To_Initilise)
+    switch (moduleToInitilise)
     {
         case 'B' :
             IOWR_ALTERA_AVALON_PWM_CLK_DIV(MY_PWM_5_BASE, 50);
@@ -67,9 +67,9 @@ int Initilise_PWM(char Module_To_Initilise)
     }
     return 1;
 }
-/***********************************Initialise PWM Modules*****************************************
+/***********************************Set PWM Duty Cycle*****************************************
  *
- *  Author      : Sam Hughes
+ *  Author      : Sam Hughes, Queron Williams
  *  Date        : 11/02/2014
  *  Inputs      : Channel selects which of the six PWM modules should be updated
  *                Duty_Cycle the value that the PWM will be updated to
@@ -79,31 +79,31 @@ int Initilise_PWM(char Module_To_Initilise)
  *  Description : This module updates the duty cycle for the selected PWM module
  *
  **************************************************************************************************/
-int Set_PWM_Duty_Cycle ( int Channel, int Duty_Cycle)
+int setPwmDutyCycle ( int channel, int dutyCycle)
 {
     //get address of PWM Channel
 
-    int Address = 0;
+    int address = 0;
 
-    switch (Channel)
+    switch (channel)
     {
         case 1 :
-            Address = MY_PWM_0_BASE;
+            address = MY_PWM_0_BASE;
             break;
         case 2 :
-            Address = MY_PWM_1_BASE;
+            address = MY_PWM_1_BASE;
             break;
         case 3 :
-            Address = MY_PWM_2_BASE;
+            address = MY_PWM_2_BASE;
             break;
         case 4 :
-            Address = MY_PWM_3_BASE;
+            address = MY_PWM_3_BASE;
             break;
         case 5 :
-            Address = MY_PWM_4_BASE;
+            address = MY_PWM_4_BASE;
             break;
         case 6 :
-            Address = MY_PWM_5_BASE;
+            address = MY_PWM_5_BASE;
             break;
         default :
             //unrecognised channal selected
@@ -112,7 +112,7 @@ int Set_PWM_Duty_Cycle ( int Channel, int Duty_Cycle)
     }
 
     //check the desired PWM module is active
-    if(IORD_ALTERA_AVALON_PWM_CONTROL(Address) == 0)
+    if(IORD_ALTERA_AVALON_PWM_CONTROL(address) == 0)
     {
         return 0;
     }
@@ -121,42 +121,42 @@ int Set_PWM_Duty_Cycle ( int Channel, int Duty_Cycle)
     //if(Duty_Cycle > 125) Duty_Cycle = 125;
     //if(Duty_Cycle < 25) Duty_Cycle = 0;
     //set the channel to the desired Duty Cycle
-    IOWR_ALTERA_AVALON_PWM_DUTY(Address, Duty_Cycle);
+    IOWR_ALTERA_AVALON_PWM_DUTY(address, dutyCycle);
 
     return 1;
 }
-/***********************************Initialise PWM Modules*****************************************
+/***********************************Set Servo Position*****************************************
  *
- *  Author      : Sam Hughes
+ *  Author      : Queron Williams
  *  Date        : 11/02/2014
  *  Inputs      : Channel selects which of the six PWM modules should be updated
  *                Duty_Cycle the value that the PWM will be updated to
- *  Outputs     : 1 if module successfully updated
- *                0 if unknown PWM module or selected module has not been initilised
- *
- *  Description : This module updates the duty cycle for the selected PWM module
+ *  Outputs     : Calculated pulse width which was sent to the servo,
+ *  			  0 if unknown servo is updated
+ *  Description : This module converts an input angle to a pulse width and passes it
+ *  			  to the corresponding PWM module
  *
  **************************************************************************************************/
-int Set_Servo_Position (char Servo, int Position)
+int setServoPosition (char servo, int position)
 {
-	int pulseWidth = map(Position,-90,90,50,250);
-    switch (Servo)
+	int pulseWidth = map(position,-90,90,50,250);
+    switch (servo)
     {
         case 'G' :
-        	Set_PWM_Duty_Cycle(1, pulseWidth);
+        	setPwmDutyCycle(1, pulseWidth);
             break;
         case 'W' :
-        	Set_PWM_Duty_Cycle(2, pulseWidth);
+        	setPwmDutyCycle(2, pulseWidth);
             break;
         case 'E' :
-        	Set_PWM_Duty_Cycle(3, pulseWidth);
+        	setPwmDutyCycle(3, pulseWidth);
             break;
         case 'S' :
-        	Set_PWM_Duty_Cycle(4, pulseWidth);
-        	Set_PWM_Duty_Cycle(5, pulseWidth);
+        	setPwmDutyCycle(4, pulseWidth);
+        	setPwmDutyCycle(5, pulseWidth);
             break;
         case 'B' :
-        	Set_PWM_Duty_Cycle(6, pulseWidth);
+        	setPwmDutyCycle(6, pulseWidth);
             break;
         default :
             //unrecognised channal selected
