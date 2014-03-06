@@ -13,14 +13,14 @@
 #include "math.h"
 
 // length (l) only has 4 values but for compatibility with DH standard they start at index 1
-float *IK(float l[5], float phi, float target[3], float solution[4])
+float *IK(float l[5], float phi, float target[4], float solution[4])
 {
 
 	float deg2rad = (float) M_PI/180;
 	float rad2deg = (float) 180/M_PI;
 
 //	printf("deg2rad: %f\n",deg2rad); //this print is needed to make the code work. no idea why.
-	printf("rad2deg: %f\n",rad2deg);
+//	printf("rad2deg: %f\n",rad2deg);
 
     float t1 = (float) atan2(target[1],target[0])*rad2deg; // theta 1
     float z = (float) target[2]-(l[4]*sin(phi*deg2rad))-l[1];
@@ -41,15 +41,20 @@ float *IK(float l[5], float phi, float target[3], float solution[4])
     float t4b = (float) phi-(t2b+t3b)-90;
 
 
-	printf("t1: %f\n",t1);
-	printf("t2: %f\n",t2a);
-	printf("t3: %f\n",t3a);
-	printf("t4: %f\n",t4a);
+//	printf("t1: %f\n",t1);
+//	printf("t2: %f\n",t2a);
+//	printf("t3: %f\n",t3a);
+//	printf("t4: %f\n",t4a);
 
-    solution[0] = t1;
-    solution[1] = t2a;
-    solution[2] = t3a;
-    solution[3] = t4a;
+    solution[0] = t1-90;
+    solution[1] = -t2b+90;
+    solution[2] = +90+t3b;
+    solution[3] = -t4b-90;
+//    printf("t1: %f\n",solution[0]);
+//    solution[0] = t1;
+//    solution[1] = t2a-90;
+//    solution[2] = 90-t3a;
+//    solution[3] = t4a+279;
 
 	return solution;
 }

@@ -142,9 +142,7 @@ ACDS_VERSION := 12.0sp2
 ELF := HelloWorldnew.elf
 
 # Paths to C, C++, and assembly source files.
-C_SRCS += hello_world.c
-C_SRCS += pwm.c
-C_SRCS += utilities.c
+C_SRCS := hello_world.c
 CXX_SRCS :=
 ASM_SRCS :=
 

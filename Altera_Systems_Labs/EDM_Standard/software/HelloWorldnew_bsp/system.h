@@ -4,7 +4,7 @@
  * Machine generated for CPU 'cpu' in SOPC Builder design 'DE0_SOPC'
  * SOPC Builder design path: C:/Users/Queron/Documents/GitHub/VhdlProjectFiles/Altera_Systems_Labs/EDM_Standard/DE0_SOPC.sopcinfo
  *
- * Generated: Tue Feb 25 14:09:12 GMT 2014
+ * Generated: Tue Mar 04 10:20:44 GMT 2014
  */
 
 /*
@@ -259,8 +259,8 @@
 
 #define ALT_INCLUDE_INSTRUCTION_RELATED_EXCEPTION_API
 #define ALT_MAX_FD 32
-#define ALT_SYS_CLK PROFILE_TIMER
-#define ALT_TIMESTAMP_CLK none
+#define ALT_SYS_CLK TIMER
+#define ALT_TIMESTAMP_CLK PROFILE_TIMER
 
 
 /*

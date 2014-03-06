@@ -3,7 +3,7 @@
 # Machine generated for CPU 'cpu' in SOPC Builder design 'DE0_SOPC'
 # SOPC Builder design path: C:/Users/Queron/Documents/GitHub/VhdlProjectFiles/Altera_Systems_Labs/EDM_Standard/DE0_SOPC.sopcinfo
 #
-# Generated: Tue Feb 18 15:00:13 GMT 2014
+# Generated: Sun Mar 02 20:23:23 GMT 2014
 
 # DO NOT MODIFY THIS FILE
 #
