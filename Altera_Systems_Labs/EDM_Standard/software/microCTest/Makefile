@@ -146,6 +146,8 @@ C_SRCS += hello_ucosii.c
 C_SRCS += IK.c
 C_SRCS += pwm.c
 C_SRCS += utilities.c
+C_SRCS += keypad.c
+C_SRCS += lcd.c
 CXX_SRCS :=
 ASM_SRCS :=
 

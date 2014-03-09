@@ -2,8 +2,8 @@
 <sch:Settings xmlns:sch="http://www.altera.com/embeddedsw/bsp/schema">
         <BspType>ucosii</BspType>
         <BspVersion>default</BspVersion>
-        <BspGeneratedTimeStamp>Mar 4, 2014 12:38:41 PM</BspGeneratedTimeStamp>
-        <BspGeneratedUnixTimeStamp>1393936721208</BspGeneratedUnixTimeStamp>
+        <BspGeneratedTimeStamp>09-Mar-2014 18:45:19</BspGeneratedTimeStamp>
+        <BspGeneratedUnixTimeStamp>1394390719300</BspGeneratedUnixTimeStamp>
         <BspGeneratedLocation>C:\Users\Queron\Documents\GitHub\VhdlProjectFiles\Altera_Systems_Labs\EDM_Standard\software\microCTest_bsp</BspGeneratedLocation>
         <BspSettingsFile>settings.bsp</BspSettingsFile>
         <SopcDesignFile>C:\Users\Queron\Documents\GitHub\VhdlProjectFiles\Altera_Systems_Labs\EDM_Standard\DE0_SOPC.sopcinfo</SopcDesignFile>

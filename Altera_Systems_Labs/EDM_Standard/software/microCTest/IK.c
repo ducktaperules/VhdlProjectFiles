@@ -13,9 +13,9 @@
 #include "math.h"
 
 // length (l) only has 4 values but for compatibility with DH standard they start at index 1
-float *IK(float l[5], float phi, float target[4], float solution[4])
+float *IK(float l[5], float target[4], float solution[4])
 {
-
+	float phi = target[3];
 	float deg2rad = (float) M_PI/180;
 	float rad2deg = (float) 180/M_PI;
 

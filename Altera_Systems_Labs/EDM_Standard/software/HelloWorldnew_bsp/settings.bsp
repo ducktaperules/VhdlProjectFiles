@@ -2,8 +2,8 @@
 <sch:Settings xmlns:sch="http://www.altera.com/embeddedsw/bsp/schema">
         <BspType>hal</BspType>
         <BspVersion>default</BspVersion>
-        <BspGeneratedTimeStamp>Mar 4, 2014 10:20:42 AM</BspGeneratedTimeStamp>
-        <BspGeneratedUnixTimeStamp>1393928442247</BspGeneratedUnixTimeStamp>
+        <BspGeneratedTimeStamp>09-Mar-2014 18:45:04</BspGeneratedTimeStamp>
+        <BspGeneratedUnixTimeStamp>1394390704552</BspGeneratedUnixTimeStamp>
         <BspGeneratedLocation>C:\Users\Queron\Documents\GitHub\VhdlProjectFiles\Altera_Systems_Labs\EDM_Standard\software\HelloWorldnew_bsp</BspGeneratedLocation>
         <BspSettingsFile>settings.bsp</BspSettingsFile>
         <SopcDesignFile>C:\Users\Queron\Documents\GitHub\VhdlProjectFiles\Altera_Systems_Labs\EDM_Standard\DE0_SOPC.sopcinfo</SopcDesignFile>

@@ -33,24 +33,26 @@
 #include <stdlib.h>
 #include <unistd.h> // usleep()
 #include "pwm.h"
+#include "lcd.h"
+#include "keypad.h"
 #include "utilities.h"
 #include "IK.h"
 
 /* Definition of Task Stacks */
 #define   TASK_STACKSIZE       2048
 OS_STK    task1_stk[TASK_STACKSIZE];
-OS_STK    task2_stk[TASK_STACKSIZE];
+OS_STK    filterOut_stk[TASK_STACKSIZE];
+OS_STK    keypadCheck_stk[TASK_STACKSIZE];
 
 /* Definition of Task Priorities */
 
-#define TASK1_PRIORITY      2
-#define TASK2_PRIORITY      1
+#define TASK1_PRIORITY      3
+#define KEYPADCHECK_PRIORITY      2
+#define FILTEROUT_PRIORITY      1
 
-/* Definition of  que size */
-
-#define queueSize 32
-
+/* Global varables go here */
 float solution2[3];
+
 /* Prints "Hello World" and sleeps for three seconds */
 void task1(void* pdata)
 {
@@ -60,7 +62,7 @@ void task1(void* pdata)
 	initilisePwm('s');
 	initilisePwm('B');
 	////printf("initialise\n");
-	int IKMode = 1; //to enable IK mode
+	int Mode = 2; //1to enable IK mode, 2 to enable keypad
 	float lengths[5]; //in cm
 				lengths[0] = 0;
 				lengths[1] = 40;
@@ -93,7 +95,7 @@ void task1(void* pdata)
 	int move = 0;
 
 	while (1) {
-		if(IKMode==1)
+		if(Mode==1)
 		{
 			for (i = 0; i < 5; i++)
 			{
@@ -111,7 +113,7 @@ void task1(void* pdata)
 				}
 
 				float buf[4];
-				float *solution = IK(lengths,target[3],target,buf);
+				float *solution = IK(lengths,target,buf);
 //
 //				setServoPosition('B', solution[0]);
 //				setServoPosition('S', solution[1]);
@@ -123,10 +125,34 @@ void task1(void* pdata)
 			if(move>=noOfPositions){move=0;}
 			printf("here %d \n",move);
 		}
+		if(Mode==2)
+		{
+			if ( button[PRESSED] == 1 ) {
+				if ( button[SHIFT] == 0 ) {
+					if ( button[UP] == 1 ) {newPosition3d[1]-=10;}
+					if ( button[DOWN] == 1 ) {newPosition3d[1]+=10;}
+					if ( button[LEFT] == 1 ) {newPosition3d[0]+=10;}
+					if ( button[RIGHT] == 1 ) {newPosition3d[0]-=10;}
+					if ( button[UPLEFT] == 1 ) {newPosition3d[2]-=10;}
+					if ( button[UPRIGHT] == 1 ) {newPosition3d[2]+=10;}
+					if ( button[DOWNLEFT] == 1 ) {newPosition3d[3]+=1;}
+					if ( button[DOWNRIGHT] == 1 ) {newPosition3d[3]-=1;}
+				}else if ( button[SHIFT] == 1 ) {
+
+				}
+			}
+			for (j = 0; j < 4; j++)
+			{
+				target[j] = newPosition3d[j];
+			}
+			float buf[4];
+			float *solution = IK(lengths,target,buf);
+			OSTimeDlyHMSM(0, 0, 0, 100);
+		}
 	}
 }
-/* Prints "Hello World" and sleeps for three seconds */
-void task2(void* pdata)
+/* Task that runs in background smoothing pwm outputs to arm. */
+void filterOut(void* pdata)
 {
   while (1)
   { 
@@ -164,30 +190,57 @@ void task2(void* pdata)
     OSTimeDlyHMSM(0, 0, 0, 10);
   }
 }
+/* Task that runs in background smoothing pwm outputs to arm. */
+void keypadCheck(void* pdata)
+{
+	char key_Val = 0;
+	char* str[32];
+	while (1)
+	{
+		/* read the keypad */
+		checkKeypad();
+		//printf("%d\n", key_Val);
+		sprintf(str, "%d%d%d%d   %d\n %d%d%d%d", button[SHIFT],button[M1],button[M2],button[M3],OSCPUUsage, button[UPLEFT],button[UP],button[UPRIGHT],button[MENU]);
+		Write_To_Lcd(str);
+		OSTimeDlyHMSM(0, 0, 0, 100);
+	}
+}
 /* The main function creates two task and starts multi-tasking */
 int main(void)
 {
+
+  OSTaskCreateExt(keypadCheck,
+				  NULL,
+				  (void *)&keypadCheck_stk[TASK_STACKSIZE-1],
+				  KEYPADCHECK_PRIORITY,
+				  KEYPADCHECK_PRIORITY,
+				  keypadCheck_stk,
+				  TASK_STACKSIZE,
+				  NULL,
+				  0);
   
   OSTaskCreateExt(task1,
+				  NULL,
+				  (void *)&task1_stk[TASK_STACKSIZE-1],
+				  TASK1_PRIORITY,
+				  TASK1_PRIORITY,
+				  task1_stk,
+				  TASK_STACKSIZE,
+				  NULL,
+				  0);
+
+  OSTaskCreateExt(filterOut,
                   NULL,
-                  (void *)&task1_stk[TASK_STACKSIZE-1],
-                  TASK1_PRIORITY,
-                  TASK1_PRIORITY,
-                  task1_stk,
+                  (void *)&filterOut_stk[TASK_STACKSIZE-1],
+                  FILTEROUT_PRIORITY,
+                  FILTEROUT_PRIORITY,
+                  filterOut_stk,
                   TASK_STACKSIZE,
                   NULL,
                   0);
 
-
-  OSTaskCreateExt(task2,
-                  NULL,
-                  (void *)&task2_stk[TASK_STACKSIZE-1],
-                  TASK2_PRIORITY,
-                  TASK2_PRIORITY,
-                  task2_stk,
-                  TASK_STACKSIZE,
-                  NULL,
-                  0);
+  Initilise_Keypad();
+  Initilise_Lcd();
   OSStart();
   return 0;
 }
