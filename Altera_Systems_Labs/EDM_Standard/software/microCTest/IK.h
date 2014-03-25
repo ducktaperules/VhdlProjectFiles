@@ -8,7 +8,11 @@
 #ifndef IK_H_
 #define IK_H_
 
-float *IK(float l[5], float target[4], float solution[4]);
+float *IK( float target[4], float solution[4]);
+
+void moveArm(int positions3d[14][6], int program, int move);
+
+void moveArmDirect(int positions3d[14][6], int program, int move);
 
 #define L0 0
 #define L1 40

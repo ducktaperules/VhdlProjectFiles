@@ -77,15 +77,14 @@ void Clear_Lcd()
 /*****************************************************************************
  *                                                                           *
  * Function    : Write_To_Lcd                                                *
- * Author      : Sam Hughes                                                  *
+ * Author      : Queron Williams											 *
  * Date        : 18/02/2014                                                  *
  * Inputs      : lcd_Input is the pointer to the first character in a        *
  *               string to be printed                                        *
  * Outputs     : N/A                                                         *
  * Description : Takes a pointer to the start of a string or character       *
- *               array. Can also take array or string as input, the function *       *
- * 				 receives this as a pointer to the first element in the      *
- *               array or string          				                     *
+ *               array. Each character is successively written to the		 *
+ *				 display, /n causes the display to switch to the second line *
  * NOTES       : Any data sent to this function must conclude with a null    *
  *               character '\0'. This is automatic for any string contained  *
  *               within double quotes.                                       *

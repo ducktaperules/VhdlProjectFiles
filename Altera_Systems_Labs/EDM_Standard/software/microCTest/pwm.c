@@ -8,7 +8,7 @@
 
 /***********************************Initilise PWM Modules*****************************************
  *
- *  Author      : Sam Hughes, Queron Williams
+ *  Author      : Queron Williams
  *  Date        : 11/02/2014
  *  Inputs      : Module_To_Initilise specifies which of the PWM modules to start-up
  *  Outputs     : 1 if module successfully initilised
@@ -23,22 +23,22 @@ int initilisePwm(char moduleToInitilise)
     int address = 0;
     switch (moduleToInitilise)
     {
-        case 'B' :
+        case 'B' : // Base
         	address = MY_PWM_5_BASE;
             break;
-        case 'S' :
+        case 'S' : //Shoulder1
         	address = MY_PWM_3_BASE;
             break;
-        case 's' :
+        case 's' : //shoulder2
         	address = MY_PWM_4_BASE;
             break;
-        case 'E' :
+        case 'E' : //Elbow
         	address = MY_PWM_2_BASE;
             break;
-        case 'W' :
+        case 'W' : //Wrist
         	address = MY_PWM_1_BASE;
             break;
-        case 'G' :
+        case 'G' : //Gripper
         	address = MY_PWM_0_BASE;
             break;
         default :
@@ -54,7 +54,7 @@ int initilisePwm(char moduleToInitilise)
 }
 /***********************************Set PWM Duty Cycle*****************************************
  *
- *  Author      : Sam Hughes, Queron Williams
+ *  Author      : Queron Williams
  *  Date        : 11/02/2014
  *  Inputs      : Channel selects which of the six PWM modules should be updated
  *                Duty_Cycle the value that the PWM will be updated to
@@ -127,20 +127,20 @@ int setServoPosition (char servo, float position)
 	int pulseWidth = round(map(position,-90,90,400,2100));//50 to 250
     switch (servo)
     {
-        case 'G' :
+        case 'G' : //Gripper
         	setPwmDutyCycle(1, pulseWidth);
             break;
-        case 'W' :
+        case 'W' : //Wrist
         	setPwmDutyCycle(2, pulseWidth);
             break;
-        case 'E' :
+        case 'E' : //Elbow
         	setPwmDutyCycle(3, pulseWidth);
             break;
-        case 'S' :
+        case 'S' : //Shoulder
         	setPwmDutyCycle(4, pulseWidth);
         	setPwmDutyCycle(5, pulseWidth);
             break;
-        case 'B' :
+        case 'B' :	// Base
         	setPwmDutyCycle(6, pulseWidth);
             break;
         default :

@@ -51,7 +51,9 @@ OS_STK    keypadCheck_stk[TASK_STACKSIZE];
 #define FILTEROUT_PRIORITY      1
 
 /* Global varables go here */
-float solution2[3];
+float solution2[5];
+int program = 1; //varable used to track which program is in use
+int move = 1; //varable used to track which current move is
 
 /* Prints "Hello World" and sleeps for three seconds */
 void task1(void* pdata)
@@ -62,17 +64,19 @@ void task1(void* pdata)
 	initilisePwm('s');
 	initilisePwm('B');
 	////printf("initialise\n");
-	int Mode = 2; //1to enable IK mode, 2 to enable keypad
+	int mode = 2; //1to enable IK mode, 2 to enable keypad
+	int program = 1; //varable used to track which program is in use
+	extern int move;
 	float lengths[5]; //in cm
 				lengths[0] = 0;
 				lengths[1] = 40;
 				lengths[2] = 120;
 				lengths[3] = 120;
 				lengths[4] = 120;
-	float target[4]; //in cm
+
 	int noOfPositions = 14;
 	int positions3d[14][6] = {{ 0,150,150,0,0, 10 },	//x,y,x,phi,gripper,time
-							{ 0,250,150,0,0, 10 },
+							{ 0,250,150,0,20, 10 },
 							{ 0,100,150,0,0, 10 },
 							{ 150,100,150,0,0, 10 },
 							{ -150,100,150,0,0, 10 },
@@ -81,72 +85,51 @@ void task1(void* pdata)
 							{ 0,200,250,0,0, 10 },
 							{ 0,200,50,0,0, 10 },
 							{ 0,200,150,0,0, 10 },
-							{ 0,200,150,45,0, 10 },
-							{ 0,200,150,-45,0, 100 },
+							{ 0,200,150,35,0, 10 },
+							{ 0,200,150,-35,0, 40 },
 							{ 0,200,150,0,0, 10 },
 							{ 0,150,150,0,0, 10 }};
-	int interpolations = 1000;
-	int X = 0;
-	int i,j;
-	int oldPosition = 0;
-	int newPosition = 0;
-	int oldPosition3d[6]= { 0,100,200,0,0, 10 };
-	int newPosition3d[6]= { 0,100,200,0,0, 10 };
-	int move = 0;
 
 	while (1) {
-		if(Mode==1)
+		if(mode==1)
 		{
-			for (i = 0; i < 5; i++)
-			{
-				oldPosition3d[i] = newPosition3d[i] ;
-				newPosition3d[i] = positions3d[move][i];
+			while (1){
+				moveArm(positions3d,program,move);
+				move=move+1;
+				if(move>=noOfPositions){move=0;}
+				printf("here %d \n",move);
+				OSTimeDlyHMSM(0, 0, 1, 0);
+				if ( button[RECORD] == 1 ) {break;}
 			}
-			interpolations = positions3d[move][5];
-
-			for (i = 0; i < interpolations; i++) {
-				for (j = 0; j < 4; j++)
-				{
-					oldPosition = oldPosition3d[j];
-					newPosition = newPosition3d[j];
-					target[j] = smoothstep(oldPosition, newPosition, interpolations, i);
-				}
-
-				float buf[4];
-				float *solution = IK(lengths,target,buf);
-//
-//				setServoPosition('B', solution[0]);
-//				setServoPosition('S', solution[1]);
-//				setServoPosition('E', solution[2]);
-//				setServoPosition('W', solution[3]);
-			    OSTimeDlyHMSM(0, 0, 0, 100);
-			}
-			move=move+1;
-			if(move>=noOfPositions){move=0;}
-			printf("here %d \n",move);
+			move = 0;
+			mode = 2;
 		}
-		if(Mode==2)
+		if(mode==2)
 		{
 			if ( button[PRESSED] == 1 ) {
 				if ( button[SHIFT] == 0 ) {
-					if ( button[UP] == 1 ) {newPosition3d[1]-=10;}
-					if ( button[DOWN] == 1 ) {newPosition3d[1]+=10;}
-					if ( button[LEFT] == 1 ) {newPosition3d[0]+=10;}
-					if ( button[RIGHT] == 1 ) {newPosition3d[0]-=10;}
-					if ( button[UPLEFT] == 1 ) {newPosition3d[2]-=10;}
-					if ( button[UPRIGHT] == 1 ) {newPosition3d[2]+=10;}
-					if ( button[DOWNLEFT] == 1 ) {newPosition3d[3]+=1;}
-					if ( button[DOWNRIGHT] == 1 ) {newPosition3d[3]-=1;}
+					if ( button[UP] == 1 ) {positions3d[move][1]-=10;}
+					if ( button[DOWN] == 1 ) {positions3d[move][1]+=10;}
+					if ( button[LEFT] == 1 ) {positions3d[move][0]-=10;}
+					if ( button[RIGHT] == 1 ) {positions3d[move][0]+=10;}
+					if ( button[UPLEFT] == 1 ) {positions3d[move][2]-=10;}
+					if ( button[UPRIGHT] == 1 ) {positions3d[move][2]+=10;}
+					if ( button[DOWNLEFT] == 1 ) {positions3d[move][3]+=1;}
+					if ( button[DOWNRIGHT] == 1 ) {positions3d[move][3]-=1;}
 				}else if ( button[SHIFT] == 1 ) {
-
+					if ( button[UP] == 1 ) {positions3d[move][3]+=1;}
+					if ( button[STOP] == 1 ) {positions3d[move][3]-=1;}
+					if ( button[LEFT] == 1 ) {positions3d[move][4]-=10;}
+					if ( button[RIGHT] == 1 ) {positions3d[move][4]+=10;}
 				}
+				if ( button[DOWNLEFT] == 1 ) {move--;OSTimeDlyHMSM(0, 0, 0, 500);}
+				if ( button[DOWNRIGHT] == 1 ) {move++;OSTimeDlyHMSM(0, 0, 0, 500);}
+				if ( move<=-1 ) {move=0;}
+				if ( button[PLAY] == 1 ) {mode=1;}
 			}
-			for (j = 0; j < 4; j++)
-			{
-				target[j] = newPosition3d[j];
-			}
+
 			float buf[4];
-			float *solution = IK(lengths,target,buf);
+			moveArmDirect(positions3d, program, move);
 			OSTimeDlyHMSM(0, 0, 0, 100);
 		}
 	}
@@ -156,7 +139,7 @@ void filterOut(void* pdata)
 {
   while (1)
   { 
-	extern float solution2[3];
+	extern float solution2[5];
 	static int count = 0;
 	int number = 100;
 	int i;
@@ -185,6 +168,7 @@ void filterOut(void* pdata)
 	setServoPosition('S', output[1]);
 	setServoPosition('E', output[2]);
 	setServoPosition('W', output[3]);
+	setServoPosition('G', solution2[4]);
 	//printf(" %f    %f\n",solution2[1],output[1]);
 	count++;
     OSTimeDlyHMSM(0, 0, 0, 10);
@@ -193,6 +177,8 @@ void filterOut(void* pdata)
 /* Task that runs in background smoothing pwm outputs to arm. */
 void keypadCheck(void* pdata)
 {
+	extern int program;
+	extern int menu;
 	char key_Val = 0;
 	char* str[32];
 	while (1)
@@ -200,7 +186,8 @@ void keypadCheck(void* pdata)
 		/* read the keypad */
 		checkKeypad();
 		//printf("%d\n", key_Val);
-		sprintf(str, "%d%d%d%d   %d\n %d%d%d%d", button[SHIFT],button[M1],button[M2],button[M3],OSCPUUsage, button[UPLEFT],button[UP],button[UPRIGHT],button[MENU]);
+		//sprintf(str, "%d%d%d%d   %d\n %d%d%d%d", button[SHIFT],button[M1],button[M2],button[M3],OSCPUUsage, button[UPLEFT],button[UP],button[UPRIGHT],button[MENU]);
+		sprintf(str, "P=%d M=%d\n X=   Y=   Z=   ", program,move);
 		Write_To_Lcd(str);
 		OSTimeDlyHMSM(0, 0, 0, 100);
 	}
@@ -241,6 +228,7 @@ int main(void)
 
   Initilise_Keypad();
   Initilise_Lcd();
+  //OSStatInit();   //settup os statistics  THIS IS UNTESTED
   OSStart();
   return 0;
 }
